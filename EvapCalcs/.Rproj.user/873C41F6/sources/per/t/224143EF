@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1565296245101.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "224143EF",
+    "lastKnownWriteTime" : 8017342125385807465,
+    "last_content_update" : 1565296245101,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "75B34E8",
+        "caption" : "dfPoolsComb",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=dfPoolsComb&cache_key=75B34E8",
+        "displayedObservations" : 13,
+        "environment" : "",
+        "object" : "dfPoolsComb",
+        "preview" : 0,
+        "totalObservations" : 13,
+        "variables" : 6
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1625170350733.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "6D6BE003",
+    "lastKnownWriteTime" : 3180141808686473843,
+    "last_content_update" : 1625170350733,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "EDFB7A80",
+        "caption" : "dfICSBalance",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=dfICSBalance&cache_key=EDFB7A80",
+        "displayedObservations" : 11,
+        "environment" : "",
+        "object" : "dfICSBalance",
+        "preview" : 0,
+        "totalObservations" : 11,
+        "variables" : 7
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

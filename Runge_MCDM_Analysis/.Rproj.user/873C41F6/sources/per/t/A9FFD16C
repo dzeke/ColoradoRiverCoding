@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1551801861067.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "A9FFD16C",
+    "lastKnownWriteTime" : 19140779460001857,
+    "last_content_update" : 1551801861067,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "41E6BE19",
+        "caption" : "RungeNumericFlip",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=RungeNumericFlip&cache_key=41E6BE19",
+        "displayedObservations" : "19",
+        "environment" : "",
+        "object" : "RungeNumericFlip",
+        "preview" : "0",
+        "totalObservations" : "19",
+        "variables" : "19"
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

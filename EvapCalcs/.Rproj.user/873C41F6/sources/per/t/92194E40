@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1565284754647.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "92194E40",
+    "lastKnownWriteTime" : 8389754659302220320,
+    "last_content_update" : 1565284754647,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "160DF36E",
+        "caption" : "dfPowellEvap",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=dfPowellEvap&cache_key=160DF36E",
+        "displayedObservations" : "685",
+        "environment" : "",
+        "object" : "dfPowellEvap",
+        "preview" : "0",
+        "totalObservations" : "685",
+        "variables" : "10"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

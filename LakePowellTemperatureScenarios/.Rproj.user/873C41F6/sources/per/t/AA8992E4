@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1604208881613.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "AA8992E4",
+    "lastKnownWriteTime" : 8017342125385807465,
+    "last_content_update" : 1604208881613,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "C7968D1F",
+        "caption" : "dfPowellZonesMinusTop",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=dfPowellZonesMinusTop&cache_key=C7968D1F",
+        "displayedObservations" : 7,
+        "environment" : "",
+        "object" : "dfPowellZonesMinusTop",
+        "preview" : 0,
+        "totalObservations" : 7,
+        "variables" : 6
+    },
+    "relative_order" : 6,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

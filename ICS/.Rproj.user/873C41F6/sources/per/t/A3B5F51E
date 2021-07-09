@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1623365322626.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "A3B5F51E",
+    "lastKnownWriteTime" : 339744800,
+    "last_content_update" : 1623365322626,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "2E31FA7",
+        "caption" : "dfMaxBalanceCum",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=dfMaxBalanceCum&cache_key=2E31FA7",
+        "displayedObservations" : 4,
+        "environment" : "",
+        "object" : "dfMaxBalanceCum",
+        "preview" : 0,
+        "totalObservations" : 4,
+        "variables" : 3
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

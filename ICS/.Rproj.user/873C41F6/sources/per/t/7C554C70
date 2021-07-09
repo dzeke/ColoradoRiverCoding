@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1624117011126.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "7C554C70",
+    "lastKnownWriteTime" : 7308604914264011873,
+    "last_content_update" : 1624117011126,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "25DB0D23",
+        "caption" : "dfICStoDCP",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=dfICStoDCP&cache_key=25DB0D23",
+        "displayedObservations" : 12,
+        "environment" : "",
+        "object" : "dfICStoDCP",
+        "preview" : 0,
+        "totalObservations" : 12,
+        "variables" : 13
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

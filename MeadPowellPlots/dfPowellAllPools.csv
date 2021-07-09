@@ -1,0 +1,17 @@
+"","Reservoir","variable","value","level","month","stor_maf"
+"1","Powell","Top of Dam",30809525,3711.91663710328,1,30.809525
+"2","Powell","Live Capacity",24321999.999975,3699.9977271987,1,24.321999999975
+"3","Powell","Bottom of Flood Pool (Feb- Sept)",24322000,3699.99772719885,1,24.322
+"4","Powell","Bottom of Flood Pool (Nov to Jan)",22322000,3687.17119343884,1,22.322
+"5","Powell","Turbine Overload",22752367.5,3690,1,22.7523675
+"6","Powell","Rated Power",9066728.54003,3569.5,1,9.06672854003
+"7","Powell","Minimum Power (from Object)",3972535.44,3489.5,1,3.97253544
+"8","Powell","Min Power (from Rule curve)",5019408.81,3509.5,1,5.01940881
+"9","Powell","Inactive Capacity",0,3370,1,0
+"10","Powell","Dead Capacity",1894999.99999793,3439.79287441804,1,1.89499999999793
+"11","Powell","Crediable Space to Mead (af)",3850000,3486.98870503332,1,3.85
+"12","Powell","Lower Tier",5930000,3525.05566609739,1,5.93
+"13","Powell","Mid Tier",9520000,3575.03294185707,1,9.52
+"14","Powell","Upper Eq. Tier (2008)",15535699,3636,1,15.535699
+"15","Powell","Upper Eq. Tier (2019)",17846128.12,3655,1,17.84612812
+"16","Powell","Upper Eq. Tier (2026)",19291262.2,3666,1,19.2912622

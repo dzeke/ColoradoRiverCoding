@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1593043932627.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "836CF41D",
+    "lastKnownWriteTime" : 32088624093462639,
+    "last_content_update" : 1593043932627,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "4C031E99",
+        "caption" : "dfEvapDiffMelt",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=dfEvapDiffMelt&cache_key=4C031E99",
+        "displayedObservations" : 18,
+        "environment" : "",
+        "object" : "dfEvapDiffMelt",
+        "preview" : 0,
+        "totalObservations" : 18,
+        "variables" : 3
+    },
+    "relative_order" : 11,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

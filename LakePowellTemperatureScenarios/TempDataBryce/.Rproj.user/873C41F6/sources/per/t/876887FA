@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1599760146184.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "961062806",
+    "id" : "876887FA",
+    "lastKnownWriteTime" : 1599769599,
+    "last_content_update" : 1599769599771,
+    "path" : "C:/Rosenberg/Work/USU/Research/ColoradoRiver/RCode/ColoradoRiverFutures/LakePowellTemperatureScenarios/TempDataBryce/GrandCanyonTempCompare.R",
+    "project_path" : "GrandCanyonTempCompare.R",
+    "properties" : {
+        "cursorPosition" : "7,30",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

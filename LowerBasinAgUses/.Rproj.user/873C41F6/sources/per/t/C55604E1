@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1617321988023.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "C55604E1",
+    "lastKnownWriteTime" : 8017342125385807465,
+    "last_content_update" : 1617321988023,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "76616C91",
+        "caption" : "dfDepletionData",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=dfDepletionData&cache_key=76616C91",
+        "displayedObservations" : "744",
+        "environment" : "",
+        "object" : "dfDepletionData",
+        "preview" : "0",
+        "totalObservations" : "744",
+        "variables" : "337"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

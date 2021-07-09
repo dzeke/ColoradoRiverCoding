@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1625173526195.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "C0DE8F25",
+    "lastKnownWriteTime" : 8017342125385807465,
+    "last_content_update" : 1625173526195,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "D33BFC65",
+        "caption" : "dfJointStorageZeros",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=dfJointStorageZeros&cache_key=D33BFC65",
+        "displayedObservations" : 0,
+        "environment" : "",
+        "object" : "dfJointStorageZeros",
+        "preview" : 0,
+        "totalObservations" : 0,
+        "variables" : 10
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

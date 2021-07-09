@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1604209017643.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "CD739301",
+    "lastKnownWriteTime" : 8017342125385807465,
+    "last_content_update" : 1604209017643,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "9C263CB5",
+        "caption" : "dfPowellTempLevelsPlot",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=dfPowellTempLevelsPlot&cache_key=9C263CB5",
+        "displayedObservations" : "18953",
+        "environment" : "",
+        "object" : "dfPowellTempLevelsPlot",
+        "preview" : "0",
+        "totalObservations" : "18953",
+        "variables" : "31"
+    },
+    "relative_order" : 7,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

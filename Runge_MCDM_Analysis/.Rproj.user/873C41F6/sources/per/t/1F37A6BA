@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1551763949056.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "1F37A6BA",
+    "lastKnownWriteTime" : 19140779460001857,
+    "last_content_update" : 1551763949056,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "9E4F9BA5",
+        "caption" : "RungeNumeric",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=RungeNumeric&cache_key=9E4F9BA5",
+        "displayedObservations" : "19",
+        "environment" : "",
+        "object" : "RungeNumeric",
+        "preview" : "0",
+        "totalObservations" : "19",
+        "variables" : "19"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

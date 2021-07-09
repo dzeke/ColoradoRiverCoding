@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1617334461235.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "FAD80BC1",
+    "lastKnownWriteTime" : 6443632293566443105,
+    "last_content_update" : 1617334461235,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "FCBBB6BF",
+        "caption" : "dfAllDepletionSeas",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=dfAllDepletionSeas&cache_key=FCBBB6BF",
+        "displayedObservations" : 1860,
+        "environment" : "",
+        "object" : "dfAllDepletionSeas",
+        "preview" : 0,
+        "totalObservations" : 1860,
+        "variables" : 7
+    },
+    "relative_order" : 12,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

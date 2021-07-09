@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1620702606363.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "9526FA67",
+    "lastKnownWriteTime" : 8017342125385807465,
+    "last_content_update" : 1620702606363,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "EC6054C",
+        "caption" : "dfGCFlowsUSGS",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=dfGCFlowsUSGS&cache_key=EC6054C",
+        "displayedObservations" : "31",
+        "environment" : "",
+        "object" : "dfGCFlowsUSGS",
+        "preview" : "0",
+        "totalObservations" : "31",
+        "variables" : "5"
+    },
+    "relative_order" : 7,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

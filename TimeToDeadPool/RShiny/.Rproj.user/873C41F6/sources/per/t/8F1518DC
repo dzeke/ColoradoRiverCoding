@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1571768553786.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "8F1518DC",
+    "lastKnownWriteTime" : 8389754659302220320,
+    "last_content_update" : 1571768553786,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "context" : "unknown:::<observer>"
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_code_browser"
+}

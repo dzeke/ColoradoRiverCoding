@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1596231782652.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3500642727",
+    "id" : "D2CE3D2E",
+    "lastKnownWriteTime" : 1606360445,
+    "last_content_update" : 1606360445378,
+    "path" : "C:/Rosenberg/Work/USU/Research/ColoradoRiver/RCode/ColoradoRiverFutures/LakePowellTemperatureScenarios/LakePowellElevationTempModelInterigate.R",
+    "project_path" : "LakePowellElevationTempModelInterigate.R",
+    "properties" : {
+        "cursorPosition" : "335,0",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

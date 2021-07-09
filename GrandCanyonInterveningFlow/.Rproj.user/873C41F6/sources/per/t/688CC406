@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1620680275026.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1550264421",
+    "id" : "688CC406",
+    "lastKnownWriteTime" : 1620772040,
+    "last_content_update" : 1620772040780,
+    "path" : "C:/Rosenberg/Work/USU/Research/ColoradoRiver/RCode/ColoradoRiverFutures/GrandCanyonInterveningFlow/GrandCanyonInterveneFlow.R",
+    "project_path" : "GrandCanyonInterveneFlow.R",
+    "properties" : {
+        "cursorPosition" : "165,37",
+        "scrollLine" : "153"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1599760910792.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "7A7FE449",
+    "lastKnownWriteTime" : 8243124888230196078,
+    "last_content_update" : 1599760910792,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "BBB8B8E2",
+        "caption" : "dfLocations",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=dfLocations&cache_key=BBB8B8E2",
+        "displayedObservations" : 6,
+        "environment" : "",
+        "object" : "dfLocations",
+        "preview" : 0,
+        "totalObservations" : 6,
+        "variables" : 3
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

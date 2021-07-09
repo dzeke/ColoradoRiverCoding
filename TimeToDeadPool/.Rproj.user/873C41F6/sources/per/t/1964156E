@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1621915311740.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1655526777",
+    "id" : "1964156E",
+    "lastKnownWriteTime" : 1624301131,
+    "last_content_update" : 1624301131705,
+    "path" : "C:/Rosenberg/Work/USU/Research/ColoradoRiver/RCode/ColoradoRiverFutures/TimeToDeadPool/MeadSteadyInflowSimulation.Rmd",
+    "project_path" : "MeadSteadyInflowSimulation.Rmd",
+    "properties" : {
+        "cursorPosition" : "27,99",
+        "scrollLine" : "19"
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1623365202565.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "D7445CF",
+    "lastKnownWriteTime" : 3180141808686473843,
+    "last_content_update" : 1623365202565,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "F4727DC3",
+        "caption" : "nMaxBalance",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=nMaxBalance&cache_key=F4727DC3",
+        "displayedObservations" : 3,
+        "environment" : "",
+        "object" : "nMaxBalance",
+        "preview" : 0,
+        "totalObservations" : 3,
+        "variables" : 6
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1565295778325.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "384B175C",
+    "lastKnownWriteTime" : 32088624093462639,
+    "last_content_update" : 1565295778325,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "A0BF9E6E",
+        "caption" : "dfPowellPools",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=dfPowellPools&cache_key=A0BF9E6E",
+        "displayedObservations" : "4",
+        "environment" : "",
+        "object" : "dfPowellPools",
+        "preview" : "0",
+        "totalObservations" : "4",
+        "variables" : "6"
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

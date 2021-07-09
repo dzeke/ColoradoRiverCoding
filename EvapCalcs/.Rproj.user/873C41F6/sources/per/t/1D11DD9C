@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1593035865988.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "1D11DD9C",
+    "lastKnownWriteTime" : 8017342123466555394,
+    "last_content_update" : 1593035865988,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "4D7174EF",
+        "caption" : "dfPartitionResults",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=dfPartitionResults&cache_key=4D7174EF",
+        "displayedObservations" : 81,
+        "environment" : "",
+        "object" : "dfPartitionResults",
+        "preview" : 0,
+        "totalObservations" : 81,
+        "variables" : 5
+    },
+    "relative_order" : 12,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

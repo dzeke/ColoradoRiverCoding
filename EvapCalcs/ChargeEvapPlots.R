@@ -1,0 +1,758 @@
+# ChargeEvapPlots.r
+#
+# Make plots for alternative management paradigm where charge reservoir evaporation to states and users 
+#
+# Mead specific:
+# 1. Drought Contingency Plan (DCP) and Interim Shortage Guidelines (ISG) cutbacks versus Mead Active Storage
+# 2. Mead evaporation volume versus Mead active storage
+# 3. Water volume (Mead evaporation and Cutbacks) versus Mead active storage
+#
+# Mead and Powell combined:
+# 4. Drought Contingency Plan and Interim Shortage Guidelines cutbacks versus combined Mead + Powell Active Storage (assume equalization)
+# 5. Mead + Powell Evaporation volume versus combined Mead + Powell active storage (assuming Powell and Mead Equalized)
+# 6. Water volume (combined evaporation, ISG, and DCP cutbacks) vs combined active storage (assuming Powell and Mead Equalized).
+# 
+# Data is drawn from CRSS, analysis of DCP, and other sources as docummented in source Excel files (see below)
+# Please report bugs/feedback to:
+#
+# David E. Rosenberg
+# March 29, 2019
+# Utah State University
+# david.rosenberg@usu.edu
+
+rm(list = ls())  #Clear history
+
+# Use Rtools40 on Windows to install executable to update dependent libraries - https://cran.r-project.org/bin/windows/Rtools/
+
+# Load required libraies
+
+if (!require(tidyverse)) { 
+  install.packages("tidyverse", repos="https://cran.cnr.berkeley.edu/", verbose = TRUE) 
+  library(tidyverse) 
+}
+
+
+if (!require(readxl)) { 
+  install.packages("readxl") 
+  library(readxl) 
+}
+
+  
+if (!require(RColorBrewer)) { 
+  install.packages("RColorBrewer",repos="http://cran.r-project.org") 
+  library(RColorBrewer) # 
+}
+
+if (!require(dplyr)) { 
+  install.packages("dplyr") 
+  library(dplyr) # 
+}
+
+if (!require(expss)) { 
+  install.packages("expss",repos="http://cran.r-project.org") 
+  library(expss) # 
+}
+
+if (!require(reshape2)) { 
+  install.packages("reshape2", repos="http://cran.r-project.org") 
+  library(reshape2) 
+}
+
+if (!require(pracma)) { 
+  install.packages("pracma", repos="http://cran.r-project.org") 
+  library(pracma) 
+}
+
+if (!require(lubridate)) { 
+  install.packages("lubridate", type="source") 
+  library(lubridate) 
+}
+
+if (!require(directlabels)) { 
+  install.packages("directlabels", repo="http://cran.r-project.org")
+  library(directlabels) 
+}
+
+if (!require(plyr)) { 
+  install.packages("plyr", type="source")
+  library(plyr) 
+}
+
+if (!require(ggplot2)) { 
+  install.packages("ggplot2", type="source")
+  library(ggplot2) 
+}
+
+if (!require(stringr)) { 
+  install.packages("stringr", repo="http://cran.r-project.org")
+  library(stringr) 
+}
+
+
+library(readxl)
+library(plyr) 
+library(tidyverse)
+library(ggplot2) 
+library(stringr) 
+library(RColorBrewer)
+library(dplyr)
+library(directlabels) 
+library(lubridate) 
+library(pracma) 
+library(reshape2) 
+library(expss)
+library(ggplot2)
+
+
+
+# New function interp2 to return NAs for values outside interpolation range (from https://stackoverflow.com/questions/47295879/using-interp1-in-r)
+interp2 <- function(x, y, xi = x, ...) {
+  yi <- rep(NA, length(xi));
+  sel <- which(xi >= range(x)[1] & xi <= range(x)[2]);
+  yi[sel] <- interp1(x = x, y = y, xi = xi[sel], ...);
+  return(yi);
+}
+
+# New function TimeToDeadPool which calculates the number of time periods to reach the dead pool given
+# an initial storage volume, inflow, delivery schedule of deliveryVolume and deliveryResStorage, evaporation rate, and reservoir bathymetry of ResArea and ResVolume
+# This is done on an annual basis. MaxIts is the maximum number of iterations
+TimeToDeadPool <- function(Sinit, inflow, deliveryVolume, deliveryResStorage, eRate, ResArea, ResVolume, MaxIts) {
+  #Start with zero years
+  
+  currT <- 0
+  Scurr <- Sinit #Set current storage volume
+  while (Scurr > 0 && currT <= MaxIts){
+    #Calculate mass balance components in current time step at Scurr
+    release <- interp2(x=deliveryResStorage, y=deliveryVolume,xi = Scurr, method = "constant")
+    evap <- eRate*interp2(x=ResVolume, y=ResArea,xi = Scurr)
+    #Mass balance equation
+    Scurr <- Scurr + inflow - release - evap
+                 
+    currT <- currT + 1
+  }
+  
+  ReturnList <- list("volume" = Scurr, "periods" = currT - 1)
+  
+  return(ReturnList)
+}
+
+
+## Small example to test the TimeToDeadPool function
+tStartVol <- 10
+tMaxVol <- 15
+tInflow <- 2
+dfDeliverySchedule <- data.frame(release = c(2,2,5,5), stor = c(0,2,11,tMaxVol))
+dfBath <- data.frame(volume = c(0,3,10,tMaxVol), area = c(1,3,5,6))
+tErate <- 0.5
+
+interp2(x=dfDeliverySchedule$stor, y=dfDeliverySchedule$release, xi = tStartVol) 
+interp2(x=dfBath$volume, y=dfBath$area,xi = tStartVol)
+
+#debug(TimeToDeadPool)
+lTestReturn <- TimeToDeadPool(Sinit = tStartVol, inflow = tInflow, deliveryVolume = dfDeliverySchedule$release, 
+                  deliveryResStorage = dfDeliverySchedule$stor, eRate = tErate, ResArea = dfBath$area, 
+                  ResVolume = dfBath$volume, MaxIts = 50)
+
+######### LAKE MEAD ############
+#                              #
+################################
+# Load Data
+
+# Lower Basin Delivery Target for CA, AZ, NV, and MX (maf per year)
+vLowerBasinDeliveryTarget <- 9.6e6
+
+###This reservoir data comes from CRSS. It was exported to Excel.
+
+# Read elevation-storage data in from Excel
+sExcelFile <- 'MeadDroughtContingencyPlan.xlsx'
+dfMeadElevStor <- read_excel(sExcelFile, sheet = "Mead-Elevation-Area",  range = "A4:D676")
+dfPowellElevStor <- read_excel(sExcelFile, sheet = 'Powell-Elevation-Area',  range = "A4:D689")
+
+#Evaporation rates from CRSS
+#EvapRates <- read_excel(sExcelFile, sheet = 'Data',  range = "P3:S15")
+# Evaporation Rates from Schmidt et al (2016) Fill Mead First, p. 29, Table 2 - https://qcnr.usu.edu/wats/colorado_river_studies/files/documents/Fill_Mead_First_Analysis.pdf
+dfEvapRates <- data.frame(Reservoir = c("Mead","Mead","Powell"),"Rate ft per year" = c(5.98,6.0, 5.73), Source = c("CRSS","FEIS-2008","Reclamation"), MinRate = c(NA,5.5,4.9), MaxRate = c(NA,6.4, 6.5))
+
+# Define maximum storages
+dfMaxStor <- data.frame(Reservoir = c("Powell","Mead"),Volume = c(24.32,25.95))
+
+
+# Read in Reservoir Pools Volumes / Zones from Excel
+dfPoolVols <- read_excel(sExcelFile, sheet = "Pools",  range = "D31:O43")
+# Read in Reserved Flood Storage
+dfReservedFlood <- read_excel(sExcelFile, sheet = "Pools",  range = "C46:E58")
+#Convert dates to months
+dfReservedFlood$month_num <- month(as.POSIXlt(dfReservedFlood$Month, format="%Y-%m-%Y"))
+
+# Read in the ISG and DCP cutbacks from Excel
+dfCutbacksElev <- read_excel(sExcelFile, sheet = "Data",  range = "H21:H41") #Elevations
+dfCutbacksVols <- read_excel(sExcelFile, sheet = "Data",  range = "O21:U41") #ISG and DCP for states + MX
+dfCutbacksVolsFed <- read_excel(sExcelFile, sheet = "Data",  range = "Y21:Y41") # Federal cutback
+#Merge into one data frame
+dfCutbacks <- dfCutbacksElev
+dfCutbacks$RowNum <- 0
+dfCutbacksVols$RowNum <- 0
+dfCutbacksVolsFed$RowNum <- 0
+for (CurrRow in 1:nrow(dfCutbacks)) {
+  dfCutbacks[CurrRow,"RowNum"] <- CurrRow
+  dfCutbacksVols[CurrRow,"RowNum"] <- CurrRow
+  dfCutbacksVolsFed[CurrRow,"RowNum"] <- CurrRow
+}
+
+dfCutbacks <- full_join(dfCutbacks,dfCutbacksVols)
+dfCutbacks <- full_join(dfCutbacks,dfCutbacksVolsFed)
+
+# Convert NAs to Zeros
+dfCutbacks <- replace(dfCutbacks,is.na(dfCutbacks),0)
+
+# Calculate Mead Volume from Elevation (interpolate from storage-elevation curve)
+dfCutbacks$MeadActiveVolume <- interp1(xi = dfCutbacks$`Mead Elevation (ft)`,x=dfMeadElevStor$`Elevation (ft)` , y=dfMeadElevStor$`Live Storage (ac-ft)`, method="linear")
+
+#Calculate Total Reductions for ISG (use Federal and Mexico dating to 2012 )
+dfCutbacks <- dfCutbacks %>% mutate(Total2007ISG = `Mexico Reduction (Minute 323) [2017]`+ 
+                                      `2007-AZ Reduction (ac-ft)` + `2007-NV Reduction (ac-ft)` + `2007-CA Reduction (ac-ft)` +
+                                     `DCP Federal Government (ac-ft)`)
+#Remove federal amount at 1090 ft since IGS only starts at 1075 ft
+dfCutbacks$Total2007ISG[dfCutbacks$`Mead Elevation (ft)` == 1090] <- 0
+
+#Calculate Total Reudctions for DCP
+dfCutbacks <- dfCutbacks %>% mutate(TotalDCP = `Mexico Reduction (Minute 323) [2017]`+ 
+                                      `DCP-AZ Reduction (ac-ft)` + `DCP-NV Reduction (ac-ft)` + `DCP-CA Reduction (ac-ft)` +
+                                      `DCP Federal Government (ac-ft)`)
+
+#Calculate Delivers as Target - Reduction
+dfCutbacks$DeliveryDCP <- vLowerBasinDeliveryTarget - dfCutbacks$TotalDCP
+dfCutbacks$DeliveryISG <- vLowerBasinDeliveryTarget - dfCutbacks$Total2007ISG
+dfCutbacks$DeliveryNorm <- vLowerBasinDeliveryTarget 
+
+#Culculate the storage to delivery ratio
+dfCutbacks$StoDDCP <- dfCutbacks$MeadActiveVolume/dfCutbacks$DeliveryDCP
+dfCutbacks$StoDISG <- dfCutbacks$MeadActiveVolume/dfCutbacks$DeliveryISG
+dfCutbacks$StoDNorm <- dfCutbacks$MeadActiveVolume/dfCutbacks$DeliveryNorm
+
+#Calculate evaporated volume for Mead
+dfMeadEvap <- dfMeadElevStor
+# Max evaporation is product of annual evaporation rate and area (assumes water always stays at same level through year, there is inflow!
+EvapRateToUse = as.numeric(dfEvapRates %>% filter(Reservoir %in% c("Mead"), Source %in% c("FEIS-2008")) %>% select(Rate.ft.per.year))
+EvapRatesToUse = as.numeric(dfEvapRates %>% filter(Reservoir %in% c("Mead"), Source %in% c("FEIS-2008")) %>% select(Rate.ft.per.year,MinRate,MaxRate))
+dfMeadEvap$EvapVolMax <- dfMeadEvap$`Area (acres)`*EvapRatesToUse[1]
+dfMeadEvap$EvapVolMaxUp <- dfMeadEvap$`Area (acres)`*EvapRatesToUse[3]
+dfMeadEvap$EvapVolMaxLo <- dfMeadEvap$`Area (acres)`*EvapRatesToUse[2]
+#Min evaporation assumes all inflow occurs, followed by all evaporation. We subtract evporation rate from level and take difference of two levels
+dfMeadEvap$EvapVolMin <- dfMeadEvap$`Live Storage (ac-ft)` - interp2(xi = dfMeadEvap$`Elevation (ft)` - EvapRateToUse[1], x=dfMeadElevStor$`Elevation (ft)` , y=dfMeadElevStor$`Live Storage (ac-ft)`, method="linear")
+
+strEvapRange <- paste0("(",EvapRatesToUse[2]," - ", EvapRatesToUse[3], " feet/year)")
+
+#Calculate evaporated volume for Powell
+dfPowellEvap <- dfPowellElevStor
+# Max evaporation is product of annual evaporation rate and area (assumes water always stays at same level through year, there is inflow!
+EvapRatesToUsePowell = as.numeric(dfEvapRates %>% filter(Reservoir %in% c("Powell"), Source %in% c("Reclamation")) %>% select(Rate.ft.per.year,MinRate,MaxRate))
+dfPowellEvap$EvapVolMax <- dfPowellEvap$`Area (acres)`*EvapRatesToUsePowell[1]
+dfPowellEvap$EvapVolMaxUp <- dfPowellEvap$`Area (acres)`*EvapRatesToUsePowell[3]
+dfPowellEvap$EvapVolMaxLo <- dfPowellEvap$`Area (acres)`*EvapRatesToUsePowell[2]
+#Min evaporation assumes all inflow occurs, followed by all evaporation. We subtract evporation rate from level and take difference of two levels
+dfPowellEvap$EvapVolMin <- dfPowellEvap$`Live Storage (ac-ft)` - interp2(xi = dfPowellEvap$`Elevation (ft)` - EvapRatesToUsePowell[1], x=dfPowellElevStor$`Elevation (ft)` , y=dfPowellElevStor$`Live Storage (ac-ft)`, method="linear")
+#Calculate percent erro off MaxUp and MaxLo values
+dfPowellEvap$RangeError <- (dfPowellEvap$EvapVolMaxUp - dfPowellEvap$EvapVolMaxLo)/dfPowellEvap$EvapVolMaxLo
+#Calculate half the difference
+dfPowellEvap$Range <- (dfPowellEvap$EvapVolMaxUp - dfPowellEvap$EvapVolMaxLo)/1e6/2
+
+strEvapRangePowell <- paste0("(",EvapRatesToUsePowell[2]," - ", EvapRatesToUsePowell[3], " feet/year)")
+strEvapRangeMead <-  paste0("(",EvapRatesToUse[2]," - ", EvapRatesToUse[3], " feet/year)")
+strEvapRangeComb <-  paste0("(",min(EvapRatesToUsePowell[2],EvapRatesToUse[2]) ," - ", max(EvapRatesToUsePowell[3], EvapRatesToUse[2]), " feet/year)")
+
+#Combine the dfPowellEvap and dfMeadEvap data frames based on storage (assuming equalization).
+# We will base on Mead. That is, when Mead has 0 af, 100,000 af, 2,000,000 af of active storage, we want to know all
+# the Powell varaiables at the Powell active storage values of 0, 100,000, 2,000,000 af. This
+# is just a lot of linear-interpolations on each Powell Variable
+dfCombineEvap <- dfMeadEvap
+cCols <- colnames(dfPowellEvap)
+strLiveCol <- cCols[2]
+cCols <- cCols[-2]
+cColsPowell <- paste0(cCols,"Powell")
+cColsComb <- paste0(cCols,"Comb")
+cColsComb <- cColsComb[-1]
+
+#Loop over the columns and interpolate
+for (ColIndex in (1:length(cColsPowell))){
+  dfCombineEvap[cColsPowell[ColIndex]] <- interp2(xi = dfCombineEvap$`Live Storage (ac-ft)`,x=dfPowellEvap$`Live Storage (ac-ft)` , y=dfPowellEvap[[cCols[ColIndex]]], method="linear")
+}
+
+#Now a second loop to add the Mead (original) and Powell comumns to get a Combined Total
+dfCombineEvap$CombLiveStor <- 2*dfCombineEvap$`Live Storage (ac-ft)`
+for (ColIndex in (2:length(cCols))){
+  dfCombineEvap[cColsComb[ColIndex-1]] <- dfCombineEvap[[cCols[ColIndex]]] + dfCombineEvap[[cColsPowell[ColIndex]]]
+}
+
+interp1(xi = 1089.74,x=dfMeadElevStor$`Elevation (ft)`,y=dfMeadElevStor$`Live Storage (ac-ft)`, method="linear") + 8997607
+
+
+# Identify important Mead Levels to put as context on x-axis above the plot 
+#Calculate Levels from volumes (interpolate from storage-elevation curve)
+#Mead
+dfMeadVals <- melt(subset(dfPoolVols,Reservoir == "Mead"),id.vars = c("Reservoir"))
+dfMeadVals$level <- interp1(xi = dfMeadVals$value,x=dfMeadElevStor$`Live Storage (ac-ft)`,y=dfMeadElevStor$`Elevation (ft)`, method="linear")
+
+#Powell
+dfPowellVals <- melt(subset(dfPoolVols,Reservoir == "Powell"),id.vars = c("Reservoir"))
+dfPowellVals$level <- interp1(xi = dfPowellVals$value,x=dfPowellElevStor$`Live Storage (ac-ft)`,y=dfPowellElevStor$`Elevation (ft)`, method="linear")
+
+dfPowellVals <- melt(dfPowellVals,id.vars = c("Reservoir","variable","value","level"))
+dfMeadVals <- melt(dfMeadVals,id.vars = c("Reservoir","variable","value","level"))
+
+# Convert to MAF storage
+dfMeadVals$stor_maf <- dfMeadVals$value / 1000000
+dfPowellVals$stor_maf <- dfPowellVals$value / 1000000
+
+#Calculate the volume of flood storage space reserved
+dfReservedFlood$Mead_flood_stor <- dfMeadVals[2,c("stor_maf")] - dfReservedFlood$Mead
+dfReservedFlood$Powell_flood_stor <- dfPowellVals[2,c("stor_maf")] - dfReservedFlood$Powell
+#Calculate levels for the reserved flood volumes
+dfReservedFlood$Mead_level <- interp1(xi = dfReservedFlood$Mead_flood_stor*1000000,x=dfMeadElevStor$`Live Storage (ac-ft)`,y=dfMeadElevStor$`Elevation (ft)`, method="linear")
+dfReservedFlood$Powell_level <- interp1(xi = dfReservedFlood$Powell_flood_stor*1000000,x=dfPowellElevStor$`Live Storage (ac-ft)`,y=dfPowellElevStor$`Elevation (ft)`, method="linear")
+
+# Include additional levels not in the CRSS pool data
+#Specify Powell Equalization levels by Year (data values from Interim Guidelines)
+dfPowellEqLevels <- data.frame(Year = c(2008:2026), Elevation = c(3636,3639,3642,3643,3645,3646,3648,3649,3651,3652,3654,3655,3657,3659,3660,3663,3663,3664,3666))
+dfPowellEqLevels$Volume <- vlookup(dfPowellEqLevels$Elevation,dfPowellElevStor,result_column=2,lookup_column = 1)/1000000
+#Need to convert these Powell volumes into equivalent Mead levels for the next step
+dfPowellEqLevels$EqMeadLev <- interp2(xi = dfPowellEqLevels$Volume*1000000,x=dfMeadElevStor$`Live Storage (ac-ft)`,y=dfMeadElevStor$`Elevation (ft)`, method="linear")
+
+
+
+
+dfMeadValsAdd <- data.frame(Reservoir = "Mead",
+                            variable = c("Mead Flood Pool","Powell Eq. Level (2019)","DCP trigger","ISG trigger","SNWA Intake #1","Mead Eq. Tier","SNWA Intake #2","Mead Power","SNWA Intake #3"),
+                            level = c(max(dfReservedFlood$Mead_level),dfPowellEqLevels$EqMeadLev[12],1090,1075,1050,1025,1000,955,860))
+nRowMead <- nrow(dfMeadValsAdd)
+dfMeadValsAdd$value <- 0
+#Interpolate live storage volume
+dfMeadValsAdd$value[1:(nRowMead-1)] <- interp1(xi = dfMeadValsAdd$level[1:(nRowMead-1)],x=dfMeadElevStor$`Elevation (ft)`,y=dfMeadElevStor$`Live Storage (ac-ft)`, method="linear")
+#Add SNWA third straw which is below dead pool
+dfMeadValsAdd$value[nRowMead] <- -dfMeadVals[10,3]
+dfMeadValsAdd$stor_maf <- dfMeadValsAdd$value / 1000000
+
+#Combine the original mead levels from CRSS with the levels added above
+dfMeadAllPools <- rbind(dfMeadVals,dfMeadValsAdd)
+#dfMeadAllPools <- dfMeadAllPools[order(dfMeadAllPools$month, dfMeadAllPools$level),]
+
+#Pull out the desired rows
+#dfMeadPoolsPlot <- dfMeadAllPools[c(3,6,7,9:13,16),]
+cMeadVarNames <- c("Inactive Capacity", "Mead Power", "SNWA Intake #2", "Mead Eq. Tier", "SNWA Intake #1", "DCP trigger", "Powell Eq. Level (2019)",
+                  "Mead Flood Pool", "Live Capacity")
+dfMeadPoolsPlot <- dfMeadAllPools %>% filter(variable %in% cMeadVarNames) %>% arrange(level)
+dfMeadPoolsPlot$name <- as.character(dfMeadPoolsPlot$variable)
+#Rename a few of the variable labels
+dfMeadPoolsPlot[1,c("name")] <- "Dead Pool"
+#dfMeadPoolsPlot[6,c("name")] <- "Flood Pool (1-Aug)"
+#Create the y-axis tick label from the level and variable
+#dfMeadPoolsPlot$label <- paste(round(dfMeadPoolsPlot$level,0),'\n',dfMeadPoolsPlot$name)
+dfMeadPoolsPlot$label <- paste(str_replace_all(dfMeadPoolsPlot$name," ","\n"),'\n', round(dfMeadPoolsPlot$level,0))
+dfMeadPoolsPlot$labelComb <- str_replace_all(dfMeadPoolsPlot$name," ","\n")
+dfMeadPoolsPlot$labelComb[1] <- paste0(dfMeadPoolsPlot$labelComb[1],"s")
+
+
+#Plot #1. Cutbacks versus Mead active storage
+ggplot() +
+  #DCP and ISG step functions
+  geom_step(data=dfCutbacks,aes(x=MeadActiveVolume/1000000,y=Total2007ISG/1000000, color = "ISG", linetype="ISG"), size=2, direction="vh") +
+  geom_step(data=dfCutbacks,aes(x=MeadActiveVolume/1000000,y=TotalDCP/1000000, color = "DCP", linetype="DCP"), size=2, direction="vh") +
+  
+  scale_color_manual(name="Guide1",values = c("Blue", "Red"),breaks=c("DCP", "ISG"), labels= c("Drought Contingency Plan (2019) Cutbacks", "Interim Shortage Guidelines (2008) Cutbacks")) +
+  scale_linetype_manual(name="Guide1",values=c("DCP"="solid","ISG"="longdash"), breaks=c("DCP", "ISG"), labels= c("Drought Contingency Plan (2019) Cutbacks", "Interim Shortage Guidelines (2008) Cutbacks")) +
+  
+  scale_x_continuous(breaks = c(0,5,10,15,20,25),labels=c(0,5,10,15, 20,25), limits = c(0,as.numeric(dfMaxStor %>% filter(Reservoir %in% c("Mead")) %>% select(Volume))),
+                     sec.axis = sec_axis(~. +0, name = "Mead Level (feet)", breaks = dfMeadPoolsPlot$stor_maf, labels = dfMeadPoolsPlot$label)) +
+ 
+  guides(fill = guide_legend(keywidth = 1, keyheight = 1),
+         linetype=guide_legend(keywidth = 3, keyheight = 1),
+         colour=guide_legend(keywidth = 3, keyheight = 1)) +
+  
+  theme_bw() +
+  
+  labs(x="Mead Active Storage (MAF)", y="Water Volume (MAF per year)") +
+  theme(text = element_text(size=20),  legend.title = element_blank(), legend.text=element_text(size=18), legend.position = c(0.7,0.85))
+
+
+#Plot #2. Mead Evaporated volume versus Mead Active storage
+ggplot() +
+  geom_errorbar(data=dfMeadEvap, aes(x=`Live Storage (ac-ft)`/1000000,ymin=EvapVolMaxLo/1000000, ymax=EvapVolMaxUp/1000000), width=.2,
+                position=position_dodge(0.2)) +
+  #geom_line(data=dfMeadEvap,aes(x=`Live Storage (ac-ft)`/1000000,y=EvapVolMax/1000000, color = "Max"), size=2) +
+  #geom_line(data=dfMeadEvap,aes(x=`Live Storage (ac-ft)`/1000000,y=EvapVolMin/1000000, color = "Min"), size=2) +
+  scale_color_manual(values = c("Black", "Grey")) +
+  #scale_x_continuous(breaks = c(0,5,10,15,20,25),labels=c(0,5,10,15, 20,25)) + #,   sec.axis = sec_axis(~. +0, name = "Elevation (feet)", breaks = dfMeadPoolsPlot2$stor_maf, labels = dfMeadPoolsPlot2$label)) +
+  
+  scale_x_continuous(breaks = c(0,5,10,15,20,25),labels=c(0,5,10,15, 20,25), limits = c(0,as.numeric(dfMaxStor %>% filter(Reservoir %in% c("Mead")) %>% select(Volume))),
+                     sec.axis = sec_axis(~. +0, name = "Mead Level (feet)", breaks = dfMeadPoolsPlot$stor_maf, labels = dfMeadPoolsPlot$label)) +
+  
+  
+  
+  theme_bw() +
+  #coord_fixed() +
+  labs(x="Mead Active Storage (MAF)", y="Evaporated Volume (MAF per year)") +
+  theme(text = element_text(size=20),  legend.title = element_blank(), legend.text=element_text(size=14), legend.position = c(0.7,0.8))
+
+
+#Plot #3. Water Volume (Cutback and Evaporated Volume) versus Mead active storage on the same plot
+ggplot() +
+  #Error bar
+  geom_errorbar(data=dfMeadEvap, aes(x=`Live Storage (ac-ft)`/1000000,ymin=EvapVolMaxLo/1000000, ymax=EvapVolMaxUp/1000000), width=.2,
+                position=position_dodge(0.2)) +
+  geom_line(data=dfMeadEvap,aes(x=`Live Storage (ac-ft)`/1000000,y=EvapVolMax/1000000, color = "Evaporation", linetype="Evaporation"), size=2) +
+  
+  
+  geom_step(data=dfCutbacks,aes(x=MeadActiveVolume/1000000,y=Total2007ISG/1000000, color = "ISG", linetype="ISG"), size=2, direction="vh") +
+  geom_step(data=dfCutbacks,aes(x=MeadActiveVolume/1000000,y=TotalDCP/1000000, color = "DCP", linetype="DCP"), size=2, direction="vh") +
+  
+  scale_color_manual(name="Guide1",values = c("Blue", "Black", "Red"),breaks=c("DCP", "ISG", "Evaporation"), labels= c("Drought Contingency Plan (2019) Cutbacks", "Interim Shortage Guidelines (2008) Cutbacks", paste("Evaporation",strEvapRangeComb))) +
+  scale_linetype_manual(name="Guide1",values=c("Evaporation"="twodash","DCP"="solid","ISG"="longdash"), breaks=c("DCP", "ISG", "Evaporation"), labels= c("Drought Contingency Plan (2019) Cutbacks", "Interim Shortage Guidelines (2008) Cutbacks", paste("Evaporation",strEvapRangeComb))) +
+  
+  #scale_color_manual(values = c("Blue", "Black", "Red"), breaks=c("DCP", "ISG", "Evaporation"), labels= c("Drought Contingency Plan (2019) Cutbacks", "Interim Shortage Guidelines (2008) Cutbacks", paste("Evaporation",strEvapRangeComb))) +
+  #scale_linetype_manual("Variabler",values=c("Evaporation"="twodash","DCP"="solid","ISG"="longdash"),labels= c("Drought Contingency Plan (2019) Cutbacks", "Interim Shortage Guidelines (2008) Cutbacks", paste("Evaporation",strEvapRangeComb))) +
+  scale_x_continuous(breaks = c(0,5,10,15,20,25),labels=c(0,5,10,15, 20,25), limits = c(0,as.numeric(dfMaxStor %>% filter(Reservoir %in% c("Mead")) %>% select(Volume))),
+                     sec.axis = sec_axis(~. +0, name = "Mead Level (feet)", breaks = dfMeadPoolsPlot$stor_maf, labels = dfMeadPoolsPlot$label)) +
+  #scale_x_continuous(breaks = cCombScale,labels=cCombScale, limits = c(0,2*as.numeric(dfMaxStor %>% filter(Reservoir %in% c("Mead")) %>% select(Volume))),
+  #                   sec.axis = sec_axis(~. +0, breaks = 2*dfMeadPoolsPlot$stor_maf, labels = dfMeadPoolsPlot$labelComb)) +
+  
+  #    scale_y_continuous(breaks = c(0,5.98,9.6,12.2,dfMaxStor[2,2]),labels=c),  sec.axis = sec_axis(~. +0, name = "Mead Level (feet)", breaks = c(0,5.98,9.6,12.2,dfMaxStor[2,2]), labels = c(895,1025,1075,1105,1218.8))) +
+  #scale_x_discrete(breaks=cMonths, labels= cMonthsLabels) +
+  guides(fill = guide_legend(keywidth = 1, keyheight = 1),
+         linetype=guide_legend(keywidth = 3, keyheight = 1),
+         colour=guide_legend(keywidth = 3, keyheight = 1)) +
+  
+  theme_bw() +
+  #coord_fixed() +
+  labs(x="Mead Active Storage (MAF)", y="Water Volume (MAF per year)") +
+  theme(text = element_text(size=20),  legend.title = element_blank(), legend.text=element_text(size=18), legend.position = c(0.7,0.85))
+
+
+#Plot #4. Deliveries versus Mead active storage
+ggplot() +
+  #DCP and ISG step functions
+  geom_step(data=dfCutbacks,aes(x=MeadActiveVolume/1000000,y=DeliveryISG/1000000, color = "ISG", linetype="ISG"), size=2, direction="vh") +
+  geom_step(data=dfCutbacks,aes(x=MeadActiveVolume/1000000,y=DeliveryDCP/1000000, color = "DCP", linetype="DCP"), size=2, direction="vh") +
+  
+  scale_color_manual(name="Guide1",values = c("Blue", "Red"),breaks=c("DCP", "ISG"), labels= c("Drought Contingency Plan (2019)", "Interim Shortage Guidelines (2008)")) +
+  scale_linetype_manual(name="Guide1",values=c("DCP"="solid","ISG"="longdash"), breaks=c("DCP", "ISG"), labels= c("Drought Contingency Plan (2019)", "Interim Shortage Guidelines (2008)")) +
+  
+  scale_x_continuous(breaks = c(0,5,10,15,20,25),labels=c(0,5,10,15, 20,25), limits = c(0,as.numeric(dfMaxStor %>% filter(Reservoir %in% c("Mead")) %>% select(Volume))),
+                     sec.axis = sec_axis(~. +0, name = "Mead Level (feet)", breaks = dfMeadPoolsPlot$stor_maf, labels = dfMeadPoolsPlot$label)) +
+  
+  guides(fill = guide_legend(keywidth = 1, keyheight = 1),
+         linetype=guide_legend(keywidth = 3, keyheight = 1),
+         colour=guide_legend(keywidth = 3, keyheight = 1)) +
+  
+  theme_bw() +
+  
+  labs(x="Mead Active Storage (MAF)", y="Delivery (MAF per year)") +
+  theme(text = element_text(size=20),  legend.title = element_blank(), legend.text=element_text(size=18), legend.position = c(0.7,0.85))
+
+# Plot 5. Storage to delivery ratio versus volume
+
+sRatioTicks <- seq(from = 0, to = max(dfCutbacks$StoDISG), by = 0.2)
+
+ggplot() +
+  #DCP and ISG step functions
+  geom_line(data=dfCutbacks,aes(x=MeadActiveVolume/1000000,y=StoDISG, color = "ISG", linetype="ISG"), size=2, direction="vh") +
+  geom_line(data=dfCutbacks,aes(x=MeadActiveVolume/1000000,y=StoDDCP, color = "DCP", linetype="DCP"), size=2, direction="vh") +
+  geom_line(data=dfCutbacks,aes(x=MeadActiveVolume/1000000,y=StoDNorm, color = "Norm", linetype="Norm"), size=2, direction="vh") +
+   
+  scale_color_manual(name="Guide1", values = c("Blue", "Red", "Black"), breaks=c("DCP", "ISG", "Norm"), labels= c("Drought Contingency Plan (2019)", "Interim Shortage Guidelines (2008)", "9 MAF/yr delivery (pre 2008)")) +
+  scale_linetype_manual(name="Guide1", values = c("DCP"="solid","ISG"="longdash", "Norm"="twodash"), breaks=c("DCP", "ISG", "Norm"), labels= c("Drought Contingency Plan (2019)", "Interim Shortage Guidelines (2008)", "9 MAF/yr delivery (pre 2008)")) +
+  
+  scale_x_continuous(breaks = c(0,5,10,15,20,25),labels=c(0,5,10,15, 20,25), limits = c(0,as.numeric(dfMaxStor %>% filter(Reservoir %in% c("Mead")) %>% select(Volume))),
+                     sec.axis = sec_axis(~. +0, name = "Mead Level (feet)", breaks = dfMeadPoolsPlot$stor_maf, labels = dfMeadPoolsPlot$label)) +
+  #scale_y_continuous(breaks = sRatioTicks,labels=sRatioTicks, limits = c(min(sRatioTicks),max(sRatioTicks))) +
+
+  guides(fill = guide_legend(keywidth = 1, keyheight = 1),
+         linetype=guide_legend(keywidth = 3, keyheight = 1),
+         colour=guide_legend(keywidth = 3, keyheight = 1)) +
+  
+  theme_bw() +
+  
+  labs(x="Mead Active Storage (MAF)", y="Active Storage Volume to Delivery Ratio\n(years to dead pool)") +
+  theme(text = element_text(size=20),  legend.title = element_blank(), legend.text=element_text(size=18), legend.position = c(0.4,0.85))
+
+
+
+
+cCombScale <- seq(from=0,to=50, by = 5)
+
+#Plot #6. Water Volume (Cutback and Evaporated Volume) versus Combined (Powell and Mead) active storage on the same plot. This assumes Equalization!
+ggplot() +
+  #Error bar
+  geom_errorbar(data=dfCombineEvap, aes(x=CombLiveStor/1000000,ymin=EvapVolMaxLoComb/1000000, ymax=EvapVolMaxUpComb/1000000), width=.2,
+                position=position_dodge(0.2)) +
+  geom_line(data=dfCombineEvap,aes(x=CombLiveStor/1000000,y=EvapVolMaxComb/1000000, color = "Evaporation", linetype="Evaporation"), size=2) +
+  
+  
+  geom_step(data=dfCutbacks,aes(x=2*MeadActiveVolume/1000000,y=Total2007ISG/1000000, color = "ISG", linetype="ISG"), size=2, direction="vh") +
+  geom_step(data=dfCutbacks,aes(x=2*MeadActiveVolume/1000000,y=TotalDCP/1000000, color = "DCP", linetype="DCP"), size=2, direction="vh") +
+  
+  scale_color_manual(name="Guide1",values = c("Red", "Blue", "Black"),breaks=c("DCP", "ISG", "Evaporation"), labels= c("Drought Contingency Plan (2019) Cutbacks", "Interim Shortage Guidelines (2008) Cutbacks", paste("Evaporation",strEvapRangeComb))) +
+  scale_linetype_manual(name="Guide1",values=c("Evaporation"="twodash","DCP"="solid","ISG"="longdash"), breaks=c("DCP", "ISG", "Evaporation"), labels= c("Drought Contingency Plan (2019) Cutbacks", "Interim Shortage Guidelines (2008) Cutbacks", paste("Evaporation",strEvapRangeComb))) +
+  
+  #scale_color_manual(values = c("Blue", "Black", "Red"), breaks=c("DCP", "ISG", "Evaporation"), labels= c("Drought Contingency Plan (2019) Cutbacks", "Interim Shortage Guidelines (2008) Cutbacks", paste("Evaporation",strEvapRangeComb))) +
+  #scale_linetype_manual("Variabler",values=c("Evaporation"="twodash","DCP"="solid","ISG"="longdash"),labels= c("Drought Contingency Plan (2019) Cutbacks", "Interim Shortage Guidelines (2008) Cutbacks", paste("Evaporation",strEvapRangeComb))) +
+  #scale_x_continuous(breaks = c(0,5,10,15,20,25),labels=c(0,5,10,15, 20,25), limits = c(0,as.numeric(dfMaxStor %>% filter(Reservoir %in% c("Mead")) %>% select(Volume)))) + #,   sec.axis = sec_axis(~. +0, name = "Elevation (feet)", breaks = dfMeadPoolsPlot2$stor_maf, labels = dfMeadPoolsPlot2$label)) +
+  scale_x_continuous(breaks = cCombScale,labels=cCombScale, limits = c(0,2*as.numeric(dfMaxStor %>% filter(Reservoir %in% c("Mead")) %>% select(Volume))),
+                     sec.axis = sec_axis(~. +0, breaks = 2*dfMeadPoolsPlot$stor_maf, labels = dfMeadPoolsPlot$labelComb)) +
+  
+  #    scale_y_continuous(breaks = c(0,5.98,9.6,12.2,dfMaxStor[2,2]),labels=c),  sec.axis = sec_axis(~. +0, name = "Mead Level (feet)", breaks = c(0,5.98,9.6,12.2,dfMaxStor[2,2]), labels = c(895,1025,1075,1105,1218.8))) +
+  #scale_x_discrete(breaks=cMonths, labels= cMonthsLabels) +
+  guides(fill = guide_legend(keywidth = 1, keyheight = 1),
+           linetype=guide_legend(keywidth = 3, keyheight = 1),
+           colour=guide_legend(keywidth = 3, keyheight = 1)) +
+  
+  theme_bw() +
+  #coord_fixed() +
+  labs(x="Mead + Powell Active Storage, Equalized (MAF)", y="Water Volume (MAF per year)") +
+  theme(text = element_text(size=20),  legend.title = element_blank(), legend.text=element_text(size=18), legend.position = c(0.25,0.9))
+
+ggsave("EvapCutbacksCombined.png", width=9, height = 6.5, units="in")
+
+dfPowellPools <- dfPowellVals[c(2,6,7,9),]
+#Rename select variables
+cFact <- levels(dfPowellPools$variable)
+cFact <- c(cFact,"Minimum Power", "Dead Pool")
+levels(dfPowellPools$variable) <- cFact
+dfPowellPools[3,c("variable")] <- 'Minimum Power'
+dfPowellPools[4,c("variable")] <- 'Dead Pool'
+
+
+dfPowellPools$Label <- paste(dfPowellPools$variable,'\n',round(dfPowellPools$level,0))
+
+#Plot #7. Powell Evaporated volume versus Powel Active storage
+#Write the data out to CSV
+
+ggplot() +
+  geom_errorbar(data=dfPowellEvap, aes(x=`Live Storage (ac-ft)`/1000000,ymin=EvapVolMaxLo/1000000, ymax=EvapVolMaxUp/1000000), width=.2,
+                position=position_dodge(0.2)) +
+  #geom_line(data=dfMeadEvap,aes(x=`Live Storage (ac-ft)`/1000000,y=EvapVolMax/1000000, color = "Max"), size=2) +
+  #geom_line(data=dfMeadEvap,aes(x=`Live Storage (ac-ft)`/1000000,y=EvapVolMin/1000000, color = "Min"), size=2) +
+  scale_color_manual(values = c("Black", "Grey")) +
+  #scale_x_continuous(breaks = c(0,5,10,15,20,25),labels=c(0,5,10,15, 20,25)) + #,   sec.axis = sec_axis(~. +0, name = "Elevation (feet)", breaks = dfMeadPoolsPlot2$stor_maf, labels = dfMeadPoolsPlot2$label)) +
+  
+  scale_x_continuous(breaks = c(0,5,10,15,20,25),labels=c(0,5,10,15, 20,25), limits = c(0,as.numeric(dfMaxStor %>% filter(Reservoir %in% c("Mead")) %>% select(Volume))),
+                     sec.axis = sec_axis(~. +0, name = "Powell Level (feet)", breaks = dfPowellPools$stor_maf, labels = dfPowellPools$Label)) +
+  
+  
+  
+  theme_bw() +
+  #coord_fixed() +
+  labs(x="Powell Active Storage (MAF)", y="Evaporated Volume (MAF per year)") +
+  theme(text = element_text(size=20),  legend.title = element_blank(), legend.text=element_text(size=14), legend.position = c(0.7,0.8))
+
+#Plot #8. Mead and Powell Evaporated volume versus active storage
+#Build a combined list of levels to put on the top axis
+dfMeadPoolsPlotCond <- dfMeadPoolsPlot[,c(1:5)]
+dfMeadPoolsPlotCond$Label <- dfMeadPoolsPlot$name
+dfPowellPoolsCond <- dfPowellPools[,c(1:5)]
+dfPowellPoolsCond$Label <- dfPowellPools$variable
+
+dfPoolsComb <- rbind(dfMeadPoolsPlotCond,dfPowellPoolsCond)
+
+cRows <- c(1,2,6,7,8,11)
+dfPoolsUse <- dfPoolsComb[cRows,]
+dfPoolsUse$Label[2] <- "Mead Min. Power"
+dfPoolsUse$Label[3] <- "Mead DCP Trigger"
+dfPoolsUse$Label[6] <- "Powell Rated Power"
+
+dfPoolsUse$LabelBr <- str_replace_all(dfPoolsUse$Label," ","\n")
+
+
+ggplot() +
+  #Central lines of evap
+  #Mead
+  geom_line(data=dfMeadEvap,aes(x=`Live Storage (ac-ft)`/1000000,y=EvapVolMax/1000000, color = "Mead"), size=1) +
+  #Powell
+  geom_line(data=dfPowellEvap,aes(x=`Live Storage (ac-ft)`/1000000,y=EvapVolMax/1000000, color = "Powell"), size=1) +
+  
+  #Error bars on evap
+  #Powell first because wider
+  geom_errorbar(data=dfPowellEvap, aes(x=`Live Storage (ac-ft)`/1000000,ymin=EvapVolMaxLo/1000000, ymax=EvapVolMaxUp/1000000), width=.2,
+                position=position_dodge(0.2), color="blue", show.legend = FALSE) +
+  #Mead
+  geom_errorbar(data=dfMeadEvap, aes(x=`Live Storage (ac-ft)`/1000000,ymin=EvapVolMaxLo/1000000, ymax=EvapVolMaxUp/1000000), width=.2,
+                position=position_dodge(0.2), color="red", show.legend = FALSE) +
+ 
+  scale_color_manual(name="Guide1",values = c("red", "blue"), breaks=c("Mead", "Powell"), labels= c(paste("Mead",strEvapRangeMead), paste("Powell",strEvapRangePowell))) +
+  #scale_linetype_manual(name="Guide1",values=c("Mead"="twodash","Powell"="solid"), breaks=c("Mead","Powell"), labels= c(paste("Mead",strEvapRangeMead), paste("Powell",strEvapRangePowell))) +
+  
+  #scale_color_manual(values = c("Blue", "Black", "Red", "Grey"), breaks=c("DCP", "ISG", "Mead", "Powell"), labels= c("Drought Contingency Plan (2019) Cutbacks", "Interim Shortage Guidelines (2008) Cutbacks", paste("Mead",strEvapRangMead))) +
+  #scale_linetype_manual("Variabler",values=c("Evaporation"="twodash","DCP"="solid","ISG"="longdash"),labels= c("Drought Contingency Plan (2019) Cutbacks", "Interim Shortage Guidelines (2008) Cutbacks", paste("Evaporation",strEvapRangeComb))) +
+  scale_x_continuous(breaks = c(0,5,10,15,20,25),labels=c(0,5,10,15, 20,25), limits = c(0,as.numeric(dfMaxStor %>% filter(Reservoir %in% c("Mead")) %>% select(Volume))),
+                    # sec.axis = sec_axis(~. +0, name = "", breaks = dfPoolsUse$stor_maf, labels = dfPoolsUse$LabelBr)) +
+                     sec.axis = sec_axis(~ . /sum(dfMaxStor$Volume[2]), breaks = seq(0,1,by=0.2), name="Fraction of Total Mead Active Storage" )) +
+ 
+  guides(fill = guide_legend(keywidth = 1, keyheight = 1),
+         #linetype=guide_legend(keywidth = 3, keyheight = 1),
+         colour=guide_legend(keywidth = 3, keyheight = 1)) +
+  
+  theme_bw() +
+  #coord_fixed() +
+  labs(x="Active Storage (MAF)", y="Evaporated Volume\n(MAF per year)") +
+  theme(text = element_text(size=20),  legend.title = element_blank(), legend.text=element_text(size=18), legend.position = c(0.3,0.7),
+        #Box around legend
+        panel.border = element_rect(colour = "black", fill=NA),
+        #aspect.ratio = 1, axis.text = element_text(colour = 1, size = 12),
+        legend.background = element_rect(linetype = 1, size = 1, colour = 1))
+
+### Plot 9. Mead and Powell evaporated volume as a percent of total storage. Compare to ICS loss assess rates
+
+#create a data frame for 4 traces - Mead, Powell, 5% Loss 1st Year, 3% Loss Subsequent years
+dfEvapTraceLabels <- data.frame(ActiveStorage = c(5.5,4.5,20,22.5), evaprate = c(8.5, 3.5,2.1,5.6), 
+                                label = c(paste("Mead",strEvapRangeMead), paste("Powell",strEvapRangePowell),"ICS Assess\nSubsequent Years (3%)", "ICS Assess-Year 1 (5%)"),
+                                color = c("red","blue","black","black"))
+
+ggsave("MeadPowellEvap.png", width=9, height = 6.5, units="in")
+
+ggplot() +
+  #Central lines of evap
+  #Mead
+  geom_line(data=dfMeadEvap,aes(x=`Live Storage (ac-ft)`/1000000,y=EvapVolMax/`Total Storage (ac-ft)`*100, color = "Mead"), size=1) +
+  #Powell
+  geom_line(data=dfPowellEvap,aes(x=`Live Storage (ac-ft)`/1000000,y=EvapVolMax/`Total Storage (ac-ft)`*100, color = "Powell"), size=1) +
+  # ICS Initial Assessment
+  geom_line(data=dfPowellEvap,aes(x=`Live Storage (ac-ft)`/1000000,y=5, color = "ICS-1st Year"), size=1) +
+  # ICS Subsequent Assessment
+  geom_line(data=dfPowellEvap,aes(x=`Live Storage (ac-ft)`/1000000,y=3, color = "ICS-Subsequent Years"), size=1) +
+  
+  
+  #Error bars on evap
+  #Powell first because wider
+  geom_errorbar(data=dfPowellEvap, aes(x=`Live Storage (ac-ft)`/1000000,ymin=EvapVolMaxLo/`Total Storage (ac-ft)`*100, ymax=EvapVolMaxUp/`Total Storage (ac-ft)`*100), width=.2,
+                position=position_dodge(0.2), color="blue", show.legend = FALSE) +
+  #Mead
+  geom_errorbar(data=dfMeadEvap, aes(x=`Live Storage (ac-ft)`/1000000,ymin=EvapVolMaxLo/`Total Storage (ac-ft)`*100, ymax=EvapVolMaxUp/`Total Storage (ac-ft)`*100), width=.2,
+                position=position_dodge(0.2), color="red", show.legend = FALSE) +
+  
+  geom_text(data = dfEvapTraceLabels, aes(x=ActiveStorage,y=evaprate,label=label, color=color), size = 6) + 
+  
+  scale_color_manual(name="Guide1",values = c("black","blue","black", "black","black","black", "red"), breaks=c("Mead", "Powell","ICS-Year 1 (5%)", "ICS\nSubsequent Years (3%)")) +
+  #scale_linetype_manual(name="Guide1",values=c("Mead"="twodash","Powell"="solid"), breaks=c("Mead","Powell"), labels= c(paste("Mead",strEvapRangeMead), paste("Powell",strEvapRangePowell))) +
+  
+  #scale_color_manual(values = c("Blue", "Black", "Red", "Grey"), breaks=c("DCP", "ISG", "Mead", "Powell"), labels= c("Drought Contingency Plan (2019) Cutbacks", "Interim Shortage Guidelines (2008) Cutbacks", paste("Mead",strEvapRangMead))) +
+  #scale_linetype_manual("Variabler",values=c("Evaporation"="twodash","DCP"="solid","ISG"="longdash"),labels= c("Drought Contingency Plan (2019) Cutbacks", "Interim Shortage Guidelines (2008) Cutbacks", paste("Evaporation",strEvapRangeComb))) +
+  scale_x_continuous(breaks = c(0,5,10,15,20,25),labels=c(0,5,10,15, 20,25), limits = c(0,as.numeric(dfMaxStor %>% filter(Reservoir %in% c("Mead")) %>% select(Volume))),
+          #           sec.axis = sec_axis(~. +0, name = "", breaks = dfPoolsUse$stor_maf, labels = dfPoolsUse$LabelBr)) +
+                     sec.axis = sec_axis(~ . /sum(dfMaxStor$Volume[2]), breaks = seq(0,1,by=0.2), name="Fraction of Total Mead Active Storage" )) +
+  
+  guides(fill = guide_legend(keywidth = 1, keyheight = 1),
+         #linetype=guide_legend(keywidth = 3, keyheight = 1),
+         color = FALSE) +
+         #colour=guide_legend(keywidth = 3, keyheight = 1)) +
+  
+  #xlim(1,27.5) +
+  
+  theme_bw() +
+  #coord_fixed() +
+  labs(x="Active Storage (MAF)", y="Evaporated Volume per Year\n(% of Total Storage)") +
+  theme(text = element_text(size=18),  legend.title = element_blank(), legend.text=element_text(size=16), legend.position = c(0.3,0.7),
+        #Box around legend
+        panel.border = element_rect(colour = "black", fill=NA),
+        #aspect.ratio = 1, axis.text = element_text(colour = 1, size = 12),
+        legend.background = element_rect(linetype = 1, size = 1, colour = 1))
+
+ggsave("EvapAndICSLossRate.png", width=9, height = 6.5, units="in")
+
+### Figure 10. What is the storage partition between Mead and Powell that minimizes evaporation at each total storage
+
+#Initialize a new data frame
+dfPartitionResults <- data.frame(TotalStorage = c(0),PercentInMead = c(0), MeadEvap = c(0), PowellEvap = c(0), CombEvap = c(0))
+
+#Loop over total storages and partition percents
+for (TotStorage in seq(0,55,by=2.5)){
+  for (PerMead in seq(0,1,by=0.1)) {
+    #Only move forward on physcially feasible combinations:
+    #   1 - Current Mead Storage less than Mead Capacity
+    #   2 - Current Powell Storage less than Powell Capacity
+    
+    nMeadVol <- PerMead*TotStorage 
+    nPowellVol <- TotStorage - nMeadVol
+    
+    if ((nMeadVol <= dfMaxStor$Volume[2]) & (nPowellVol <= dfMaxStor$Volume[1])) {
+      
+      #Interpolate Mead evaporation volume
+      nMeadEvap <- interp2(xi = nMeadVol*1e6,x=dfCombineEvap$`Live Storage (ac-ft)` , y=dfCombineEvap$EvapVolMax, method="linear")
+      #Interpolate Pead evaporation volume
+      nPowellEvap <- interp2(xi = nPowellVol*1e6,x=dfCombineEvap$`Live Storage (ac-ft)` , y=dfCombineEvap$EvapVolMaxPowell, method="linear")
+ 
+      #Create new record
+      dfThisRow <- data.frame(TotalStorage = TotStorage, PercentInMead = PerMead, MeadEvap = nMeadEvap, PowellEvap = nPowellEvap, CombEvap = nMeadEvap+nPowellEvap)
+      #Add new to existing
+      dfPartitionResults <- rbind(dfPartitionResults, dfThisRow)
+      
+      }
+    
+    }
+}
+
+#Remove the first record
+dfPartitionResults <- dfPartitionResults[2:nrow(dfPartitionResults),]
+
+#Add a nice label to show in legend for percent in Mead column
+cStorageInMeadBreaks <- c("0% - All in Powell", "25%", "50% - Equalization", "75%", "100% - All in Mead")
+
+detach(package:plyr)
+
+dfEvapDiff <- dfPartitionResults %>% filter(TotalStorage > 0, TotalStorage==round(TotalStorage)) %>% group_by(TotalStorage) %>% summarize(MinEvap = min(CombEvap, na.rm=TRUE), MaxEvap=max(CombEvap, na.rm=TRUE))
+dfEvapDiff$Diff <- dfEvapDiff$MaxEvap - dfEvapDiff$MinEvap
+
+# Calculate the outer envelop or evaporation errors for each combined active storage
+dfEvapDiff$OuterEvapError <- interp1(x=dfCombineEvap$CombLiveStor/1e6, y=dfCombineEvap$EvapVolMaxUpComb, xi = dfEvapDiff$TotalStorage)
+dfEvapDiff$MidEvap <- interp1(x=dfCombineEvap$CombLiveStor/1e6, y=dfCombineEvap$EvapVolMaxComb, xi = dfEvapDiff$TotalStorage)
+
+dfEvapDiffMelt <- melt(dfEvapDiff[, c("TotalStorage","MinEvap","MaxEvap")], id = c("TotalStorage")) %>% arrange(TotalStorage)
+
+cPercentStorage <- cCombScale/(sum(dfMaxStor$Volume))
+
+palBlues <- brewer.pal(9, "Blues")
+
+#Plot #11. Total evaporated volume as a function combined active storage and storage partition between Mead and Powell (fraction of storage in Mead)
+ggplot() +
+  #Error bar
+  geom_errorbar(data=dfCombineEvap, aes(x=CombLiveStor/1000000,ymin=EvapVolMaxLoComb/1000000, ymax=EvapVolMaxUpComb/1000000), width=.2,
+               position=position_dodge(0.2)) +
+  geom_line(data=dfPartitionResults,aes(x=TotalStorage,y=CombEvap/1000000, color = PercentInMead*100, group=PercentInMead), size=2) +
+  #geom_line(data=dfPartitionResults,aes(x=TotalStorage,y=CombEvap/1000000, color = PercentInMeadLabel, group=PercentInMeadLabel), size=2) +
+  
+  
+  #Show the difference between the two
+  geom_text(data=dfEvapDiff, aes(x=TotalStorage,y=(OuterEvapError)/1e6 + 0.07,label=round(Diff/1e6,2)), size=5, color="red") +
+  
+  #verticle line to show difference
+  geom_line(data=dfEvapDiffMelt, aes(x=TotalStorage,y=value/1e6, group=TotalStorage), size=1.5, color="red") +
+  
+  
+  #Label the top and bottom lines
+  geom_text(data=dfPartitionResults,aes(x=20,y=0.75,label="All in Mead"),size=5, color=palBlues[9]) +
+  geom_text(data=dfPartitionResults,aes(x=15,y=1.1,label="All in Powell"),size=5, color=palBlues[9]) +
+  geom_text(data=dfPartitionResults,aes(x=32.5,y=2.0,label="Difference in evaporated\nvolume between\nAll in Mead and All in Powell\n(MAF per year)"),size=4, color="red") +
+  geom_text(data=dfPartitionResults,aes(x=42.5,y=1.3,label="Error on\nEvapored Volume"),size=5, color="black") +
+  
+  #geom_step(data=dfCutbacks,aes(x=2*MeadActiveVolume/1000000,y=Total2007ISG/1000000, color = "ISG", linetype="ISG"), size=2, direction="vh") +
+  #geom_step(data=dfCutbacks,aes(x=2*MeadActiveVolume/1000000,y=TotalDCP/1000000, color = "DCP", linetype="DCP"), size=2, direction="vh") +
+  
+  #scale_color_manual(name="Guide1",values = c("Blue", "Black", "Red"),breaks=c("DCP", "ISG", "Evaporation"), labels= c("Drought Contingency Plan (2019) Cutbacks", "Interim Shortage Guidelines (2008) Cutbacks", paste("Evaporation",strEvapRangeComb))) +
+  #scale_linetype_manual(name="Guide1",values=c("Evaporation"="twodash","DCP"="solid","ISG"="longdash"), breaks=c("DCP", "ISG", "Evaporation"), labels= c("Drought Contingency Plan (2019) Cutbacks", "Interim Shortage Guidelines (2008) Cutbacks", paste("Evaporation",strEvapRangeComb))) +
+  
+  #Continuous color scale by Mead Percent
+  scale_color_continuous(name="Storage in Mead (%)", low=palBlues[1],high=palBlues[9], na.value="White", aesthetics="color", labels = cStorageInMeadBreaks) +
+  #scale_color_continuous(low=palBlues[1],high=palBlues[9], na.value="White", aesthetics="color") +
+  
+  scale_x_continuous(breaks = cCombScale,labels=cCombScale, limits = c(0,2*as.numeric(dfMaxStor %>% filter(Reservoir %in% c("Mead")) %>% select(Volume))),
+                     sec.axis = sec_axis(~ . /sum(dfMaxStor$Volume), breaks = seq(0,1,by=0.2), name="Fraction of Total Active Storage" )) +
+  
+  guides(color=guide_legend(keywidth = 3, keyheight = 1)) +
+  
+  theme_bw() +
+  #coord_fixed() +
+  labs(x="Mead + Powell Active Storage (MAF)", y="Evaporated Volume (MAF per year)") +
+  theme(text = element_text(size=18), legend.text=element_text(size=14), legend.position = c(0.18,0.8))
+
+ggsave("EvapStoragePartition.png", width=9, height = 6.5, units="in")
+
+
+

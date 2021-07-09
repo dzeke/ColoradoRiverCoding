@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1625177378790.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "5279477A",
+    "lastKnownWriteTime" : 8017342125385807465,
+    "last_content_update" : 1625177378790,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "BA1FE7D9",
+        "caption" : "dfKeyTraceLabels",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=dfKeyTraceLabels&cache_key=BA1FE7D9",
+        "displayedObservations" : 4,
+        "environment" : "",
+        "object" : "dfKeyTraceLabels",
+        "preview" : 0,
+        "totalObservations" : 4,
+        "variables" : 4
+    },
+    "relative_order" : 8,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

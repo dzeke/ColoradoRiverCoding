@@ -1,0 +1,313 @@
+# MeadStorage.R
+#
+# Plots that show the combined storage of Lake Powell and Lake Mead.
+#
+# 1. Import the reservoir elevation-volume curves
+# 2. Import historical reservoir storage data
+# 3. Import the conservation account data for Lake Mead
+#
+# This is a beginning R-programming effort! There could be lurking bugs or basic coding errors that I am not even aware of.
+# Please report bugs/feedback to me (contact info below)
+#
+# David E. Rosenberg
+# July 6, 2021
+# Utah State University
+# david.rosenberg@usu.edu
+
+rm(list = ls())  #Clear history
+
+# Load required libraies
+
+if (!require(tidyverse)) { 
+  install.packages("tidyverse", repos="http://cran.r-project.org") 
+  library(tidyverse) 
+}
+
+if (!require(readxl)) { 
+  install.packages("readxl", repos="http://cran.r-project.org") 
+  library(readxl) 
+}
+
+  
+if (!require(RColorBrewer)) { 
+  install.packages("RColorBrewer",repos="http://cran.r-project.org") 
+  library(RColorBrewer) # 
+}
+
+if (!require(dplyr)) { 
+  install.packages("dplyr",repos="http://cran.r-project.org") 
+  library(dplyr) # 
+}
+
+if (!require(expss)) { 
+  install.packages("expss",repos="http://cran.r-project.org") 
+  library(expss) # 
+}
+
+if (!require(reshape2)) { 
+  install.packages("reshape2", repos="http://cran.r-project.org") 
+  library(reshape2) 
+}
+
+if (!require(pracma)) { 
+  install.packages("pracma", repos="http://cran.r-project.org") 
+  library(pracma) 
+}
+
+if (!require(lubridate)) { 
+  install.packages("lubridate", repos="http://cran.r-project.org") 
+  library(lubridate) 
+}
+
+if (!require(directlabels)) { 
+  install.packages("directlabels", repo="http://cran.r-project.org")
+  library(directlabels) 
+}
+
+
+if (!require(plyr)) { 
+  install.packages("plyr", repo="http://cran.r-project.org")
+  library(plyr) 
+}
+
+if (!require(ggrepel)) { 
+  devtools::install_github("slowkow/ggrepel")
+  library(ggrepel) 
+}
+
+
+
+# New function interpNA to return NAs for values outside interpolation range (from https://stackoverflow.com/questions/47295879/using-interp1-in-r)
+interpNA <- function(x, y, xi = x, ...) {
+  yi <- rep(NA, length(xi));
+  sel <- which(xi >= range(x)[1] & xi <= range(x)[2]);
+  yi[sel] <- interp1(x = x, y = y, xi = xi[sel], ...);
+  return(yi);
+}
+
+
+
+###This reservoir data comes from CRSS. It was exported to Excel.
+
+# Read elevation-storage data in from Excel
+sExcelFile <- 'MeadDroughtContingencyPlan.xlsx'
+dfMeadElevStor <- read_excel(sExcelFile, sheet = "Mead-Elevation-Area",  range = "A4:D676")
+dfPowellElevStor <- read_excel(sExcelFile, sheet = 'Powell-Elevation-Area',  range = "A4:D689")
+
+# Read in Reservoir Pools Volumes / Zones from Excel
+dfPoolVols <- read_excel(sExcelFile, sheet = "Pools",  range = "D31:O43")
+# Read in Reserved Flood Storage
+dfReservedFlood <- read_excel(sExcelFile, sheet = "Pools",  range = "C46:E58")
+#Convert dates to months
+dfReservedFlood$month_num <- month(as.POSIXlt(dfReservedFlood$Month, format="%Y-%m-%Y"))
+
+### This historical reservoir level data comes from USBR websites.
+
+
+# File name to read in Mead end of month reservoir level in feet - cross tabulated by year (1st column) and month (subsequent columns)
+#    LAKE MEAD AT HOOVER DAM, END OF MONTH ELEVATION (FEET), Lower COlorado River Operations, U.S. Buruea of Reclamation
+#    https://www.usbr.gov/lc/region/g4000/hourly/mead-elv.html
+
+sMeadHistoricalFile <- 'MeadLevel.xlsx'
+
+
+# Read in the historical Mead data
+dfMeadHistorical <- read_excel(sMeadHistoricalFile)
+
+#Convert cross-tabulated Mead months into timeseries
+dfMeadHist <- melt(dfMeadHistorical, id.vars = c("Year"))
+dfMeadHist$BeginOfMonStr <- paste(dfMeadHist$Year,dfMeadHist$variable,"1",sep="-")
+dfMeadHist$BeginOfMon <- as.Date(dfMeadHist$BeginOfMonStr, "%Y-%b-%d")
+dfMeadHist$BeginNextMon <- dfMeadHist$BeginOfMon %m+% months(1)
+#Filter out NAs
+dfMeadHist <- dfMeadHist %>% filter(!is.na(dfMeadHist$value))
+#Filter out low storages below min
+dfMeadHist <- dfMeadHist %>% filter(dfMeadHist$value > min(dfMeadElevStor$`Elevation (ft)`))
+dfMeadHist$Stor <- interp1(xi = dfMeadHist$value,y=dfMeadElevStor$`Live Storage (ac-ft)`,x=dfMeadElevStor$`Elevation (ft)`, method="linear")
+
+dfJointStorage <- dfMeadHist[,c("BeginNextMon","Stor","BeginOfMon")]
+dfJointStorage$MeadStorage <- dfJointStorage$Stor/1000000
+dfJointStorage$DateAsValue <- dfJointStorage$BeginOfMon
+#Add a column for decade
+dfJointStorage$decade <- round_any(as.numeric(format(dfJointStorage$DateAsValue,"%Y")),10,f=floor)
+#dfJointStorage$DecadeAsClass <- dfJointStorage %>% mutate(category=cut(decade, breaks=seq(1960,2020,by=10), labels=seq(1960,2020,by=10)))
+
+# Define maximum storages
+dfMaxStor <- data.frame(Reservoir = c("Powell","Mead"),Volume = c(24.32,25.9))
+
+#################################################
+#### MEAD STORAGE OVER TIME
+#################################################
+
+# Combined, Powell, and Mead on one plot
+ggplot() +
+  #Mead Storage
+  geom_line(data=dfJointStorage,aes(x=DateAsValue,y=MeadStorage, color="Mead"), size=2) +
+
+    #geom_area(data=dfPlotData,aes(x=month,y=stor_maf, fill = variable), position='stack') +
+  scale_y_continuous(breaks = seq(0,50,by=10),labels=seq(0,50,by=10)) +
+  scale_x_date(limits= c(as.Date("1968-01-01"), as.Date("2030-01-01"))) +
+  
+  theme_bw() +
+  #coord_fixed() +
+  labs(x="", y="Active Storage (MAF)", color = "Reservoir") +
+  theme(text = element_text(size=20), legend.title=element_blank(), legend.text=element_text(size=18))
+  #theme(text = element_text(size=20), legend.text=element_text(size=16)
+
+
+### Combined plot for proposal that shows:
+###    - combined protection level
+###    - Lake Mead conservation account balances
+
+## Read in ICS account balance data
+sExcelFile <- 'IntentionallyCreatedSurplus-Summary.xlsx'
+dfICSBalance <- read_excel(sExcelFile, sheet = "Sheet1",  range = "B6:G17")
+nMaxYearICSData <- max(dfICSBalance$Year)
+#Duplicate the largest year and set the year to largest value plus 1
+dfICSBalance <- rbind(dfICSBalance, dfICSBalance %>% filter(Year == nMaxYearICSData) %>% mutate(Year = nMaxYearICSData+1))
+#Order by decreasing year
+dfICSBalance <- dfICSBalance[order(-dfICSBalance$Year),]
+#Turn time into a index by month. Year 1 = 1, Year 2 = 13
+dfICSBalance$MonthIndex <- 12*(dfICSBalance$Year - dfICSBalance$Year[nrow(dfICSBalance)]) + 12
+
+#Turn the ICS year into monthly
+dfICSmonths = expand.grid(Year = unique(dfICSBalance$Year), month = 1:12)
+dfICSmonths$MonthIndex <- 12*(dfICSmonths$Year - dfICSmonths$Year[nrow(dfICSmonths)]) + dfICSmonths$month
+#Filter off first year but keep last month
+dfICSmonths <- dfICSmonths %>% filter(dfICSmonths$MonthIndex >= 12)
+#Calculate a date
+dfICSmonths$Date <- as.Date(sprintf("%d-%d-01",dfICSmonths$Year, dfICSmonths$month))
+
+
+#Interpolate Lower Basin conservation account balances by Month
+dfICSmonths$LowerBasinConserve <- interp1(xi = dfICSmonths$MonthIndex, x=dfICSBalance$MonthIndex, y = dfICSBalance$Total, method="linear" )
+#Interpolate Mexico conservation account balance by Month
+dfICSmonths$MexicoConserve <- interp1(xi = dfICSmonths$MonthIndex, x=dfICSBalance$MonthIndex, y = dfICSBalance$Mexico, method="linear" )
+
+## Calculate the Protection elevation
+dfProtectLevel <- data.frame(Reservoir = c("Powell", "Mead"), Elevation = c(3525, 1020))
+#Interpolate storage from elevation
+dfProtectLevel$Volume[1] <- interpNA(xi = dfProtectLevel$Elevation[1], x= dfPowellElevStor$`Elevation (ft)`, y=dfPowellElevStor$`Live Storage (ac-ft)`)
+dfProtectLevel$Volume[2] <- interpNA(xi = dfProtectLevel$Elevation[2], x= dfMeadElevStor$`Elevation (ft)`, y=dfMeadElevStor$`Live Storage (ac-ft)`)
+
+nProtectCombined <- sum(dfProtectLevel$Volume)/1e6
+nCapacityCombined <- (dfMaxStor[1,2] + dfMaxStor[2,2])
+nLastVolumeCombined <- dfJointStorage$PowellStorage[629] + dfJointStorage$MeadStorage[629]
+
+#Data frame of key dates
+dfKeyDates <- data.frame(Date = as.Date(c("2007-01-01", "2026-01-01")), Label = c("Interim\nGuidelines", "Guidelines\nExpire"))
+#Data frame of key elevations
+dfKeyVolumes <- data.frame(Volume = c(nProtectCombined, nCapacityCombined), Label = c("Protect","Combined\nCapacities"))
+#Data frame of key traces
+dfKeyTraceLabels <- data.frame(Label = c("Protect Mindset", "Available\nWater", "Lake Mead\nConservation\nAccounts", "Deficit Mindset"),
+                                Volume = c(nProtectCombined/2, 18, 25, 40), xPosition = rep(2007 + (nMaxYearICSData - 2007)/2,4),
+                                Size = c(6, 6, 5, 6))
+
+#Adjust the x positions of the Available water and LB + MX conserved water
+dfKeyTraceLabels$xPosition[2] <- 2009
+dfKeyTraceLabels$xPosition[3] <- (2026 + nMaxYearICSData + 0.825 )/2
+#Data frame of end arrows
+nArrowOffset <- 4
+dfEndArrows <- data.frame(Label = c("Recover?", "Stabilize?", "Draw down?"), Ystart = rep(nLastVolumeCombined,3), 
+                            Xstart = as.Date(rep("2022-01-01",3)), Xend = as.Date(rep("2025-01-01",3)),
+                            Yend = c(nLastVolumeCombined + nArrowOffset, nLastVolumeCombined, nLastVolumeCombined - nArrowOffset),
+                            Angle = c(20,0,-20), Yoffset = c(0.1, 0, -0.1))
+#Calculate the mid date
+dfEndArrows$MidDate <- dfEndArrows$Xstart + floor((dfEndArrows$Xend - dfEndArrows$Xstart)/2)
+
+#Left join the ICS data to the joint storage data to get the entire date range
+dfJointStorage <- left_join(dfJointStorage, dfICSmonths, by=c("DateAsValue" = "Date"))
+#Convert NAs to zeros
+dfJointStorage$Year <- year(dfJointStorage$DateAsValue)
+dfJointStorageClean <- dfJointStorage[,2:ncol(dfJointStorage)] %>% filter(Year <= nMaxYearICSData)
+dfJointStorageClean[is.na(dfJointStorageClean)] <- 0
+dfTemp <- dfJointStorage %>% filter(Year <= nMaxYearICSData) %>% select(DateAsValue)
+dfJointStorageClean$DateAsValue <- dfTemp$DateAsValue
+
+#Add rows for years 2022 to 2030 with all zeros
+dfYearsAdd <- data.frame(Year = seq(nMaxYearICSData+1, nMaxYearICSData + 10, by = 1))
+dfJointStorageZeros <- dfJointStorageClean[1,1:(ncol(dfJointStorageClean)-1)]
+dfJointStorageZeros[1, ] <- 0
+dfJointStorageZeros <- as.data.frame(lapply(dfJointStorageZeros,  rep, nrow(dfYearsAdd)))
+dfJointStorageZeros$Year <- dfYearsAdd$Year
+#Calculate a date
+dfJointStorageZeros$DateAsValue <- as.Date(sprintf("%.0f-01-01", dfJointStorageZeros$Year))
+#Bind to the Clean data frame
+dfJointStorageClean <- rbind(dfJointStorageClean, dfJointStorageZeros)
+
+
+#New data frame for area
+dfJointStorageStack <- dfJointStorageClean
+
+dfJointStorageStack$Protect <- nProtectCombined
+dfJointStorageStack$LowerBasin <- ifelse(dfJointStorageStack$Year <= nMaxYearICSData, dfJointStorageStack$LowerBasinConserve/1e6, 0)
+dfJointStorageStack$Mexico <- ifelse(dfJointStorageStack$Year <= nMaxYearICSData, dfJointStorageStack$MexicoConserve/1e6, 0)
+dfJointStorageStack$AvailableWater <- ifelse(dfJointStorageStack$Year <= nMaxYearICSData, dfJointStorageStack$PowellStorage + dfJointStorageStack$MeadStorage - dfJointStorageStack$Protect - dfJointStorageStack$LowerBasin - dfJointStorageStack$Mexico, 0)
+dfJointStorageStack$Capacity <- ifelse(dfJointStorageStack$Year <= nMaxYearICSData, nCapacityCombined - dfJointStorageStack$AvailableWater - dfJointStorageStack$Protect - dfJointStorageStack$LowerBasin - dfJointStorageStack$Mexico, 0)
+
+#Melt the data
+dfJointStorageStackMelt <- melt(dfJointStorageStack, id.vars = c("DateAsValue"), measure.vars = c("Protect","LowerBasin", "Mexico", "AvailableWater", "Capacity"))
+#Specify the order of the variables
+dfJointStorageStackMelt$variable <- factor(dfJointStorageStackMelt$variable, levels=c("Capacity","AvailableWater", "Mexico", "LowerBasin", "Protect"))
+
+#Get the color palettes
+#Get the blue color bar
+pBlues <- brewer.pal(9,"Blues")
+pReds <- brewer.pal(9,"Reds")
+
+ggplot() +
+  #Combined Storage
+  #As area
+  geom_area(data=dfJointStorageStackMelt, aes(x=DateAsValue, y=value, fill=variable, group=variable)) +
+  #As line
+  geom_line(data=dfJointStorageStack %>% filter(Year < nMaxYearICSData + 1),aes(x=DateAsValue,y=MeadStorage+PowellStorage, color="Combined"), size=2, color = "Black") +
+  #geom_area(data=dfPlotData,aes(x=month,y=stor_maf, fill = variable), position='stack') +
+  
+  #lines for max capacity and protect elevation
+  geom_hline(data=dfKeyVolumes, aes(yintercept = Volume), linetype="longdash", size=1) +
+  #lines for Interim Guidelines and Expiry
+  geom_vline(data=dfKeyDates, aes(xintercept = Date), linetype = "dashed", size=1, color = pReds[9]) +
+
+  #Labels for the areas
+  geom_text(data=dfKeyTraceLabels %>% filter(Label != dfKeyTraceLabels$Label[3]), aes(x=as.Date(sprintf("%.0f-01-01",xPosition)), y=Volume, label=as.character(Label)), size = 6, fontface="bold") +
+  geom_text(data=dfKeyTraceLabels %>% filter(Label == dfKeyTraceLabels$Label[3]), aes(x=as.Date(sprintf("%.0f-01-01",xPosition)), y=Volume, label=as.character(Label)), size = 4.5, fontface="bold", color = pBlues[5]) +
+ 
+  #Arrow Lake Mead conservation account label
+  geom_curve(data = dfKeyTraceLabels %>% filter(Label == dfKeyTraceLabels$Label[3]), aes(x=as.Date(sprintf("%.0f-01-01",xPosition)), xend = as.Date(sprintf("%.0f-02-01",nMaxYearICSData+1)), y=20.5, yend = 13), curvature = -0.5, color = pBlues[5], size = 1.0, arrow = arrow(length = unit(0.03, "npc"))) +
+  
+  
+  #Label what is next
+  #geom_text(data = dfEndArrows %>% filter(Label == "Recover?"), aes(x= MidDate, y = Ystart, label = "Recover?\nStabilize?\nDraw down?"), size = 5, color = "Black") +
+  #Label the arrows
+  #geom_text(data = dfEndArrows, aes(x = Xstart, y = (Ystart+Yend)/2 + Yoffset, label = Label, angle = Angle), size = 5, color = "Black", hjust = 0) +
+  
+  #geom_segment(aes(x=as.Date("2022-01-01"), xend=as.Date("2025-01-01"), y=12, yend = 14, colour = palBlues[7], arrow = arrow())) +
+  
+  
+    
+  #Scales
+  scale_x_date(limits= c(as.Date("1990-01-01"), as.Date("2026-01-01")), sec.axis = sec_axis(~. +0, name = "", breaks = dfKeyDates$Date, labels = as.character(dfKeyDates$Label))) +
+  #scale_y_continuous(limits = c(0,NA)) +
+  # secondary axis is not working
+  # scale_y_continuous(limits = c(0,NA), sec_axis(~. +0, name = "", breaks = dfKeyVolumes$Volume, labels = dfKeyVolumes$Volume)) +
+  #Secondary axis as percent
+  scale_y_continuous(limits = c(0,NA), sec.axis = sec_axis(~ . /nCapacityCombined*100, name = "Percent of Combined Capacity", breaks = seq(0,100,by=25), labels = sprintf("%d%%", seq(0,100,by=25)))) +
+  
+  scale_fill_manual(values=c(pReds[3], pBlues[3], pBlues[5], pBlues[5], pBlues[7])) +
+  
+  #    scale_y_continuous(breaks = c(0,5.98,9.6,12.2,dfMaxStor[2,2]),labels=c(0,5.98,9.6,12.2,dfMaxStor[2,2]),  sec.axis = sec_axis(~. +0, name = "Mead Level (feet)", breaks = c(0,5.98,9.6,12.2,dfMaxStor[2,2]), labels = c(895,1025,1075,1105,1218.8))) +
+  #scale_x_discrete(breaks=cMonths, labels= cMonthsLabels) +
+  #scale_x_continuous(breaks=seq(1960,2020,by=10), labels= seq(1960,2020,by=10)) +
+  
+  
+  #scale_fill_manual(breaks=c(1:6),values = palBlues[2:7]) + #,labels = variable) + 
+  theme_bw() +
+  #coord_fixed() +
+  labs(x="", y="Combined Active Storage\n(MAF)", color = "") +
+  theme(text = element_text(size=20), legend.title=element_blank(), legend.position ="none")
+#theme(text = element_text(size=20), legend.text=element_text(size=16)
+
+
+
+
+
