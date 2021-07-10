@@ -8,7 +8,7 @@ Most of these efforts are beginning coding efforts and works in progress.
 
 Dr. David E. Rosenberg
 
-david.rosenberg@usu.edu
+david.rosenberg@usu.edu | [@WaterModeler](https://twitter.com/WaterModeler)
 
 July 9, 2021
 
