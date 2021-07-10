@@ -15,6 +15,8 @@ year-to-year water consumption and conservation decsions while they track other 
 Players can explore water conservation and consumptive use strategies for different scenarios of natural flow and different political decisions
 such as include more parties or stakeholders, split existing reservoir storage among users, split future inflows among users, and split the combined reservoir storage among reservoirs. 
 
+Open the file **[PilotFlexAccounting-KeyIdeas.pdf](https://github.com/dzeke/ColoradoRiverCoding/raw/main/PilotFlexAccounting/PilotFlexAccounting-KeyIdeas.pdf)** for visuals of the above concepts.
+
 **Can flex accounting encourage more water conservation in the Colorado River basin?** Follow the directions below to download and try out the tool by yourself or with colleagues, friends, or family.
 After you complete, please share feedback -- things you like, things to improve -- with David Rosenberg at david.rosenberg@usu.edu.
 
