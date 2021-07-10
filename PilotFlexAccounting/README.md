@@ -1,7 +1,7 @@
 # Pilot flex accounting to encourage more water conservation in a combined Lake Powell-Lake Mead system
 
-### Quick link to Download: [Pilot flex accounting tool](https://github.com/dzeke/ColoradoRiverCoding/raw/master/PilotFlexAccounting/PilotFlexAccounting-CombinedPowellMead.xlsx)
-
+### Quick link to Download: [Pilot flex accounting tool](https://github.com/dzeke/ColoradoRiverCoding/raw/main/PilotFlexAccounting/PilotFlexAccounting-CombinedPowellMead.xlsx)
+														
 This folder contains a pilot flex water accounting tool to encourage more water conservation in a combined Lake Powell-Lake Mead system.
 The tool gives each party more flexibility than current Colorado River operations to make individual water consumption, conservation, and reservoir storage decisions within the party's available water independent of other parties.
 Each party's available water is their account balance plus share of inflow, minus share of reservoir evaporation, plus water purchases, and minus water sales.
@@ -33,7 +33,7 @@ The tool is organized as a spreadsheet.
 1. ~ 1.5 to 2 hours (may split over multiple periods).
 
 ## Directions to Use
-1. Download the file **[PilotFlexAccounting-CombinedPowellMead.xlsx](https://github.com/dzeke/ColoradoRiverCoding/raw/master/PilotFlexAccounting/PilotFlexAccounting-CombinedPowellMead.xlsx)** to your computer.
+1. Download the file **[PilotFlexAccounting-CombinedPowellMead.xlsx](https://github.com/dzeke/ColoradoRiverCoding/raw/main/PilotFlexAccounting/PilotFlexAccounting-CombinedPowellMead.xlsx)** to your computer.
 1. Move the Excel file to be a Google Sheet in a Google Drive folder associated with your Google Account.
 1. Invite the other players to join the Google Sheet. Copy + share the URL to the Sheet. Or in the upper right of the Sheet, click the **Share** button, add emails, and set permissions so players can access the sheet.
 1. In the Google Sheet, select the *ReadMe-Directions* worksheet. Follow the further directions to start and complete the role play.
@@ -42,15 +42,15 @@ The tool is organized as a spreadsheet.
 Please email feedback -- things you like, things to improve -- about the pilot flex water accounting tool or the role play to David Rosenberg at david.rosenberg@usu.edu. Or Tweet at [@WaterModeler](https://twitter.com/WaterModeler).
  
 ## Requested Citation
-David E. Rosenberg (2021). "Pilot flex accounting to encourage more water conservation in a combined Lake Powell-Lake Mead system." Utah State University, Logan, UT. https://github.com/dzeke/ColoradoRiverCoding/tree/master/PilotFlexAccounting.
+David E. Rosenberg (2021). "Pilot flex accounting to encourage more water conservation in a combined Lake Powell-Lake Mead system." Utah State University, Logan, UT. https://github.com/dzeke/ColoradoRiverCoding/tree/main/PilotFlexAccounting.
 
 ## Explanation of Contents
-1. **[PilotFlexAccounting-CombinedPowellMead.xlsx](https://github.com/dzeke/ColoradoRiverCoding/raw/master/PilotFlexAccounting/PilotFlexAccounting-CombinedPowellMead.xlsx)** - An Excel file with the pilot flex accounting tool and directions for the role play. For syncronous access by multiple players, download and move this file into a Google Sheet. See the ReadMe-Directions worksheet for directions.
-1. **[PilotFlexAccounting-KeyIdeas.pdf](https://github.com/dzeke/ColoradoRiverCoding/raw/master/PilotFlexAccounting/PilotFlexAccounting-KeyIdeas.pdf)** - A PDF file with 5 slides that show key ideas for the pilot flex accounting tool.
+1. **[PilotFlexAccounting-CombinedPowellMead.xlsx](https://github.com/dzeke/ColoradoRiverCoding/raw/main/PilotFlexAccounting/PilotFlexAccounting-CombinedPowellMead.xlsx)** - An Excel file with the pilot flex accounting tool and directions for the role play. For syncronous access by multiple players, download and move this file into a Google Sheet. See the ReadMe-Directions worksheet for directions.
+1. **[PilotFlexAccounting-KeyIdeas.pdf](https://github.com/dzeke/ColoradoRiverCoding/raw/main/PilotFlexAccounting/PilotFlexAccounting-KeyIdeas.pdf)** - A PDF file with 5 slides that show key ideas for the pilot flex accounting tool.
 1. **Hydrology** - Folder with Excel files used to generate hydrologic scenarios. CRB_29gages.xlsx: Listing of gages in the Colorado River basin used to estimate natural flow. NaturalFlows1906-2018_20200110.xlsx: Natural flow hydrology downloaded from the USBR website and modified to pick out particular 10- and 20- year sequences of flows from the observed and paleo reconstructed records.
-1. **OldVersions** - Folder with older versions of the interactive water budget.
+1. **OldVersions** - Folder with older versions of the pilot flex accounting tool.
 
 ## License
-BSD-3-Clause (https://github.com/dzeke/ColoradoRiverCoding/blob/master/LICENSE). Available to use, modify, distribute, etc. for free.
+BSD-3-Clause (https://github.com/dzeke/ColoradoRiverCoding/blob/main/LICENSE). Available to use, modify, distribute, etc. for free.
 All modified or derivative products must use the same BSD-3-Clause license. This license keeps this work in the public domain forever.
 
