@@ -51,8 +51,5 @@ Additionally generates plots that show the daily range of release temperature (P
 7. Select all the code in the file (ctrl-A) and click **Run** (row below the file tabs).
 8. R studio will run the code, generate the figures, and store the figures as .png files in the same directory. 
 
-## Recommended Citation
-Rosenberg, D and (2021) "Appendix 2: How does Lake Powell water storage influence release temperatures and Grand Canyon fishes?" in Wheeler et al (2021) "White Paper 6. Alternative Management Paradigms for the Future of the Colorado and Green Rivers". https://qcnr.usu.edu/coloradoriver/futures.
-
-## Working version of repository (for up-to-date version of code/data/etc)
-https://github.com/dzeke/ColoradoRiverCoding/tree/main/LakePowellTemperatureScenarios.
+## Requested Citation
+Rosenberg, D and Lindsey Bruckerhoff(2021) "Appendix 2: How does Lake Powell water storage influence release temperatures and Grand Canyon fishes?" in Wheeler et al (2021) "White Paper 6. Alternative Management Paradigms for the Future of the Colorado and Green Rivers". https://qcnr.usu.edu/coloradoriver/futures.
