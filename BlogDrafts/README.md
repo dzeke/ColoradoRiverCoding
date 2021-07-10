@@ -3,8 +3,9 @@
 Drafts and preprints of blogs in the series "Encouraging more Water Conservation in the Colorado River Basin" before they are published.
 
 Dr. David E. Rosenberg
-david.rosenberg@usu.edu | @WaterModeler
-July 1, 2021
+
+david.rosenberg@usu.edu | [@WaterModeler](https://twitter.com/WaterModeler)
+
 Utah State University
 
 ## Requested Citation
