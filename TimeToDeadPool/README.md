@@ -10,9 +10,6 @@ April 3, 2020
 
 Utah State University
 
-## Recommended Citation
-David E. Rosenberg (2019). "Time to Mead Dead Pool". Utah State University. Logan, Utah. https://github.com/dzeke/ColoradoRiverFutures.
-
 ## Description
 **TimeToDeadPool** is a steady deterministic analysis of the number of years for Lake Mead to hit one of the following conditions given a starting storage volume, steady inflow, and steady demand that includes 2019 Drought Contingency Plan reductions when Mead falls
 to specified storage levels. Steady inflow means the same inflow volume year after year after year. The stop conditions are to:
@@ -40,3 +37,6 @@ NOTE: Code does not currently work
 ## To Do
 1. Automate results for different reservoir evaporation rates (line 586)
 1. Autoamte results to recover from a specified starting storage (line 577)
+
+## Recommended Citation
+David E. Rosenberg (2019). "Time to Mead Dead Pool". Utah State University. Logan, Utah. https://github.com/dzeke/ColoradoRiverCoding/tree/main/TimeToDeadPool.

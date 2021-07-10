@@ -55,4 +55,4 @@ Additionally generates plots that show the daily range of release temperature (P
 Rosenberg, D and (2021) "Appendix 2: How does Lake Powell water storage influence release temperatures and Grand Canyon fishes?" in Wheeler et al (2021) "White Paper 6. Alternative Management Paradigms for the Future of the Colorado and Green Rivers". https://qcnr.usu.edu/coloradoriver/futures.
 
 ## Working version of repository (for up-to-date version of code/data/etc)
-https://github.com/dzeke/ColoradoRiverFutures/tree/master/LakePowellTemperatureScenarios.
+https://github.com/dzeke/ColoradoRiverCoding/tree/main/LakePowellTemperatureScenarios.

@@ -10,9 +10,6 @@ The last plot can help estimate the water volume potentially saved if Lower Basi
 
 Data comes from The main CRSS data file DIT_CRSS_LBshortageEIS_2016UCRC_v1.8. This data represents the 2016 Upper Colorado River schedule (for upper basin states).
 
-## Recommended Citation
-Rosenberg (2021). "Lower Basin Water Uses from CRSS". Utah State University, Logan, Utah. https://github.com/dzeke/ColoradoRiverFutures/tree/master/LowerBasinAgUses.
-
 ## Explanation of Contents
 
 1. **PlotLowerBasinAgUsers.r** - The R script to run
@@ -25,3 +22,6 @@ Rosenberg (2021). "Lower Basin Water Uses from CRSS". Utah State University, Log
 1. In your file browser, double click the file LowerBasinAgUses.Rproject. This will open the project workspace and the script files
 1. Select all the code in the file PlotLowerBasinAgUsers.r and run (Cntrol - Enter or the Run icon in the top right). The figures should generate.
 1. Alternatively, Switch to the LowerBasinAgUses.Rmd pane. Then click the Knit icon above the code. The pdf file should generate.
+
+## Recommended Citation
+Rosenberg (2021). "Lower Basin Water Uses from CRSS". Utah State University, Logan, Utah. https://github.com/dzeke/ColoradoRiverCoding/tree/main/LowerBasinAgUses.

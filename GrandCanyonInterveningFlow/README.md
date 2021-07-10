@@ -39,8 +39,8 @@ Tarbotton (2020)
 1. **Supplementary_file-WangSchmidt.xlsx** - The excel file from Wang and Schmidt (2020) that compares USGS and Natural flow data for their period of analysis. See readme worksheet for more info.
 1. **USGSInterveningFlowData.xlsx** - Excel data with USGS data for Colorado River near Peach Springs [9404200], Colorado River at Lees Feery [9382000], and Virign River at Littlefield [9415000] downloaded from USGS data service.
 
-## Recommended Citation
-David E. Rosenberg (2020). "Grand Canyon Intervening Flow". Utah State University. Logan, Utah. https://github.com/dzeke/GrandCanyonInterveningFlow.
+## Requested Citation
+David E. Rosenberg (2020). "Grand Canyon Intervening Flow". Utah State University. Logan, Utah. https://github.com/dzeke/ColoradoRiverCoding/tree/main/GrandCanyonInterveningFlow.
 
 ## References
 Prairie, J. (2020). "Colorado River Basin Natural Flow and Salt Data." U.S. Bureau of Reclamation. https://www.usbr.gov/lc/region/g4000/NaturalFlow/current.html.
