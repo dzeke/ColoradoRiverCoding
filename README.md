@@ -1,6 +1,6 @@
-# Colorado River Futures - Code Projects
+# Colorado River Coding 
 
-Small and bigger coding efforts in support of work on the Colorado River. Some of the figures generated appear in papers on the Colorado River Futures project website (https://qcnr.usu.edu/coloradoriver/futures)
+Small and bigger coding efforts in support of work on the Colorado River. 
 
 All coding efforts in R Studio.
 
@@ -10,12 +10,9 @@ Dr. David E. Rosenberg
 
 david.rosenberg@usu.edu
 
-April 1, 2021 (Ha, ha!!)
+July 9, 2021
 
 Utah State University
-
-## Recommended Citation
-David E. Rosenberg (2019). "Colorado River Futures - Code Projects". Utah State University. Logan, Utah. https://github.com/dzeke/ColoradoRiverFutures.
 
 ## Explanation of Contents
 
@@ -43,4 +40,9 @@ an alternative management paradigm where reservoir evaporation is counted as par
 1. The code will generate a single PDF file of the same file name with all results.
 1. If the subfolder does not have an .Rmd file, select the tab for the .R file in  R Studio. Select all the code (Ctrl-A), and run (Ctrl-enter or click the **Run** button on the tool bar below the file tabs). The results will generate in the console.
 
-This repository is updated as new work is undertaken.
+## License
+BSD-3-Clause (https://github.com/dzeke/ColoradoRiverFutures/blob/master/LICENSE). Available to use, modify, distribute, etc. for free.
+All modified or derivative products must use the same BSD-3-Clause license. This license keeps this work in the public domain forever.
+
+## Requested Citation
+David E. Rosenberg (2021). "Colorado River Coding." Utah State University. Logan, Utah. https://github.com/dzeke/ColoradoRiverCoding.
