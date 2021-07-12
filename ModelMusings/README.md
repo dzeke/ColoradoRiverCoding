@@ -1,6 +1,6 @@
 # Colorado River Modeling Musings
 
-### Quick link to download the current model musing: [Pilot flex accounting to encourage more water conservation in a combined Lake Powell-Lake Mead system](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/PilotFlexAccounting-CombinedPowellMead.xlsx)
+### Quick link to download: [Pilot flex accounting to encourage more water conservation in a combined Lake Powell-Lake Mead system](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/PilotFlexAccounting-CombinedPowellMead.xlsx)
 														
 This Github repository contains model musings. A model musing is an idea to build on existing Colorado River operations that includes a numerical implementation. A model musing includes a description, model structure, requirements and directions to use, model files, and comparisons to current basin operations.
 
