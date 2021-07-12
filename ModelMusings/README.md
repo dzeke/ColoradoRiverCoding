@@ -4,7 +4,8 @@
 														
 This Github repository contains model musings. A model musing is an idea to build on existing Colorado River operations that includes a numerical implementation. A model musing includes a description, model structure, requirements and directions to use, model files, and comparisons to current basin operations.
 
-The current model musing is a **Pilot flex water accounting tool to encourage more water conservation in a combined Lake Powell-Lake Mead system**. Key features of this musing:
+##Description: Pilot flex accounting tool to encourage more water conservation in a combined Lake Powell-Lake Mead system**
+Key features of this model musing are:
 1. Give each party more flexibility to make their individual water consumption, conservation, and reservoir storage decisions independent of other parties.
 1. Stretch the Lee Ferry compact point to be a region of combined management that starts with the natural inflow to Lake Powell and ends with Lake Mead releases.
 1. Give each party an individual account in the combined reservoir system.
