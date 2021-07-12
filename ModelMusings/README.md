@@ -27,7 +27,7 @@ See pdf file with visuals of the key ideas for this model musing: **[PilotFlexAc
 Please share feedback about this model musing -- things you like, things to improve -- with David Rosenberg at david.rosenberg@usu.edu. Or Tweet to [@WaterModeler](https://twitter.com/WaterModeler).
 
 ## Model Structure
-**Spreadsheet structure**:
+**Spreadsheet**:
  * Rows represent the components of an interactive water budget for a combined Lake Powell-Lake Mead system. Interactive mean the players must enter some components of the water budget. The different types of components (cell fill) are:
    * Physical watershed data (Peach fill, blue text) such as inflows and reservoir evaporation,
    * Political (player) decisions (Orange fill, white text) such as individual water consumption and conservation,
