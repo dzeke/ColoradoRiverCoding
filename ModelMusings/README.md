@@ -50,17 +50,17 @@ Please share feedback about this model musing -- things you like, things to impr
 1. Invite the other players to join the Google Sheet. Copy + share the URL to the Sheet. Or in the upper right of the Sheet, click the **Share** button, add emails, and set permissions so players can access the sheet.
 1. In the Google Sheet, select the left-most worksheet *ReadMe-Directions*. Follow the further directions to start and complete the role play.
  
-## Requested Feedback
-Please email feedback -- things you like, things to improve -- about the pilot flex water accounting tool or the role play to David Rosenberg at david.rosenberg@usu.edu. Or Tweet at [@WaterModeler](https://twitter.com/WaterModeler).
- 
 ## Model File(s)
 1. **[PilotFlexAccounting-CombinedPowellMead.xlsx](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/PilotFlexAccounting-CombinedPowellMead.xlsx)** - An Excel file with the pilot flex accounting tool and directions to role play. For syncronous access by multiple players, download and move this file into a Google Sheet. See the ReadMe-Directions worksheet for directions.
 1. **[PilotFlexAccounting-KeyIdeas.pdf](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/PilotFlexAccounting-KeyIdeas.pdf)** - A PDF file that illustrates key ideas for this model musing.
 1. **Hydrology** - Folder with Excel files used to generate hydrologic scenarios. CRB_29gages.xlsx: Listing of gages in the Colorado River basin used to estimate natural flow. NaturalFlows1906-2018_20200110.xlsx: Natural flow hydrology downloaded from the USBR website and modified to pick out particular 10- and 20- year sequences of flows from the observed and paleo reconstructed records.
 1. **OldVersions** - Folder with older versions of the pilot flex accounting tool.
 
+## Requested Feedback
+Please email feedback about this modeling muse -- things you like, things to improve -- to David Rosenberg at david.rosenberg@usu.edu. Or Tweet at [@WaterModeler](https://twitter.com/WaterModeler).
+
 ## Requested Citation
-David E. Rosenberg (2021). "Pilot flex accounting to encourage more water conservation in a combined Lake Powell-Lake Mead system." Utah State University, Logan, UT. https://github.com/dzeke/ColoradoRiverCoding/tree/main/PilotFlexAccounting.
+David E. Rosenberg (2021). "Pilot flex accounting to encourage more water conservation in a combined Lake Powell-Lake Mead system." Utah State University, Logan, UT. https://github.com/dzeke/ColoradoRiverCoding/tree/main/ModelMusings.
 
 ## License
 BSD-3-Clause (https://github.com/dzeke/ColoradoRiverCoding/blob/main/LICENSE). Available to use, modify, distribute, etc. for free.
