@@ -35,6 +35,10 @@ A pilot flex accounting spreadsheet is structured as follows:
    * Facilitation steps (White fill).
  * Columns represent years. Each year has a natural inflow to Lake Powell, Grand Canyon Tributary flow (between Lake Powell and Lake Mead), and Natural flow between Hoover Dam and the US-Mexico boarder. Results from the end of one year carry on to the beginning of the next year.
 
+Modeling Uncertainty:
+ * Hydrologic: A facillitator or player(s) choose each year's flow
+ * Water demands: Players enter their individual water consumption and conservation decisions.
+ 
 ## Requirements to Use
 1. A Google account. [Create a Google account](https://accounts.google.com/signup/v2/webcreateaccount?hl=en&flowName=GlifWebSignIn&flowEntry=SignUp)
 1. Another participant (for synchronous play). A participant may role play one or more parties (e.g., Upper Basin and Mexico).
@@ -44,7 +48,7 @@ A pilot flex accounting spreadsheet is structured as follows:
 1. Download the file **[PilotFlexAccounting-CombinedPowellMead.xlsx](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/PilotFlexAccounting-CombinedPowellMead.xlsx)** to your computer.
 1. Move the Excel file to be a Google Sheet in a Google Drive folder associated with your Google Account.
 1. Invite the other players to join the Google Sheet. Copy + share the URL to the Sheet. Or in the upper right of the Sheet, click the **Share** button, add emails, and set permissions so players can access the sheet.
-1. In the Google Sheet, select the *ReadMe-Directions* worksheet. Follow the further directions to start and complete the role play.
+1. In the Google Sheet, select the left-most worksheet *ReadMe-Directions*. Follow the further directions to start and complete the role play.
  
 ## Requested Feedback
 Please email feedback -- things you like, things to improve -- about the pilot flex water accounting tool or the role play to David Rosenberg at david.rosenberg@usu.edu. Or Tweet at [@WaterModeler](https://twitter.com/WaterModeler).
