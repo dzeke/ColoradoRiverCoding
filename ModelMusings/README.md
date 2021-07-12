@@ -27,7 +27,7 @@ See pdf file with visuals of the key ideas for this model musing: **[PilotFlexAc
 Please share feedback about this model musing -- things you like, things to improve -- with David Rosenberg at david.rosenberg@usu.edu. Or Tweet to [@WaterModeler](https://twitter.com/WaterModeler).
 
 ## Model Structure
-A pilot flex accounting spreadsheet is structured as follows:
+**Spreadsheet structure**:
  * Rows represent the components of an interactive water budget for a combined Lake Powell-Lake Mead system. Interactive mean the players must enter some components of the water budget. The different types of components (cell fill) are:
    * Physical watershed data (Peach fill, blue text) such as inflows and reservoir evaporation,
    * Political (player) decisions (Orange fill, white text) such as individual water consumption and conservation,
@@ -35,8 +35,8 @@ A pilot flex accounting spreadsheet is structured as follows:
    * Facilitation steps (White fill).
  * Columns represent years. Each year has a natural inflow to Lake Powell, Grand Canyon Tributary flow (between Lake Powell and Lake Mead), and Natural flow between Hoover Dam and the US-Mexico boarder. Results from the end of one year carry on to the beginning of the next year.
 
-Modeling Uncertainty:
- * Hydrologic: A facillitator or player(s) choose each year's flow
+**Model Uncertainties**:
+ * Hydrologic: A facillitator or player(s) choose each year's natural flows.
  * Water demands: Players enter their individual water consumption and conservation decisions.
  
 ## Requirements to Use
