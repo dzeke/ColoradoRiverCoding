@@ -57,7 +57,9 @@ Please share feedback about this model musing -- things you like, things to impr
 1. **OldVersions** - Folder with older versions of the pilot flex accounting tool.
 
 ## Requested Feedback
-Please email feedback about this modeling muse -- things you like, things to improve -- to David Rosenberg at david.rosenberg@usu.edu. Or Tweet at [@WaterModeler](https://twitter.com/WaterModeler).
+Please share your feedback about this modeling muse -- things you like, things to improve.
+* Preferred method: Submit an [issue](https://github.com/dzeke/ColoradoRiverCoding/issues) via Github (2nd menu item below dzeke/ColoradoRiverCodng. Include a copy of the Excel workbook, summarize changes made, and describe the issues.
+* Alternative:  Email the file and same information to David Rosenberg at david.rosenberg@usu.edu. Use the subject line "Feedback: Colorado River model musing".
 
 ## Requested Citation
 David E. Rosenberg (2021). "Pilot flex accounting to encourage more water conservation in a combined Lake Powell-Lake Mead system." Utah State University, Logan, UT. https://github.com/dzeke/ColoradoRiverCoding/tree/main/ModelMusings.
