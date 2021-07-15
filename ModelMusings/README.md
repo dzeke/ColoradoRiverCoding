@@ -2,8 +2,6 @@
 
 ### Quick link to download: [Pilot flex accounting to encourage more water conservation in a combined Lake Powell-Lake Mead system](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/PilotFlexAccounting-CombinedPowellMead.xlsx)
 														
-The purpose of the numerical models in this Github repository are to provoke thought, discussion, and collaboration about the renegotiations of the 2007 Colorado River Interim Guidelines for Lower Basin Shortages and the Coordinated Operations for Lake Powell and Lake Mead. The guidelines are available at https://www.usbr.gov/lc/region/programs/strategies/RecordofDecision.pdf and expire in 2026.
-
 **The purpose of the numerical models in this Github repository are to provoke thought, discussion, and collaboration about the renegotiations of the 2007 Colorado River Interim Guidelines** for Lower Basin Shortages and the Coordinated Operations for Lake Powell and Lake Mead and the **2019 Lower and Upper Basin Drought Contingency Plans**. The Interim Guidelines are available at https://www.usbr.gov/lc/region/programs/strategies/RecordofDecision.pdf. The Drought Contingency Plans are available at https://www.usbr.gov/dcp/finaldocs.html. **The operations expire in 2026**.
 
 Each numerical model includes a name, description, model structure, requirements and directions to use, model files, and comparisons to current basin operations.
