@@ -28,8 +28,7 @@ add more parties or stakeholders, split existing reservoir storage among users, 
 
 See pdf file with visuals of the key ideas for this numerical model: **[PilotFlexAccounting-KeyIdeas.pdf](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/PilotFlexAccounting-KeyIdeas.pdf)**.
 
-**Can flex accounting encourage more water conservation in the Colorado River basin?** Follow the directions below to download and try out the tool by yourself or with colleagues, friends, or family.
-Please share feedback about this numerical model -- things you like, things to improve -- with David Rosenberg at david.rosenberg@usu.edu. Or Tweet to [@WaterModeler](https://twitter.com/WaterModeler).
+**Try out the model?** Follow the directions below. Use by yourself or with colleagues, friends, or family.
 
 ## Model Structure
 **Spreadsheet**:
