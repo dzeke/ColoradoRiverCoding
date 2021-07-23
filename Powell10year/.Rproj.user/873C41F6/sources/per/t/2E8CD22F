@@ -12,15 +12,15 @@
     "path" : null,
     "project_path" : null,
     "properties" : {
-        "cacheKey" : "BEB1A631",
+        "cacheKey" : "BEF42BC1",
         "caption" : "dfPowellHist",
-        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=dfPowellHist&cache_key=BEB1A631",
-        "displayedObservations" : "678",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=dfPowellHist&cache_key=BEF42BC1",
+        "displayedObservations" : "21126",
         "environment" : "",
         "object" : "dfPowellHist",
         "preview" : "0",
-        "totalObservations" : "678",
-        "variables" : "24"
+        "totalObservations" : "21126",
+        "variables" : "14"
     },
     "relative_order" : 7,
     "source_on_save" : false,

@@ -93,7 +93,7 @@ if (!require(zoo)) {
 
 
 
-sPowellHistoricalFile <- 'PowellDataUSBRMay2020.csv'
+sPowellHistoricalFile <- 'PowellDataUSBRMay2021.csv'
 
 # File name to read in Mead end of month reservoir level in feet - cross tabulated by year (1st column) and month (subsequent columns)
 #    LAKE MEAD AT HOOVER DAM, END OF MONTH ELEVATION (FEET), Lower COlorado River Operations, U.S. Buruea of Reclamation
@@ -108,8 +108,17 @@ dfPowellHistorical <- read.csv(file=sPowellHistoricalFile,
 
 
 #Interpolate Powell storage from level to check
+## For 2020 data
 dtStart <- as.Date("1963-12-22")
 dfPowellHist <- dfPowellHistorical[15:692,] #%>% filter(dfPowellHistorical$Date >= dtStart) # I don't like this hard coding but don't know a way around
+dAddInterval <- 12  # months
+
+# For 2021 data
+dtStart <- as.Date("1963-06-29")
+dfPowellHist <- dfPowellHistorical[112:21237,] #%>% filter(dfPowellHistorical$Date >= dtStart) # I don't like this hard coding but don't know a way around
+dAddInterval <- 365 #days
+
+
 #Convert date text to date value
 dfPowellHist$DateAsValueError <- as.Date(dfPowellHist$Date,"%d-%b-%y")
 #Apparently R breaks the century at an odd place
@@ -118,17 +127,27 @@ dfPowellHist$Year <- as.numeric(format(dfPowellHist$DateAsValueError,"%Y"))
 dfPowellHist$DateAsValue <- dfPowellHist$DateAsValueError
 dfPowellHist$DateAsValue[dfPowellHist$Year > 2030] <- dfPowellHist$DateAsValue[dfPowellHist$Year > 2030] %m-% months(12*100)
 
+
+# library(xts)
+# data(sample_matrix)
+# samplexts <- as.xts(dfPowellHist)
+# to.monthly(dfPowellHist) 
+
+
 # Convert CFS to Acre-feet per month
 nCFStoAFMon <- 60.37
+nCFStoAFDay <- nCFStoAFMon/30.5
+
+nCFSToAF <- nCFStoAFDay
 
 #Annual total release
-dfPowellHist$OneYearRelease <- rollapply(dfPowellHist$Total.Release..cfs.*nCFStoAFMon/1e6, 12,sum, fill=NA, align="right")
+dfPowellHist$OneYearRelease <- rollapply(dfPowellHist$Total.Release..cfs.*nCFSToAF /1e6, dAddInterval,sum, fill=NA, align="right")
 
 #Annual inflow
-dfPowellHist$OneYearInflow <- rollapply(dfPowellHist$Inflow....cfs.*nCFStoAFMon/1e6, 12,sum, fill=NA, align="right")
+dfPowellHist$OneYearInflow <- rollapply(dfPowellHist$Inflow....cfs.*nCFSToAF /1e6, dAddInterval,sum, fill=NA, align="right")
 
 #Annual evaporation
-dfPowellHist$OneYearEvap <- rollapply(dfPowellHist$Evaporation..af./1e6, 12,sum, fill=NA, align="right")
+dfPowellHist$OneYearEvap <- rollapply(dfPowellHist$Evaporation..af./1e6, dAddInterval,sum, fill=NA, align="right")
 
 
 #Calculate evporation by rates and area
@@ -176,7 +195,7 @@ dfPowellHist$ByMonthEvap <- rollapply(dfPowellHist$EvaporationMonthly, 12,sum, f
 
 
 #10-year total release
-dfPowellHist$TenYearRelease <- rollapply(dfPowellHist$Total.Release..cfs.*nCFStoAFMon/1e6, 12*10,sum, fill=NA, align="right")
+dfPowellHist$TenYearRelease <- rollapply(dfPowellHist$Total.Release..cfs.*nCFSToAF /1e6, 12*10,sum, fill=NA, align="right")
 #75 and 82.5 MAF ten-year targets
 dfPowellHist$TenYearTarget <- 75
 dfPowellHist$TenYearTarget82 <- 75 + 7.5
@@ -201,7 +220,7 @@ write.csv(dfPowellByDecade,"DecadePowellRelease.csv" )
 
 ggplot() +
   #Powell release - monthly
-  geom_line(data=dfPowellHist,aes(x=DateAsValue,y=Total.Release..cfs.*nCFStoAFMon/1e6, color="Monthly"), size=2) +
+  geom_line(data=dfPowellHist,aes(x=DateAsValue,y=Total.Release..cfs.*nCFSToAF /1e6, color="Monthly"), size=2) +
   # Powell release-  annual
   geom_line(data=dfPowellHist,aes(x=DateAsValue,y=OneYearRelease, color="1-year"), size=2) +
   
@@ -224,7 +243,7 @@ ggsave("PowellMonthYearDecadeRelease.png", width=9, height = 6.5, units="in")
 
 ggplot() +
   #Powell release - monthly
-  #geom_line(data=dfPowellHistAnnual,aes(x=DateAsValue,y=Total.Release..cfs.*nCFStoAFMon/1e6, color="Monthly"), size=2) +
+  #geom_line(data=dfPowellHistAnnual,aes(x=DateAsValue,y=Total.Release..cfs.*nCFSToAF /1e6, color="Monthly"), size=2) +
   # Powell release-  annual
   geom_line(data=dfPowellHistAnnual,aes(x=DateAsValue,y=OneYearRelease, color="1-Year Total"), size=2) +
   #geom_bar(data=dfPowellHistAnnual,aes(x=DateAsValue,y=OneYearRelease, color="1-Year Total")) +
