@@ -2,7 +2,10 @@
 
 ### Quick link to download: [Pilot flex accounting to encourage more water conservation in a combined Lake Powell-Lake Mead system](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/PilotFlexAccounting-CombinedPowellMead.xlsx)
 														
-**The purpose of the numerical models in this Github repository are to provoke thought, discussion, and collaboration** about renegotiations of the 2007 Colorado River Interim Guidelines and 2019 Drought Contingency Plans. The Interim Guidelines are available at https://www.usbr.gov/lc/region/programs/strategies/RecordofDecision.pdf. The Drought Contingency Plans are available at https://www.usbr.gov/dcp/finaldocs.html. **These operations expire in 2026**.
+**The purpose of the numerical models in this Github repository are to provoke thought, discussion, and collaboration** about renegotiations of operations for Lake Powell and Lake Mead. More specifically: how to convert a shrinking pie (lose-lose) environmental conflict -- the Colorado River basin in drought -- into an expanding pie (win-win) collaboration. Links to existing basin operations:
+
+ * [2007 Interim Guidelines](https://www.usbr.gov/lc/region/programs/strategies/RecordofDecision.pdf).
+ * [2019 Drought Contingency Plans](https://www.usbr.gov/dcp/finaldocs.html). **Both operations expire in 2026**.
 
 Each numerical model includes a name, description, model structure, requirements and directions to use, model files, and comparisons to current basin operations.
 
@@ -62,7 +65,7 @@ add more parties or stakeholders, split existing reservoir storage among users, 
 
 ## Requested Feedback
 Please share your feedback about this numerical model and role play -- things you like, things to improve.
-* Preferred method: Submit an [issue](https://github.com/dzeke/ColoradoRiverCoding/issues) via Github (2nd menu item below dzeke/ColoradoRiverCodng). Describe things you like, things to include. If you provide a copy of the Excel workbook, please summarize changes made.
+* Preferred method: Submit an [issue](https://github.com/dzeke/ColoradoRiverCoding/issues) via Github (2nd menu item below dzeke/ColoradoRiverCodng). Describe things you like, things to inprove. If you provide a copy of the Excel workbook, please summarize changes made.
 * Alternative:  Email things you like, things to improve to David Rosenberg at david.rosenberg@usu.edu. Use the subject line "Feedback: Colorado River numerical model".
 
 ## Requested Citation
