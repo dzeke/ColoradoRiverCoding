@@ -427,7 +427,8 @@ pReds <- brewer.pal(9,"Reds")
 dfKeyTraceLabels$xPositionFlex <- as.Date("2020-09-01")
 dfKeyTraceLabels$xPositionFlex[1] <- as.Date("2021-01-01")
 dfKeyTraceLabels$LabelFlex <- as.character(dfKeyTraceLabels$Label)
-dfKeyTraceLabels$LabelFlex[2] <- "Private Accounts"
+dfKeyTraceLabels$LabelFlex[1] <- "Shared, Reserve"
+dfKeyTraceLabels$LabelFlex[2] <- "Flex Accounts"
 dfKeyTraceLabels$VolumeFlex <- dfKeyTraceLabels$Volume
 dfKeyTraceLabels$VolumeFlex[4] <- 35
 dfKeyTraceLabels$VolumeFlex[2] <- 16
