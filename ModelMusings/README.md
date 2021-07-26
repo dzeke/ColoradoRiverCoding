@@ -1,4 +1,4 @@
-# Colorado River Model Musings and Role Play/Game
+# Colorado River Model Musings, Interactive Tool, and Role Play
 
 ### Quick link to download: [Pilot flex accounting to encourage more water conservation in a combined Lake Powell-Lake Mead system](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/PilotFlexAccounting-CombinedPowellMead.xlsx)
 														
