@@ -2,7 +2,7 @@
 
 ### Quick link to download: [Pilot flex accounting to encourage more water conservation in a combined Lake Powell-Lake Mead system](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/PilotFlexAccounting-CombinedPowellMead.xlsx)
 														
-**The purpose of the numerical models in this Github repository are to provoke thought, discussion, and collaboration** about renegotiations of operations for Lake Powell and Lake Mead. More specifically: how to convert a shrinking pie (lose-lose) environmental conflict -- the Colorado River basin in drought -- into expanding pie (win-win) collaborations? Links to existing Lake Powell and Lake Mead operations:
+**The purpose of the numerical models in this Github repository are to provoke thought and discussion** about renegotiations of operations for Lake Powell and Lake Mead. More specifically: how to convert a shrinking pie (lose-lose) environmental conflict -- the Colorado River basin in drought -- into expanding pie (win-win) arrangements? Links to existing Lake Powell and Lake Mead operations:
 
  * [2007 Interim Guidelines](https://www.usbr.gov/lc/region/programs/strategies/RecordofDecision.pdf).
  * [2019 Drought Contingency Plans](https://www.usbr.gov/dcp/finaldocs.html). **Both operations expire in 2026**.
