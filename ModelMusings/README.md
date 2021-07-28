@@ -26,9 +26,7 @@ Visuals of key features: **[PilotFlexAccounting-KeyIdeas.pdf](https://github.com
 the parties will not all agree on a withdraw. Thus, the water will stay parked in the account as a buffer pool, check, and balance so the parties do not collectively draw down the combined reservoir storage to zero.
 
 When the [Excel model file](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/PilotFlexAccounting-CombinedPowellMead.xlsx) is moved into a Google sheet, role players representing the Upper Basin, Lower Basin, Mexico, and other parties can synchronously access and collaboratively use the tool. Players make their
-year-to-year water consumption and conservation decsions while they track other players' choices and monitor combined and individual reservoir storage.
-Players can explore water conservation and consumptive use strategies for different scenarios of natural flow and different political (player) decisions. Political decisions include:
-add more parties or stakeholders, split existing reservoir storage among users, split future inflows among users, and split the combined reservoir storage among reservoirs. 
+year-to-year water consumption and conservation decsions while they track other players' choices and monitor combined and individual reservoir storage. Players can explore water conservation and consumptive use strategies for different scenarios of natural flow and different political (player) decisions.
 
 **Try out the model?** Follow the directions below. Use solo or with colleagues, friends, and/or family.
 
@@ -37,7 +35,12 @@ add more parties or stakeholders, split existing reservoir storage among users, 
 This numerical model is a structured Excel **spreadsheet**. 
  * Rows represent the components of an interactive water budget for a combined Lake Powell-Lake Mead system. Interactive means the players enter some components (political/management decisions) of the water budget. The different types of components (cell fill) are:
    * Physical watershed data (Peach fill, blue text) such as inflows and reservoir evaporation,
-   * Political (player) decisions (Orange fill, white text) such as individual water consumption and conservation,
+   * Political (player) decisions (Orange fill, white text) such as:
+      * Individual water consumption and conservation,
+      * Add more parties or stakeholders,
+	  * Split existing reservoir storage among users,
+	  * Split future inflows among users, 
+	  * Split the combined reservoir storage among reservoirs. 
    * Calculations (Grey fill), and
    * Facilitation steps (White fill).
  * Columns represent years. Each year has a natural inflow to Lake Powell, Grand Canyon Tributary flow (between Lake Powell and Lake Mead), and Natural flow between Hoover Dam and the US-Mexico boarder. Results from the end of one year carry on to the beginning of the next year.
