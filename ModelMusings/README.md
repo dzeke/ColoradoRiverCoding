@@ -15,8 +15,8 @@ Presently there is one numerical model in the repository.
 
 Visuals of key features: **[PilotFlexAccounting-KeyIdeas.pdf](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/PilotFlexAccounting-KeyIdeas.pdf)**.
 
-## Description
-Key features:
+## Description and Key Features
+
 1. Give each party more flexibility to make their individual water consumption, conservation, and reservoir storage decisions independent of other parties.
 1. Stretch the Lee Ferry compact point to be a region of combined management that starts with the natural inflow to Lake Powell and ends with Lake Mead releases.
 1. Give each party an individual account in the combined reservoir system.
@@ -57,20 +57,29 @@ add more parties or stakeholders, split existing reservoir storage among users, 
 1. Invite the other players to join the Google Sheet. Copy + share the URL to the Sheet. Or in the upper right of the Sheet, click the **Share** button, add emails, and set permissions so players can access the sheet.
 1. In the Google Sheet, select the left-most worksheet *ReadMe-Directions*. Follow the further directions to start and complete the role play.
  
-## Model File(s)
-1. **[PilotFlexAccounting-CombinedPowellMead.xlsx](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/PilotFlexAccounting-CombinedPowellMead.xlsx)** - An Excel file with the pilot flex accounting tool and directions to role play. For syncronous access by multiple players, download and move this file into a Google Sheet. See the ReadMe-Directions worksheet for directions.
-1. **[PilotFlexAccounting-KeyIdeas.pdf](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/PilotFlexAccounting-KeyIdeas.pdf)** - A PDF file that illustrates key ideas for this model musing.
-1. **Support** - Supporting folders:
-   1. **Hydrology** - Folder with Excel files used to generate hydrologic scenarios. CRB_29gages.xlsx: Listing of gages in the Colorado River basin used to estimate natural flow. NaturalFlows1906-2018_20200110.xlsx: Natural flow hydrology downloaded from the USBR website and modified to pick out particular 10- and 20- year sequences of flows from the observed and paleo reconstructed records.
-   1. **OldVersions** - Folder with older versions of the pilot flex accounting tool.
-
-## Requested Feedback
+## Share Feedback
 Please share your feedback about this numerical model and role play -- things you like, things to improve.
 * Preferred method: Submit an [issue](https://github.com/dzeke/ColoradoRiverCoding/issues) via Github (2nd menu item below dzeke/ColoradoRiverCodng). Describe things you like, things to inprove. If you provide a copy of the Excel workbook, please summarize changes made.
 * Alternative:  Email things you like, things to improve to David Rosenberg at david.rosenberg@usu.edu. Use the subject line "Feedback: Colorado River numerical model".
 
 ## Requested Citation
 David E. Rosenberg (2021). "Pilot flex accounting to encourage more water conservation in a combined Lake Powell-Lake Mead system." Utah State University, Logan, UT. https://github.com/dzeke/ColoradoRiverCoding/tree/main/ModelMusings.
+
+## Donate to Support this Work
+Make a tax deductible gift -- for as little as $5 -- to Utah State University (USU) to support this work:
+
+1. Goto [USU Gift Webform](https://www.usu.edu/advancement/annualgiving/gift).
+1. In the box **I would like to make a gift to support:** select *Other*. 
+1. In the **Comments** box enter *for David Rosenberg – Colorado River*.
+
+All donors will be added to an email list and receive periodic updates.
+
+## Model File(s)
+1. **[PilotFlexAccounting-CombinedPowellMead.xlsx](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/PilotFlexAccounting-CombinedPowellMead.xlsx)** - An Excel file with the pilot flex accounting tool and directions to role play. For syncronous access by multiple players, download and move this file into a Google Sheet. See the ReadMe-Directions worksheet for directions.
+1. **[PilotFlexAccounting-KeyIdeas.pdf](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/PilotFlexAccounting-KeyIdeas.pdf)** - A PDF file that illustrates key ideas for this model musing.
+1. **Support** - Supporting folders:
+   1. **Hydrology** - Folder with Excel files used to generate hydrologic scenarios. CRB_29gages.xlsx: Listing of gages in the Colorado River basin used to estimate natural flow. NaturalFlows1906-2018_20200110.xlsx: Natural flow hydrology downloaded from the USBR website and modified to pick out particular 10- and 20- year sequences of flows from the observed and paleo reconstructed records.
+   1. **OldVersions** - Folder with older versions of the pilot flex accounting tool.
 
 ## License
 BSD-3-Clause (https://github.com/dzeke/ColoradoRiverCoding/blob/main/LICENSE). Available to use, modify, distribute, etc. for free.
