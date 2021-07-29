@@ -34,9 +34,11 @@ year-to-year water consumption and conservation decsions while they track other 
 
 This numerical model is a structured Excel **spreadsheet**. 
  * Rows represent the components of an interactive water budget for a combined Lake Powell-Lake Mead system. Interactive means the players enter some components (political/management decisions) of the water budget. The different types of components (cell fill) are:
-   * Physical watershed data (Peach fill, blue text) such as inflows and reservoir evaporation,
-   * Political (player) decisions (Orange fill, white text) such as:
-      * Individual water consumption and conservation,
+   * Physical watershed data (Green fill) such as reservoir inflows and reservoir evaporation rates.
+   * Individual political (player) Flex account decisions (Light orrange fill, black text) such as:
+      * Water consumption and conservation,
+	  * Water purchases or sales 
+	* Joint political decisions (Orange fill, white text):
       * Add more parties or stakeholders,
 	  * Split existing reservoir storage among users,
 	  * Split future inflows among users, 
