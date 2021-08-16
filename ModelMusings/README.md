@@ -19,7 +19,7 @@ Visuals of key features: **[PilotFlexAccounting-KeyIdeas.pdf](https://github.com
 
 1. Give each party more flexibility to make their individual water consumption, conservation, and reservoir storage decisions independent of other parties.
 1. Stretch the Lee Ferry compact point to be a region of combined management that starts with the natural inflow to Lake Powell and ends with Lake Mead releases.
-1. Give each party an individual account in the combined reservoir system.
+1. Give each party a Flex account in the combined Lake Powell-Lake Mead system.
 1. Include reservoir storage and inflow as operations criteria not just reservior elevations/tiers ([Rosenberg, 2021a](https://github.com/dzeke/ColoradoRiverCoding/raw/main/BlogDrafts/2-AddReservoirInflowAsNewCriteriaToRecoverLakeMead.docx)).
 1. Each party makes their individual water consumption and conservation decisions within their available water. Each party's available water is their account balance, plus share of inflow, minus share of combined reservoir evaporation, plus water purchases, and minus water sales.
 1. Add a "shared, reserve" account equal in volume to the current Lake Powell and Lake Mead protection volumes ([Rosenberg, 2021b](https://github.com/dzeke/ColoradoRiverCoding/raw/main/BlogDrafts/3-GiveLakeMeadManagersMoreFlexibilityToConserveToStopDrawdownToDeadPool.docx)). The shared, reserve account is managed by consensus of all parties and is intended to prevent the parties from simulataneously drawing down the combined reservoir storage to zero (dead pools). The assumption is that 
@@ -34,11 +34,11 @@ year-to-year water consumption and conservation decsions while they track other 
 
 This numerical model is a structured Excel **spreadsheet**. 
  * Rows represent the components of an interactive water budget for a combined Lake Powell-Lake Mead system. Interactive means the players enter some components (political/management decisions) of the water budget. The different types of components (cell fill) are:
-   * Physical watershed data (Green fill) such as reservoir inflows and reservoir evaporation rates.
-   * Individual political (player) Flex account decisions (Light orrange fill, black text) such as:
+   * **Physical watershed data** (Green fill) such as reservoir inflows and reservoir evaporation rates.
+   * **Individual political (player) Flex account decisions** (Light orrange fill, black text) such as:
       * Water consumption and conservation,
 	  * Water purchases or sales 
-	* Joint political decisions (Orange fill, white text):
+	* **Joint political decisions** (Orange fill, white text):
       * Add more parties or stakeholders,
 	  * Split existing reservoir storage among users,
 	  * Split future inflows among users, 
