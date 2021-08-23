@@ -7,7 +7,7 @@
  * [2007 Interim Guidelines](https://www.usbr.gov/lc/region/programs/strategies/RecordofDecision.pdf).
  * [2019 Drought Contingency Plans](https://www.usbr.gov/dcp/finaldocs.html). **Both operations expire in 2026**.
 
-Each interactive model includes a name, description, requirements and directions to use, model files, and comparisons to current basin operations.
+Each interactive model includes a name, description, requirements and directions to use, files, and comparisons to current basin operations.
 
 Presently there is one interactive model in the repository.
 
@@ -68,6 +68,9 @@ This interactive model is a structured Excel **spreadsheet**.
 1. Move the Excel file to be a Google Sheet in a Google Drive folder associated with your Google Account.
 1. Invite the other players to join the Google Sheet. Copy + share the URL to the Sheet. Or in the upper right of the Google Sheet, click the **Share** button. Add emails, and set permissions so players can access the Google Sheet.
 1. In the Google Sheet, select the left-most worksheet *ReadMe-Directions*. Follow the further directions to start and complete the role play.
+
+## Compare to Current Operations
+The **Today**, **8.1-Trade**, and **MillenniumRecover** worksheets come with companion **-LawOfRiver** and **-Plots** worksheets. Select the **-Plots** worksheets to see comparisons between flex accounting entries and the current operations (Law of the River). Use the **Today** worksheet for the interactive modeling and role play to compare your entries to current operations.  
  
 ## Share Feedback
 Please share your feedback about this interactive model and role play -- things you like, things to improve.
