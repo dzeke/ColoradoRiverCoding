@@ -166,6 +166,10 @@ dfJointStorage$decade <- round_any(as.numeric(format(dfJointStorage$DateAsValue,
 # Define maximum storages
 dfMaxStor <- data.frame(Reservoir = c("Powell","Mead"),Volume = c(24.32,25.9))
 
+#Calculate the total storage
+dfJointStorageTab <- dfJointStorage
+dfJointStorageTab$Combined <- dfJointStorage$MeadStorage + dfJointStorage$PowellStorage
+
 #################################################
 #### COMBINED POWELL AND MEAD STORAGE OVER TIME
 #################################################
