@@ -174,6 +174,7 @@ dfEvapRatesMonth <- data.frame(Reservoir = c(rep("Powell",12),rep("Mead",12)),
                                EvapFeet = c(0.24, 0.19,0.29,0.38,0.5,0.63,0.7,0.77,0.69,0.52,0.41,0.36,
                                             0.3,0.28,0.29,0.4,0.53,0.63,0.6,0.67,0.64,0.64,0.55,0.45))
 
+#### These evaporation calculations are for monthly data and need to be changed to daily
 
 #Calculate evaporated volume for Powell
 # Max evaporation is product of annual evaporation rate and area (assumes water always stays at same level through year, there is inflow!
@@ -195,7 +196,10 @@ dfPowellHist$ByMonthEvap <- rollapply(dfPowellHist$EvaporationMonthly, 12,sum, f
 
 
 #10-year total release
-dfPowellHist$TenYearRelease <- rollapply(dfPowellHist$Total.Release..cfs.*nCFSToAF /1e6, 12*10,sum, fill=NA, align="right")
+dfPowellHist$TenYearRelease <- rollapply(dfPowellHist$Total.Release..cfs.*nCFSToAF /1e6, 365*10,sum, fill=NA, align="right")
+#9-year total
+dfPowellHist$NineYearRelease <- rollapply(dfPowellHist$Total.Release..cfs.*nCFSToAF /1e6, 365*9,sum, fill=NA, align="right")
+
 #75 and 82.5 MAF ten-year targets
 dfPowellHist$TenYearTarget <- 75
 dfPowellHist$TenYearTarget82 <- 75 + 7.5
@@ -206,13 +210,26 @@ dfPowellHist$Diff <- dfPowellHist$TenYearRelease - dfPowellHist$TenYearTarget82
 dfPowellHist$Month <- month(dfPowellHist$DateAsValue)
 dfPowellHist$Year <- year(dfPowellHist$DateAsValue)
 
-dfPowellHistAnnual <- dfPowellHist %>% filter(Month==10)
+#Calculate day
+dfPowellHist$Day <- day(dfPowellHist$DateAsValue)
+
+#dfPowellHistAnnual <- dfPowellHist %>% filter(Month==10)
+dfPowellHistAnnual <- dfPowellHist %>% filter(Month==10, Day == 1)
+
+
 # Add text for the decade
+# 10-year values
 dfPowellHistAnnual$Decade <- paste0(dfPowellHistAnnual$Year - 10 + 1," to ",dfPowellHistAnnual$Year)
 dfPowellHistAnnual$TenYearReleaseRnd <- round(dfPowellHistAnnual$TenYearRelease, digits=1)
 dfPowellHistAnnual$TenYearDiffRnd <- round(dfPowellHistAnnual$Diff, digits=1)
+
+# 9-year value
+dfPowellHistAnnual$NineYearPeriod <- paste0(dfPowellHistAnnual$Year - 9 + 1," to ",dfPowellHistAnnual$Year)
+dfPowellHistAnnual$NineYearReleaseRnd <- round(dfPowellHistAnnual$NineYearRelease, digits=1)
+dfPowellHistAnnual$NineYearDiffRnd <- round(dfPowellHistAnnual$NineYearRelease - 8.23*9, digits=1)
+
 # Select into two columns and reverse sort
-dfPowellByDecade <- dfPowellHistAnnual %>% arrange(Year, decreasing = TRUE) %>% select(Decade, TenYearReleaseRnd,TenYearDiffRnd) 
+dfPowellByDecade <- dfPowellHistAnnual %>% arrange(Year, decreasing = TRUE) %>% select(Decade, TenYearReleaseRnd,TenYearDiffRnd, NineYearRelease) 
 
 #Export to CSV
 write.csv(dfPowellByDecade,"DecadePowellRelease.csv" )
@@ -269,15 +286,20 @@ ggsave("PowellReleaseTargets.png", width=9, height = 6.5, units="in")
 
 ggplot() +
   #  10-year sum
-  geom_line(data=dfPowellHistAnnual,aes(x=DateAsValue,y=TenYearDiffRnd, color="10-Year Difference"), size=2) +
+  geom_line(data=dfPowellHistAnnual,aes(x=DateAsValue,y=TenYearDiffRnd, color="10-Year"), size=2) +
 
+  geom_line(data=dfPowellHistAnnual,aes(x=DateAsValue,y=NineYearDiffRnd, color="9-Year"), size=2) +
+  
   theme_bw() +
   #coord_fixed() +
-  labs(x="", y="Powell Release above 10-Year Requirement\n(million acre-feet)") +
+  labs(x="", y="Powell Release above Requirement\n(million acre-feet)") +
   theme(text = element_text(size=20), legend.title=element_blank(), legend.text=element_text(size=18))
 #theme(text = element_text(size=20), legend.text=element_text(size=16)
 
 ggsave("PowellReleaseTargetDifference.png", width=9, height = 6.5, units="in")
+
+# Report the most recent 9-year release, target, and difference 
+sprintf("Nine year Lake Powell release (%s) of %s maf is %s maf above 74.1 maf requirement",dfPowellHistAnnual[nrow(dfPowellHistAnnual), "NineYearPeriod"], round(dfPowellHistAnnual[nrow(dfPowellHistAnnual), "NineYearRelease"],1), dfPowellHistAnnual[nrow(dfPowellHistAnnual), "NineYearDiffRnd"])
 
 ### Powell Annual Inflow
 

@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1629833653914.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "D53C9150",
+    "lastKnownWriteTime" : 4294967296,
+    "last_content_update" : 1629833653914,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "B2DD5988",
+        "caption" : "dfPowellHistAnnual",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=dfPowellHistAnnual&cache_key=B2DD5988",
+        "displayedObservations" : 56,
+        "environment" : "",
+        "object" : "dfPowellHistAnnual",
+        "preview" : 0,
+        "totalObservations" : 56,
+        "variables" : 28
+    },
+    "relative_order" : 6,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}
