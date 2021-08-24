@@ -1,7 +1,7 @@
 ---
 title: "Lake Powell Inflows and Releases"
 author: "David E. Rosenberg"
-date: "May 12, 2021"
+date: "August 24, 2021"
 output: pdf_document
 ---
 
@@ -11,7 +11,12 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Overview
 
-This is an R Markdown document. This document reads monthly USBR data on Lake Powell Inflows and Releases (https://www.usbr.gov/rsvrWater/HistoricalApp.htm). The code aggregates data to yearly (water year starting Oct 1) and decadal values and then plots 10-year releases incomparison to Compact Article 3d 10-year requirements, inflows, and releaes. The document alsow shows histograms of Powell inflows and realeases.
+This is an R Markdown document. This document reads daily USBR data on Lake Powell Inflows and Releases (https://www.usbr.gov/rsvrWater/HistoricalApp.htm). The code aggregates data to yearly (water year starting Oct 1), 9-year, and decadal values and then compares Lake Powell releases to The 1922 Compact Article 3(d) requirement. The document alsow shows histograms of Powell inflows and realeases.
+
+* 10-year 75 maf requirement: Upper Basin delivers to Lower Basin by Article 3(d) of 1922 Compact
+* 10-year 82.3 maf requirement: Upper Basin delivers to Lower Basin by 1922 Compact Article 3(d) and half of 1.5 maf per year United States obligation to Mexico by 1944 Treaty.
+* Presently, the Upper Basin's 0.75 maf per year obligation to Mexico may be revised down by contigency plans in Minutes 319 and 323 to US-Mexico Treaty.
+* 9-Year target is used to show Upper Basin flexibility to allow inflow to pass to Lower Basin in current 10th year.
 
 ## Requested Citation
 David E. Rosenberg (2021), "Lake Powell Inflows and Releases." Utah State University. Logan, Utah. https://github.com/dzeke/ColoradoRiverFutures/tree/master/Powell10year.
@@ -117,6 +122,7 @@ installed.packages()
 
 
 sPowellHistoricalFile <- 'PowellDataUSBRMay2020.csv'
+sPowellHistoricalFile <- 'PowellDataUSBRMay2021.csv'
 
 # File name to read in Mead end of month reservoir level in feet - cross tabulated by year (1st column) and month (subsequent columns)
 #    LAKE MEAD AT HOOVER DAM, END OF MONTH ELEVATION (FEET), Lower COlorado River Operations, U.S. Buruea of Reclamation
@@ -131,8 +137,16 @@ dfPowellHistorical <- read.csv(file=sPowellHistoricalFile,
 
 
 #Interpolate Powell storage from level to check
+## For 2020 data
 dtStart <- as.Date("1963-12-22")
 dfPowellHist <- dfPowellHistorical[15:692,] #%>% filter(dfPowellHistorical$Date >= dtStart) # I don't like this hard coding but don't know a way around
+dAddInterval <- 12  # months
+
+# For 2021 data
+dtStart <- as.Date("1963-06-29")
+dfPowellHist <- dfPowellHistorical[112:21237,] #%>% filter(dfPowellHistorical$Date >= dtStart) # I don't like this hard coding but don't know a way around
+dAddInterval <- 365 #days
+
 #Convert date text to date value
 dfPowellHist$DateAsValueError <- as.Date(dfPowellHist$Date,"%d-%b-%y")
 #Apparently R breaks the century at an odd place
@@ -143,18 +157,25 @@ dfPowellHist$DateAsValue[dfPowellHist$Year > 2030] <- dfPowellHist$DateAsValue[d
 
 # Convert CFS to Acre-feet per month
 nCFStoAFMon <- 60.37
+nCFStoAFDay <- nCFStoAFMon/30.5
+
+nCFSToAF <- nCFStoAFDay
+
 
 #Annual total release
-dfPowellHist$OneYearRelease <- rollapply(dfPowellHist$Total.Release..cfs.*nCFStoAFMon/1e6, 12,sum, fill=NA, align="right")
+dfPowellHist$OneYearRelease <- rollapply(dfPowellHist$Total.Release..cfs.*nCFSToAF/1e6, dAddInterval,sum, fill=NA, align="right")
 
 #Annual inflow
-dfPowellHist$OneYearInflow <- rollapply(dfPowellHist$Inflow....cfs.*nCFStoAFMon/1e6, 12,sum, fill=NA, align="right")
+dfPowellHist$OneYearInflow <- rollapply(dfPowellHist$Inflow....cfs.*nCFSToAF/1e6, dAddInterval,sum, fill=NA, align="right")
 
 #Annual evaporation
-dfPowellHist$OneYearEvap <- rollapply(dfPowellHist$Evaporation..af./1e6, 12,sum, fill=NA, align="right")
+dfPowellHist$OneYearEvap <- rollapply(dfPowellHist$Evaporation..af./1e6, dAddInterval,sum, fill=NA, align="right")
 
 #10-year total release
-dfPowellHist$TenYearRelease <- rollapply(dfPowellHist$Total.Release..cfs.*nCFStoAFMon/1e6, 12*10,sum, fill=NA, align="right")
+dfPowellHist$TenYearRelease <- rollapply(dfPowellHist$Total.Release..cfs.*nCFSToAF/1e6, dAddInterval*10,sum, fill=NA, align="right")
+#9-year total
+dfPowellHist$NineYearRelease <- rollapply(dfPowellHist$Total.Release..cfs.*nCFSToAF /1e6, dAddInterval*9,sum, fill=NA, align="right")
+
 #75 and 82.5 MAF ten-year targets
 dfPowellHist$TenYearTarget <- 75
 dfPowellHist$TenYearTarget82 <- 75 + 7.5
@@ -165,13 +186,27 @@ dfPowellHist$Diff <- dfPowellHist$TenYearRelease - dfPowellHist$TenYearTarget82
 dfPowellHist$Month <- month(dfPowellHist$DateAsValue)
 dfPowellHist$Year <- year(dfPowellHist$DateAsValue)
 
-dfPowellHistAnnual <- dfPowellHist %>% filter(Month==10)
+#Calculate day
+dfPowellHist$Day <- day(dfPowellHist$DateAsValue)
+
+#dfPowellHistAnnual <- dfPowellHist %>% filter(Month==10)
+dfPowellHistAnnual <- dfPowellHist %>% filter(Month==10, Day == 1)
+
 # Add text for the decade
+# 10-year values
 dfPowellHistAnnual$Decade <- paste0(dfPowellHistAnnual$Year - 10 + 1," to ",dfPowellHistAnnual$Year)
 dfPowellHistAnnual$TenYearReleaseRnd <- round(dfPowellHistAnnual$TenYearRelease, digits=1)
 dfPowellHistAnnual$TenYearDiffRnd <- round(dfPowellHistAnnual$Diff, digits=1)
+
+# 9-year value
+dfPowellHistAnnual$NineYearPeriod <- paste0(dfPowellHistAnnual$Year - 9 + 1," to ",dfPowellHistAnnual$Year)
+dfPowellHistAnnual$NineYearReleaseRnd <- round(dfPowellHistAnnual$NineYearRelease, digits=1)
+dfPowellHistAnnual$NineYearDiffRnd <- round(dfPowellHistAnnual$NineYearRelease - 8.23*9, digits=1)
+
+
+
 # Select into two columns and reverse sort
-dfPowellByDecade <- dfPowellHistAnnual %>% arrange(Year, decreasing = TRUE) %>% select(Decade, TenYearReleaseRnd,TenYearDiffRnd) 
+dfPowellByDecade <- dfPowellHistAnnual %>% arrange(Year, decreasing = TRUE) %>% select(Decade, TenYearReleaseRnd,TenYearDiffRnd, NineYearDiffRnd) 
 
 #Export to CSV
 write.csv(dfPowellByDecade,"DecadePowellRelease.csv" )
@@ -189,7 +224,7 @@ library(ggplot2)
 
 # ggplot() +
 #   #Powell release - monthly
-#   geom_line(data=dfPowellHist,aes(x=DateAsValue,y=Total.Release..cfs.*nCFStoAFMon/1e6, color="Monthly"), size=2) +
+#   geom_line(data=dfPowellHist,aes(x=DateAsValue,y=Total.Release..cfs.*nCFStoAF/1e6, color="Monthly"), size=2) +
 #   # Powell release-  annual
 #   geom_line(data=dfPowellHist,aes(x=DateAsValue,y=OneYearRelease, color="1-year"), size=2) +
 #   
@@ -210,7 +245,7 @@ library(ggplot2)
 
 ggplot() +
   #Powell release - monthly
-  #geom_line(data=dfPowellHistAnnual,aes(x=DateAsValue,y=Total.Release..cfs.*nCFStoAFMon/1e6, color="Monthly"), size=2) +
+  #geom_line(data=dfPowellHistAnnual,aes(x=DateAsValue,y=Total.Release..cfs.*nCFStoAF/1e6, color="Monthly"), size=2) +
   # Powell release-  annual
   geom_line(data=dfPowellHistAnnual,aes(x=DateAsValue,y=OneYearRelease, color="1-Year Total"), size=2) +
   #geom_bar(data=dfPowellHistAnnual,aes(x=DateAsValue,y=OneYearRelease, color="1-Year Total")) +
@@ -236,7 +271,7 @@ ggplot() +
 
 ```
 
-# 10-Year Difference between Release and 82.3 MAF Target
+# Difference between Release and 82.3 MAF (10-Year) and 74.1 MAF (9-Year) Targets
 
 
 ```{r TenYearDifference, echo=FALSE, warning=FALSE, message=FALSE}
@@ -245,12 +280,15 @@ library(ggplot2)
 
 ggplot() +
   #  10-year sum
-  geom_line(data=dfPowellHistAnnual,aes(x=DateAsValue,y=TenYearDiffRnd, color="10-Year Difference"), size=2) +
+  geom_line(data=dfPowellHistAnnual,aes(x=DateAsValue,y=TenYearDiffRnd, color="10-Year"), size=2) +
+  geom_line(data=dfPowellHistAnnual,aes(x=DateAsValue,y=NineYearDiffRnd, color="9-Year"), size=2) +
 
+  scale_color_manual(" ", values = c("10-Year" = "red", "9-Year" = "blue")) +
+  
   theme_bw() +
   #coord_fixed() +
-  labs(x="", y="Powell Release above 10-Year Requirement\n(million acre-feet)") +
-  theme(text = element_text(size=20), legend.title=element_blank(), legend.text=element_text(size=18), legend.position = "none")
+  labs(x="", y="Powell Release above Requirement\n(million acre-feet)") +
+  theme(text = element_text(size=14), legend.title=element_blank(), legend.text=element_text(size=14))
 #theme(text = element_text(size=20), legend.text=element_text(size=16)
 
 ### Powell Annual Inflow
@@ -274,6 +312,11 @@ ggplot() +
 #theme(text = element_text(size=20), legend.text=element_text(size=16)
 
 # As mixed bar (inflow) line (release) plot
+
+# Report the most recent 9-year release, target, and difference 
+sprintf("Nine year Lake Powell release of %s maf (%s) is %s maf above 74.1 maf requirement",round(dfPowellHistAnnual[nrow(dfPowellHistAnnual), "NineYearRelease"],1), dfPowellHistAnnual[nrow(dfPowellHistAnnual), "NineYearPeriod"],  dfPowellHistAnnual[nrow(dfPowellHistAnnual), "NineYearDiffRnd"])
+
+
 
 
 ```
