@@ -2,12 +2,12 @@
 
 ### Quick download link: [Pilot flex accounting to encourage more water conservation in a combined Lake Powell-Lake Mead system](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/PilotFlexAccounting-CombinedPowellMead.xlsx)
 														
-**The purpose of the interactive models in this Github repository are to provoke thought and discussion** about renegotiations of operations for Lake Powell and Lake Mead. More specifically: how to convert a shrinking pie (lose-lose) environmental conflict -- the Colorado River basin in drought -- into expanding pie (win-win) arrangements? Links to existing Lake Powell and Lake Mead operations:
+**The purpose of the interactive models in this Github repository are to provoke thought and discussion** about renegotiations of operations for Lake Powell and Lake Mead. More specifically: how to convert a shrinking pie (lose-lose) environmental conflict -- our Colorado River basin becoming more arid -- into more positive arrangements? Links to existing Lake Powell and Lake Mead operations:
 
  * [2007 Interim Guidelines](https://www.usbr.gov/lc/region/programs/strategies/RecordofDecision.pdf).
  * [2019 Drought Contingency Plans](https://www.usbr.gov/dcp/finaldocs.html). **Both operations expire in 2026**.
 
-Participants synchronously connect to the interactive model on the cloud. Participants role play parties year-to-year management choices. Each interactive model includes a name, key features, requirements and directions to use, files, and comparisons to current basin operations.
+**Interactive Model**: Participants synchronously connect to a cloud model for the Colordo River basin. Participants role play parties year-to-year management choices. Each interactive model includes a name, key features, requirements and directions to use, files, and comparisons to current basin operations.
 
 Presently there is one interactive model in the repository.
 
@@ -23,8 +23,8 @@ Visuals of key features: **[PilotFlexAccounting-KeyIdeas.pdf](https://github.com
 1. Include reservoir storage and inflow as operations criteria not just reservior elevations/tiers ([Rosenberg, 2021a](https://github.com/dzeke/ColoradoRiverCoding/raw/main/BlogDrafts/2-AddReservoirInflowAsNewCriteriaToRecoverLakeMead.docx)).
 1. Each party makes their individual water consumption and conservation decisions within their available water. Each party's available water is their account balance, plus share of inflow, minus share of combined reservoir evaporation, plus water purchases, and minus water sales.
 1. Show impacts of Lake Powell water elevation on release temperature and Grand Canyon fish ([Wheeler et al, 2021, Sidebar 1, p. 47](https://qcnr.usu.edu/coloradoriver/files/WhitePaper6.pdf)).
-1. Add a "shared, reserve" account equal in volume to the current Lake Powell and Lake Mead protection volumes ([Rosenberg, 2021b](https://github.com/dzeke/ColoradoRiverCoding/raw/main/BlogDrafts/3-GiveLakeMeadManagersMoreFlexibilityToConserveToStopDrawdownToDeadPool.docx)). The shared, reserve account is managed by consensus of all parties and is intended to prevent the parties from simulataneously drawing down the combined reservoir storage to zero (dead pools). The assumption is that 
-the parties will not all agree on a withdraw. Thus, the water will stay parked in the account as a buffer pool, check, and balance so the parties do not collectively draw down the combined reservoir storage to zero.
+1. Add a "shared, reserve" account equal in volume to the current Lake Powell and Lake Mead protection volumes ([Rosenberg, 2021b](https://github.com/dzeke/ColoradoRiverCoding/raw/main/BlogDrafts/3-GiveLakeMeadManagersMoreFlexibilityToConserveToStopDrawdownToDeadPool.docx)). Manage the shared, reserve account by consensus of all parties. The assumption is that 
+the parties will not all agree how to manage. Thus, the water will stay parked in the account as a buffer pool, check, and balance so the parties do not collectively draw down the combined reservoir storage to zero.
 
 When the [Excel model file](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/PilotFlexAccounting-CombinedPowellMead.xlsx) is moved into a Google sheet, role players representing the Upper Basin, Lower Basin, Mexico, and other parties can synchronously interact and collaboratively use the model. Players make their
 year-to-year water consumption and conservation decsions while they track other players' choices and monitor combined and individual reservoir storage. Players can explore water conservation and consumptive use strategies for different scenarios of natural flow and different political (player) decisions.
@@ -33,7 +33,7 @@ year-to-year water consumption and conservation decsions while they track other 
 
 ## Model Structure
 
-This interactive model is a structured Excel **spreadsheet**. 
+This interactive model is a structured **spreadsheet** (Google Sheet). 
  * **Rows** represent the components of an interactive water budget for a combined Lake Powell-Lake Mead system. Interactive means the players enter some components (political/management decisions) of the water budget. The different types of components (cell fill) are:
    * **Physical watershed data** (Green fill, black text)
       * Reservoir evaporation rates.
@@ -53,15 +53,15 @@ This interactive model is a structured Excel **spreadsheet**.
       * Physically split combined storage between Lake Powell and Lake Mead. 	  
    * **Calculations** (Grey fill), and
    * **Facilitation** steps (White fill).
- * **Columns represent years**. Players play year-by-year. For example, specify hydrology. Players make choices. Results from the end of one year carry on to the beginning of the next year.
+ * **Columns represent years**. Players play year-by-year. For example, specify hydrology in Year 1. Players make choices. Account balances and reservoir storages at Year 1 end carry on to Year 2 beginning.
 
-**Model Uncertainties**:
- * Hydrologic: A facillitator or player(s) choose each year's basin natural flows.
- * Water demands: Players enter their individual water consumption and conservation decisions year by year.
+**Treatment of Uncertainties**:
+ * Hydrologic: Players or a facilitator choose each year's basin natural flows.
+ * Water demands: Players enter their water conservation and consumption choices year by year within their available water independent of other parties.
  
 ## Requirements to Use
 1. A Google account. [Create a Google account](https://accounts.google.com/signup/v2/webcreateaccount?hl=en&flowName=GlifWebSignIn&flowEntry=SignUp)
-1. Another participant (for synchronous, interactive role play). A participant may role play one or more parties (e.g., Upper Basin and Mexico).
+1. Another participant (for synchronous, interactive modeling). A participant may role play one or more parties (e.g., Upper Basin and Mexico).
 1. ~ 1 to 2 hours. Go slow. If you run out of time, schedule another session.
 
 ## Directions to Use
@@ -69,10 +69,10 @@ This interactive model is a structured Excel **spreadsheet**.
 1. Move the Excel file to be a Google Sheet in a Google Drive folder associated with your Google Account.
 1. Invite the other players to join the Google Sheet. Copy + share the URL to the Sheet. Or in the upper right of the Google Sheet, click the **Share** button. Add emails, and set permissions so players can access the Google Sheet.
 1. In the Google Sheet, select the left-most worksheet *ReadMe-Directions*. Follow the further directions to start and complete the role play.
-1. Note: Use the **Today** worksheet to later compare your flex account entries to current operations (Law of River).
+1. Before start: duplicate the **Master** worksheet to save a blank version. Play in the **Master** worksheet. View the **Master-Plots** worksheet to compare entries to current operations (Law of River).
 
 ## Compare to Current Operations
-The **Today**, **8.1-Trade**, and **MillenniumRecover** worksheets come with companion **-LawOfRiver** and **-Plots** worksheets. Select the **-Plots** worksheets to compare flex accounting entries to current operations (Law of the River). Use the **Today** worksheet to compare your entries to current operations.  
+The **Master**, **8.1-Trade**, and **MillenniumRecover** worksheets come with companion **-LawOfRiver** and **-Plots** worksheets. Select the **-Plots** worksheets to compare flex accounting entries to current operations (Law of the River). Use the **Master** worksheet to compare your entries to current operations.  
  
 ## Share Feedback
 Please share your feedback about this interactive model and role play -- things you like, things to improve.
