@@ -7,14 +7,14 @@
  * [2007 Interim Guidelines](https://www.usbr.gov/lc/region/programs/strategies/RecordofDecision.pdf).
  * [2019 Drought Contingency Plans](https://www.usbr.gov/dcp/finaldocs.html). **Both operations expire in 2026**.
 
-**Interactive Model**: Participants synchronously connect to a cloud model for the Colordo River basin. Participants role play Upper Basin, Lower Basin, Mexico, and other parties's and make their 
- their year-to-year water conservation, consumption, purchase, and sale decsions while they track other players' choices.
+**Interactive Model**: Participants synchronously connect to a cloud model for the Colordo River basin. Participants role play Upper Basin, Lower Basin, Mexico, and other parties. Participants make 
+ year-to-year water conservation, consumption, purchase, and sale decsions for their party while they track other players' choices, account balances, and reservoir storage.
 
 Each interactive model includes a name, key features, requirements and directions to use, files, and comparisons to current basin operations.
 
 Presently there is one interactive model in the repository.
 
- * To make interactive, download the [Excel model file](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/PilotFlexAccounting-CombinedPowellMead.xlsx) and move into a Google Sheet.
+ * **To make interactive**: download the [Excel model file](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/PilotFlexAccounting-CombinedPowellMead.xlsx) and move into a Google Sheet.
 
 ## Pilot flex accounting to encourage more water conservation in a combined Lake Powell-Lake Mead system
 
