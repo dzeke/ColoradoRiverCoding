@@ -7,7 +7,7 @@
  * [2007 Interim Guidelines](https://www.usbr.gov/lc/region/programs/strategies/RecordofDecision.pdf).
  * [2019 Drought Contingency Plans](https://www.usbr.gov/dcp/finaldocs.html). **Both operations expire in 2026**.
 
-**Interactive Model**: Participants synchronously connect to a cloud model for the Colordo River basin. Participants role play Upper Basin, Lower Basin, Mexico, and other parties. Participants make 
+**Interactive Model**: Participants synchronously connect to a cloud model for the Colorado River basin. Participants role play Upper Basin, Lower Basin, Mexico, and other parties. Participants make 
  year-to-year water conservation, consumption, purchase, and sale decsions for their party while they track other players' choices, account balances, reservoir storage, and conditions for Grand Canyon fish.
 
 Each interactive model includes a name, key features, requirements and directions to use, files, and comparisons to current basin operations.
