@@ -1,13 +1,13 @@
 # Colorado River Musings, Interactive Model, and Role Plays
 
-### Quick link to download: [Pilot flex accounting to encourage more water conservation in a combined Lake Powell-Lake Mead system](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/PilotFlexAccounting-CombinedPowellMead.xlsx)
+### Quick download link: [Pilot flex accounting to encourage more water conservation in a combined Lake Powell-Lake Mead system](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/PilotFlexAccounting-CombinedPowellMead.xlsx)
 														
 **The purpose of the interactive models in this Github repository are to provoke thought and discussion** about renegotiations of operations for Lake Powell and Lake Mead. More specifically: how to convert a shrinking pie (lose-lose) environmental conflict -- the Colorado River basin in drought -- into expanding pie (win-win) arrangements? Links to existing Lake Powell and Lake Mead operations:
 
  * [2007 Interim Guidelines](https://www.usbr.gov/lc/region/programs/strategies/RecordofDecision.pdf).
  * [2019 Drought Contingency Plans](https://www.usbr.gov/dcp/finaldocs.html). **Both operations expire in 2026**.
 
-Each interactive model includes a name, description, requirements and directions to use, files, and comparisons to current basin operations.
+Participants synchronously connect to the interactive model on the cloud. Participants role play parties year-to-year management choices. Each interactive model includes a name, key features, requirements and directions to use, files, and comparisons to current basin operations.
 
 Presently there is one interactive model in the repository.
 
@@ -15,13 +15,14 @@ Presently there is one interactive model in the repository.
 
 Visuals of key features: **[PilotFlexAccounting-KeyIdeas.pdf](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/PilotFlexAccounting-KeyIdeas.pdf)**.
 
-## Key Features and Description
+## Key Features
 
 1. Give each party more flexibility to make their individual water consumption, conservation, and reservoir storage decisions independent of other parties.
 1. Stretch the Lee Ferry compact point to be a region of combined management that starts with the natural inflow to Lake Powell and ends with Lake Mead releases.
 1. Give each party a Flex account in the combined Lake Powell-Lake Mead system.
 1. Include reservoir storage and inflow as operations criteria not just reservior elevations/tiers ([Rosenberg, 2021a](https://github.com/dzeke/ColoradoRiverCoding/raw/main/BlogDrafts/2-AddReservoirInflowAsNewCriteriaToRecoverLakeMead.docx)).
 1. Each party makes their individual water consumption and conservation decisions within their available water. Each party's available water is their account balance, plus share of inflow, minus share of combined reservoir evaporation, plus water purchases, and minus water sales.
+1. Show impacts of Lake Powell water elevation on release temperature and Grand Canyon fish ([Wheeler et al, 2021, Sidebar 1, p. 47](https://qcnr.usu.edu/coloradoriver/files/WhitePaper6.pdf)).
 1. Add a "shared, reserve" account equal in volume to the current Lake Powell and Lake Mead protection volumes ([Rosenberg, 2021b](https://github.com/dzeke/ColoradoRiverCoding/raw/main/BlogDrafts/3-GiveLakeMeadManagersMoreFlexibilityToConserveToStopDrawdownToDeadPool.docx)). The shared, reserve account is managed by consensus of all parties and is intended to prevent the parties from simulataneously drawing down the combined reservoir storage to zero (dead pools). The assumption is that 
 the parties will not all agree on a withdraw. Thus, the water will stay parked in the account as a buffer pool, check, and balance so the parties do not collectively draw down the combined reservoir storage to zero.
 
