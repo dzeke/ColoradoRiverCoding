@@ -5,15 +5,15 @@
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "2229325902",
+    "hash" : "3990425631",
     "id" : "617DA5A3",
-    "lastKnownWriteTime" : 1624301201,
-    "last_content_update" : 1624301201328,
-    "path" : "C:/Rosenberg/Work/USU/Research/ColoradoRiver/RCode/ColoradoRiverFutures/TimeToDeadPool/TimeToDeadPool.R",
+    "lastKnownWriteTime" : 1630363320,
+    "last_content_update" : 1630363320355,
+    "path" : "C:/Rosenberg/Work/USU/Research/ColoradoRiver/RCode/ColoradoRiverCoding2/TimeToDeadPool/TimeToDeadPool.R",
     "project_path" : "TimeToDeadPool.R",
     "properties" : {
-        "cursorPosition" : "907,0",
-        "scrollLine" : "906"
+        "cursorPosition" : "579,36",
+        "scrollLine" : "562"
     },
     "relative_order" : 1,
     "source_on_save" : false,

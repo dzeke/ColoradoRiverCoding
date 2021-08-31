@@ -488,7 +488,8 @@ dfInflowSimulations <- data.frame(Storage=0, Year=0, index=0, Inflow=0, Release=
 sMeadApril2019 <- interp1(xi = 1089.74,y=dfMeadElevStor$`Live Storage (ac-ft)`,x=dfMeadElevStor$`Elevation (ft)`, method="linear")
 sMeadOct2019 <- interp1(xi = 1083.05,y=dfMeadElevStor$`Live Storage (ac-ft)`,x=dfMeadElevStor$`Elevation (ft)`, method="linear")
 sMeadOct2020 <- 10.1*1e6 # Oct 2020 volume ## 7.3*1e6 is long term ending storage at 9 maf per year
-sMeadStartStorage <- sMeadOct2020
+sMeadAug2021 <- 9.0*1e6 # Aug 30, 2021. 1,068 feet. http://mead.uslakes.info/level.asp
+sMeadStartStorage <- sMeadAug2021
 sMeadDeadPool <- interp1(xi = 900,y=dfMeadElevStor$`Live Storage (ac-ft)`,x=dfMeadElevStor$`Elevation (ft)`, method="linear")
 
 #Define start year
@@ -499,7 +500,7 @@ maxIts <- 24
 eRateToUse <- eRateMoreo[2]
 
 #Loop over steady natural inflow values (stress tests)
-for (tInflow in c(7, 8, 8.3, 8.6, 9, 10, 11, 12,14)*1e6){
+for (tInflow in c(7, 8, 8.4, 8.6, 9, 10, 11, 12,14)*1e6){
   
     #tInflow <- 6e6
     #debug(TimeToReservoirTarget)
@@ -541,7 +542,7 @@ dfTimeResults$LeeFerryNaturalFlow <- dfTimeResults$Inflow + as.numeric(vMeadInfl
 dfTimeResults$PowellRelease <- MeadInflowToPowellRelease(dfTimeResults$Inflow, GrandCanyonTribFlows)
 
 # Select even rows for plotting flow labels
-dfTimeResultsEven <- dfTimeResults[seq(4,nrow(dfTimeResults),by=4),]
+dfTimeResultsEven <- dfTimeResults[seq(4,nrow(dfTimeResults),by=8),]
 
 ## Define a polygons that identify the follow:
 # 1. Level below Mead 1025 where deliveries are no longer defined by Drought Contingency Plan
@@ -614,7 +615,7 @@ ggplot() +
   #Polygon zones
   geom_polygon(data = dfPolyAll, aes(x = Year, y = MeadVol/1e6, group = id, fill = as.factor(dfPolyAll$DumVal)), show.legend = F) +
   #Inflow traces
-  geom_line(data=dfTimeResults,aes(x=Year,y=Storage/1e6, group = Inflow/1e6, color = (Inflow/1e6)), size=1.5) +
+  geom_line(data=dfTimeResults,aes(x=Year,y=Storage/1e6, group = Inflow/1e6, color = (Inflow/1e6)), size=1.1) +
   
   #Interim guidelines expire
   geom_line(data=dfIntGuidelinesExpire,aes(x=Year,y=MeadVol, linetype="IntGuide"), size=3,show.legend = F) +
@@ -642,7 +643,7 @@ ggplot() +
   #Color scale for polygons - increasing red as go to lower levels
   #scale_fill_manual(breaks = c(2,1),values = c(palReds[3],palReds[2]),labels = dfPolyLabel$Label ) + 
   scale_fill_manual(breaks = as.factor(dfPolyLabel$DumVal),values = c(palReds[3],palReds[2]),labels = dfPolyLabel$Label ) + 
-  
+  scale_color_continuous(low = pBlues[6], high=pBlues[9]) +
   
     
   theme_bw() +
@@ -709,7 +710,7 @@ dfReleaseToStabilize$Release <- ifelse(dfReleaseToStabilize$ReleaseToStabilize >
                                        dfReleaseToStabilize$ReleaseToStabilize)
 
 #Label and position the traces
-dfTraceLabels <- data.frame(Elevation=c(rep(1090,3),rep(1025,3)),Inflow = c(8.5,7.6,8.5,8.2,7.4,8.5), Release = c(9.6-0.3/2, 8.3, 5,9.6-.65/2,7.7,5), Label=rep(c("Mandatory conservation", "More\nconservation", "Release"),2))
+dfTraceLabels <- data.frame(Elevation=c(rep(1090,3),rep(1025,3)),Inflow = c(8.5,7.6,8.5,8.2,7.4,8.5), Release = c(9.6-0.3/2, 8.3, 5,9.6-.65/2,7.7,5), Label=rep(c("Mandatory conservation", "More\nconservation", "Reservoir level\nrises"),2))
 
 #Calculate the additional conservation needed beyond DCP target
 dfReleaseToStabilize$AdditionalConservation <- dfReleaseToStabilize$DeliveryTarget  - dfReleaseToStabilize$MandatoryConservationTarget - dfReleaseToStabilize$Release

@@ -576,7 +576,8 @@ sMeadApril2019 <- interp1(xi = 1089.74,y=dfMeadElevStor$`Live Storage (ac-ft)`,x
 sMeadOct2019 <- interp1(xi = 1083.05,y=dfMeadElevStor$`Live Storage (ac-ft)`,x=dfMeadElevStor$`Elevation (ft)`, method="linear")
 sMeadOct2020 <- 10.1*1e6 # Oct 2020 volume ## 7.3*1e6 is long term ending storage at 9 maf per year
 sMeadApril2021 <- 9.9*1e6  #April 2021 volume
-sMeadStartStorage <- sMeadOct2020
+sMeadAugust2021 <- 9.0*1e6 #August 2021 volume
+sMeadStartStorage <- sMeadAugust2021
 sMeadDeadPool <- interp1(xi = 900,y=dfMeadElevStor$`Live Storage (ac-ft)`,x=dfMeadElevStor$`Elevation (ft)`, method="linear")
 
 #Define start year
