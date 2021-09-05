@@ -1,0 +1,13 @@
+"Reservoir","variable","value","level","month","stor_maf","name","label"
+"Mead","Inactive Capacity",0,895,1,0,"Dead Pool","895 - Dead Pool"
+"Mead","SNWA Intake #2",4475301,1000,1,4.475301,"SNWA Intake #2","1000 - SNWA Intake #2"
+"Mead","Eq. Mid Tier",5981122,1025,1,5.981122,"Eq. Mid Tier","1025 - Eq. Mid Tier"
+"Mead","SNWA Intake #1",7682878,1050,1,7.682878,"SNWA Intake #1","1050 - SNWA Intake #1"
+"Mead","ISG trigger",9600987.99999,1075,1,9.60098799999,"ISG trigger","1075 - ISG trigger"
+"Mead","DCP trigger",10857008,1090,1,10.857008,"DCP trigger","1090 - DCP trigger"
+"Mead","Eq. Protect Level",12186069.168,1105,1,12.186069168,"Eq. Protect Level","1105 - Eq. Protect Level"
+"Mead","Flood Pool (Jan 1
+Full upstream storage)",22033237.000033,1192.1936004229,1,22.033237000033,"Flood Pool (Jan 1
+Full upstream storage)","1192 - Max. Req. Flood Pool"
+"Mead","Bottom of Flood Pool (Feb- Sept)",25883000,1218.12702895422,1,25.883,"Flood Pool (Aug 1)","1218 - Min. Req. Flood Pool"
+"Mead","Live Capacity",27383237.000033,1227.5411306637,1,27.383237000033,"Live Capacity","1228 - Live Capacity"

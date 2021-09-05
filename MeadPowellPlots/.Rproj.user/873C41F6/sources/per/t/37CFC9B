@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1630817934639.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "37CFC9B",
+    "lastKnownWriteTime" : 8030597042934194811,
+    "last_content_update" : 1630817934639,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "DC9CFE1",
+        "caption" : "dfMeadPoolsPlot2",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=dfMeadPoolsPlot2&cache_key=DC9CFE1",
+        "displayedObservations" : 10,
+        "environment" : "",
+        "object" : "dfMeadPoolsPlot2",
+        "preview" : 0,
+        "totalObservations" : 10,
+        "variables" : 8
+    },
+    "relative_order" : 9,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

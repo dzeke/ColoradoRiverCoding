@@ -448,4 +448,92 @@ ggplot() +
   theme(text = element_text(size=20), legend.title=element_blank(), legend.position ="none")
 #theme(text = element_text(size=20), legend.text=element_text(size=16)
 
+###################################################
+#### PLOT for MEAD
 
+#Data frame of key elevations
+nProtectMead <- dfProtectLevel$Volume[2]/1e6
+nCapacityMead <- dfMaxStor$Volume[2]
+dfKeyMeadVolumes <- data.frame(Volume = c(nProtectMead, nCapacityMead ), Label = c("Protect","Capacity"))
+#Data frame of key traces
+dfKeyMeadTraceLabels <- data.frame(Label = c("Protect", "Public Pool", "Conservation\nAccounts", "Deficit Mindset"),
+                               Volume = c(nProtectMead/2, 8.5, 12, 20), xPosition = rep(2007 + (nMaxYearICSData - 2007)/2,4),
+                               Size = c(6, 6, 5, 6))
+
+#Adjust the position of the MX+LB conservation accounts
+dfKeyMeadTraceLabels$xPosition[3] <- (2026 + nMaxYearICSData + 0.825 )/2
+
+## Data for the stacked plot
+#New data frame for area
+dfMeadStorageStack <- dfJointStorageClean
+
+dfMeadStorageStack$Protect <- nProtectMead
+dfMeadStorageStack$LowerBasin <- ifelse(dfMeadStorageStack$Year <= nMaxYearICSData, dfMeadStorageStack$LowerBasinConserve/1e6, 0)
+dfMeadStorageStack$Mexico <- ifelse(dfMeadStorageStack$Year <= nMaxYearICSData, dfMeadStorageStack$MexicoConserve/1e6, 0)
+dfMeadStorageStack$AvailableWater <- ifelse(dfMeadStorageStack$Year <= nMaxYearICSData, dfMeadStorageStack$MeadStorage - dfMeadStorageStack$Protect - dfMeadStorageStack$LowerBasin - dfMeadStorageStack$Mexico, 0)
+dfMeadStorageStack$Capacity <- ifelse(dfMeadStorageStack$Year <= nMaxYearICSData, nCapacityMead - dfMeadStorageStack$AvailableWater - dfMeadStorageStack$Protect - dfMeadStorageStack$LowerBasin - dfMeadStorageStack$Mexico, 0)
+
+#Melt the data
+dfMeadStorageStackMelt <- melt(dfMeadStorageStack, id.vars = c("DateAsValue"), measure.vars = c("Protect","LowerBasin", "Mexico", "AvailableWater", "Capacity"))
+#Specify the order of the variables
+dfMeadStorageStackMelt$variable <- factor(dfMeadStorageStackMelt$variable, levels=c("Capacity","AvailableWater", "Mexico", "LowerBasin", "Protect"))
+
+#Read in the levels from CSV
+dfMeadPoolsPlot2 <- read.csv("dfMeadPoolsPlot2.csv",header=TRUE)
+
+
+
+ggplot() +
+  #Combined Storage
+  #As area
+  geom_area(data=dfMeadStorageStackMelt, aes(x=DateAsValue, y=value, fill=variable, group=variable)) +
+  #As line
+  geom_line(data=dfMeadStorageStack %>% filter(Year < nMaxYearICSData + 1),aes(x=DateAsValue,y=MeadStorage, color="Combined"), size=2, color = "Black") +
+  #geom_area(data=dfPlotData,aes(x=month,y=stor_maf, fill = variable), position='stack') +
+  
+  #lines for max capacity and protect elevation
+  geom_hline(data=dfKeyMeadVolumes, aes(yintercept = Volume), linetype="longdash", size=1) +
+  #lines for Interim Guidelines and Expiry
+  geom_vline(data=dfKeyDates, aes(xintercept = Date), linetype = "dashed", size=1, color = pReds[9]) +
+  
+  #Labels for the areas
+  geom_text(data=dfKeyMeadTraceLabels %>% filter(Label != dfKeyMeadTraceLabels$Label[3]), aes(x=as.Date(sprintf("%.0f-01-01",xPosition)), y=Volume, label=as.character(Label)), size = 6, fontface="bold") +
+  geom_text(data=dfKeyMeadTraceLabels %>% filter(Label == dfKeyMeadTraceLabels$Label[3]), aes(x=as.Date(sprintf("%.0f-01-01",xPosition)), y=Volume, label=as.character(Label)), size = 5, fontface="bold", color = pBlues[5]) +
+  
+  #Arrow Lake Mead conservation account label
+  geom_curve(data = dfKeyTraceLabels %>% filter(Label == dfKeyTraceLabels$Label[3]), aes(x=as.Date(sprintf("%.0f-01-01",xPosition)), xend = as.Date(sprintf("%.0f-02-01",nMaxYearICSData+1)), y=10.5, yend = 7), curvature = -0.5, color = pBlues[5], size = 1.0, arrow = arrow(length = unit(0.03, "npc"))) +
+  
+  
+  #Label what is next
+  #geom_text(data = dfEndArrows %>% filter(Label == "Recover?"), aes(x= MidDate, y = Ystart, label = "Recover?\nStabilize?\nDraw down?"), size = 5, color = "Black") +
+  #Label the arrows
+  #geom_text(data = dfEndArrows, aes(x = Xstart, y = (Ystart+Yend)/2 + Yoffset, label = Label, angle = Angle), size = 5, color = "Black", hjust = 0) +
+  
+  #geom_segment(aes(x=as.Date("2022-01-01"), xend=as.Date("2025-01-01"), y=12, yend = 14, colour = palBlues[7], arrow = arrow())) +
+
+  
+  #Scales
+  scale_x_date(limits= c(as.Date("2000-01-01"), as.Date("2026-01-01")), sec.axis = sec_axis(~. +0, name = "", breaks = dfKeyDates$Date, labels = as.character(dfKeyDates$Label))) +
+  #scale_y_continuous(limits = c(0,NA)) +
+  # secondary axis is not working
+  # scale_y_continuous(limits = c(0,NA), sec_axis(~. +0, name = "", breaks = dfKeyVolumes$Volume, labels = dfKeyVolumes$Volume)) +
+  #Secondary axis as percent
+  #scale_y_continuous(limits = c(0,NA), sec.axis = sec_axis(~ . /nCapacityMead*100, name = "Percent of Capacity", breaks = seq(0,100,by=25), labels = sprintf("%d%%", seq(0,100,by=25)))) +
+
+  #Secondary axis as Mead level
+  scale_y_continuous(limits = c(0, NA),  sec.axis = sec_axis(~. +0, name = "Elevation (feet)", breaks = dfMeadPoolsPlot2$stor_maf, labels = dfMeadPoolsPlot2$label)) +
+  
+  
+  scale_fill_manual(values=c(pReds[3], pBlues[3], pBlues[5], pBlues[5], pBlues[7])) +
+  
+  #    scale_y_continuous(breaks = c(0,5.98,9.6,12.2,dfMaxStor[2,2]),labels=c(0,5.98,9.6,12.2,dfMaxStor[2,2]),  sec.axis = sec_axis(~. +0, name = "Mead Level (feet)", breaks = c(0,5.98,9.6,12.2,dfMaxStor[2,2]), labels = c(895,1025,1075,1105,1218.8))) +
+  #scale_x_discrete(breaks=cMonths, labels= cMonthsLabels) +
+  #scale_x_continuous(breaks=seq(1960,2020,by=10), labels= seq(1960,2020,by=10)) +
+  
+  
+  #scale_fill_manual(breaks=c(1:6),values = palBlues[2:7]) + #,labels = variable) + 
+  theme_bw() +
+  #coord_fixed() +
+  labs(x="", y="Active Storage\n(MAF)", color = "") +
+  theme(text = element_text(size=20), legend.title=element_blank(), legend.position ="none")
+#theme(text = element_text(size=20), legend.text=element_text(size=16)
