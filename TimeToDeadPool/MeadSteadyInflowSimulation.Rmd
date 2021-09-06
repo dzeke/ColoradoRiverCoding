@@ -1,7 +1,7 @@
 ---
-title: "Add reservoir inflow as new criteria to recover Lake Mead from shortage"
+title: "Add reservoir inflow as new criteria to give Lake Mead managers more flexibility and independence to conserve water"
 author: "David E. Rosenberg"
-date: "June 21, 2021"
+date: "September 5, 2021"
 output: pdf_document
 ---
 
@@ -11,11 +11,11 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Description
 
-This is an R Markdown document. This work supports the blog post "Add reservoir inflow as new criteria to recover Lake Mead from shortage." There are simulations of reservoir draw down for inflow scenarios of 7 to 14 maf per year every year. These simulations assume states and contractors do not withdraw from their conservation accounts nor convert and conservation account balances to meet mandatory conservation targets. Another plot shows the reservoir release needed to stablize reservoir level for different inflow scenarios. And a final plot shows reservoir recovery from two starting storages. Key plots include:
+This is an R Markdown document. This work supports the piece "Add reservoir inflow as new criteria to give Lake Mead managers more flexibility and independence to conserve water." There are simulations of reservoir draw down for inflow scenarios of 7 to 14 maf per year every year. These simulations assume states and contractors do not withdraw from their conservation accounts nor convert and conservation account balances to meet mandatory conservation targets. Another plot shows the reservoir release needed to stablize reservoir level for different inflow scenarios. And a final plot shows reservoir recovery from two starting storages. Key plots include:
 
 1. A line graph compares the schedules of total mandatory cutbacks by 2008 Interim Guidelines and 2019 DCP. Dashed 1:1 lines show required cutbacks to avoid Dead Pool and to protect 1,025 feet (6.0 maf storage).
 
-2. A line plot shows evolution of Lake Mead Active storage (y-axis) over time (x-axis) for mandatory conservation with different steady inflow scenarios. Pink area denotes the storage volumes/elevations of mandatory conservation target. Red area denotes lower storage. Simulations assume max DCP cutback in red area below 1,025 feet but in reality, the Lower Basin States and Mexico will renegotiate operations.
+2. A line plot shows evolution of Lake Mead Active storage (y-axis) over time (x-axis) for mandatory conservation with different steady inflow scenarios. Pink area denotes the storage volumes/elevations of mandatory conservation target. Red area denotes lower storage. Simulations assume max DCP cutback in red area below 1,025 feet. We hope that if reservoir level gets that low the Lower Basin States and Mexico will cut back release further (depends on inflow) to stabilize reservoir level.
 
 3. The reservoir release needed to stabilize reservoir storage at different reservoir elvations and inflows. This release is calculated by resolving the reservoir mass balance equation for release = inflow - evaporation.
 
@@ -25,7 +25,7 @@ Data from 2019 Lower Basin Drought Contingency Plan (DCP), U.S.-Mexico Minute 32
 
 
 ## Requested Citation
-David E. Rosenberg (2021), "Add reservoir inflow as new criteria to recover Lake Mead from shortage." Utah State University. Logan, Utah. https://github.com/dzeke/ColoradoRiverFutures/tree/master/TimeToDeadPool
+David E. Rosenberg (2021), "Add reservoir inflow as new criteria to give Lake Mead managers more flexibility and independence to conserve water." Utah State University. Logan, Utah. https://github.com/dzeke/ColoradoRiverFutures/tree/master/TimeToDeadPool
 
 ```{r PrelimCalcs, echo=FALSE, warning=FALSE, message=FALSE}
 
@@ -244,6 +244,9 @@ vLowerBasinDeliveryTarget <- 9.6e6
 sExcelFile <- 'MeadDroughtContingencyPlan.xlsx'
 dfMeadElevStor <- read_excel(sExcelFile, sheet = "Mead-Elevation-Area",  range = "A4:D676")
 dfPowellElevStor <- read_excel(sExcelFile, sheet = 'Powell-Elevation-Area',  range = "A4:D689")
+
+# Read in pre-processes pool definitions for Lake Mead from CSV
+dfMeadPoolsPlot2 <- read.csv("dfMeadPoolsPlot2.csv",header=TRUE)
 
 #Evaporation rates from CRSS
 #EvapRates <- read_excel(sExcelFile, sheet = 'Data',  range = "P3:S15")
@@ -635,8 +638,12 @@ ggplot() +
   geom_label(data=dfPolyLabel, aes(x = 2041, y = MidMead/1e6, label = Label, fontface="bold", fill=as.factor(dfPolyLabel$DumVal)), size=3, angle = 0) + 
   
   #Y-axis: Active storage on left, Elevation with labels on right 
-  scale_y_continuous(breaks = seq(0,tMaxVol,by=5), labels = seq(0,tMaxVol,by=5), limits = c(0, tMaxVol), 
-                     sec.axis = sec_axis(~. +0, name = "Mead Level (feet)", breaks = dfMeadPoolsPlot$stor_maf, labels = dfMeadPoolsPlot$labelSecY)) +
+  #scale_y_continuous(breaks = seq(0,tMaxVol,by=5), labels = seq(0,tMaxVol,by=5), limits = c(0, tMaxVol), sec.axis = sec_axis(~. +0, name = "Mead Level (feet)", breaks = dfMeadPoolsPlot$stor_maf, labels = dfMeadPoolsPlot$labelSecY)) +
+  
+  #Yaxis: Secondary axis as Mead level with pre-processed zones
+  scale_y_continuous(breaks = seq(0,tMaxVol,by=5), labels = seq(0,tMaxVol,by=5), limits = c(0, tMaxVol),  sec.axis = sec_axis(~. +0, name = "Elevation (feet)", breaks = dfMeadPoolsPlot2$stor_maf, labels = dfMeadPoolsPlot2$label)) +
+  
+  
   #limits = c(0,as.numeric(dfMaxStor %>% filter(Reservoir %in% c("Mead")) %>% select(Volume))),
   #scale_y_continuous(breaks = seq(0,50,by=10), labels = seq(0,50,by=10), limits = c(0, 50)) +
 
@@ -901,8 +908,12 @@ ggplot() +
   geom_label(data=dfPolyLabel, aes(x = xMax-4, y = MidMead/1e6, label = Label, fontface="bold", fill=as.factor(dfPolyLabel$DumVal)), size=3, angle = 0) + 
   
   #Y-axis: Active storage on left, Elevation with labels on right 
-  scale_y_continuous(breaks = seq(0,tMaxVol,by=5), labels = seq(0,tMaxVol,by=5), limits = c(0, tMaxVol), 
-                     sec.axis = sec_axis(~. +0, name = "Mead Level (feet)", breaks = dfMeadPoolsPlot$stor_maf, labels = dfMeadPoolsPlot$labelSecY)) +
+ # scale_y_continuous(breaks = seq(0,tMaxVol,by=5), labels = seq(0,tMaxVol,by=5), limits = c(0, tMaxVol), sec.axis = sec_axis(~. +0, name = "Mead Level (feet)", breaks = dfMeadPoolsPlot$stor_maf, labels = dfMeadPoolsPlot$labelSecY)) +
+  
+    #Yaxis: Secondary axis as Mead level with pre-processed zones
+    scale_y_continuous(breaks = seq(0,tMaxVol,by=5), labels = seq(0,tMaxVol,by=5), limits = c(0, tMaxVol),  sec.axis = sec_axis(~. +0, name = "Elevation (feet)", breaks = dfMeadPoolsPlot2$stor_maf, labels = dfMeadPoolsPlot2$label)) +
+
+  
   scale_x_continuous(limits = c(nStartYearRecovery,xMax)) +
   
   #limits = c(0,as.numeric(dfMaxStor %>% filter(Reservoir %in% c("Mead")) %>% select(Volume))),

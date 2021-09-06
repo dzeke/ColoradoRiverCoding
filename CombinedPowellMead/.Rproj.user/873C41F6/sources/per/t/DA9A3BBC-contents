@@ -489,7 +489,7 @@ ggplot() +
 
 ```
 
-# Figure 4. Mead Storage over time with conservation accounts
+# Figure 4. Lake Mead storage over time with conservation accounts
 ```{r CombinedFig4, echo=FALSE, warning=FALSE, message=FALSE}
 
 

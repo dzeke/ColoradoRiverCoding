@@ -235,6 +235,9 @@ sExcelFile <- 'MeadDroughtContingencyPlan.xlsx'
 dfMeadElevStor <- read_excel(sExcelFile, sheet = "Mead-Elevation-Area",  range = "A4:D676")
 dfPowellElevStor <- read_excel(sExcelFile, sheet = 'Powell-Elevation-Area',  range = "A4:D689")
 
+# Read in pre-processes pool definitions for Lake Mead from CSV
+dfMeadPoolsPlot2 <- read.csv("dfMeadPoolsPlot2.csv",header=TRUE)
+
 #Evaporation rates from CRSS
 #EvapRates <- read_excel(sExcelFile, sheet = 'Data',  range = "P3:S15")
 # Evaporation Rates from Schmidt et al (2016) Fill Mead First, p. 29, Table 2 - https://qcnr.usu.edu/wats/colorado_river_studies/files/documents/Fill_Mead_First_Analysis.pdf
@@ -724,9 +727,13 @@ ggplot() +
   geom_label(data=dfPolyLabel, aes(x = 2041, y = MidMead/1e6, label = Label, fontface="bold", fill=as.factor(dfPolyLabel$DumVal)), size=5, angle = 0) + 
   
   #Y-axis: Active storage on left, Elevation with labels on right 
-  scale_y_continuous(breaks = seq(0,tMaxVol,by=5), labels = seq(0,tMaxVol,by=5), limits = c(0, tMaxVol), 
-                     sec.axis = sec_axis(~. +0, name = "Mead Level (feet)", breaks = dfMeadPoolsPlot$stor_maf, labels = dfMeadPoolsPlot$labelSecY)) +
-  #limits = c(0,as.numeric(dfMaxStor %>% filter(Reservoir %in% c("Mead")) %>% select(Volume))),
+  #scale_y_continuous(breaks = seq(0,tMaxVol,by=5), labels = seq(0,tMaxVol,by=5), limits = c(0, tMaxVol), 
+  #                   sec.axis = sec_axis(~. +0, name = "Mead Level (feet)", breaks = dfMeadPoolsPlot$stor_maf, labels = dfMeadPoolsPlot$labelSecY)) +
+
+  #Yaxis: Secondary axis as Mead level with pre-processed zones
+  scale_y_continuous(breaks = seq(0,tMaxVol,by=5), labels = seq(0,tMaxVol,by=5), limits = c(0, tMaxVol),  sec.axis = sec_axis(~. +0, name = "Elevation (feet)", breaks = dfMeadPoolsPlot2$stor_maf, labels = dfMeadPoolsPlot2$label)) +
+  
+    #limits = c(0,as.numeric(dfMaxStor %>% filter(Reservoir %in% c("Mead")) %>% select(Volume))),
   #scale_y_continuous(breaks = seq(0,50,by=10), labels = seq(0,50,by=10), limits = c(0, 50)) +
 
   #Color scale for polygons - increasing red as go to lower levels
@@ -886,8 +893,12 @@ ggplot() +
   geom_label(data=dfPolyLabel, aes(x = xMax-4, y = MidMead/1e6, label = Label, fontface="bold", fill=as.factor(dfPolyLabel$DumVal)), size=4, angle = 0) + 
   
   #Y-axis: Active storage on left, Elevation with labels on right 
-  scale_y_continuous(breaks = seq(0,tMaxVol,by=5), labels = seq(0,tMaxVol,by=5), limits = c(0, tMaxVol), 
-                     sec.axis = sec_axis(~. +0, name = "Mead Level (feet)", breaks = dfMeadPoolsPlot$stor_maf, labels = dfMeadPoolsPlot$labelSecY)) +
+  #scale_y_continuous(breaks = seq(0,tMaxVol,by=5), labels = seq(0,tMaxVol,by=5), limits = c(0, tMaxVol), 
+  #                   sec.axis = sec_axis(~. +0, name = "Mead Level (feet)", breaks = dfMeadPoolsPlot$stor_maf, labels = dfMeadPoolsPlot$labelSecY)) +
+  
+  #Yaxis: Secondary axis as Mead level with pre-processed zones
+  scale_y_continuous(breaks = seq(0,tMaxVol,by=5), labels = seq(0,tMaxVol,by=5), limits = c(0, tMaxVol),  sec.axis = sec_axis(~. +0, name = "Elevation (feet)", breaks = dfMeadPoolsPlot2$stor_maf, labels = dfMeadPoolsPlot2$label)) +
+  
   scale_x_continuous(limits = c(nStartYearRecovery,xMax)) +
   
   #limits = c(0,as.numeric(dfMaxStor %>% filter(Reservoir %in% c("Mead")) %>% select(Volume))),
@@ -1029,9 +1040,13 @@ ggplot() +
   geom_label(data=dfPolyLabel, aes(x = MidYear, y = MidMead/1e6, label = Label, fontface="bold", fill=as.factor(dfPolyLabel$DumVal)), size=6, angle = 0) + 
   
   #Y-axis: Active storage on left, Elevation with labels on right 
-  scale_y_continuous(breaks = seq(0,tMaxVol,by=5), labels = seq(0,tMaxVol,by=5), limits = c(0, tMaxVol), 
+  #scale_y_continuous(breaks = seq(0,tMaxVol,by=5), labels = seq(0,tMaxVol,by=5), limits = c(0, tMaxVol), 
                      sec.axis = sec_axis(~. +0, name = "Mead Level (feet)", breaks = dfMeadPoolsPlot$stor_maf, labels = dfMeadPoolsPlot$labelSecY)) +
-  #limits = c(0,as.numeric(dfMaxStor %>% filter(Reservoir %in% c("Mead")) %>% select(Volume))),
+
+  #Yaxis: Secondary axis as Mead level with pre-processed zones
+  scale_y_continuous(breaks = seq(0,tMaxVol,by=5), labels = seq(0,tMaxVol,by=5), limits = c(0, tMaxVol),  sec.axis = sec_axis(~. +0, name = "Elevation (feet)", breaks = dfMeadPoolsPlot2$stor_maf, labels = dfMeadPoolsPlot2$label)) +
+  
+    #limits = c(0,as.numeric(dfMaxStor %>% filter(Reservoir %in% c("Mead")) %>% select(Volume))),
   #scale_y_continuous(breaks = seq(0,50,by=10), labels = seq(0,50,by=10), limits = c(0, 50)) +
   
   #Color scale for polygons - increasing red as go to lower levels
@@ -1068,8 +1083,12 @@ ggplot() +
   geom_label(data=dfPolyLabel, aes(x = MidYear, y = MidMead/1e6, label = Label, fontface="bold", fill=as.factor(dfPolyLabel$DumVal)), size=6, angle = 0) + 
   
   #Y-axis: Active storage on left, Elevation with labels on right 
-  scale_y_continuous(breaks = seq(0,tMaxVol,by=5), labels = seq(0,tMaxVol,by=5), limits = c(0, tMaxVol), 
-                     sec.axis = sec_axis(~. +0, name = "Mead Level (feet)", breaks = dfMeadPoolsPlot$stor_maf, labels = dfMeadPoolsPlot$labelSecY)) +
+  #scale_y_continuous(breaks = seq(0,tMaxVol,by=5), labels = seq(0,tMaxVol,by=5), limits = c(0, tMaxVol), 
+  #                   sec.axis = sec_axis(~. +0, name = "Mead Level (feet)", breaks = dfMeadPoolsPlot$stor_maf, labels = dfMeadPoolsPlot$labelSecY)) +
+  
+  #Yaxis: Secondary axis as Mead level with pre-processed zones
+  scale_y_continuous(breaks = seq(0,tMaxVol,by=5), labels = seq(0,tMaxVol,by=5), limits = c(0, tMaxVol),  sec.axis = sec_axis(~. +0, name = "Elevation (feet)", breaks = dfMeadPoolsPlot2$stor_maf, labels = dfMeadPoolsPlot2$label)) +
+  
   #limits = c(0,as.numeric(dfMaxStor %>% filter(Reservoir %in% c("Mead")) %>% select(Volume))),
   #scale_y_continuous(breaks = seq(0,50,by=10), labels = seq(0,50,by=10), limits = c(0, 50)) +
   
@@ -1111,9 +1130,13 @@ ggplot() +
   geom_label(data=dfPolyLabel, aes(x = MidYear, y = MidMead/1e6, label = Label, fontface="bold", fill=as.factor(dfPolyLabel$DumVal)), size=6, angle = 0) + 
   
   #Y-axis: Active storage on left, Elevation with labels on right 
-  scale_y_continuous(breaks = seq(0,tMaxVol,by=5), labels = seq(0,tMaxVol,by=5), limits = c(0, tMaxVol), 
-                     sec.axis = sec_axis(~. +0, name = "Mead Level (feet)", breaks = dfMeadPoolsPlot$stor_maf, labels = dfMeadPoolsPlot$labelSecY)) +
-  #limits = c(0,as.numeric(dfMaxStor %>% filter(Reservoir %in% c("Mead")) %>% select(Volume))),
+  #scale_y_continuous(breaks = seq(0,tMaxVol,by=5), labels = seq(0,tMaxVol,by=5), limits = c(0, tMaxVol), 
+  #                   sec.axis = sec_axis(~. +0, name = "Mead Level (feet)", breaks = dfMeadPoolsPlot$stor_maf, labels = dfMeadPoolsPlot$labelSecY)) +
+
+  #Yaxis: Secondary axis as Mead level with pre-processed zones
+  scale_y_continuous(breaks = seq(0,tMaxVol,by=5), labels = seq(0,tMaxVol,by=5), limits = c(0, tMaxVol),  sec.axis = sec_axis(~. +0, name = "Elevation (feet)", breaks = dfMeadPoolsPlot2$stor_maf, labels = dfMeadPoolsPlot2$label)) +
+  
+    #limits = c(0,as.numeric(dfMaxStor %>% filter(Reservoir %in% c("Mead")) %>% select(Volume))),
   #scale_y_continuous(breaks = seq(0,50,by=10), labels = seq(0,50,by=10), limits = c(0, 50)) +
   
   #Color scale for polygons - increasing red as go to lower levels
@@ -1245,8 +1268,12 @@ p <- ggplot() +
 #  geom_label(data=dfPolyLabel, aes(x = xLabelPos, y = MidMead/1e6, label = Label, fontface="bold"), size=6, angle = 0) + 
   
   #Y-axis: Active storage on left, Elevation with labels on right 
-  scale_y_continuous(breaks = seq(0,tMaxVol,by=5), labels = seq(0,tMaxVol,by=5), limits = c(0, tMaxVol), 
-                     sec.axis = sec_axis(~. +0, name = "Mead Level (feet)", breaks = dfMeadPoolsPlot$stor_maf, labels = dfMeadPoolsPlot$labelSecY)) +
+  #scale_y_continuous(breaks = seq(0,tMaxVol,by=5), labels = seq(0,tMaxVol,by=5), limits = c(0, tMaxVol), 
+  #                   sec.axis = sec_axis(~. +0, name = "Mead Level (feet)", breaks = dfMeadPoolsPlot$stor_maf, labels = dfMeadPoolsPlot$labelSecY)) +
+
+  #Yaxis: Secondary axis as Mead level with pre-processed zones
+  scale_y_continuous(breaks = seq(0,tMaxVol,by=5), labels = seq(0,tMaxVol,by=5), limits = c(0, tMaxVol),  sec.axis = sec_axis(~. +0, name = "Elevation (feet)", breaks = dfMeadPoolsPlot2$stor_maf, labels = dfMeadPoolsPlot2$label)) +
+  
   scale_x_continuous(breaks = xFlowScale, labels = xFlowScale) +
   #limits = c(0,as.numeric(dfMaxStor %>% filter(Reservoir %in% c("Mead")) %>% select(Volume))),
   #scale_y_continuous(breaks = seq(0,50,by=10), labels = seq(0,50,by=10), limits = c(0, 50)) +
@@ -1344,8 +1371,12 @@ for (i in (1:nRows)) {
     #  geom_label(data=dfPolyLabel, aes(x = xLabelPos, y = MidMead/1e6, label = Label, fontface="bold"), size=6, angle = 0) + 
     
     #Y-axis: Active storage on left, Elevation with labels on right 
-    scale_y_continuous(breaks = seq(0,tMaxVol,by=5), labels = seq(0,tMaxVol,by=5), limits = c(0, tMaxVol+3), 
-                       sec.axis = sec_axis(~. +0, name = "Mead Level (feet)", breaks = dfMeadPoolsPlot$stor_maf, labels = dfMeadPoolsPlot$labelSecY)) +
+    #scale_y_continuous(breaks = seq(0,tMaxVol,by=5), labels = seq(0,tMaxVol,by=5), limits = c(0, tMaxVol+3), 
+    #                   sec.axis = sec_axis(~. +0, name = "Mead Level (feet)", breaks = dfMeadPoolsPlot$stor_maf, labels = dfMeadPoolsPlot$labelSecY)) +
+
+    #Yaxis: Secondary axis as Mead level with pre-processed zones
+    scale_y_continuous(breaks = seq(0,tMaxVol,by=5), labels = seq(0,tMaxVol,by=5), limits = c(0, tMaxVol),  sec.axis = sec_axis(~. +0, name = "Elevation (feet)", breaks = dfMeadPoolsPlot2$stor_maf, labels = dfMeadPoolsPlot2$label)) +
+   
     scale_x_continuous(breaks = xFlowScaleCurr, labels = xFlowScaleCurr) +
     #limits = c(0,as.numeric(dfMaxStor %>% filter(Reservoir %in% c("Mead")) %>% select(Volume))),
     #scale_y_continuous(breaks = seq(0,50,by=10), labels = seq(0,50,by=10), limits = c(0, 50)) +
@@ -1756,8 +1787,12 @@ ggplot() +
   geom_hline(yintercept = targetStorageVal/1e6, size = 2) + 
   
   #Y-axis: Active storage on left, Elevation with labels on right 
-  scale_y_continuous(breaks = seq(0,tMaxVol,by=5), labels = seq(0,tMaxVol,by=5), limits = c(0, tMaxVol+3), 
-                     sec.axis = sec_axis(~. +0, name = "Mead Level (feet)", breaks = dfMeadPoolsPlot$stor_maf, labels = dfMeadPoolsPlot$labelSecY)) +
+  #scale_y_continuous(breaks = seq(0,tMaxVol,by=5), labels = seq(0,tMaxVol,by=5), limits = c(0, tMaxVol+3), 
+  #                   sec.axis = sec_axis(~. +0, name = "Mead Level (feet)", breaks = dfMeadPoolsPlot$stor_maf, labels = dfMeadPoolsPlot$labelSecY)) +
+  
+  #Yaxis: Secondary axis as Mead level with pre-processed zones
+  scale_y_continuous(breaks = seq(0,tMaxVol,by=5), labels = seq(0,tMaxVol,by=5), limits = c(0, tMaxVol),  sec.axis = sec_axis(~. +0, name = "Elevation (feet)", breaks = dfMeadPoolsPlot2$stor_maf, labels = dfMeadPoolsPlot2$label)) +
+  
   scale_x_continuous(breaks = xFlowScaleCurr, labels = xFlowScaleCurr) +
   #limits = c(0,as.numeric(dfMaxStor %>% filter(Reservoir %in% c("Mead")) %>% select(Volume))),
   #scale_y_continuous(breaks = seq(0,50,by=10), labels = seq(0,50,by=10), limits = c(0, 50)) +
