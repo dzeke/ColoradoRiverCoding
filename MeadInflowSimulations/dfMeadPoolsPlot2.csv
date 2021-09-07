@@ -1,0 +1,9 @@
+Reservoir,variable,value,level,month,stor_maf,name,label
+Mead,Dead Pool,0,895,1,0,Dead Pool,895 - Dead Pool
+Mead,Minimum Power,2223200,955,1,2.2232,Minimum Power,955 - Power
+Mead,SNWA Intake #2,4475301,1000,1,4.475301,SNWA Intake #2,1000 - SNWA Intake #2
+Mead,SNWA Intake #3,5664593,1020,1,5.6646,Protect,1020 - Protect
+Mead,SNWA Intake #1,7682878,1050,1,7.682878,SNWA Intake #1,1050 - SNWA Intake #1
+Mead,DCP trigger,10857008,1090,1,10.857008,DCP trigger,1090 - DCP trigger
+Mead,Pearce Rapid,15207120,1135,1,15.10711897,Pearce Rapid,1135 - Pearce Rapid
+Mead,Flood pool,25900000,1218,1,25.9,Capacity,1218 - Flood Pool

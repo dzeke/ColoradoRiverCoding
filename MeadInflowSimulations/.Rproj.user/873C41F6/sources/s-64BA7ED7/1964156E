@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1621915311740.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2958564224",
+    "id" : "1964156E",
+    "lastKnownWriteTime" : 1630986926,
+    "last_content_update" : 1630986926504,
+    "path" : "C:/Rosenberg/Work/USU/Research/ColoradoRiver/RCode/ColoradoRiverCoding2/MeadInflowSimulations/MeadSteadyInflowSimulation.Rmd",
+    "project_path" : "MeadSteadyInflowSimulation.Rmd",
+    "properties" : {
+        "cursorPosition" : "21,147",
+        "scrollLine" : "18"
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}
