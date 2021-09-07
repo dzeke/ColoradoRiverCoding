@@ -29,4 +29,4 @@ contained within the PDF file.
 1. **MeadDroughtContingencyPlan.xlsx** - Spreadsheet with Mead and Powell reservoir storage-area-elevation data from CRSS and drought contingency plan schedule (cutbacks vs. Lake Mead elevation)
 1. **MeadSteadyInflowSimulation.R** - R version of **MeadSteadyInflowSimulation.Rmd**. There are some differences. There is also some experimental code at the end. The file generates **Fig0-9.jpg**
 1. **MeadSteadyInflowSimulation.Rmd** - R markdown file with script to generate **MeadSteadyInflowSimulation.pdf**. **See directions to run this file!**
-
+1. **ShareOfInflow-LB-MX.xlsx** - Excel file calculates shares of inflow for Lower Basin parties and Mexico. Used in Appendix A of paper.
