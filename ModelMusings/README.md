@@ -18,20 +18,28 @@ Presently there is one interactive model in the repository.
 
 ## Pilot flex accounting to encourage more water conservation in a combined Lake Powell-Lake Mead system
 
-**Visuals of key features: [PilotFlexAccounting-KeyIdeas.pdf](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/PilotFlexAccounting-KeyIdeas.pdf)**.
+**Visuals of key benefits and features: [PilotFlexAccounting-KeyIdeas.pdf](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/PilotFlexAccounting-KeyIdeas.pdf)**.
 
-## Key Benefits
+## Individual and Collective Benefits
 
 1. Give each party more flexibility to make their individual water consumption, conservation, and reservoir storage decisions independent of other parties.
-1. Parties manage all available water not just prior conserved water.
-1. Each party's available water is their account balance, plus share of inflow, minus share of combined reservoir evaporation, plus water purchases, and minus water sales.
-1. Include reservoir storage and inflow as operations criteria not just reservior elevations/tiers ([Rosenberg, 2021a](https://github.com/dzeke/ColoradoRiverCoding/raw/main/BlogDrafts/2-AddReservoirInflowAsNewCriteriaToGiveLakeMeadManagersMoreFlexibilityAndIndependenceToConserveWater.docx)).
-1. Stretch the Lee Ferry compact point to be a region of combined management that starts with natural inflow to Lake Powell and ends with Lake Mead releases.
+1. Parties manage all available water not just prior conserved water (Intentionally Created Surplus balances).
+1. Adapt to basin inflows and slow reservoir draw down ([Rosenberg, 2021a](https://github.com/dzeke/ColoradoRiverCoding/raw/main/BlogDrafts/2-AddInflowAsNewCriteriaToGiveLakeMeadManagersMoreFlexibilityAndIndependenceToSlowReservoirDrawdown.docx).
 1. Include more parties such as Colorado River Delta managers, First Names, and managers for Grand Canyon ecosystems.
-1. Show impacts of Lake Powell water elevation on release temperature and Grand Canyon fish ([Wheeler et al, 2021, Sidebar 1, p. 47](https://qcnr.usu.edu/coloradoriver/files/WhitePaper6.pdf)).
-1. Add a "shared, reserve" account equal in volume to the current Lake Powell and Lake Mead protection volumes ([Rosenberg, 2021b](https://github.com/dzeke/ColoradoRiverCoding/raw/main/BlogDrafts/3-GiveLakeMeadManagersMoreFlexibilityToConserveToStopDrawdownToDeadPool.docx)). Manage the shared, reserve account by consensus of all parties. Assume that 
-the parties will not all agree how to manage. Thus, the water will stay parked in the account and prevent parties to collectively draw down the combined reservoir storage to zero.
+1. Provide for water temperature needs of endangered fish of the Grand Canyon. Delay/avoid triggering the Endangered Species Act [Wheeler et al, 2021, Sidebar 1, p. 47](https://qcnr.usu.edu/coloradoriver/files/WhitePaper6.pdf).
+1. Move Lower Basin and Mexico conservation account balances into flex account.
+1. Shift "my" basin and "my" reservoir towards "our" reservoirs.
+1. More positive process.
 
+**Features that create a more positive process**
+
+1. Stretch the Lee Ferry compact point into a region of combined management that starts with Lake Powell inflows and ends with Lake Mead releases (see [Slide #3](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/PilotFlexAccounting-KeyIdeas.pdf))
+1. Each party gets a flex account in the combined Lake Powell-Lake Mead system.
+1. Parties split the existing reservoir storage and basin natural inflow.
+1. Each party's available water is their flex account balance, plus share of natural flow, minus share of reservoir evaporation, plus water purchases, minus sales (see [Slide #4](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/PilotFlexAccounting-KeyIdeas.pdf))
+1. Parties can buy or sell water from other parties. These are transactions among flex accounts in the combined system. Avoids wheeling.
+1. Each party conserves or consumes within their available water.
+1. Parties jointly decide how physically store water in Lake Powell and Lake Mead (e.g., consider fish and hydropower). Regardless of physical storage, parties access their water in their flex account.
 
 **Try out the model?** Follow the directions below. Use solo or with colleagues, friends, and/or family.
 
