@@ -24,7 +24,7 @@ Presently there is one interactive model in the repository.
 
 1. Give each party more flexibility to make their individual water consumption, conservation, and reservoir storage decisions independent of other parties.
 1. Parties manage all available water not just prior conserved water (Intentionally Created Surplus balances).
-1. Adapt to basin inflows and slow reservoir draw down ([Rosenberg, 2021a](https://github.com/dzeke/ColoradoRiverCoding/raw/main/BlogDrafts/2-AddInflowAsNewCriteriaToGiveLakeMeadManagersMoreFlexibilityAndIndependenceToSlowReservoirDrawdown.docx).
+1. Adapt parties consumption and conservation decisions to basin inflows to give more flexibility to slow reservoir draw down ([Rosenberg, 2021a](https://github.com/dzeke/ColoradoRiverCoding/raw/main/BlogDrafts/2-AdaptLakeMeadReleasesToInflowsToGiveManagersMoreFlexibilityToSlowReservoirDrawDown.docx).
 1. Include more parties such as Colorado River Delta managers, First Names, and managers for Grand Canyon ecosystems.
 1. Provide for water temperature needs of endangered fish of the Grand Canyon. Delay/avoid triggering the Endangered Species Act [Wheeler et al, 2021, Sidebar 1, p. 47](https://qcnr.usu.edu/coloradoriver/files/WhitePaper6.pdf).
 1. Move Lower Basin and Mexico conservation account balances into flex account.
