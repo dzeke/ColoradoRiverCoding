@@ -15,11 +15,11 @@ This is an R Markdown document. This document shows plots of combined Lake Powel
 
 1. Line plot of the Lake Mead, Lake Powell, and combined storage over time. 
 
-2. A stacked area plot shows combined storage of Lake Powell and Lake Mead over time in comparison to Lake Mead conservation account balances, combined protection volume, and 2026 expiration of Interim Guidelines. Combined storage is split between Lake Mead conservation accounts and a public pool (current opperations).
+2. A stacked area plot shows combined storage of Lake Powell and Lake Mead over time in comparison to Lake Mead conservation account balances, combined protection volume, and 2026 expiration of Interim Guidelines. Combined storage is split between Lake Mead conservation accounts and public pools in Lake Powell and Lake Mead. Within the public pool, a thin line shows the historical split between Lake Powell and Lake Mead (current opperations).
 
-3. A stacked area plot of combined storage over with where all available water is transitioned into private flex accounts.
+3. A stacked area plot of combined storage over with where all available water is transitioned into individual flex accounts.
 
-4, A stacked area plot of Lake Mead storage showing conservation account amounts.
+4. A stacked area plot of Lake Mead storage shows the division between the public pool and conservation account amounts.
 
 Data are from: 
 
@@ -280,7 +280,7 @@ dfICSmonths$LowerBasinConserve <- interp1(xi = dfICSmonths$MonthIndex, x=dfICSBa
 dfICSmonths$MexicoConserve <- interp1(xi = dfICSmonths$MonthIndex, x=dfICSBalance$MonthIndex, y = dfICSBalance$Mexico, method="linear" )
 
 ## Calculate the Protection elevation
-dfProtectLevel <- data.frame(Reservoir = c("Powell", "Mead"), Elevation = c(3525, 1020))
+dfProtectLevel <- data.frame(Reservoir = c("Powell", "Mead"), Elevation = c(3525, 1020), xPos = 2001, yPos = c(30.75,25.75))
 #Interpolate storage from elevation
 dfProtectLevel$Volume[1] <- interpNA(xi = dfProtectLevel$Elevation[1], x= dfPowellElevStor$`Elevation (ft)`, y=dfPowellElevStor$`Live Storage (ac-ft)`)
 dfProtectLevel$Volume[2] <- interpNA(xi = dfProtectLevel$Elevation[2], x= dfMeadElevStor$`Elevation (ft)`, y=dfMeadElevStor$`Live Storage (ac-ft)`)
@@ -294,12 +294,12 @@ dfKeyDates <- data.frame(Date = as.Date(c("2007-01-01", "2026-01-01")), Label = 
 #Data frame of key elevations
 dfKeyVolumes <- data.frame(Volume = c(nProtectCombined, nCapacityCombined), Label = c("Protect","Combined\nCapacities"))
 #Data frame of key traces
-dfKeyTraceLabels <- data.frame(Label = c("Protect", "Public Pool", "Lake Mead\nConservation\nAccounts", "Deficit Mindset"),
-                                Volume = c(nProtectCombined/2, 18, 25, 40), xPosition = rep(2007 + (nMaxYearICSData - 2007)/2,4),
+dfKeyTraceLabels <- data.frame(Label = c("Protect", "Public Pools", "Lake Mead\nConservation\nAccounts", "Deficit Mindset"),
+                                Volume = c(nProtectCombined/2, 15, 25, 40), xPosition = rep(2007 + (nMaxYearICSData - 2007)/2,4),
                                 Size = c(6, 6, 5, 6))
 
 #Adjust the x positions of the Available water and LB + MX conserved water
-dfKeyTraceLabels$xPosition[2] <- 2011
+dfKeyTraceLabels$xPosition[2] <- 2003
 dfKeyTraceLabels$xPosition[3] <- (2026 + nMaxYearICSData + .995 )/2
 #Data frame of end arrows
 nArrowOffset <- 4
@@ -354,9 +354,12 @@ ggplot() +
   #Combined Storage
   #As area
   geom_area(data=dfJointStorageStackMelt, aes(x=DateAsValue, y=value, fill=variable, group=variable)) +
-  #As line
+  #Total Storage as a thick line
   geom_line(data=dfJointStorageStack %>% filter(Year < nMaxYearICSData + 1),aes(x=DateAsValue,y=MeadStorage+PowellStorage, color="Combined"), size=2, color = "Black") +
   #geom_area(data=dfPlotData,aes(x=month,y=stor_maf, fill = variable), position='stack') +
+  
+    #Mead Storage as a thin line
+  geom_line(data=dfJointStorageStack %>% filter(Year < nMaxYearICSData + 1),aes(x=DateAsValue,y=MeadStorage+dfProtectLevel$Volume[1]/1e6, color="Combined"), size=0.25, color = "Black") +
   
   #lines for max capacity and protect elevation
   geom_hline(data=dfKeyVolumes, aes(yintercept = Volume), linetype="longdash", size=1) +
@@ -366,6 +369,9 @@ ggplot() +
   #Labels for the areas
   geom_text(data=dfKeyTraceLabels %>% filter(Label != dfKeyTraceLabels$Label[3]), aes(x=as.Date(sprintf("%.0f-01-01",xPosition)), y=Volume, label=as.character(Label)), size = 4, fontface="bold") +
   geom_text(data=dfKeyTraceLabels %>% filter(Label == dfKeyTraceLabels$Label[3]), aes(x=as.Date(sprintf("%.0f-01-01",xPosition)), y=Volume, label=as.character(Label)), size = 3, fontface="bold", color = pBlues[5]) +
+  
+  #Text label for reservoirs
+    geom_text(data=dfProtectLevel, aes(x=as.Date(sprintf("%.0f-01-01",xPos)), y=yPos, label=as.character(Reservoir)), size = 3, angle = -43) +
  
   #Arrow Lake Mead conservation account label
   geom_curve(data = dfKeyTraceLabels %>% filter(Label == dfKeyTraceLabels$Label[3]), aes(x=as.Date(sprintf("%.0f-01-01",xPosition)), xend = as.Date(sprintf("%.0f-02-01",nMaxYearICSData+1)), y=20.5, yend = 13), curvature = -0.5, color = pBlues[5], size = 1.0, arrow = arrow(length = unit(0.03, "npc"))) +
