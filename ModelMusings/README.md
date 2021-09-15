@@ -2,7 +2,7 @@
 
 ### Quick download link: [Pilot flex accounting to encourage more water conservation in a combined Lake Powell-Lake Mead system](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/PilotFlexAccounting-CombinedPowellMead.xlsx)
 														
-**The purpose of the interactive models in this Github repository are to provoke thought and discussion** about renegotiations of operations for Lake Powell and Lake Mead. More specifically: how to convert a shrinking pie (lose-lose) environmental conflict -- our Colorado River basin becoming more arid -- into more positive processes? Links to existing Lake Powell and Lake Mead operations:
+**The purpose of the interactive models in this Github repository are to provoke thought and discussion** about renegotiations of operations for Lake Powell and Lake Mead. More specifically: how to convert a shrinking pie (lose-lose) water conflict -- our Colorado River basin becoming more arid -- into more positive processes for people and endangered fish? Links to existing Lake Powell and Lake Mead operations:
 
  * [2007 Interim Guidelines](https://www.usbr.gov/lc/region/programs/strategies/RecordofDecision.pdf).
  * [2019 Drought Contingency Plans](https://www.usbr.gov/dcp/finaldocs.html). **Both operations expire in 2026**.
@@ -26,10 +26,9 @@ Presently there is one interactive model in the repository.
 1. Parties manage all available water not just prior conserved water (Intentionally Created Surplus balances).
 1. Adapt parties consumption and conservation decisions to basin inflows to give more flexibility to slow reservoir draw down ([Rosenberg, 2021a](https://github.com/dzeke/ColoradoRiverCoding/raw/main/BlogDrafts/2-AdaptLakeMeadReleasesToInflowsToGiveManagersMoreFlexibilityToSlowReservoirDrawDown.docx).
 1. Include more parties such as Colorado River Delta managers, First Names, and managers for Grand Canyon ecosystems.
-1. Provide for water temperature needs of endangered fish of the Grand Canyon. Delay/avoid triggering the Endangered Species Act [Wheeler et al, 2021, Sidebar 1, p. 47](https://qcnr.usu.edu/coloradoriver/files/WhitePaper6.pdf).
+1. Provide managers more flexibility to meet temperature needs of endangered Grand Canyon fish while preserve access to stored water [Wheeler et al, 2021, Sidebar 1, p. 47](https://qcnr.usu.edu/coloradoriver/files/WhitePaper6.pdf).
 1. Move Lower Basin and Mexico conservation account balances into flex account.
-1. Shift "my" basin and "my" reservoir towards "our" reservoirs.
-1. More positive process.
+1. Shift "my" basin, "my" reservoir, and "my contingency plan" mentality towards "our" reservoirs.
 
 **Features that create a more positive process**
 
