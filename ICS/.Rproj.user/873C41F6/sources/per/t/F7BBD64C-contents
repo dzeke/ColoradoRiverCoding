@@ -351,5 +351,45 @@ ggplot(data=dfICStoDCPRatioMelt ) +
 
 
 
+#### Number of years to draw down account balance considering max withdraw limit. Dashed red line (100%) indicates balance equals withdraw limit.
+#Pull the ICS balance and max withdraw data from the data frames
+dfICSBalanceCalc <- dfICSBalance %>% filter(Year == 2020) %>% select(Arizona, California, Nevada)
+dfICSBalanceCalc$RowName <- "Account Balance"
+dfLimitsTemp<- dfLimits[3,] %>% select(Arizona, California, Nevada)
+dfLimitsTemp$RowName <- "Max Withdraw"
 
+#Combine the data frames
+dfICSBalanceCalc <- rbind(dfICSBalanceCalc, dfLimitsTemp)
+#Pivot the rows/columns
+dfICSBalanceCalcMelt <- melt(data = dfICSBalanceCalc, id.vars = "RowName", measure.vars = c("Arizona", "California", "Nevada"))
+#Cast back so Row Name is a column
+dfICSBalanceCalcCast <- dcast(data = dfICSBalanceCalcMelt, variable ~ RowName )
+
+#Calculate the years to draw down account at max withdraw
+dfICSBalanceCalcCast$YearsToDrawDown <- dfICSBalanceCalcCast$`Account Balance` / dfICSBalanceCalcCast$`Max Withdraw`
+
+ggplot(data=dfICSBalanceCalcCast ) +
+  
+  geom_bar(aes(fill=variable,y=YearsToDrawDown,x=variable), position=position_dodge(), stat="identity") +
+  
+  #Add a horizontal line for 100%
+  geom_hline(yintercept = 1,linetype="dashed",color="red",size = 0.75) +
+  
+  scale_fill_manual(name="Guide1",values = c(palBlues[3],palBlues[6],palBlues[9]),breaks=cNamesRatio[18:20], labels = cColNames[1:3]) +
+  #scale_color_manual(name="Guide2", values=c("Black","Black")) +
+  
+  #scale_fill_continuous(name="Guide1",values = c(palBlues[6],palBlues[9])) +
+  
+  scale_x_discrete(labels = cColNames[1:3]) +
+  #scale_x_continuous(breaks=seq(min(dfICSDepositMelt$Year),max(dfICSDepositMelt$Year),by=2),labels=seq(min(dfICSDepositMelt$Year),max(dfICSDepositMelt$Year),by=2)) +
+  #scale_y_continuous(labels = scales::percent) + 
+  
+   guides(fill = guide_legend(keywidth = 1, keyheight = 1), color = "none") +
+  
+  
+  theme_bw() +
+  
+  labs(x="", y="Years to Draw Down Conservation\nAccount") +
+  theme(text = element_text(size=20),  legend.title = element_blank(), legend.text=element_text(size=18),
+        legend.position= c(1.075,0.5))
 
