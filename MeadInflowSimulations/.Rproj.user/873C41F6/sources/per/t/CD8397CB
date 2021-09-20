@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1632163665943.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "CD8397CB",
+    "lastKnownWriteTime" : 7308604914264011873,
+    "last_content_update" : 1632163665943,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "E0BA2CBB",
+        "caption" : "dfRecoveryCases",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=dfRecoveryCases&cache_key=E0BA2CBB",
+        "displayedObservations" : 2,
+        "environment" : "",
+        "object" : "dfRecoveryCases",
+        "preview" : 0,
+        "totalObservations" : 2,
+        "variables" : 4
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

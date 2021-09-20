@@ -767,7 +767,7 @@ ggplot(data = dfReleaseToStabilizeMelt %>% filter(Elevation %in% c("1025","1090"
   
 ```
 
-## Figure 4. Lake Mead recovery from two shortage levels. Numeric line labels (maf per year) indicate the sum of reservoir inflow and additional conservation beyond mandatory targets.
+## Figure 4. Lake Mead recovery from elevation 1,050 feet. Numeric line labels (maf per year) indicate the sum of reservoir inflow and additional conservation beyond mandatory targets.
 
 ```{r Fig4MeadSimulation, echo=FALSE, warning=FALSE, message=FALSE}
 
@@ -875,15 +875,16 @@ dfPolyAll$Year2 <- ifelse(dfPolyAll$Year2 == 2021, nStartYearRecovery, dfPolyAll
 ggplot() +
   #Polygon zones
   geom_polygon(data = dfPolyAll, aes(x = Year2, y = MeadVol/1e6, group = id, fill = as.factor(dfPolyAll$DumVal)), show.legend = F) +
-  #Inflow trace 1
+  #Inflow trace 1 (1,025 feet)
   #geom_line(data=dfTimeResultsInteger %>% filter(Inflow/1e6 == 8, Year <= 2025), aes(x=Year,y=Storage/1e6, group = Inflow/1e6), color = cRecoveryColors[1], size=2) +
   #geom_line(data=dfTimeResultsInteger %>% filter(Inflow/1e6 == 9, Year <= 2030), aes(x=Year,y=Storage/1e6, group = Inflow/1e6), color = cRecoveryColors[2], size=2) +
   
   #geom_line(data=dfTimeResultsInteger,aes(x=Year,y=Storage/1e6), color = cRecoveryColors[3], size=2) +
   
-    #Recovery case 1
-  geom_line(data=dfRecoveryTimeResults %>% filter(as.character(Case) == dfRecoveryCases$Label[1]), aes(x=Year,y=Storage/1e6, group = Inflow/1e6), color = cRecoveryColors[1], size=1.5, linetype = "solid") +
-  #Recovery case 2
+    #Recovery case 1 (Elevation 1,025 feet)
+  #geom_line(data=dfRecoveryTimeResults %>% filter(as.character(Case) == dfRecoveryCases$Label[1]), aes(x=Year,y=Storage/1e6, group = Inflow/1e6), color = cRecoveryColors[1], size=1.5, linetype = "solid") +
+
+    #Recovery case 2
   geom_line(data=dfRecoveryTimeResults %>% filter(as.character(Case) == dfRecoveryCases$Label[2]), aes(x=Year,y=Storage/1e6, group = Inflow/1e6), color = cRecoveryColors[2], size=1.5, linetype = "longdash") +
   
   #Interim guidelines expire
@@ -898,8 +899,8 @@ ggplot() +
   #geom_label(data=dfTimeResultsInterval %>% filter(Inflow == 8*1e6, Year <= 2025), aes( x = Year, y = Storage/1e6, label = Inflow/1e6, fontface="bold"),  color = cRecoveryColors[1], size=5, angle = 0) + 
   #geom_label(data=dfTimeResultsInterval %>% filter(Inflow == 9*1e6, Year < 2030), aes( x = Year, y = Storage/1e6, label = Inflow/1e6, fontface="bold"),  color = cRecoveryColors[2], size=5, angle = 0) + 
   
-   #Label the recovery case 1 traces
-  geom_label(data=dfRecoveryTimeResultsInterval %>% filter(Year > startYear, as.character(Case) == dfRecoveryCases$Label[1], !(Inflow/1e6 == 9 & Year == 2035)), aes( x = Year, y = Storage/1e6, label = round(Inflow/1e6, digits = 1), fontface="bold"), color=cRecoveryColors[1], size=3, angle = 0) + 
+   #Label the recovery case 1 traces (Elevation 1,025 feet)
+ # geom_label(data=dfRecoveryTimeResultsInterval %>% filter(Year > startYear, as.character(Case) == dfRecoveryCases$Label[1], !(Inflow/1e6 == 9 & Year == 2035)), aes( x = Year, y = Storage/1e6, label = round(Inflow/1e6, digits = 1), fontface="bold"), color=cRecoveryColors[1], size=3, angle = 0) + 
   #Label the recovery case 2 traces
   geom_label(data=dfRecoveryTimeResultsInterval %>% filter(Year > startYear, as.character(Case) == dfRecoveryCases$Label[2]), aes( x = Year, y = Storage/1e6, label = round(Inflow/1e6, digits = 1), fontface="bold"), color=cRecoveryColors[2], size=3, angle = 0) + 
   
