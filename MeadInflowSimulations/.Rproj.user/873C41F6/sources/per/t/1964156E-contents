@@ -1,7 +1,7 @@
 ---
-title: "Add reservoir inflow as new criteria to give Lake Mead managers more flexibility and independence to conserve water"
+title: "Adapt Lake Mead releases to inflow to give managers more flexibility to slow reservoir draw down"
 author: "David E. Rosenberg"
-date: "September 5, 2021"
+date: "September 22, 2021"
 output: pdf_document
 ---
 
@@ -11,15 +11,15 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Description
 
-This is an R Markdown document. This work supports the piece "Add reservoir inflow as new criteria to give Lake Mead managers more flexibility and independence to conserve water." There are simulations of reservoir draw down for inflow scenarios of 7 to 14 maf per year every year. These simulations assume states and contractors do not withdraw from their conservation accounts nor convert and conservation account balances to meet mandatory conservation targets. Another plot shows the reservoir release needed to stablize reservoir level for different inflow scenarios. And a final plot shows reservoir recovery from two starting storages. Key plots include:
+This is an R Markdown document. This work supports the piece "[Adapt Lake Mead releases to inflow to give managers more flexibility to slow reservoir draw down](https://raw.githubusercontent.com/dzeke/ColoradoRiverCoding/main/MeadInflowSimulations/MeadSteadyInflowSimulation.pdf)."  There are simulations of reservoir draw down for inflow scenarios from 7 to 14 maf per year every year. These simulations assume states and contractors do not withdraw from their conservation accounts nor convert and conservation account balances to meet mandatory conservation targets. Another plot shows the reservoir release needed to stablize reservoir level for different inflow scenarios. And a final plot shows reservoir recovery from a Lake Mead elevation of 1,050 feet. Key plots include:
 
 1. A line graph compares the schedules of total mandatory cutbacks by 2008 Interim Guidelines and 2019 DCP. Dashed 1:1 lines show required cutbacks to avoid Dead Pool and to protect 1,025 feet (6.0 maf storage).
 
 2. A line plot shows evolution of Lake Mead Active storage (y-axis) over time (x-axis) for mandatory conservation with different steady inflow scenarios. Pink area denotes the storage volumes/elevations of mandatory conservation target. Red area denotes lower storage. Simulations assume max DCP cutback in red area below 1,025 feet. We hope that if reservoir level gets that low the Lower Basin States and Mexico will cut back release further (depends on inflow) to stabilize reservoir level.
 
-3. The reservoir release needed to stabilize reservoir storage at different reservoir elvations and inflows. This release is calculated by resolving the reservoir mass balance equation for release = inflow - evaporation.
+3. The Lake Mead release needed to stabilize reservoir storage at different reservoir elvations and inflows. This release is calculated by resolving the reservoir mass balance equation for release = inflow - evaporation.
 
-4. Reservoir recovery simulations from two reservoir levels for different reservoir inflows and additional conservation efforts beyond mandatory targets.
+4. Lake Mead recovery simulations from two elevation 1,050 feet for different reservoir inflows and additional conservation efforts beyond mandatory targets.
 
 Data from 2019 Lower Basin Drought Contingency Plan (DCP), U.S.-Mexico Minute 323, and CRSS.  
 
