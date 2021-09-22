@@ -28,20 +28,21 @@ Presently there is one interactive model in the repository.
 1. Give each party more flexibility to make their individual water consumption, conservation, and reservoir storage decisions independent of other parties.
 1. Parties manage all available water not just prior conserved water (Intentionally Created Surplus balances).
 1. Adapt parties consumption and conservation decisions to basin inflows to give more flexibility to slow reservoir draw down ([Rosenberg, 2021a](https://github.com/dzeke/ColoradoRiverCoding/raw/main/BlogDrafts/2-AdaptLakeMeadReleasesToInflowsToGiveManagersMoreFlexibilityToSlowReservoirDrawDown.docx).
-1. Include more parties such as Colorado River Delta managers, First Names, and managers for Grand Canyon ecosystems.
-1. Provide managers more flexibility to meet temperature needs of endangered Grand Canyon fish while preserve access to stored water [Wheeler et al, 2021, Sidebar 1, p. 47](https://qcnr.usu.edu/coloradoriver/files/WhitePaper6.pdf).
+1. Include more parties such as Colorado River Delta managers, First Nations, and managers for Grand Canyon ecosystems.
+1. Parties access stored water while have more flexibility to protect temperature needs of endangered Grand Canyon fish [Wheeler et al, 2021, Sidebar 1, p. 47](https://qcnr.usu.edu/coloradoriver/files/WhitePaper6.pdf).
 1. Move Lower Basin and Mexico conservation account balances into flex account.
-1. Shift "my" basin, "my" reservoir, and "my contingency plan" mentality towards "our" reservoirs.
+1. Nudge "my basin", "my reservoir", and "my contingency plan" mentality towards "our" reservoirs.
 
-**Features that create a more positive process**
+**How the process works**
 
 1. Stretch the Lee Ferry compact point into a region of combined management that starts with Lake Powell inflows and ends with Lake Mead releases (see [Slide #3](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/PilotFlexAccounting-KeyIdeas.pdf))
-1. Each party gets a flex account in the combined Lake Powell-Lake Mead system.
-1. Parties split the existing reservoir storage and basin natural inflow.
+1. Assign parties a flex account in the combined Lake Powell-Lake Mead system.
+1. Assign existing reservoir storage to accounts.
+1. Parties split each year's natural flow.
 1. Each party's available water is their flex account balance, plus share of natural flow, minus share of reservoir evaporation, plus water purchases, minus sales (see [Slide #4](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/PilotFlexAccounting-KeyIdeas.pdf))
-1. Parties can buy or sell water from other parties. These are transactions among flex accounts in the combined system. Avoids wheeling.
-1. Each party conserves or consumes within their available water.
-1. Parties jointly decide how physically store water in Lake Powell and Lake Mead (e.g., consider fish and hydropower). Regardless of physical storage, parties access their water in their flex account.
+1. Parties may buy or sell water from other parties. These are transactions among flex accounts in the combined system. Avoids wheeling.
+1. Each party conserves or consumes within their available water independent of other parties.
+1. Parties jointly decide how physically store water in Lake Powell and Lake Mead (e.g., consider fish and hydropower). Parties retain access to storage whether water is in Lake Powell or Lake Mead.
 
 **Try out the model?** Follow the directions below. Use solo or with colleagues, friends, and/or family.
 
