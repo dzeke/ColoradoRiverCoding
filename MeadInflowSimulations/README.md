@@ -11,7 +11,7 @@ Utah State University
 David E. Rosenberg (2021). "[Adapt Lake Mead releases to inflow to give managers more flexibility to slow reservoir draw down.](https://github.com/dzeke/ColoradoRiverCoding/raw/main/BlogDrafts/2-AdaptLakeMeadReleasesToInflowsToGiveManagersMoreFlexibilityToSlowReservoirDrawDown.docx)" Utah State University. Logan, Utah.
 
 ## View Results
-Open the file **[MeadSteadyInflowSimulation.pdf](https://github.com/dzeke/ColoradoRiverCoding/raw/main/CombinedPowellMead/CombinedPowellMead.pdf)** to view results and an explanation of how results were generated.
+Open the file **[MeadSteadyInflowSimulation.pdf](https://github.com/dzeke/ColoradoRiverCoding/raw/main/MeadInflowSimulations/MeadSteadyInflowSimulation.pdf)** to view results and an explanation of how results were generated.
 
 ## Requirements to Run
 * R version 4.1.1. Download from https://cran.r-project.org/.
