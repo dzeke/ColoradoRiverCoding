@@ -1,20 +1,33 @@
 # Colorado River Coding 
 
-Small and bigger coding efforts in support of work on the Colorado River. 
-
-All coding efforts in R Studio.
+Small and bigger coding efforts to support Colorado River work. 
 
 Most of these efforts are beginning coding efforts and works in progress. Find current versions at https://github.com/dzeke/ColoradoRiverCoding.
 
-Within each folder, see directions to run ad generate results.
 
 Dr. David E. Rosenberg
 
 david.rosenberg@usu.edu | [@WaterModeler](https://twitter.com/WaterModeler)
 
-September 11, 2021
+September 22, 2021
 
 Utah State University
+
+## Directions to View Results
+1. Open a subfolder. See Explanation of Contents below.
+2. Find the PDF file and open it. The PDF file is auto-generated and has documentation/explanation of methods and results.
+
+## Requirements
+* R version 4.1.1. Download from https://cran.r-project.org/.
+* R Studio 1.1.456. Download from https://www.rstudio.com/.
+
+## Directions to Reproduce Results
+1. Download this repository to your local machine (towards top of webpage, click green **Code** button => **Download Zip**). Unzip contents.
+1. Download and install R and RStudio (see Requirements).
+1. Within any downloaded subfolder, open the .Rproject file. R Studio will open.
+1. Select the tab for the R Markdown file (.Rmd) and click **Knit**.
+1. The code will generate a single PDF file with results and documentation. The PDF file will have the same filename as the .Rmd file.
+1. If the subfolder does not have an .Rmd file, select the tab for the .R file in R Studio. Select all the code (Ctrl-A), and run (Ctrl-enter or click the **Run** button on the tool bar below the file tabs). The results will generate in the console.
 
 ## Explanation of Contents
 
@@ -35,18 +48,6 @@ an alternative management paradigm where reservoir evaporation is counted as par
 1. **Runge_MCDM_Analysis** - interactive parallel coordinate plot visualization of the 18 objectives use in the analysis by Runge et al of Glend Canyon Dam management alternatives. Runge, M. C., LaGory, K. E., Russell, K., Balsom, J. R., Butler, R. A., Coggins, J. L. G., Grantz, K. A., Hayse, J., Hlohowskyj, I., Korman, J., May, J. E., O'Rourke, D. J., Poch, L. A., Prairie, J. R., VanKuiken, J. C., Van Lonkhuyzen, R. A., Varyu, D. R., Verhaaren, B. T., Veselka, T. D., Williams, N. T., Wuthrich, K. K., Yackulic, C. B., Billerbeck, R. P., and Knowles, G. W. (2015). "Decision analysis to support development of the Glen Canyon Dam long-term experimental and management plan." 2015-5176, U.S. Geological Survey, Reston, VA. http://pubs.er.usgs.gov/publication/sir20155176.
 1. **TimeToDeadPool** - a steady deterministic scenario analysis of the number of years to hit Lake Mead dead pool (or other target elevation) given a starting storage volume and steady reservoir inflow. Used to explore scenarios of inflow from 7 to 14 maf per year every year and identify potential effects of additional voluntary water conservation.
 1. **TribalWater** - Digitizes some of the data in the Tribal Waer Study by the USBR.
-
-## Requirements
-* R version 4.1.1. Download from https://cran.r-project.org/.
-* R Studio 1.1.456. Download from https://www.rstudio.com/.
-
-## Directions to Run
-1. Download this repository to your local machine (towards top of webpage, click green **Code** button => **Download Zip**). Unzip contents.
-1. Download and install R and RStudio (see Requirements).
-1. Within any downloaded subfolder, open the .Rproject file. R Studio will open.
-1. Select the tab for the R Markdown file (.Rmd) and click **Knit**.
-1. The code will generate a single PDF file with results and documentation. The PDF file will have the same filename as the .Rmd file.
-1. If the subfolder does not have an .Rmd file, select the tab for the .R file in R Studio. Select all the code (Ctrl-A), and run (Ctrl-enter or click the **Run** button on the tool bar below the file tabs). The results will generate in the console.
 
 ## License
 BSD-3-Clause (https://github.com/dzeke/ColoradoRiverFutures/blob/master/LICENSE). Available to use, modify, distribute, etc. for free.
