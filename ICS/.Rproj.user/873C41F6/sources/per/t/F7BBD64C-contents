@@ -375,7 +375,7 @@ ggplot(data=dfICSBalanceCalcCast ) +
   #Add a horizontal line for 100%
   geom_hline(yintercept = 1,linetype="dashed",color="red",size = 0.75) +
   
-  scale_fill_manual(name="Guide1",values = c(palBlues[3],palBlues[6],palBlues[9]),breaks=cNamesRatio[18:20], labels = cColNames[1:3]) +
+  scale_fill_manual(name="Guide1",values = c(palBlues[3],palBlues[6],palBlues[9])) +
   #scale_color_manual(name="Guide2", values=c("Black","Black")) +
   
   #scale_fill_continuous(name="Guide1",values = c(palBlues[6],palBlues[9])) +
@@ -391,5 +391,5 @@ ggplot(data=dfICSBalanceCalcCast ) +
   
   labs(x="", y="Years to Draw Down Conservation\nAccount") +
   theme(text = element_text(size=20),  legend.title = element_blank(), legend.text=element_text(size=18),
-        legend.position= c(1.075,0.5))
+        legend.position= "none")
 

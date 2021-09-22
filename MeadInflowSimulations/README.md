@@ -4,14 +4,21 @@ How long does it take Lake Mead draw down, stabilize, or recover with a steady i
 
 Dr. David Rosenberg
 david.rosenberg@usu.edu
-September 6, 2021
+September 22, 2021
 Utah State University
 
 ## Requested Citation
 David E. Rosenberg (2021). "[Add reservoir inflow as new criteria to give Lake Mead managers more independence and flexibility to conserve water.](https://github.com/dzeke/ColoradoRiverCoding/blob/main/BlogDrafts/2-AddReservoirInflowAsNewCriteriaToGiveLakeMeadManagersMoreFlexibilityAndIndependenceToConserveWater.docx?raw=true)" Utah State University. Logan, Utah.
 
-## Directions to Use
-1. Download and install R and RStudio.
+## View Results
+Open the file **[MeadSteadyInflowSimulation.pdf](https://github.com/dzeke/ColoradoRiverCoding/raw/main/CombinedPowellMead/CombinedPowellMead.pdf)** to view results and an explanation of how results were generated.
+
+## Requirements to Run
+* R version 4.1.1. Download from https://cran.r-project.org/.
+* R Studio 1.1.456. Download from https://www.rstudio.com/.
+
+## Directions to Generate Results
+1. Download and install R and RStudio (see Requirements).
 1. Open the **MeadSteadyInflowSimulation.R Project** file. R Studio will open
 1. Select the file tab **MeadSteadyInflowSimulation.Rmd**. 
 1. On the row below the file tab, click the **Knit** button. The **MeadSteadyInflowSimulation.pdf** file will generate.

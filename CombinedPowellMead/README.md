@@ -13,6 +13,11 @@ Utah State University
 ## Requested Citation
 David E. Rosenberg (2021), "Combined Lake Powell-Lake Mead plots." Utah State University. Logan, Utah. https://github.com/dzeke/ColoradoRiverCoding/tree/main/CombinedPowellMead.
 
+## Requirements
+
+* R version 4.1.1. Download from https://cran.r-project.org/.
+* R Studio 1.1.456. Download from https://www.rstudio.com/.
+
 ## Contents
 1. CombinedPowellMead.R - the R code to run. Results shown in console.
 1. CombinedPowellMead.Rmd - R markdown code file used to generation results in CombinedPowellMead.pdf. **Run this file to reproduce results in the file CombinedPowellMead.pdf**
@@ -24,7 +29,7 @@ gov/lc/region/g4000/hourly/mead-elv.html.
 1. IntentionallyCreatedSurplus-Summary.xlsx - Lake Mead conservation account balances : USBR (2020). “Boulder Canyon Operatoins Office - Program and Activites: Water Accounting Reports”. https://www.usbr.gov/lc/region/g4000/wtracct.html.
 
 ## Directions to Use
-1. Download and install R and RStudio. 
+1. Download and install R and RStudio (see requirements). 
 1. Within this subfolder, open the **CombinedPowellMead.Rproject** file. R Studio should open.
 1. Select the **CombinedPowellMead.Rmd** tab (R markdown file) within R Studio.
 1. Just below the tab, click the **Knit** button.

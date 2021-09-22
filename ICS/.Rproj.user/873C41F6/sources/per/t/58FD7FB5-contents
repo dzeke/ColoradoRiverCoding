@@ -472,5 +472,4 @@ ggplot(data=dfICSBalanceCalcCast ) +
   theme(text = element_text(size=16),  legend.title = element_blank(), legend.text=element_text(size=16),
         legend.position= "none")
 
-
 ```

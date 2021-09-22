@@ -36,14 +36,17 @@ an alternative management paradigm where reservoir evaporation is counted as par
 1. **TimeToDeadPool** - a steady deterministic scenario analysis of the number of years to hit Lake Mead dead pool (or other target elevation) given a starting storage volume and steady reservoir inflow. Used to explore scenarios of inflow from 7 to 14 maf per year every year and identify potential effects of additional voluntary water conservation.
 1. **TribalWater** - Digitizes some of the data in the Tribal Waer Study by the USBR.
 
-## Directions to Run
+## Requirements
+* R version 4.1.1. Download from https://cran.r-project.org/.
+* R Studio 1.1.456. Download from https://www.rstudio.com/.
 
+## Directions to Run
 1. Download this repository to your local machine (towards top of webpage, click green **Code** button => **Download Zip**). Unzip contents.
-1. Download and install R (https://cran.r-project.org/) and RStudio (https://www.rstudio.com/).
-1. Within the a downloaded subfolder, open the .Rproject file. R Studio will open.
+1. Download and install R and RStudio (see Requirements).
+1. Within any downloaded subfolder, open the .Rproject file. R Studio will open.
 1. Select the tab for the R Markdown file (.Rmd) and click **Knit**.
-1. The code will generate a single PDF file of the same file name with all results.
-1. If the subfolder does not have an .Rmd file, select the tab for the .R file in  R Studio. Select all the code (Ctrl-A), and run (Ctrl-enter or click the **Run** button on the tool bar below the file tabs). The results will generate in the console.
+1. The code will generate a single PDF file with results and documentation. The PDF file will have the same filename as the .Rmd file.
+1. If the subfolder does not have an .Rmd file, select the tab for the .R file in R Studio. Select all the code (Ctrl-A), and run (Ctrl-enter or click the **Run** button on the tool bar below the file tabs). The results will generate in the console.
 
 ## License
 BSD-3-Clause (https://github.com/dzeke/ColoradoRiverFutures/blob/master/LICENSE). Available to use, modify, distribute, etc. for free.
