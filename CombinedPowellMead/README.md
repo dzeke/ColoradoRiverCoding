@@ -14,7 +14,6 @@ Utah State University
 David E. Rosenberg (2021), "Combined Lake Powell-Lake Mead plots." Utah State University. Logan, Utah. https://github.com/dzeke/ColoradoRiverCoding/tree/main/CombinedPowellMead.
 
 ## Requirements
-
 * R version 4.1.1. Download from https://cran.r-project.org/.
 * R Studio 1.1.456. Download from https://www.rstudio.com/.
 

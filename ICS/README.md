@@ -1,6 +1,6 @@
-# Intentionally Created Surplus program for Lake Mead (ICS)
+# Intentionally Created Surplus (ICS) program for Lake Mead
 
-Plots account balances, deposits/withdraws, limits, and other data for the Intentionally Created Surplus Program (ICS) for Lake Mead. Also compares the ICS account balances to
+Plots account balances, deposits/withdraws, limits, and other data for the Intentionally Created Surplus (ICS) program for Lake Mead. Also compares the ICS account balances to
 withdraw limits and mandatory conservation targets .
 
 ## View Results

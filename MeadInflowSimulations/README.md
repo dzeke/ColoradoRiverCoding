@@ -8,7 +8,7 @@ September 22, 2021
 Utah State University
 
 ## Requested Citation
-David E. Rosenberg (2021). "[Add reservoir inflow as new criteria to give Lake Mead managers more independence and flexibility to conserve water.](https://github.com/dzeke/ColoradoRiverCoding/blob/main/BlogDrafts/2-AddReservoirInflowAsNewCriteriaToGiveLakeMeadManagersMoreFlexibilityAndIndependenceToConserveWater.docx?raw=true)" Utah State University. Logan, Utah.
+David E. Rosenberg (2021). "[Adapt Lake Mead releases to inflow to give managers more flexibility to slow reservoir draw down.](https://github.com/dzeke/ColoradoRiverCoding/raw/main/BlogDrafts/2-AdaptLakeMeadReleasesToInflowsToGiveManagersMoreFlexibilityToSlowReservoirDrawDown.docx)" Utah State University. Logan, Utah.
 
 ## View Results
 Open the file **[MeadSteadyInflowSimulation.pdf](https://github.com/dzeke/ColoradoRiverCoding/raw/main/CombinedPowellMead/CombinedPowellMead.pdf)** to view results and an explanation of how results were generated.
