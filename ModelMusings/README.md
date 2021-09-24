@@ -27,10 +27,10 @@ Presently there is one interactive model in the repository.
 
 1. Give each party more flexibility to make their individual water consumption, conservation, and reservoir storage decisions independent of other parties.
 1. Parties manage all available water not just prior conserved water (Intentionally Created Surplus balances).
-1. Adapt parties consumption and conservation decisions to basin inflows to give more flexibility to slow reservoir draw down ([Rosenberg, 2021a](https://github.com/dzeke/ColoradoRiverCoding/raw/main/BlogDrafts/2-AdaptLakeMeadReleasesToInflowsToGiveManagersMoreFlexibilityToSlowReservoirDrawDown.docx).
+1. Adapt parties consumption and conservation decisions to basin inflows to give more flexibility to slow reservoir draw down ([Rosenberg, 2021a](https://github.com/dzeke/ColoradoRiverCoding/raw/main/BlogDrafts/2-AdaptLakeMeadReleasesToInflowsToGiveManagersMoreFlexibilityToSlowReservoirDrawDown.docx)).
 1. Include more parties such as Colorado River Delta managers, First Nations, and managers for Grand Canyon ecosystems.
-1. Parties access stored water while have more flexibility to protect temperature needs of endangered Grand Canyon fish [Wheeler et al, 2021, Sidebar 1, p. 47](https://qcnr.usu.edu/coloradoriver/files/WhitePaper6.pdf).
-1. Move Lower Basin and Mexico conservation account balances into flex account.
+1. Parties access stored water while have more flexibility to protect temperature needs of endangered Grand Canyon fish ([Wheeler et al, 2021, Sidebar 1, p. 47](https://qcnr.usu.edu/coloradoriver/files/WhitePaper6.pdf)) and delay triggering Endangered Species Act.
+1. Carry over Lower Basin and Mexico conservation account balances into flex accounts.
 1. Nudge "my basin", "my reservoir", and "my contingency plan" mentality towards "our" reservoirs.
 
 **How the process works**
