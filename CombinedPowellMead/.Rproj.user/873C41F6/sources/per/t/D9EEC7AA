@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1633486810561.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "D9EEC7AA",
+    "lastKnownWriteTime" : 3419473789575321445,
+    "last_content_update" : 1633486810561,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "E9D89597",
+        "caption" : "dfMeadStorageStack",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=dfMeadStorageStack&cache_key=E9D89597",
+        "displayedObservations" : "634",
+        "environment" : "",
+        "object" : "dfMeadStorageStack",
+        "preview" : "0",
+        "totalObservations" : "634",
+        "variables" : "15"
+    },
+    "relative_order" : 9,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

@@ -114,7 +114,7 @@ if (!require(ggrepel)) {
 
 #For rollapply - running sum
 if (!require(zoo)) { 
-  devtools::install_github("zoo")
+  install.packages("zoo", type = "source")
   library(zoo) 
 }
 
@@ -317,6 +317,81 @@ ggplot() +
 sprintf("Nine year Lake Powell release of %s maf (%s) is %s maf above 74.1 maf requirement",round(dfPowellHistAnnual[nrow(dfPowellHistAnnual), "NineYearRelease"],1), dfPowellHistAnnual[nrow(dfPowellHistAnnual), "NineYearPeriod"],  dfPowellHistAnnual[nrow(dfPowellHistAnnual), "NineYearDiffRnd"])
 
 
+```
+
+# 9-Year Release in comparison to delivery target
+
+
+```{r NineYearRelease, echo=FALSE, warning=FALSE, message=FALSE}
+
+library(ggplot2)
+
+ggplot() +
+  #  10-year sum
+  #geom_line(data=dfPowellHistAnnual,aes(x=DateAsValue,y=TenYearDiffRnd, color="10-Year"), size=2) +
+  geom_line(data=dfPowellHistAnnual,aes(x=DateAsValue,y=NineYearDiffRnd, color="9-Year"), size=2) +
+
+  scale_color_manual(" ", values = c("10-Year" = "red", "9-Year" = "blue")) +
+  
+  theme_bw() +
+  #coord_fixed() +
+  labs(x="", y="Powell Release above Requirement\n(million acre-feet)") +
+  theme(text = element_text(size=14), legend.title=element_blank(), legend.text=element_text(size=14))
+
+```
+
+# 9-Year Powell Release in relation to target and 1-year
+
+
+```{r 9YearRelease, echo=FALSE, warning=FALSE, message=FALSE}
+
+library(ggplot2)
+
+# ggplot() +
+#   #Powell release - monthly
+#   geom_line(data=dfPowellHist,aes(x=DateAsValue,y=Total.Release..cfs.*nCFStoAF/1e6, color="Monthly"), size=2) +
+#   # Powell release-  annual
+#   geom_line(data=dfPowellHist,aes(x=DateAsValue,y=OneYearRelease, color="1-year"), size=2) +
+#   
+#   #  10-year sum
+#   geom_line(data=dfPowellHist,aes(x=DateAsValue,y=TenYearRelease, color="10-year"), size=2) +
+#   
+#   geom_line(data=dfPowellHist,aes(x=DateAsValue,y=TenYearTarget, color="Target"), size=2) +
+#   
+#  
+#   theme_bw() +
+#   #coord_fixed() +
+#   labs(x="", y="Powel Release (million acre-feet)") +
+#   theme(text = element_text(size=20), legend.title=element_blank(), legend.text=element_text(size=18))
+#   #theme(text = element_text(size=20), legend.text=element_text(size=16)
+
+
+#### Powell Release over time - annual
+
+ggplot() +
+  #Powell release - monthly
+  #geom_line(data=dfPowellHistAnnual,aes(x=DateAsValue,y=Total.Release..cfs.*nCFStoAF/1e6, color="Monthly"), size=2) +
+  # Powell release-  annual
+  geom_line(data=dfPowellHistAnnual,aes(x=DateAsValue,y=OneYearRelease, color="1-Year", linetye="1-Year"), size=2) +
+  #geom_bar(data=dfPowellHistAnnual,aes(x=DateAsValue,y=OneYearRelease, color="1-Year Total")) +
+  
+  geom_line(data=dfPowellHistAnnual,aes(x=DateAsValue,y=NineYearReleaseRnd, color="9-Year", linetype="9-Year"), size=2) +
+    #
+  # 10-year 75 MAF target
+ # geom_line(data=dfPowellHistAnnual,aes(x=DateAsValue,y=TenYearTarget, color="75 MAF Target"), size=2) +
+  # 9-year target 82.3 MAF target. 82.3 = 75 to Lower Basin + 7.25 to Mexico - 0.2 Help from Paria River
+  geom_line(data=dfPowellHistAnnual,aes(x=DateAsValue,y=TenYearTarget82*9/10, color="Target", linetype="Target"), size=1.5) +
+  
+  scale_color_manual(values = c("Blue","Red", "Purple"), breaks = c("9-Year", "Target","1-Year" )) +
+  scale_linetype_manual(values = c("solid", "dashed", "solid"), breaks = c("9-Year", "Target","1-Year" )) +
+  
+  scale_linetype(guide = FALSE) +
+  
+  theme_bw() +
+  #coord_fixed() +
+  labs(x="", y="Powell Release\n(million acre-feet)") +
+  theme(text = element_text(size=20), legend.title=element_blank(), legend.text=element_text(size=18))
+#theme(text = element_text(size=20), legend.text=element_text(size=16)
 
 
 ```

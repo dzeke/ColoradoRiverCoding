@@ -86,7 +86,7 @@ if (!require(ggrepel)) {
 
 #For rollapply - running sum
 if (!require(zoo)) { 
-  devtools::install_github("zoo")
+  install.packages("zoo", type = "source")
   library(zoo) 
 }
 

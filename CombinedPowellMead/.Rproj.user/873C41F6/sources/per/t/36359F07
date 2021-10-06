@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1633486844426.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "36359F07",
+    "lastKnownWriteTime" : 3419473789575321445,
+    "last_content_update" : 1633486844426,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "86804ED7",
+        "caption" : "dfMeadHistorical",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=dfMeadHistorical&cache_key=86804ED7",
+        "displayedObservations" : 87,
+        "environment" : "",
+        "object" : "dfMeadHistorical",
+        "preview" : 0,
+        "totalObservations" : 87,
+        "variables" : 13
+    },
+    "relative_order" : 11,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}
