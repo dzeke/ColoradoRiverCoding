@@ -600,7 +600,7 @@ The purpose of synchronous model is to provoke thought and discussion about
 renegotiation of Lake Powell and Lake Mead operations. So continue to play years
 so long as the discussion provokes new insights.
 
-# Step 8. Finish
+# Step 9. Finish
 
 Congratulations. You finished! If you wish to provide feedback – things you
 liked, things to improve – please send an email to david.rosenberg@usu.edu.
