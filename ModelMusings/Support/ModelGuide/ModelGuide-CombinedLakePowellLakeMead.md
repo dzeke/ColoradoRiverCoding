@@ -466,11 +466,15 @@ power pool (penstock elevations) to avoid.
 This is the annual release from Lake Powell to achieve the specified storage
 volumes in Lake Powell and Lake Mead. Compare to numbers such as 7 to 9 maf per
 year that are the target of equalization releases (Figure 10){USBR, 2007
-\#2736}. But note that as combined storage declines, it will become harder to
-achieve the 7-9 maf targets.
+\#2736}. Note that as combined storage declines, it will become harder to
+achieve the 7-9 maf targets. This Powell release is calculated as (all terms
+maf):
+
+Powell Release = -[Powell end storage] + [Powell start storage] + [Powell
+Natural Inflow] – [Upper Basin Consume] – [Powell Evaporation] (Equation 3)
 
 A negative release is infeasible and means too much water is already in Lake
-Mead. Specify a lower percentage in Step 7.
+Mead. Specify a lower percentage in Step 7 – lower Powell end storage.
 
 ### (iii) Turbine release water temperature
 
@@ -478,15 +482,22 @@ The temperature of water released through the Lake Powell penstocks to generate
 hydropower. This data is pulled from observations of water temperature (Wheeler
 et al., 2021, Appendix 1).
 
-### (iv) Suitability of native, endangered fish of the Grand Canyon
+### (iv) Suitability for native, endangered fish of the Grand Canyon
 
 As release water temperature rises, the native fish of the Grand Canyon become
 more susceptible to competition and prey by introduced non-native fish. Table 7
 shows the breakpoints of temperature suitability for native fish (Wheeler et
 al., 2021, Appendix 1).
 
-Box 2 shows an example with 13.8 maf of combined storage to assign 65% of that
-storage to lake Powell.
+### (iv) Suitability for tailwater trout
+
+The tailwater trout are an introduced species, require colder water, and live in
+the Colorado River reach from Glen Canyon Dam to Lee Ferry (and possibly below).
+Table 7 shows the breakpoints of temperature suitability for tailwater trout
+(Wheeler et al., 2021, Appendix 1).
+
+Box 2 shows an example of the impacts of 13.8 maf of combined storage if assign
+65% of that storage to lake Powell.
 
 ![](media/e4d47644b056c99b716ce3ffffc9f0c6.png)
 
