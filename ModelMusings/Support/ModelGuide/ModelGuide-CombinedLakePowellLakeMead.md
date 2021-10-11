@@ -489,7 +489,7 @@ more susceptible to competition and prey by introduced non-native fish. Table 7
 shows the breakpoints of temperature suitability for native fish (Wheeler et
 al., 2021, Appendix 1).
 
-### (iv) Suitability for tailwater trout
+### (v) Suitability for tailwater trout
 
 The tailwater trout are an introduced species, require colder water, and live in
 the Colorado River reach from Glen Canyon Dam to Lee Ferry (and possibly below).
