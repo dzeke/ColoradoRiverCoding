@@ -454,26 +454,31 @@ and 75% places more storage in Lake Powell.
 
 After entering a percent split, the following items will calculate:
 
-(i) Powell and Mead storage volumes and levels populate.
+### (i) Powell and Mead storage volumes and levels
 
 The model uses the elevation-area-volume relationships for the reservoirs to
 calculate storage level from volume. See the left and right hand side of Figure
 8 for critical levels and volumes such as dead pool (0 maf storage) and minimum
 power pool (penstock elevations) to avoid.
 
-(ii) Lake Powell release to achieve the Powell and Mead storage
+### (ii) Lake Powell release to achieve Powell and Mead storage volumes
 
-This is the release from Lake Powell to achieve the specified storage volumes in
-Lake Powell and Lake Mead. A negative release is infeasible and means too much
-water is already in Lake Mead. Specify a lower percentage in Step 7.
+This is the annual release from Lake Powell to achieve the specified storage
+volumes in Lake Powell and Lake Mead. Compare to numbers such as 7 to 9 maf per
+year that are the target of equalization releases (Figure 10){USBR, 2007
+\#2736}. But note that as combined storage declines, it will become harder to
+achieve the 7-9 maf targets.
 
-(iii) Turbine release water temperature
+A negative release is infeasible and means too much water is already in Lake
+Mead. Specify a lower percentage in Step 7.
+
+### (iii) Turbine release water temperature
 
 The temperature of water released through the Lake Powell penstocks to generate
 hydropower. This data is pulled from observations of water temperature (Wheeler
 et al., 2021, Appendix 1).
 
-(iv) Suitability of native, endangered fish of the Grand Canyon.
+### (iv) Suitability of native, endangered fish of the Grand Canyon
 
 As release water temperature rises, the native fish of the Grand Canyon become
 more susceptible to competition and prey by introduced non-native fish. Table 7
