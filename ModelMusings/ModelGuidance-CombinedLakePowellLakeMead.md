@@ -21,16 +21,22 @@ enter.
 Find quick links to support information (the sections of this document) in the
 Model file, *Master* worksheet, Column N.
 
-![](media/869c10223f828d1e70a225a54fbd45d0.png)
+Get Started
 
-# Assign Parties, Person playing, and Strategies
+Follow the Setup instructions in Box 1.
 
--   Five parties and one shared, reserve account derive standing from the 1922
-    Colorado River Compact, U.S.-Mexico Treaty, subsequent Minutes, Upper and
-    Lower Basin drought contingency plan, and desire to include more parties
-    (Table 1)(1922; IBWC, 2021; USBR, 2019; USBR, 2020).
+The rest of the document provides guidance on the steps to play.
 
-1.  Parties, Reason(s) to include in model, and Potential Strategies
+![](media/6b44ae09b31f5c50f5b5188819ca90f5.png)
+
+# 1. Assign Parties, Person playing, and Strategies
+
+Five parties and one shared, reserve account derive standing from the 1922
+Colorado River Compact, U.S.-Mexico Treaty, subsequent Minutes, Upper and Lower
+Basin drought contingency plan, and desire to include more parties (Table
+1)(1922; IBWC, 2021; USBR, 2019; USBR, 2020).
+
+Table 1. Parties, Reason(s) to include in model, and Potential Strategies
 
 | **Party**            | **Reason(s) to Include**                                                            | **Potential Strategy(s)**                                                                                                                                                                                                                                                                             |
 |----------------------|-------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -49,15 +55,15 @@ Basin. When teaming, draw on prior water sharing agreements such as an Upper
 Basin Compact where parties share water in specified percentages (Carson et al.,
 1948).
 
-## Explain cell types
+## 1A. Explain cell types
 
 Four model cell types are defined by fill color (Table 2).
 
-1.  Model Cell Types
+Table 2. Model Cell Types
 
-    ![](media/a18615987c33e9656c3b12f8de2bb14f.png)
+![](media/a18615987c33e9656c3b12f8de2bb14f.png)
 
-## Make Assumptions
+## 1B. Make Assumptions
 
 **(i) The evaporation rates** for Lake Powell and Lake Mead are taken as the
 midpoint within reported ranges of measurements (Table 3)(Schmidt et al., 2016).
@@ -67,7 +73,7 @@ sensitivity analysis found that the lower and upper bounds on Lake Mead
 evaporation rates for a five year study for Lake Mead draw down saw variations
 of 0.25 maf or less in Lake Mead storage volume (Rosenberg, 2021a).
 
-1.  Reservoir evaporation rates (feet per year)
+Reservoir evaporation rates (feet per year)
 
 | **Reservoir** | **Midpoint** | **Range** |
 |---------------|--------------|-----------|
@@ -268,7 +274,7 @@ minus Havasu / Parker evaporation and ET – among accounts. This split is a
 political decision and Table 4 shows one way to split that draws on existing
 operations.
 
-1.  Assign inflow to parties
+Assign inflow to parties
 
 | **Party**            | **Volume (MCM)**             | **Comment**                                                                                                                           | **Existing Operations**                |
 |----------------------|------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------|
@@ -325,7 +331,7 @@ prices.
 
 Purchase Cost = (0.5)(500) + (0.2)(1,200) = \$850 million.
 
-1.  Rough Colorado River water prices
+Rough Colorado River water prices
 
 | Description                                     | Price (\$/acre-foot) |
 |-------------------------------------------------|----------------------|
@@ -422,7 +428,7 @@ Consider four issues to split the combined storage between the two reservoirs:
     turbines (elevation 3,490 feet; left) and river outlets (elevation 3,370
     feet; right) for different water surface elevations (Wheeler et al., 2021).
 
-2.  Effects of Summer Lake Powell Elevation on Fish
+    Effects of Summer Lake Powell Elevation on Fish
 
     ![](media/52a39e306e16cc2b2f94e6e37ffc5c85.emf)
 
@@ -464,12 +470,7 @@ column) after assigning the combined storage to Lake Powell and Lake Mead.
 The data, code, and directions to generate figures in this post are available on
 Github.com at Rosenberg (2021c).
 
-# Acknowledgements
-
-This work is unfunded. Eric Kuhn and Jennifer Pitt made comments to improve an
-earlier draft.
-
-Requested Citation
+# Requested Citation
 
 David E. Rosenberg (2021). “Give Lake Mead managers more flexibility to conserve
 and stop draw down to the dead pool.” Utah State University, Logan, Utah.
