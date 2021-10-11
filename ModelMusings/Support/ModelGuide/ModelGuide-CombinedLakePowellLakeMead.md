@@ -616,6 +616,59 @@ David E. Rosenberg (2021). " Synchronous Model Guidance: Flex Accounting for a
 Combined Lake Powell-Lake Mead System." Utah State University.
 <https://github.com/dzeke/ColoradoRiverCoding/tree/main/ModelMusings>.
 
+# Appendix 1. Summary of Current Colorado River Operations
+
+The Colorado River basin has a long history. The parties do not get along. There
+is much written material. This appendix summarizes key pieces and provides links
+to the actual documents:
+
+1.  [**Map**](https://www.usbr.gov/lc/images/maps/CRBSmap.jpg) shows Upper
+    Basin, Lower Basin, Glen Canyon Dam/Lake Powell, Hoover Dam/Lake Mead, and
+    diversions inside and outside the hydrologic basin (USBR, 2012).
+
+2.  **Compacts, treaties, and agreements** in 1922, 1928, 1944, 1956, 1964, and
+    1968 -- <https://www.usbr.gov/lc/region/g1000/lawofrvr.html>.
+
+1.  **2007 Interim Guidelines**. Lower Basin states increase mandatory
+    conservation as Lake Mead level falls from 1,075 to 1,025 feet;
+    Intentionally created surplus (aka conservation) accounts in Lake Mead for
+    Lower Basin states (Section 3); Equalize storage in Lake Powell and Lake
+    Mead (Section 6).
+    <https://www.usbr.gov/lc/region/programs/strategies/RecordofDecision.pdf>.
+
+1.  **2012 and 2017. Minutes 319 and 323 to the 1944 US-Mexico Treaty**. Mexico
+    increases mandatory conservation as Lake Mead’s level falls from 1,090 to
+    1,025 feet. <https://www.ibwc.gov/Treaties_Minutes/Minutes.html>.
+
+1.  **2018 Ten Tribes Partnership Water Study.** Quantified 2.0 million
+    acre-feet (maf) rights in Upper and Lower Basins and 0.8 maf claims.
+    https://www.usbr.gov/lc/region/programs/crbstudy/tws/finalreport.html.
+
+2.  **2019 Upper Basin Drought Contingency Plan.** Protect Lake Powell elevation
+    of 3,525 feet (5.9 maf). Prevent Lake Powell to fall to minimum power pool
+    elevation of 3,490 feet (4.0 maf). https://www.usbr.gov/dcp/finaldocs.html.
+
+3.  **2019 Lower Basin Drought Contingency Plan.** Increase mandatory
+    conservation targets as Lake Mead’s level falls from 1,090 feet to 1,025
+    feet. See current mandatory conservation schedule in (Castle and Fleck,
+    2019). Protect Lake Mead from falling below elevation 1,020 feet.
+    https://www.usbr.gov/dcp/finaldocs.html.
+
+4.  **2026.** **Interim Guidelines and Drought Contingency Plans expire.**
+
+5.  **Castle and Fleck (2019)**:
+
+    1.  Summarize current Colorado River operations in slightly more detail than
+        Box 1.
+
+    2.  Describe what happens when the Upper Basin is unable to deliver 8.23
+        million acre-feet (maf) of water per year to Lower Basin as required in
+        the 1922 Compact and 1944 US-Mexico Treaty.
+
+1.  **Kuhn and Fleck (2019)** give a well written history of Colorado River
+    management. Read this piece for fun or to go in depth on a particular piece
+    of management.
+
 # References
 
 (1922). "Colorado River Compact."
