@@ -36,7 +36,7 @@ Colorado River Compact, U.S.-Mexico Treaty, subsequent Minutes, Upper and Lower
 Basin drought contingency plan, and desire to include more parties (Table
 1)(1922; IBWC, 2021; USBR, 2019; USBR, 2020).
 
-Table 1. Parties, Reason(s) to include in model, and Potential Strategies
+**Table 1. Parties, Reason(s) to include in model, and Potential Strategies**
 
 | **Party**            | **Reason(s) to Include**                                                            | **Potential Strategy(s)**                                                                                                                                                                                                                                                                             |
 |----------------------|-------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
