@@ -1,6 +1,6 @@
-# Synchronous Model Guidance
+# Synchronous Model Guide
 
-# Flex Accounting for a Combined Lake Powell-Lake Mead System
+## Flex Accounting for a Combined Lake Powell-Lake Mead System
 
 David E. Rosenberg \| Utah State University \|
 [david.rosenberg@usu.edu](mailto:david.rosenberg@usu.edu) \| @WaterModeler
