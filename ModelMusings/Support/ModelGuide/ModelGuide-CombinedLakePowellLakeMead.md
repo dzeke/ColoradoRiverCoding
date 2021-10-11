@@ -254,7 +254,7 @@ Basin drought contingency plans and the Minute 323 to the U.S.-Mexico Treaty
 
 -   Assign the 11.6 maf protection volume to the shared, reserve account. 11.6
     maf is the sum of 5.9 maf protection volume for Lake Powell plus 5.7 maf
-    protection volume for Lake Mead {USBR, 2019 \#2578}.
+    protection volume for Lake Mead (USBR, 2019).
 
 -   Assign the 0.17 maf in Mexico’s Lake Mead conservation account to Mexico
     (USBR, 2021a).
@@ -450,16 +450,42 @@ use. This volume is the sum of the end-of-year- balances in all accounts.
 
 Assign the end-of-year combined storage to Lake Powell and Lake Mead. Enter as
 percent where 50% splits the combined storage equally between the two reservoirs
-and 75% places more storage in Lake Powell. After entering a percent split, the
-Powell and Mead storage volumes and levels populate. So does the Lake Powell
-release to achieve the Powell and Mead storage, the turbine release water
-temperature, and suitability of native, endangered fish of the Grand Canyon. Box
-2 shows an example with 13.8 maf of combined storage to assign 65% of that
+and 75% places more storage in Lake Powell.
+
+After entering a percent split, the following items will calculate:
+
+(i) Powell and Mead storage volumes and levels populate.
+
+The model uses the elevation-area-volume relationships for the reservoirs to
+calculate storage level from volume. See the left and right hand side of Figure
+8 for critical levels and volumes such as dead pool (0 maf storage) and minimum
+power pool (penstock elevations) to avoid.
+
+(ii) Lake Powell release to achieve the Powell and Mead storage
+
+This is the release from Lake Powell to achieve the specified storage volumes in
+Lake Powell and Lake Mead. A negative release is infeasible and means too much
+water is already in Lake Mead. Specify a lower percentage in Step 7.
+
+(iii) Turbine release water temperature
+
+The temperature of water released through the Lake Powell penstocks to generate
+hydropower. This data is pulled from observations of water temperature (Wheeler
+et al., 2021, Appendix 1).
+
+(iv) Suitability of native, endangered fish of the Grand Canyon.
+
+As release water temperature rises, the native fish of the Grand Canyon become
+more susceptible to competition and prey by introduced non-native fish. Table 7
+shows the breakpoints of temperature suitability for native fish (Wheeler et
+al., 2021, Appendix 1).
+
+Box 2 shows an example with 13.8 maf of combined storage to assign 65% of that
 storage to lake Powell.
 
 ![](media/e4d47644b056c99b716ce3ffffc9f0c6.png)
 
-Consider four issues to split the combined storage between the two reservoirs:
+## 7A. Consider four issues to split the combined storage between the two reservoirs:
 
 ### (i) Protect endangered, native fish of the Grand Canyon
 
@@ -530,7 +556,7 @@ The purpose of synchronous model is to provoke thought and discussion about
 renegotiation of Lake Powell and Lake Mead operations. So continue to play years
 so long as the discussion provokes new insights.
 
-# Step 8. Finishing
+# Step 8. Finish
 
 Congratulations. You finished! If you wish to provide feedback – things you
 liked, things to improve – please send an email to david.rosenberg@usu.edu.
