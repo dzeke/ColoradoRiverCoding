@@ -53,7 +53,12 @@ Four model cell types are defined by fill color (Table 2).
 
 1.  Model Cell Types
 
-![](media/73029b584c94d5dcc22a380db6484d8f.emf)
+| **Cell Type**             | **Explanation**                                                                                                                                                                                          |
+|---------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Physical watershed data   | Flow and evaporation assumptions required by the model. Parties agree on this data and information.                                                                                                      |
+| Individual party decision | A party's strategy including decisions such as conservation, consumption, sales, purchases from a party's flex account.                                                                                  |
+| **Joint party decision**  | Decisions parties make together such as the reservoir protection elevations, how to split existing storage and inflow among parties, or how to split combined storage between Lake Powell and Lake Mead. |
+| **Calculated cell**       | Formula used to calculate cell such as reservoir evaporation or a party's available water.                                                                                                               |
 
 ## Make Assumptions
 
