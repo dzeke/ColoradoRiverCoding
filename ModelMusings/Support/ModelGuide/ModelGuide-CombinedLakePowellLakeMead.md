@@ -316,7 +316,7 @@ and Lower Basin conservation schedules.
 
 **Table 4. Mexico Mandatory Conservation under Minutes 319 and 323**
 
-![](media/e1a60948f77d6f782a1906c6acc18106.emf)
+![](media/b0fe2d1f33974bd4dd7bbe699d52fd44.png)
 
 # 
 
