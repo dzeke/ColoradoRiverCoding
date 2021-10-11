@@ -357,9 +357,10 @@ Each player has a dashboard where they can trade, conserve, and consume their
 available water (Figure 6). ![](media/01cc590a3794cac0adbe1ae9f78eb803.png)
 
 **Figure 6. Upper Basin Dashboard annotated. A Lake Powell natural flow of 9 maf
-gives the Upper Basin 5.7 maf of available water to sell or consume.**
+gives the Upper Basin 5.7 maf of available water to sell or consume. No trades
+or withdraws have been entered.**
 
-### Buy or sell water from other player(s)
+### (i) Buy or sell water from other player(s)
 
 Enter buy amounts as positive (+) and sell amounts negative (-). These are
 additions and subtractions to the party’s available water. Enter all amounts in
@@ -373,7 +374,7 @@ farm or urban water conservation efforts, the money stays in the local community
 and the seller can make more water available in future years {Rosenberg, 2021
 \#2781}.
 
-### Compensation
+### (ii) Compensation
 
 Enter compensation – payments for buying, receipts for sales – in \$ millions.
 Enter as a formula. Multiple the sale price in \$/acre-foot by the buy or sell
@@ -395,12 +396,12 @@ Compensation = (0.5)(500) + (0.2)(1,200) = \$850 million.
 | Agriculture - Lower Basin                       | \$700 - \$1,000      |
 | Desalination in the Sea of Cortez (James, 2021) | \$2,000              |
 
-### Net Trade Volume all Players
+### (iii) Net Trade Volume all Players
 
 Confirm the net trade volume for all players is zero. A zero balance indicates
 there is a buyer for every seller.
 
-### Available Water
+### (iv) Available Water
 
 Available water is the water available to a party to consume, conserve, or sell
 to another party. Purchases can increase available water (Eq. 2).
@@ -408,7 +409,7 @@ to another party. Purchases can increase available water (Eq. 2).
 | ![](media/5decdc4b51d5a9ff4d0ac1185446aabf.png) | (Eq. 2) |
 |-------------------------------------------------|---------|
 
-### Enter Withdraw within Available Water
+### (v) Enter Withdraw within Available Water
 
 Flex account withdraws are a party’s consumptive use. This consumptive use
 occurs by parties physically withdrawing from the combined Lake Powell-Lake Mead
@@ -423,7 +424,10 @@ Enter withdraws and consumptive use according to the strategy identified in Step
 The withdraw cell fill will turn red when the withdraw exceeds the available
 water. No withdrawing more money than is in your bank account!
 
-The dashboards repeat for the other parties.
+### (vi) End of Year Balance
+
+The party’s flex account balance at the end of the year after deducting
+withdraws and consumptive use. End of Year balance = Available Water – Withdraw.
 
 ## 5A. Shared, Reserve Dashboard
 
