@@ -21,7 +21,7 @@ enter.
 Find quick links to support information (the sections of this document) in the
 Model file, *Master* worksheet, Column N.
 
-# \<a id=“AssignParties”\>Assign Parties, Person playing, and Strategies\</a\>
+# Assign Parties, Person playing, and Strategies
 
 -   Five parties and one shared, reserve account derive standing from the 1922
     Colorado River Compact, U.S.-Mexico Treaty, subsequent Minutes, Upper and
