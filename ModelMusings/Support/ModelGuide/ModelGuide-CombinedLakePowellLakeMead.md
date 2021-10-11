@@ -476,7 +476,7 @@ feet; 0 maf). For example, an 18oC release through the river outlets requires
 3,600 feet on Figure 8 left plot to 3,525 feet on right plot). This information
 is also presented on the *PowellReleaseTemperature* worksheet.
 
-| ![](media/bc14adec69af7a4c4ce2b564071299bd.png) | ![](media/f20a2551b5487617dfcf35586456b582.png) |
+| ![](media/b39ba7a9554f8f13f605b538c1c85f10.png) | ![](media/f20a2551b5487617dfcf35586456b582.png) |
 |-------------------------------------------------|-------------------------------------------------|
 
 **Figure 8. Lake Powell release water temperatures through the hydropower
@@ -485,7 +485,7 @@ right) for different water surface elevations (Wheeler et al., 2021).**
 
 **Table 7. Effects of Summer Lake Powell Elevation on Fish**
 
-![](media/52a39e306e16cc2b2f94e6e37ffc5c85.emf)
+![](media/537447e0fae8a59cab74e5b713473cbd.png)
 
 ### (ii) Reduce Impacts on Hydropower Generation
 
