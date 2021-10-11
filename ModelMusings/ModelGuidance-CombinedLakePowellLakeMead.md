@@ -270,7 +270,7 @@ The combined reservoir evaporation is divided among flex accounts in proportion
 to the flex account balance (Equation 1, evaporation terms in maf per year,
 balance and storage terms in maf).
 
-![](media/6b68a446ab4d077a922a16df8e76260b.emf) Equation 1
+![](media/57ea1cad7cb89a77dfa222ee1ed1f9f0.png) Equation 1
 
 For example, if the combined evaporation is 1.0 maf and Upper Basin has 10% of
 the combined storage, then the Upper Basin is assigned 10% of the combined
