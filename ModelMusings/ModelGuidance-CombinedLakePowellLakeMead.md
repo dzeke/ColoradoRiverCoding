@@ -1,13 +1,13 @@
-**Synchronous Model Guidance**
+# Synchronous Model Guidance
 
-**Flex Accounting for a Combined Lake Powell-Lake Mead System**
+# Flex Accounting for a Combined Lake Powell-Lake Mead System
 
 David E. Rosenberg \| Utah State University \|
 [david.rosenberg@usu.edu](mailto:david.rosenberg@usu.edu) \| @WaterModeler
 
 October 5, 2021
 
-I**ntroduction**
+# I**ntroduction**
 
 This document supports participants to use the synchronous model for a combined
 Lake Powell-Lake Mead system (Rosenberg, 2021d). Synchronous means multiple
@@ -21,11 +21,12 @@ enter.
 Find quick links to support information (the sections of this document) in the
 Model file, *Master* worksheet, Column N.
 
-Get Started
+# Get Started
 
 Follow the Setup instructions in Box 1.
 
-The rest of the document provides guidance on the steps to play.
+Follow the Play instructions in Box 1. The rest of the document provides
+guidance on the steps to play.
 
 ![](media/00adba6c99e470e83330019a18220325.png)
 
