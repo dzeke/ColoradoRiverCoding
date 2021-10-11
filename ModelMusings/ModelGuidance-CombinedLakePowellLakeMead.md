@@ -27,7 +27,7 @@ Follow the Setup instructions in Box 1.
 
 The rest of the document provides guidance on the steps to play.
 
-![](media/6b44ae09b31f5c50f5b5188819ca90f5.png)
+![](media/00adba6c99e470e83330019a18220325.png)
 
 # Step 1. Assign Parties, Person playing, and Strategies
 
@@ -291,7 +291,7 @@ minus Havasu / Parker evaporation and ET – among accounts. This split is a
 political decision and Table 4 shows one way to split that draws on existing
 operations.
 
-Assign inflow to parties
+**Table 4. Assign inflow to parties**
 
 | **Party**            | **Volume (MCM)**             | **Comment**                                                                                                                           | **Existing Operations**                |
 |----------------------|------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------|
@@ -312,15 +312,15 @@ Assign inflow to parties
     assigned to Mexico and the Lower Basin. Any remaining natural flow goes to
     the Upper Basin.
 
-# Player Dashboards – Conserve, Consume, and Trade
+# Step 5. Player Dashboards – Conserve, Consume, and Trade
 
 Each player has a dashboard where they can trade, conserve, and consume their
-available water (Figure 6). Within their dashboard, A participant can:
+available water (Figure 6). ![](media/01cc590a3794cac0adbe1ae9f78eb803.png)
 
-![](media/01cc590a3794cac0adbe1ae9f78eb803.png)
+**Figure 6. Upper Basin Dashboard annotated. A Lake Powell natural flow of 9 maf
+gives the Upper Basin 5.7 maf of available water to sell or consume.**
 
-Upper Basin Dashboard annotated. A Lake Powell natural flow of 9 maf gives the
-Upper Basin 5.7 maf of available water to sell or consume.
+Within their dashboard, A participant can:
 
 -   Purchase or sell water from other player(s) with compensation.
 
@@ -329,7 +329,7 @@ Upper Basin 5.7 maf of available water to sell or consume.
 
 -   Monitor their available water.
 
-| ![](media/5decdc4b51d5a9ff4d0ac1185446aabf.png) | (Eq. 1) |
+| ![](media/5decdc4b51d5a9ff4d0ac1185446aabf.png) | (Eq. 2) |
 |-------------------------------------------------|---------|
 
 -   Purchases add to the available water balance and sales lower the available
@@ -348,7 +348,7 @@ prices.
 
 Purchase Cost = (0.5)(500) + (0.2)(1,200) = \$850 million.
 
-Rough Colorado River water prices
+**Table 5. Rough Colorado River water prices**
 
 | Description                                     | Price (\$/acre-foot) |
 |-------------------------------------------------|----------------------|
@@ -362,14 +362,15 @@ withdrawing more money than is in your bank account!
 
 The dashboards repeat for the other parties.
 
-## Shared, Reserve Dashboard
+## 5A. Shared, Reserve Dashboard
 
 The dashboard for the shared, reserve account is orange fill – all parties must
 agree to a purchase or sale (Figure 7).
 
 ![](media/a79e48b88087e7f5f57068fd3824cd97.png)
 
-All Shared, Reserve Account choices are a joint decision by all parties.
+**Figure 7. All Shared, Reserve Account choices are a joint decision by all
+parties.**
 
 The current recommendation is keep the shared, reserve account balance steady –
 no sales or gifts to parties in distress.
@@ -394,19 +395,19 @@ lower Lake Powell and/or Lake Mead levels:
 Both impacts will depend on how combined storage is split between Lake Powell
 and Lake Mead (see next section).
 
-# Summary of Player Actions
+# Step 6. Summary of Player Actions
 
 Shows player actions grouped by Purchases and Sales, Account Withdraws, and
 Account end-of-year balances. These groupings can help see whether sales
 balanced purchases and also overall water consumption for the year.
 
-## Combined Storage – End of Year
+## 6A. Combined Storage – End of Year
 
 The combined storage – end of the year is the combined storage in Lake Powell
 and Lake Mead at the end of the year after all account withdraws and consumptive
 use. This volume is the sum of the end-of-year- balances in all accounts.
 
-# Assign Combined Storage to Powell and Mead
+# Step 7. Assign Combined Storage to Powell and Mead
 
 Assign the end-of-year combined storage to Lake Powell and Lake Mead. Enter as
 percent where 50% splits the combined storage equally between the two reservoirs
@@ -414,12 +415,30 @@ and 75% places more storage in Lake Powell. After entering a percent split, the
 Powell and Mead storage volumes and levels populate. So does the Lake Powell
 release to achieve the Powell and Mead storage, the turbine release water
 temperature, and suitability of native, endangered fish of the Grand Canyon. Box
-1 shows an example for 13.8 maf of combined storage.
+2 shows an example for 13.8 maf of combined storage.
 
-| Impacts to assign 65% of 13.8 maf combined storage to Lake Powell                                                                                                                                                                                                                                                                                                                                                                                                                                       |                                                  |
-|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------|
-| There is 13.8 maf of combined storage. The parties assigned 65% of the storage to Lake Powell. This leaves 9.0 maf in Lake Powell and 4.8 in Lake Mead. Both Powell and Mead are above their minimum power pool elevations of 3,490 and 955 feet.  Lake Powell releases 2.8 maf to Lake Mead this year to achieve the specified storage volumes. The release water temperature is \< 18oC which may benefit the native, endangered fish of the Grand Canyon or they may face invasion from non-natives. | ![](media/500b78c3cb0c3aa0caf0b5b21ff4f3b5.png)  |
-| A release water temperature will help tailwater trout (introduced) grow and incubate. Lake Powell will need to receive 85% of combined storage to raise the storage to 11.8 maf, cool release temperatures, and increase the relative abundance of native, endangered fish.                                                                                                                                                                                                                             |                                                  |
+![](media/e4d47644b056c99b716ce3ffffc9f0c6.png)
+
+![](media/500b78c3cb0c3aa0caf0b5b21ff4f3b5.png)
+
+Grand Canyon or they may face invasion from non-natives.
+
+A release water temperature will help tailwater trout (introduced) grow and
+incubate. Lake Powell will need to receive 85% of combined storage to raise the
+storage to 11.8 maf, cool release temperatures, and increase the relative
+abundance of native, endangered fish.
+
+**Box 2. Impacts to assign 65% of 13.8 maf combined storage to Lake Powell.**
+
+| There is 13.8 maf of combined storage. The parties assigned 65% of the storage to Lake Powell. This leaves 9.0 maf in Lake Powell and 4.8 in Lake Mead. Both Powell and Mead are above their minimum power pool elevations of 3,490 and 955 feet.  Lake Powell releases 2.8 maf to Lake Mead this year to achieve the specified storage volumes. The release water temperature is \< 18oC which may benefit the native, endangered fish of the  | ![](media/500b78c3cb0c3aa0caf0b5b21ff4f3b5.png) |
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------|
+
+Grand Canyon or they may face invasion from non-natives.
+
+A release water temperature will help tailwater trout (introduced) grow and
+incubate. Lake Powell will need to receive 85% of combined storage to raise the
+storage to 11.8 maf, cool release temperatures, and increase the relative
+abundance of native, endangered fish.
 
 Consider four issues to split the combined storage between the two reservoirs:
 
