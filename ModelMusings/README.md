@@ -3,6 +3,7 @@
 ## Quick download links:
 ### [Pilot flex accounting to encourage more water conservation in a combined Lake Powell-Lake Mead system](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/PilotFlexAccounting-CombinedPowellMead.xlsx) (Excel model file)
 ### [Slides of Key Ideas](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/PilotFlexAccounting-KeyIdeas.pdf) (pdf file)
+### [Synchronous Model Guide](https://github.com/dzeke/ColoradoRiverCoding/blob/main/ModelMusings/Support/ModelGuide/ModelGuide-CombinedLakePowellLakeMead.md) (Help file)
 
 ## Overview														
 **The purpose of the interactive models in this Github repository are to provoke thought and discussion** about renegotiations of operations for Lake Powell and Lake Mead. More specifically: how to convert a shrinking pie (lose-lose) water conflict -- our Colorado River basin becoming more arid -- into more positive processes for people and endangered fish? Links to existing Lake Powell and Lake Mead operations:
@@ -44,32 +45,31 @@ Presently there is one interactive model in the repository.
 1. Each party conserves or consumes within their available water independent of other parties.
 1. Parties jointly decide how physically store water in Lake Powell and Lake Mead (e.g., consider fish and hydropower). Parties retain access to storage whether water is in Lake Powell or Lake Mead.
 
-**Try out the model?** Follow the directions below. Use solo or with colleagues, friends, and/or family.
+## Directions to Use
+1. Download the file **[PilotFlexAccounting-CombinedPowellMead.xlsx](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/PilotFlexAccounting-CombinedPowellMead.xlsx)** to your computer.
+1. Move the Excel file to your Google Drive.
+1. Invite the other players to join the Google Sheet. Copy + share the URL to the Sheet. Or in the upper right of the Google Sheet, click the **Share** button. Add emails, and set permissions so players can access the Google Sheet.
+1. All participants open the **Master** worksheet.
+1. Duplicate the **Master** worksheet to save a blank version for later use.
+1. Follow directions in Column A.
+1. Find linked help in Column N.
+1. View the **Master-Plots** worksheet to compare entries to current operations (Law of River).
 
 ## Model Structure
 
 This interactive model is a structured **spreadsheet** (Google Sheet). 
- * **Rows** represent the components of an interactive water budget for a combined Lake Powell-Lake Mead system. Interactive means the players enter some components (political/management decisions) of the water budget. The different types of components (cell fill) are:
-   * **Physical watershed data** (Green fill, black text)
-      * Reservoir evaporation rates.
-	  * Current Lake Powell and Lake Mead storage.
-	  * Natural inflow to Lake Powell.
-	  * Grand Canyon tributary flow.
-	  * Lake Havasu / Lake Parker evaporation and evapotranspiration.
-	  * Natural inflow between Hoover Dam and Imperial Dam.
-   * **Individual political (player) Flex account decisions** (Light peach fill, black text):
+ * **Rows** represent the components of an interactive water budget for a combined Lake Powell-Lake Mead system.
+ * **Colummns** represent years. 
+ * **Interactive** means the players enter some components of the water budget year by year. Interactive components are individual and joint
+ political/management decisions such as:
       * Water consumption and conservation.
 	  * Water purchases or sales: volumes and payments. 
-	* **Joint political (player) decisions** (Orange fill, white text):
-      * Add more parties or stakeholders.
+      * Add parties or stakeholders.
 	  * Split existing reservoir storage among parties.
 	  * Split future inflows among parties. 
 	  * Raise or lower the level of the shared, reserve account.
       * Physically split combined storage between Lake Powell and Lake Mead. 	  
-   * **Calculations** (Grey fill), and
-   * **Facilitation** steps (White fill).
- * **Columns represent years**. Players play year-by-year. For example, specify hydrology in Year 1. Players make choices. Account balances and reservoir storages at Year 1 end carry on to Year 2 beginning.
-
+  
 **Treatment of Uncertainties**:
  * Hydrologic: Players or a facilitator choose each year's basin natural flows.
  * Water demands: Players enter their water conservation and consumption choices year by year within their available water independent of other parties.
@@ -78,13 +78,6 @@ This interactive model is a structured **spreadsheet** (Google Sheet).
 1. A Google account. [Create a Google account](https://accounts.google.com/signup/v2/webcreateaccount?hl=en&flowName=GlifWebSignIn&flowEntry=SignUp)
 1. Another participant (for synchronous, interactive modeling). A participant may role play one or more parties (e.g., Upper Basin and Mexico).
 1. ~ 1 to 2 hours. Go slow. If you run out of time, schedule another session.
-
-## Directions to Use
-1. Download the file **[PilotFlexAccounting-CombinedPowellMead.xlsx](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/PilotFlexAccounting-CombinedPowellMead.xlsx)** to your computer.
-1. Move the Excel file to be a Google Sheet in a Google Drive folder associated with your Google Account.
-1. Invite the other players to join the Google Sheet. Copy + share the URL to the Sheet. Or in the upper right of the Google Sheet, click the **Share** button. Add emails, and set permissions so players can access the Google Sheet.
-1. In the Google Sheet, select the left-most worksheet *ReadMe-Directions*. Follow the further directions to start and complete the role play.
-1. Before start: duplicate the **Master** worksheet to save a blank version. Play in the **Master** worksheet. View the **Master-Plots** worksheet to compare entries to current operations (Law of River).
 
 ## Compare to Current Operations
 The **Master**, **8.1-Trade**, and **MillenniumRecover** worksheets come with companion **-LawOfRiver** and **-Plots** worksheets. Select the **-Plots** worksheets to compare flex accounting entries to current operations (Law of the River). Use the **Master** worksheet to compare your entries to current operations.  
@@ -109,6 +102,7 @@ All donors will be added to an email list and receive periodic updates.
 ## Model File(s)
 1. **[PilotFlexAccounting-CombinedPowellMead.xlsx](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/PilotFlexAccounting-CombinedPowellMead.xlsx)** - An Excel file with the pilot flex accounting tool and directions to role play. For syncronous access by multiple players, download and move this file into a Google Sheet. See the ReadMe-Directions worksheet for directions.
 1. **[PilotFlexAccounting-KeyIdeas.pdf](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/PilotFlexAccounting-KeyIdeas.pdf)** - A PDF file that illustrates key ideas for this model musing.
+1. **[Synchronous Model Guide](https://github.com/dzeke/ColoradoRiverCoding/blob/main/ModelMusings/Support/ModelGuide/ModelGuide-CombinedLakePowellLakeMead.md)** - A help file that provides context and explanations for each model input. Column N of the Model File links to the help file.
 1. **Support folders**:
    1. **Hydrology** - Folder with Excel files used to generate hydrologic scenarios. CRB_29gages.xlsx: Listing of gages in the Colorado River basin used to estimate natural flow. NaturalFlows1906-2018_20200110.xlsx: Natural flow hydrology downloaded from the USBR website and modified to pick out particular 10- and 20- year sequences of flows from the observed and paleo reconstructed records.
    1. **OldVersions** - Folder with older versions of the pilot flex accounting tool.
