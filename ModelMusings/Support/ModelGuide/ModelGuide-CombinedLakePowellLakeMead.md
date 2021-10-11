@@ -5,7 +5,7 @@
 David E. Rosenberg \| Utah State University \|
 [david.rosenberg@usu.edu](mailto:david.rosenberg@usu.edu) \| @WaterModeler
 
-October 11, 2021
+October 5, 2021
 
 # I**ntroduction**
 
@@ -23,12 +23,34 @@ Model file, *Master* worksheet, Column N.
 
 # Get Started
 
-Follow the Setup instructions in Box 1.
-
-Follow the Play instructions in Box 1. The rest of the document provides
-guidance on the steps to play.
+Follow the Setup and Play instructions in Box 1. The rest of the document
+provides guidance on the steps to play.
 
 ![](media/00adba6c99e470e83330019a18220325.png)
+
+## Types of Use
+
+The synchronous model can be used in two modes:
+
+1.  Synchronously by multiple people where each person plays one or more parties
+    (in Google Drive).
+
+2.  By a single person (plays all parties).
+
+Players can explore:
+
+-   Water conservation and consumptive use strategies,
+
+-   Scenarios of natural flow
+
+-   Political decisions such as:
+
+    -   Include more parties or stakeholders. split existing reservoir storage
+        among users,
+
+    -   Split future inflows among users.
+
+    -   Split the combined reservoir storage among reservoirs.
 
 # Step 1. Assign Parties, Person playing, and Strategies
 
@@ -224,13 +246,15 @@ and evapotranspiration from 1995 to 2014 at USBR (2021a).
 # Step 3. Split existing reservoir storage among parties (year 1 only)
 
 Split the starting combined reservoir storage (Figure 5) entered in Section 1B
-among the parties. These assignments are joint party decisions. There are many
-possibilities. Below, the default splits apply Interim Guidelines Intentionally
-Created Surplus (ICS) accounts, the Lower and Upper Basin drought contingency
-plans and the Minute 323 to the U.S.-Mexico Treaty (IBWC, 2021; USBR, 2019).
+among the parties. These assignments are joint party (political) decisions.
+There are many possibilities. Here, the default values in Column B apply Interim
+Guidelines Intentionally Created Surplus (ICS) accounts, the Lower and Upper
+Basin drought contingency plans and the Minute 323 to the U.S.-Mexico Treaty
+(IBWC, 2021; USBR, 2019).
 
--   Assign the 11.6 maf protection volume to the shared, reserve account (5.9
-    maf from Lake Powell plus 5.7 maf from Lake Mead).
+-   Assign the 11.6 maf protection volume to the shared, reserve account. 11.6
+    maf is the sum of 5.9 maf protection volume for Lake Powell plus 5.7 maf
+    protection volume for Lake Mead {USBR, 2019 \#2578}.
 
 -   Assign the 0.17 maf in Mexico’s Lake Mead conservation account to Mexico
     (USBR, 2021a).
@@ -243,7 +267,13 @@ plans and the Minute 323 to the U.S.-Mexico Treaty (IBWC, 2021; USBR, 2019).
 -   Assign the remaining storage in Lake Powell to the Upper Basin.
 
 -   In these assignments, the Colorado River Delta and First Nations do not get
-    any storage. In actuality, the parties will
+    any storage.
+
+In actuality, the parties will negotiate over a share of the existing reservoir
+storage. This negotiation should be more positive for parties. Parties will get
+the same or more storage water as they get with current operations. In the
+current operations there are no Lake Powell storage accounts and only Lake Mead
+conservation accounts for Lower Basin and Mexico.
 
 ![](media/fdae5948f0f33ee22db5b70cfbdf1ca7.png)
 
@@ -252,11 +282,11 @@ accounts (right).**
 
 ## 3A. Begin of year reservoir storage
 
-In year, beginning of year reservoir storage is the Lake Powell and Lake Mead
-volumes specified in Section 1B.
+In Year 1 (Column C), beginning of year reservoir storage is the Lake Powell and
+Lake Mead volumes specified in Section 1B.
 
-In subsequent years, the Lake Powell and Lake Mead storage volumes are the
-volumes decided by parties at the end of the prior year.
+In subsequent years (Columns D, E, …), the Lake Powell and Lake Mead storage
+volumes are the volumes decided by parties at the end of the prior year.
 
 ## 3B. Calculate Powell + Mead Evaporation
 
@@ -277,40 +307,48 @@ For example, if the combined evaporation is 1.0 maf and Upper Basin has 10% of
 the combined storage, then the Upper Basin is assigned 10% of the combined
 evaporation or 0.1 maf that year.
 
-## Calculate Mexico Water Allocation
+## 3C. Calculate Mexico Water Allocation
 
 Mexico’s water allocation is its 1.5 maf per year treaty amount minus mandatory
 conservation volumes specified in Minutes 319 and 323 for declining Lake Mead
-levels (IBWC, 2021). The *MandatoryConservation* sheet shows the conservation
-schedule.
+levels (Table 4)(IBWC, 2021). The *MandatoryConservation* sheet shows the Mexico
+and Lower Basin conservation schedules.
+
+**Table 4. Mexico Mandatory Conservation under Minutes 319 and 323**
+
+![](media/e1a60948f77d6f782a1906c6acc18106.emf)
+
+# 
 
 # Split combined natural inflow among parties
 
 Split the combined natural inflow – natural inflow to Lake Powell, plus
 intervening Grand Canyon inflow, plus Mead to Imperial Dam intervening inflow,
-minus Havasu / Parker evaporation and ET – among accounts. This split is a
-political decision and Table 4 shows one way to split that draws on existing
-operations.
+minus Havasu / Parker evaporation and ET – among accounts. This split is a joint
+party (political) decision. There are lots of ways to split. Table 5 shows one
+way to split that draws on existing operations.
 
-**Table 4. Assign inflow to parties**
+**Table 5. Assign inflow to parties**
 
-| **Party**            | **Volume (MCM)**             | **Comment**                                                                                                                           | **Existing Operations**                |
-|----------------------|------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------|
-| Shared, Reserve      | Varies by Evap.              | Assign the share of evaporation volume so inflow equals outflow (evaporation) and the account balance stays steady.                   | Drought Contingency Plans (USBR, 2019) |
-| Colorado River Delta | 0.016                        | Is 67% of the 9-year, 0.21 maf volume pledged by the U.S. and Mexico.                                                                 | Minute 323 (IBWC, 2021)                |
-| Mexico               | 1.5 – mandatory conservation | Mandatory conservation volumes increase as Lake Mead level’s decreases                                                                | Minutes 319 and 323 (IBWC, 2021)       |
-| Lower Basin          | 7.5                          | All remaining Grand Canyon tributary and Mead to Imperial natural flow plus smaller of remaining Lake Powell natural flow or 7.5 maf. | 1922 Compact Article III(d)            |
-| Upper Basin          | Remain                       | Remaining Lake Powell natural flow.                                                                                                   | 1922 Compact Article III(d)            |
+| **Party**            | **Volume (MCM)**             | **Comment**                                                                                                                            | **Existing Operations**                |
+|----------------------|------------------------------|----------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------|
+| Shared, Reserve      | Varies by Evap.              | Assign share of inflow as the account evaporation volume. So inflow equals outflow (evaporation) and the account balance stays steady. | Drought Contingency Plans (USBR, 2019) |
+| Colorado River Delta | 0.016                        | 0.016 maf is 67% of the 9-year, 0.21 maf volume pledged by the U.S. and Mexico.                                                        | Minute 323 (IBWC, 2021)                |
+| Mexico               | 1.5 – mandatory conservation | Mandatory conservation volumes increase as Lake Mead level’s decreases. This volume is the same as Section 3C.                         | Minutes 319 and 323 (IBWC, 2021)       |
+| Lower Basin          | 7.5                          | All remaining Grand Canyon tributary and Mead to Imperial natural flow plus smaller of remaining Lake Powell natural flow or 7.5 maf.  | 1922 Compact Article III(d)            |
+| Upper Basin          | Remain                       | Remaining Lake Powell natural flow.                                                                                                    | 1922 Compact Article III(d)            |
 
 **Additional notes:**
 
--   In year 1, the Delivery to meet 10-year requirement (see Section 1B) is
-    assigned to the Lower Basin. Then, remaining natural flow to Lake Powell is
-    assigned to the Upper Basin. This assignment makes the 10-year delivery to
-    the Lower Basin and Mexico become 82.5 maf.
+-   In year 1, the Delivery to meet 10-year requirement (Section 1B) is assigned
+    to the Lower Basin. Then, remaining natural flow to Lake Powell is assigned
+    to the Upper Basin. This assignment makes the 10-year delivery to the Lower
+    Basin and Mexico become 82.5 maf as provided by Article III(d) of the 1922
+    Compact and 1944 U.S.-Mexico Treaty.
 
--   In Years 2 and higher, the first 8.23 maf of Lake Powell natural flow is
-    assigned to Mexico and the Lower Basin. Any remaining natural flow goes to
+-   In Years 2 and higher, first split water for the shared, reserve, Colorado
+    River Delta, and Mexico accounts. Then, assign the next 7.5 maf of Lake
+    Powell natural flow to the Lower Basin. Any remaining natural flow goes to
     the Upper Basin.
 
 # Step 5. Player Dashboards – Conserve, Consume, and Trade
@@ -337,7 +375,7 @@ Within their dashboard, A participant can:
     water balance.
 
 To calculate compensation for trades, multiply the purchase or sell volume in
-maf by the price in \$ per acre-foot. Table 5 shows rough Colorado River water
+maf by the price in \$ per acre-foot. Table 6 shows rough Colorado River water
 prices.
 
 -   For example, a purchase of 0.5 maf at \$500 per acre-foot is (0.5)(500) =
@@ -349,7 +387,7 @@ prices.
 
 Purchase Cost = (0.5)(500) + (0.2)(1,200) = \$850 million.
 
-**Table 5. Rough Colorado River water prices**
+**Table 6. Rough Colorado River water prices**
 
 | Description                                     | Price (\$/acre-foot) |
 |-------------------------------------------------|----------------------|
@@ -416,26 +454,27 @@ and 75% places more storage in Lake Powell. After entering a percent split, the
 Powell and Mead storage volumes and levels populate. So does the Lake Powell
 release to achieve the Powell and Mead storage, the turbine release water
 temperature, and suitability of native, endangered fish of the Grand Canyon. Box
-2 shows an example for 13.8 maf of combined storage.
+2 shows an example with 13.8 maf of combined storage to assign 65% of that
+storage to lake Powell.
 
 ![](media/e4d47644b056c99b716ce3ffffc9f0c6.png)
 
 Consider four issues to split the combined storage between the two reservoirs:
 
--   **Protect endangered, native fish of the Grand Canyon.** As Lake Powell
-    water storage drops to the turbine release elevation of 3,490 feet (4 maf),
-    the water stored in Lake Powell heats (less stratification), increases
-    release water temperature through the hydropower turbines, and makes the
-    native, endangered fish of the Grand Canyon more susceptible to prey by
-    non-native fish (Figure 8, left). Table 6 summarizes the important Lake
-    Powell elevation break points for fish. To delay these negative impacts on
-    fish, managers can forego release and hydropower generation through the
-    turbines and instead release water through the low elevation river outlets
-    (elevation 3,370 feet; 0 maf). For example, an 18oC release through the
-    river outlets requires 5.9 maf less storage than an 18oC release through
-    hydropower turbines (elevation 3,600 feet on Figure 8 left plot to 3,525
-    feet on right plot). This information is also presented on the
-    *PowellReleaseTemperature* worksheet.
+### (i) Protect endangered, native fish of the Grand Canyon
+
+As Lake Powell water storage drops to the turbine release elevation of 3,490
+feet (4 maf), the water stored in Lake Powell heats (less stratification),
+increases release water temperature through the hydropower turbines, and makes
+the native, endangered fish of the Grand Canyon more susceptible to prey by
+non-native fish (Figure 8, left). Table 7 summarizes the important Lake Powell
+elevation break points for fish. To delay these negative impacts on fish,
+managers can forego release and hydropower generation through the turbines and
+instead release water through the low elevation river outlets (elevation 3,370
+feet; 0 maf). For example, an 18oC release through the river outlets requires
+5.9 maf less storage than an 18oC release through hydropower turbines (elevation
+3,600 feet on Figure 8 left plot to 3,525 feet on right plot). This information
+is also presented on the *PowellReleaseTemperature* worksheet.
 
 | ![](media/bc14adec69af7a4c4ce2b564071299bd.png) | ![](media/f20a2551b5487617dfcf35586456b582.png) |
 |-------------------------------------------------|-------------------------------------------------|
@@ -444,39 +483,45 @@ Consider four issues to split the combined storage between the two reservoirs:
 turbines (elevation 3,490 feet; left) and river outlets (elevation 3,370 feet;
 right) for different water surface elevations (Wheeler et al., 2021).**
 
-**Table 6. Effects of Summer Lake Powell Elevation on Fish**
+**Table 7. Effects of Summer Lake Powell Elevation on Fish**
 
 ![](media/52a39e306e16cc2b2f94e6e37ffc5c85.emf)
 
--   **Reduce Impacts on Hydropower Generation.** Reduced water surface elevation
-    reduces hydropower generation and speeds the time that reservoirs reach
-    their minimum power pools (elevations 3,490 and 955 feet in Lake Powell and
-    Lake Mead) where the reservoirs can no longer generate energy. When energy
-    generation declines, Lake Powell and Lake Mead energy producers must go on
-    the spot energy market to purchase the energy shortfall. The synchronous
-    model does not quantify the impacts of reduced hydropower generation.
+### (ii) Reduce Impacts on Hydropower Generation
 
--   **Reduce evaporation loss.** The combined evaporated volume changes less
-    than 0.12 maf (red numbers) when preferentially storing water in Lake Mead
-    or Lake Powell (Figure 9). We do not recommend to use reservoir evaporation
-    as a criteria for splitting water between Lake Powell and Lake Mead.
+Reduced water surface elevation reduces hydropower generation and speeds the
+time that reservoirs reach their minimum power pools (elevations 3,490 and 955
+feet in Lake Powell and Lake Mead) where the reservoirs can no longer generate
+energy. When energy generation declines, Lake Powell and Lake Mead energy
+producers must go on the spot energy market to purchase the energy shortfall.
+The synchronous model does not quantify the impacts of reduced hydropower
+generation.
 
-    ![](media/d095609b8bf5c3f1101d49faec90b82c.png)
+### (iii) Reduce evaporation loss
+
+The combined evaporated volume changes less than 0.12 maf (red numbers) when
+preferentially storing water in Lake Mead or Lake Powell (Figure 9). We do not
+recommend to use reservoir evaporation as a criteria for splitting water between
+Lake Powell and Lake Mead.
+
+![](media/d095609b8bf5c3f1101d49faec90b82c.png)
 
 **Figure 9. Combined evaporated volume changes little (red numbers) to
 preferentially store water in Lake Mead or Lake Powell.**
 
--   **Current operations**. Since 2007, the current operations sought to
-    equalize storage in Lake Powell and Lake Mead (enter 50%)(USBR, 2007). Prior
-    to 2007, managers kept more storage in Lake Mead (Figure 10).
+### (iv) Current operations
 
-    ![](media/7128adb1e89cc18da0e645df2d567c43.png)
+Since 2007, the current operations sought to equalize storage in Lake Powell and
+Lake Mead (enter 50%)(USBR, 2007). Prior to 2007, managers kept more storage in
+Lake Mead (Figure 10).
+
+![](media/7128adb1e89cc18da0e645df2d567c43.png)
 
 **Figure 10. Lake Powell-Lake Mead coordination rules (blue fill) and historical
 lake levels before and after the 2007 interim guidelines (pink and purple
 lines)(Wheeler et al., 2019).**
 
-# Step 7. Move to next year
+# Step 8. Move to next year
 
 Move to next year. Move to Step 2 Specify natural inflow to Lake Powell in the
 next year (next column). Repeat Steps 2 to 7 for each year.
