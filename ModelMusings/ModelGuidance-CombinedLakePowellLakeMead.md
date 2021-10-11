@@ -21,6 +21,8 @@ enter.
 Find quick links to support information (the sections of this document) in the
 Model file, *Master* worksheet, Column N.
 
+![](media/869c10223f828d1e70a225a54fbd45d0.png)
+
 # Assign Parties, Person playing, and Strategies
 
 -   Five parties and one shared, reserve account derive standing from the 1922
@@ -52,6 +54,8 @@ Basin Compact where parties share water in specified percentages (Carson et al.,
 Four model cell types are defined by fill color (Table 2).
 
 1.  Model Cell Types
+
+    ![](media/a915a0605b70d61d62acf9990784b7d9.emf)
 
 | **Cell Type**             | **Explanation**                                                                                                                                                                                          |
 |---------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
