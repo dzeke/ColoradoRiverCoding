@@ -57,13 +57,6 @@ Four model cell types are defined by fill color (Table 2).
 
     ![](media/a18615987c33e9656c3b12f8de2bb14f.png)
 
-| **Cell Type**             | **Explanation**                                                                                                                                                                                          |
-|---------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Physical watershed data   | Flow and evaporation assumptions required by the model. Parties agree on this data and information.                                                                                                      |
-| Individual party decision | A party's strategy including decisions such as conservation, consumption, sales, purchases from a party's flex account.                                                                                  |
-| **Joint party decision**  | Decisions parties make together such as the reservoir protection elevations, how to split existing storage and inflow among parties, or how to split combined storage between Lake Powell and Lake Mead. |
-| **Calculated cell**       | Formula used to calculate cell such as reservoir evaporation or a party's available water.                                                                                                               |
-
 ## Make Assumptions
 
 **(i) The evaporation rates** for Lake Powell and Lake Mead are taken as the
@@ -81,7 +74,7 @@ of 0.25 maf or less in Lake Mead storage volume (Rosenberg, 2021a).
 | Powell        | 5.7          | 4.9 – 6.5 |
 | Mead          | 6.0          | 5.5 – 6.4 |
 
-(ii) The **starting storage** is taken from data portals (USBR, 2021b; USBR,
+(ii) The **start storage** is taken from data portals (USBR, 2021b; USBR,
 2021c). Text in Column D lists the date.
 
 (iii) The **protection elevations** of 3,525 feet for Lake Powell and 1,020 feet
@@ -235,7 +228,7 @@ plans and the Minute 323 to the U.S.-Mexico Treaty (IBWC, 2021; USBR, 2019).
 1.  Assign combined Lake Powell and Lake Mead storage (left) to flex accounts
     (right).
 
-## Beginning of year reservoir storage
+## Begin of year reservoir storage
 
 In year, beginning of year reservoir storage is the Lake Powell and Lake Mead
 volumes specified in Section 1B.
