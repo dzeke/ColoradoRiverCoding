@@ -65,13 +65,15 @@ Table 2. Model Cell Types
 
 ## 1B. Make Assumptions
 
-(i) The evaporation rates for Lake Powell and Lake Mead are taken as the
-midpoint within reported ranges of measurements (Table 3)(Schmidt et al., 2016).
-Evaporation rates for Lake Mead are presently measured and more reliable than
-Lake Powell. Lake Powell evaporation rates have not been measured in decades. A
-sensitivity analysis found that the lower and upper bounds on Lake Mead
-evaporation rates for a five year study for Lake Mead draw down saw variations
-of 0.25 maf or less in Lake Mead storage volume (Rosenberg, 2021a).
+### **(i) Evaporation rates**
+
+Evaporation rates for Lake Powell and Lake Mead are taken as the midpoint within
+reported ranges of measurements (Table 3)(Schmidt et al., 2016). Evaporation
+rates for Lake Mead are presently measured and more reliable than Lake Powell.
+Lake Powell evaporation rates have not been measured in decades. A sensitivity
+analysis found that the lower and upper bounds on Lake Mead evaporation rates
+for a five year study for Lake Mead draw down saw variations of 0.25 maf or less
+in Lake Mead storage volume (Rosenberg, 2021a).
 
 Reservoir evaporation rates (feet per year)
 
