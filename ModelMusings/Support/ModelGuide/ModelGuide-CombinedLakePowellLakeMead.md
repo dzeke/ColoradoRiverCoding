@@ -359,33 +359,33 @@ available water (Figure 6). ![](media/01cc590a3794cac0adbe1ae9f78eb803.png)
 **Figure 6. Upper Basin Dashboard annotated. A Lake Powell natural flow of 9 maf
 gives the Upper Basin 5.7 maf of available water to sell or consume.**
 
-Within their dashboard, A participant can:
+### Buy or sell water from other player(s)
 
--   Purchase or sell water from other player(s) with compensation.
+Enter buy amounts as positive (+) and sell amounts negative (-). These are
+additions and subtractions to the party’s available water. Enter all amounts in
+maf. If multiple transactions – e.g, buy 0.5 maf from Lower Basin and 0.2 maf
+from Mexico -- enter as a formula: = 0.5 + 0.2
 
--   Purchases and sales must include at least one other participant so the net
-    trade volume for all players is zero.
+**These transactions are all temporary – for one year!**
 
--   Monitor their available water.
+When a buying party requires a selling party to invest financial proceeds in new
+farm or urban water conservation efforts, the money stays in the local community
+and the seller can make more water available in future years {Rosenberg, 2021
+\#2781}.
 
-| ![](media/5decdc4b51d5a9ff4d0ac1185446aabf.png) | (Eq. 2) |
-|-------------------------------------------------|---------|
+### Compensation
 
--   Purchases add to the available water balance and sales lower the available
-    water balance.
-
-To calculate compensation for trades, multiply the purchase or sell volume in
-maf by the price in \$ per acre-foot. Table 6 shows rough Colorado River water
-prices.
+Enter compensation – payments for buying, receipts for sales – in \$ millions.
+Enter as a formula. Multiple the sale price in \$/acre-foot by the buy or sell
+volume in maf. Table 6 shows rough Colorado River water prices.
 
 -   For example, a purchase of 0.5 maf at \$500 per acre-foot is (0.5)(500) =
     \$250 million.
 
 -   If a party buys 0.5 maf at \$500 per acre-foot from one party and 0.2 maf at
-    \$1,200 per acre-foot from a second party, enter the compensation formula
-    as:
+    \$1,200 per acre-foot from a second party, the compensation formula is:
 
-Purchase Cost = (0.5)(500) + (0.2)(1,200) = \$850 million.
+Compensation = (0.5)(500) + (0.2)(1,200) = \$850 million.
 
 **Table 6. Rough Colorado River water prices**
 
@@ -395,9 +395,33 @@ Purchase Cost = (0.5)(500) + (0.2)(1,200) = \$850 million.
 | Agriculture - Lower Basin                       | \$700 - \$1,000      |
 | Desalination in the Sea of Cortez (James, 2021) | \$2,000              |
 
-Withdraws and consumptive use must stay within the available water. The withdraw
-cell fill will turn red when the withdraw exceeds the available water. No
-withdrawing more money than is in your bank account!
+### Net Trade Volume all Players
+
+Confirm the net trade volume for all players is zero. A zero balance indicates
+there is a buyer for every seller.
+
+### Available Water
+
+Available water is the water available to a party to consume, conserve, or sell
+to another party. Purchases can increase available water (Eq. 2).
+
+| ![](media/5decdc4b51d5a9ff4d0ac1185446aabf.png) | (Eq. 2) |
+|-------------------------------------------------|---------|
+
+### Enter Withdraw within Available Water
+
+Flex account withdraws are a party’s consumptive use. This consumptive use
+occurs by parties physically withdrawing from the combined Lake Powell-Lake Mead
+system at Hoover dam (Lower Basin, Mexico, or Delta), or diverting instream flow
+before that flow enters the combined system (Upper Basin). In the later case,
+the Upper Basin diverts the water and its flex account is deducted the
+corresponding consumptive use.
+
+Enter withdraws and consumptive use according to the strategy identified in Step
+1 or modifications to that strategy based on current conditions.
+
+The withdraw cell fill will turn red when the withdraw exceeds the available
+water. No withdrawing more money than is in your bank account!
 
 The dashboards repeat for the other parties.
 
