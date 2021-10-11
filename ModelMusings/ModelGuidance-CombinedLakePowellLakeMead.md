@@ -419,27 +419,6 @@ temperature, and suitability of native, endangered fish of the Grand Canyon. Box
 
 ![](media/e4d47644b056c99b716ce3ffffc9f0c6.png)
 
-![](media/500b78c3cb0c3aa0caf0b5b21ff4f3b5.png)
-
-Grand Canyon or they may face invasion from non-natives.
-
-A release water temperature will help tailwater trout (introduced) grow and
-incubate. Lake Powell will need to receive 85% of combined storage to raise the
-storage to 11.8 maf, cool release temperatures, and increase the relative
-abundance of native, endangered fish.
-
-**Box 2. Impacts to assign 65% of 13.8 maf combined storage to Lake Powell.**
-
-| There is 13.8 maf of combined storage. The parties assigned 65% of the storage to Lake Powell. This leaves 9.0 maf in Lake Powell and 4.8 in Lake Mead. Both Powell and Mead are above their minimum power pool elevations of 3,490 and 955 feet.  Lake Powell releases 2.8 maf to Lake Mead this year to achieve the specified storage volumes. The release water temperature is \< 18oC which may benefit the native, endangered fish of the  | ![](media/500b78c3cb0c3aa0caf0b5b21ff4f3b5.png) |
-|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------|
-
-Grand Canyon or they may face invasion from non-natives.
-
-A release water temperature will help tailwater trout (introduced) grow and
-incubate. Lake Powell will need to receive 85% of combined storage to raise the
-storage to 11.8 maf, cool release temperatures, and increase the relative
-abundance of native, endangered fish.
-
 Consider four issues to split the combined storage between the two reservoirs:
 
 -   **Protect endangered, native fish of the Grand Canyon.** As Lake Powell
@@ -460,11 +439,11 @@ Consider four issues to split the combined storage between the two reservoirs:
 | ![](media/bc14adec69af7a4c4ce2b564071299bd.png) | ![](media/f20a2551b5487617dfcf35586456b582.png) |
 |-------------------------------------------------|-------------------------------------------------|
 
-Lake Powll turbine water release temperatures through the hydropower turbines
-(elevation 3,490 feet; left) and river outlets (elevation 3,370 feet; right) for
-different water surface elevations (Wheeler et al., 2021).
+**Figure 8. Lake Powell release water temperatures through the hydropower
+turbines (elevation 3,490 feet; left) and river outlets (elevation 3,370 feet;
+right) for different water surface elevations (Wheeler et al., 2021).**
 
-Effects of Summer Lake Powell Elevation on Fish
+**Table 6. Effects of Summer Lake Powell Elevation on Fish**
 
 ![](media/52a39e306e16cc2b2f94e6e37ffc5c85.emf)
 
@@ -483,8 +462,8 @@ Effects of Summer Lake Powell Elevation on Fish
 
     ![](media/d095609b8bf5c3f1101d49faec90b82c.png)
 
-    Combined evaporated volume changes little (red numbers) when preferrentially
-    storing water in Lake Mead or Lake Powell.
+**Figure 9. Combined evaporated volume changes little (red numbers) to
+preferentially store water in Lake Mead or Lake Powell.**
 
 -   **Current operations**. Since 2007, the current operations sought to
     equalize storage in Lake Powell and Lake Mead (enter 50%)(USBR, 2007). Prior
@@ -492,16 +471,16 @@ Effects of Summer Lake Powell Elevation on Fish
 
     ![](media/7128adb1e89cc18da0e645df2d567c43.png)
 
-    Lake Powell-Lake Mead coordination rules (blue fill) and historical lake
-    levels before and after the 2007 interim guidelines (pink and purple
-    lines)(Wheeler et al., 2019) .
+**Figure 10. Lake Powell-Lake Mead coordination rules (blue fill) and historical
+lake levels before and after the 2007 interim guidelines (pink and purple
+lines)(Wheeler et al., 2019).**
 
-# Move to next year
+# Step 7. Move to next year
 
-Move to Step 2 Specify natural inflow to Lake Powell in the next year (next
-column) after assigning the combined storage to Lake Powell and Lake Mead.
+Move to next year. Move to Step 2 Specify natural inflow to Lake Powell in the
+next year (next column). Repeat Steps 2 to 7.
 
-# Data, Model, and Code Availability
+Data, Model, and Code Availability
 
 The data, code, and directions to generate figures in this post are available on
 Github.com at Rosenberg (2021c).
