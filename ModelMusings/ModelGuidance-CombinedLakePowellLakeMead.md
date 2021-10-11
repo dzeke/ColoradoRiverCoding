@@ -38,7 +38,7 @@ Basin drought contingency plan, and desire to include more parties (Table
 
 **Table 1. Parties, Reason(s) to include in model, and Potential Strategies**
 
-| **Party**            | **Reason(s) to Include**                                                            | **Potential Strategy(s)**                                                                                                                                                                                                                                                                             |
+| **Party**            |                                                                                     | **Potential Strategy(s)**                                                                                                                                                                                                                                                                             |
 |----------------------|-------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Upper Basin          | Article II(c to g) of the Colorado River Compact (1922).                            | Continue to consume \~ 4.0 maf/year. This is historical consumptive use minus Lake Powell Evaporation. Sell some water, get paid to conserve, and prepare for shortage and curtailment (Rosenberg, 2021e).                                                                                            |
 | Lower Basin          | Article II(c to g) of the 1922 Colorado River Compact (1922).                       | Continue mandatory conservation and cutback from 7.5 maf per year as Lake Mead level declines (USBR, 2019). See cutback schedule in *MandatoryConservation* sheet. Buy water from other parties to reduce mandatory conservation or save some water for future years.                                 |
@@ -65,7 +65,7 @@ Table 2. Model Cell Types
 
 ## 1B. Make Assumptions
 
-**(i) The evaporation rates** for Lake Powell and Lake Mead are taken as the
+(i) The evaporation rates for Lake Powell and Lake Mead are taken as the
 midpoint within reported ranges of measurements (Table 3)(Schmidt et al., 2016).
 Evaporation rates for Lake Mead are presently measured and more reliable than
 Lake Powell. Lake Powell evaporation rates have not been measured in decades. A
