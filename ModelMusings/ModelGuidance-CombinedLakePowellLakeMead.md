@@ -479,18 +479,27 @@ lines)(Wheeler et al., 2019).**
 # Step 7. Move to next year
 
 Move to next year. Move to Step 2 Specify natural inflow to Lake Powell in the
-next year (next column). Repeat Steps 2 to 7.
+next year (next column). Repeat Steps 2 to 7 for each year.
 
-Data, Model, and Code Availability
+The purpose of synchronous model is to provoke thought and discussion about
+renegotiation of Lake Powell and Lake Mead operations. So continue to play years
+so long as the discussion provokes new insights.
+
+# Step 8. Finishing
+
+Congratulations. You finished! If you wish to provide feedback – things you
+liked, things to improve – please send an email to david.rosenberg@usu.edu.
+
+# Data, Model, and Code Availability
 
 The data, code, and directions to generate figures in this post are available on
 Github.com at Rosenberg (2021c).
 
 # Requested Citation
 
-David E. Rosenberg (2021). “Give Lake Mead managers more flexibility to conserve
-and stop draw down to the dead pool.” Utah State University, Logan, Utah.
-<https://github.com/dzeke/ColoradoRiverCoding/blob/master/BlogDrafts/3-GiveLakeMeadManagersMoreFlexibilityToConserveToStopDrawdownToDeadPool.docx>.
+David E. Rosenberg (2021). " Synchronous Model Guidance: Flex Accounting for a
+Combined Lake Powell-Lake Mead System." Utah State University.
+<https://github.com/dzeke/ColoradoRiverCoding/tree/main/ModelMusings>.
 
 # References
 
