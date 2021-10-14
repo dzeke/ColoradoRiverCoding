@@ -371,8 +371,7 @@ from Mexico -- enter as a formula: = 0.5 + 0.2
 
 When a buying party requires a selling party to invest financial proceeds in new
 farm or urban water conservation efforts, the money stays in the local community
-and the seller can make more water available in future years {Rosenberg, 2021
-\#2781}.
+and the seller can make more water available in future years (Rosenberg, 2021e).
 
 ### (ii) Compensation
 
@@ -392,6 +391,7 @@ Compensation = (0.5)(500) + (0.2)(1,200) = \$850 million.
 
 | Description                                     | Price (\$/acre-foot) |
 |-------------------------------------------------|----------------------|
+| Pilot System Conservation Program (USBR, 2021e) | \$100 - \$250        |
 | Low value agriculture – Upper Basin             | \$300 - \$500        |
 | Agriculture - Lower Basin                       | \$700 - \$1,000      |
 | Desalination in the Sea of Cortez (James, 2021) | \$2,000              |
@@ -493,10 +493,9 @@ power pool (penstock elevations) to avoid.
 
 This is the annual release from Lake Powell to achieve the specified storage
 volumes in Lake Powell and Lake Mead. Compare to numbers such as 7 to 9 maf per
-year that are the target of equalization releases (Figure 10){USBR, 2007
-\#2736}. Note that as combined storage declines, it will become harder to
-achieve the 7-9 maf targets. This Powell release is calculated as (all terms
-maf):
+year that are the target of equalization releases (Figure 10)(USBR, 2007). Note
+that as combined storage declines, it will become harder to achieve the 7-9 maf
+targets. This Powell release is calculated as (all terms maf):
 
 Powell Release = -[Powell end storage] + [Powell start storage] + [Powell
 Natural Inflow] – [Upper Basin Consume] – [Powell Evaporation] (Equation 3)
@@ -680,6 +679,9 @@ Carson, C. A., Stone, C. H., Wilson, F. E., Watson, E. H., and Bishop, L. C.
 <https://www.usbr.gov/lc/region/g1000/pdfiles/ucbsnact.pdf>. [Accessed on:
 September 7, 2021].
 
+Castle, A., and Fleck, J. (2019). "The Risk of Curtailment under the Colorado
+River Compact." <http://dx.doi.org/10.2139/ssrn.3483654>.
+
 IBWC. (2021). "Minutes between the United States and Mexican Sections of the
 IBWC." United States Section.
 <https://www.ibwc.gov/Treaties_Minutes/Minutes.html>. [Accessed on: July 22,
@@ -687,6 +689,9 @@ IBWC." United States Section.
 
 James, I. (2021). "Southwest braces for water cutbacks as drought deepens along
 the Colorado River." *Arizona Republic*.
+
+Kuhn, E., and Fleck, J. (2019). *Science Be Dammed: How Ignoring Inconvenient
+Science Drained the Colorado River*, University of Arizona Press.
 
 Meko, D., Bigio, E., and Woodhouse, C. A. (2017). "Colorado River at Lees Ferry,
 CO River (Updated Skill)." *Treeflow*.
@@ -736,6 +741,10 @@ Basin Shortages and Coordinated Operations for Lakes Powell and Mead." U.S.
 Bureau of Reclamation.
 <https://www.usbr.gov/lc/region/programs/strategies/RecordofDecision.pdf>.
 
+USBR. (2012). "Colorado River Basin Water Supply and Demand Study." U.S.
+Department of Interior, Bureau of Reclamation, Washington, D.C.
+<https://www.usbr.gov/lc/region/programs/crbstudy.html>.
+
 USBR. (2019). "Agreement Concerning Colorado River Drought Contingency
 Management and Operations." U.S. Bureau of Reclamation, Washington, DC.
 <https://www.usbr.gov/dcp/finaldocs.html>.
@@ -760,6 +769,10 @@ October 5, 2021].
 USBR. (2021d). "Lake Powell Unregulated Inflow."
 <https://www.usbr.gov/uc/water/crsp/studies/images/PowellForecast.png>.
 [Accessed on: September 28, 2021].
+
+USBR. (2021e). "Pilot System Conservation Program." U.S. Bureau of Reclamation.
+<https://www.usbr.gov/lc/region/programs/PilotSysConsProg/pilotsystem.html>.
+[Accessed on: October 14, 2021].
 
 Wheeler, K., Kuhn, E., Bruckerhoff, L., Udall, B., Wang, J., Gilbert, L.,
 Goeking, S., Kasprak, A., Mihalevich, B., Neilson, B., Salehabadi, H., and
