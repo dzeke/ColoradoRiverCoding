@@ -5,7 +5,7 @@
 David E. Rosenberg \| Utah State University \|
 [david.rosenberg@usu.edu](mailto:david.rosenberg@usu.edu) \| @WaterModeler
 
-October 5, 2021
+October 15, 2021
 
 # I**ntroduction**
 
@@ -13,7 +13,7 @@ This document supports participants to use the synchronous model for a combined
 Lake Powell-Lake Mead system (Rosenberg, 2021d). Synchronous means multiple
 participants connect to the same cloud model and enter individual water
 conservation and consumption choices and group decisions as model time
-progresses year-by-year. The document provides context information for each
+progresses year-by-year. This document provides context information for each
 individual and group choice and explains how choices build on existing Colorado
 River management (Appendix A). The document also suggest potential values to
 enter.
@@ -26,7 +26,7 @@ Model file, *Master* worksheet, Column N.
 Follow the Setup and Play instructions in Box 1. The rest of the document
 provides guidance on the steps to play.
 
-![](media/00adba6c99e470e83330019a18220325.png)
+![](media/5c59964991d45df1a4f3a8b3644c9470.png)
 
 ## Types of Use
 
@@ -39,36 +39,37 @@ The synchronous model can be used in two modes:
 
 Players can explore:
 
--   Water conservation and consumptive use strategies,
+-   Water conservation and consumptive use strategies.
 
--   Scenarios of natural flow
+-   Scenarios of natural flow.
 
--   Political decisions such as:
+-   Joint (political) decisions such as:
 
-    -   Include more parties or stakeholders. split existing reservoir storage
-        among users,
+    -   Include more parties or stakeholders.
 
-    -   Split future inflows among users.
+    -   Split existing reservoir storage among parties.
+
+    -   Split future inflows among parties.
 
     -   Split the combined reservoir storage among reservoirs.
 
 # Step 1. Assign Parties, Person playing, and Strategies
 
 Five parties and one shared, reserve account derive standing from the 1922
-Colorado River Compact, U.S.-Mexico Treaty, subsequent Minutes, Upper and Lower
-Basin drought contingency plan, and desire to include more parties (Table
-1)(1922; IBWC, 2021; USBR, 2019; USBR, 2020).
+Colorado River Compact, 1944 U.S.-Mexico Treaty, subsequent Minutes 319 and 323,
+Upper and Lower Basin drought contingency plans, and desire to include more
+parties (Table 1)(1922; IBWC, 2021; USBR, 2019; USBR, 2020).
 
 **Table 1. Parties, Reason(s) to include in model, and Potential Strategies**
 
-| **Party**            |                                                                                     | **Potential Strategy(s)**                                                                                                                                                                                                                                                                             |
-|----------------------|-------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Upper Basin          | Article II(c to g) of the Colorado River Compact (1922).                            | Continue to consume \~ 4.0 maf/year. This is historical consumptive use minus Lake Powell Evaporation. Sell some water, get paid to conserve, and prepare for shortage and curtailment (Rosenberg, 2021e).                                                                                            |
-| Lower Basin          | Article II(c to g) of the 1922 Colorado River Compact (1922).                       | Continue mandatory conservation and cutback from 7.5 maf per year as Lake Mead level declines (USBR, 2019). See cutback schedule in *MandatoryConservation* sheet. Buy water from other parties to reduce mandatory conservation or save some water for future years.                                 |
-| Mexico               | 1944 U.S.-Mexico Treaty and subsequent Minutes                                      | Continue mandatory conservation and cutback from 1.5 maf per year as Lake Mead levels decline (IBWC, 2021). See *MandatoryConservation* sheet. Conserve additional water beyond mandatory targets. Sell some water to other parties to gain money to build non-water projects.                        |
-| Colorado River Delta | Section VIII of Minute 323 (IBWC, 2021)                                             | Save until have enough water for a 0.06 maf pulse flood every few years. Save until have enough water for a longer duration 0.08 maf pulse flood. Scientists are still figuring our the ecological and other benefits of 0.08 or 0.06 maf pulse flood. Buy water and make more frequent pulse floods. |
-| First Nations        | Include more parties (USBR, 2020) Tribal water study (Ten Tribes Partnership, 2018) | Develop and use 2.0 maf per year of rights. Lease undeveloped water until use. Save water for future use.                                                                                                                                                                                             |
-| Shared, Reserve      | Protect Lake Powell and Lake Mead elevations of 3,525 and 1,020 feet (USBR, 2019)   | Maintain combined protection volume (11.6 maf). Account managed by consensus of all parties. Assume parties do not agree on releases, so no releases, steady storage. Transfer some water without payment to party in need.                                                                           |
+| **Party**            |                                                                                     | **Potential Strategy(s)**                                                                                                                                                                                                                                                                              |
+|----------------------|-------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Upper Basin          | Article II(c to g) of the Colorado River Compact (1922).                            | Continue to consume \~ 4.0 maf/year (historical consumptive use). Increase consumptive use above 4.0 maf/year to fulfil aspirations to further develop. Sell some water, get paid to conserve, and prepare for shortage and curtailment (Rosenberg, 2021e).                                            |
+| Lower Basin          | Article II(c to g) of the 1922 Colorado River Compact (1922).                       | Continue mandatory conservation and cutback from 7.5 maf per year as Lake Mead level declines (USBR, 2019). See cutback schedule in *MandatoryConservation* sheet. Buy water to reduce mandatory conservation.  Save some water for future years.                                                      |
+| Mexico               | 1944 U.S.-Mexico Treaty and subsequent Minutes                                      | Continue mandatory conservation and cutback from 1.5 maf per year as Lake Mead levels decline (IBWC, 2021). See *MandatoryConservation* sheet. Conserve more water beyond mandatory targets. Sell some water to other parties to gain money to build non-water projects.                               |
+| Colorado River Delta | Section VIII of Minute 323 (IBWC, 2021)                                             | Save until have enough water for a 0.06 maf pulse flood every few years. Save until have enough water for a longer duration 0.08 maf pulse flood. Scientists are still figuring our the ecological and other benefits of 0.08 or 0.06 maf pulse floods. Buy water and make more frequent pulse floods. |
+| First Nations        | Include more parties (USBR, 2020) Tribal water study (Ten Tribes Partnership, 2018) | Develop and use 2.0 maf per year of rights. Lease undeveloped water. Save water for future use.                                                                                                                                                                                                        |
+| Shared, Reserve      | Protect Lake Powell and Lake Mead elevations of 3,525 and 1,020 feet (USBR, 2019)   | Maintain combined protection volume (11.6 maf). Account managed by consensus of all parties. Assume parties do not agree on releases, so no releases, steady storage. Transfer some water without payment to party in need.                                                                            |
 
 Each participant can play one or more roles.
 
@@ -217,7 +218,7 @@ obtain the end-of-year reservoir storage.
 ## 2A. Intervening Grand Canyon Flow
 
 Enter the intervening flow from the Paria, Little Colorado, and Virgin rivers
-plus seeps on the Grand Canyon from Glen Canyon Dam and Lake Mead. This
+plus seeps on the Grand Canyon from Glen Canyon Dam to Lake Mead. This
 intervening flow excludes Lake Powell release or other upstream consumptive use
 on the rivers. A compilation of USGS gaged data from 1990 to 2020 show a mean
 intervening Grand Canyon flow of 0.9 maf per year with 5-year sequences below
@@ -330,13 +331,14 @@ way to split that draws on existing operations.
 
 **Table 5. Assign inflow to parties**
 
-| **Party**            | **Volume (MCM)**             | **Comment**                                                                                                                            | **Existing Operations**                |
-|----------------------|------------------------------|----------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------|
-| Shared, Reserve      | Varies by Evap.              | Assign share of inflow as the account evaporation volume. So inflow equals outflow (evaporation) and the account balance stays steady. | Drought Contingency Plans (USBR, 2019) |
-| Colorado River Delta | 0.016                        | 0.016 maf is 67% of the 9-year, 0.21 maf volume pledged by the U.S. and Mexico.                                                        | Minute 323 (IBWC, 2021)                |
-| Mexico               | 1.5 – mandatory conservation | Mandatory conservation volumes increase as Lake Mead level’s decreases. This volume is the same as Section 3C.                         | Minutes 319 and 323 (IBWC, 2021)       |
-| Lower Basin          | 7.5                          | All remaining Grand Canyon tributary and Mead to Imperial natural flow plus smaller of remaining Lake Powell natural flow or 7.5 maf.  | 1922 Compact Article III(d)            |
-| Upper Basin          | Remain                       | Remaining Lake Powell natural flow.                                                                                                    | 1922 Compact Article III(d)            |
+| **Party**            | **Volume (MCM)**                 | **Comment**                                                                                                                           | **Existing Operations**                            |
+|----------------------|----------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------|
+| Shared, Reserve      | Varies by Evap.                  | Assign share of inflow that offsets the account’s evaporation volume. This keeps the account balance steady year to year.             | Drought Contingency Plans (USBR, 2019)             |
+| Colorado River Delta | 0.016                            | 0.016 maf is 67% of the 9-year, 0.21 maf volume pledged by the U.S. and Mexico.                                                       | Minute 323 (IBWC, 2021)                            |
+| Mexico               | 1.5 minus mandatory conservation | Mandatory conservation volumes increase as Lake Mead level’s decreases. This volume is the same as Section 3C.                        | 1944 Treaty, Minutes 319 and 323 (IBWC, 2021)      |
+| First Nations        | 2.01                             | Rights of 1.06 and 0.952 in the Upper and Lower Basins. Excludes claimed amounts.                                                     | Tribal Water Study (Ten Tribes Partnership, 2018). |
+| Lower Basin          | 7.5                              | All remaining Grand Canyon tributary and Mead to Imperial natural flow plus smaller of remaining Lake Powell natural flow or 7.5 maf. | 1922 Compact Article III(d)                        |
+| Upper Basin          | Remain                           | Remaining Lake Powell natural flow.                                                                                                   | 1922 Compact Article III(d)                        |
 
 **Additional notes:**
 
@@ -556,7 +558,7 @@ right) for different water surface elevations (Wheeler et al., 2021).**
 
 ![](media/537447e0fae8a59cab74e5b713473cbd.png)
 
-### (ii) Reduce Impacts on Hydropower Generation
+### (ii) Reduce Hydropower Generation
 
 Reduced water surface elevation reduces hydropower generation and speeds the
 time that reservoirs reach their minimum power pools (elevations 3,490 and 955
