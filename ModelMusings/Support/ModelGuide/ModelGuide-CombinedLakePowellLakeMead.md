@@ -62,14 +62,14 @@ parties (Table 1)(1922; IBWC, 2021; USBR, 2019; USBR, 2020).
 
 **Table 1. Parties, Reason(s) to include in model, and Potential Strategies**
 
-| **Party**            |                                                                                     | **Potential Strategy(s)**                                                                                                                                                                                                                                                                              |
-|----------------------|-------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Upper Basin          | Article II(c to g) of the Colorado River Compact (1922).                            | Continue to consume \~ 4.0 maf/year (historical consumptive use). Increase consumptive use above 4.0 maf/year to fulfil aspirations to further develop. Sell some water, get paid to conserve, and prepare for shortage and curtailment (Rosenberg, 2021e).                                            |
-| Lower Basin          | Article II(c to g) of the 1922 Colorado River Compact (1922).                       | Continue mandatory conservation and cutback from 7.5 maf per year as Lake Mead level declines (USBR, 2019). See cutback schedule in *MandatoryConservation* sheet. Buy water to reduce mandatory conservation.  Save some water for future years.                                                      |
-| Mexico               | 1944 U.S.-Mexico Treaty and subsequent Minutes                                      | Continue mandatory conservation and cutback from 1.5 maf per year as Lake Mead levels decline (IBWC, 2021). See *MandatoryConservation* sheet. Conserve more water beyond mandatory targets. Sell some water to other parties to gain money to build non-water projects.                               |
-| Colorado River Delta | Section VIII of Minute 323 (IBWC, 2021)                                             | Save until have enough water for a 0.06 maf pulse flood every few years. Save until have enough water for a longer duration 0.08 maf pulse flood. Scientists are still figuring our the ecological and other benefits of 0.08 or 0.06 maf pulse floods. Buy water and make more frequent pulse floods. |
-| First Nations        | Include more parties (USBR, 2020) Tribal water study (Ten Tribes Partnership, 2018) | Develop and use 2.0 maf per year of rights. Lease undeveloped water. Save water for future use.                                                                                                                                                                                                        |
-| Shared, Reserve      | Protect Lake Powell and Lake Mead elevations of 3,525 and 1,020 feet (USBR, 2019)   | Maintain combined protection volume (11.6 maf). Account managed by consensus of all parties. Assume parties do not agree on releases, so no releases, steady storage. Transfer some water without payment to party in need.                                                                            |
+| **Party**            |                                                                                     | **Potential Strategy(s)**                                                                                                                                                                                                                                                                                                         |
+|----------------------|-------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Upper Basin          | Article II(c to g) of the Colorado River Compact (1922).                            | Continue to consume \~ 4.0 maf/year (historical consumptive use). 4.0 maf includes 1.1 maf of use by First Nations in the Upper Basin.  Increase consumptive use above 4.0 maf/year to fulfil aspirations to further develop. Sell some water, get paid to conserve, and prepare for shortage and curtailment (Rosenberg, 2021e). |
+| Lower Basin          | Article II(c to g) of the Colorado River Compact (1922).                            | Continue mandatory conservation and cutback from 7.5 maf per year as Lake Mead level declines (USBR, 2019). See cutback schedule in *MandatoryConservation* sheet. 7.5 maf includes 0.95 maf of use by First Nations in the Lower Basin. Buy water to reduce mandatory conservation.  Save some water for future years.           |
+| Mexico               | 1944 U.S.-Mexico Treaty and subsequent Minutes                                      | Continue mandatory conservation and cutback from 1.5 maf per year as Lake Mead levels decline (IBWC, 2021). See *MandatoryConservation* sheet. Conserve more water beyond mandatory targets. Sell some water to other parties to gain money to build non-water projects.                                                          |
+| Colorado River Delta | Section VIII of Minute 323 (IBWC, 2021)                                             | Save until have enough water for a 0.06 maf pulse flood every few years. Save until have enough water for a longer duration 0.08 maf pulse flood. Scientists are still figuring our the ecological and other benefits of 0.08 or 0.06 maf pulse floods. Buy water and make more frequent pulse floods.                            |
+| First Nations        | Include more parties (USBR, 2020) Tribal water study (Ten Tribes Partnership, 2018) | Develop and use 2.0 maf per year of rights. 1.1 maf of use by First Nations in the Upper Basin and 0.95 maf by First Nations in the Lower Basin. Lease undeveloped water. Save water for future use.                                                                                                                              |
+| Shared, Reserve      | Protect Lake Powell and Lake Mead elevations of 3,525 and 1,020 feet (USBR, 2019)   | Maintain combined protection volume (11.6 maf). Account managed by consensus of all parties. Assume parties do not agree on releases, so no releases, steady storage. Transfer some water without payment to party in need.                                                                                                       |
 
 Each participant can play one or more roles.
 
@@ -488,14 +488,14 @@ After entering a percent split, the following items will calculate:
 
 The model uses the elevation-area-volume relationships for the reservoirs to
 calculate storage level from volume. See the left and right hand side of Figure
-8 for critical levels and volumes such as dead pool (0 maf storage) and minimum
+9 for critical levels and volumes such as dead pool (0 maf storage) and minimum
 power pool (penstock elevations) to avoid.
 
 ### (ii) Lake Powell release to achieve Powell and Mead storage volumes
 
 This is the annual release from Lake Powell to achieve the specified storage
 volumes in Lake Powell and Lake Mead. Compare to numbers such as 7 to 9 maf per
-year that are the target of equalization releases (Figure 10)(USBR, 2007). Note
+year that are the target of equalization releases (Figure 11)(USBR, 2007). Note
 that as combined storage declines, it will become harder to achieve the 7-9 maf
 targets. This Powell release is calculated as (all terms maf):
 
@@ -542,10 +542,10 @@ non-native fish (Figure 8, left). Table 7 summarizes the important Lake Powell
 elevation break points for fish. To delay these negative impacts on fish,
 managers can forego release and hydropower generation through the turbines and
 instead release water through the low elevation river outlets (elevation 3,370
-feet; 0 maf). For example, an 18oC release through the river outlets requires
-5.9 maf less storage than an 18oC release through hydropower turbines (elevation
-3,600 feet on Figure 8 left plot to 3,525 feet on right plot). This information
-is also presented on the *PowellReleaseTemperature* worksheet.
+feet; 0 maf; Figure 9). For example, an 18oC release through the river outlets
+requires 5.9 maf less storage than an 18oC release through hydropower turbines
+(elevation 3,600 feet on Figure 9 left plot to 3,525 feet on right plot). This
+information is also presented on the *PowellReleaseTemperature* worksheet.
 
 | ![](media/b39ba7a9554f8f13f605b538c1c85f10.png) | ![](media/f20a2551b5487617dfcf35586456b582.png) |
 |-------------------------------------------------|-------------------------------------------------|
@@ -557,6 +557,11 @@ right) for different water surface elevations (Wheeler et al., 2021).**
 **Table 7. Effects of Summer Lake Powell Elevation on Fish**
 
 ![](media/537447e0fae8a59cab74e5b713473cbd.png)
+
+![](media/877589caf87b4d9ac26001628c8596cb.png)
+
+Figure 9. Glen Canyon Dam river outlets (red) are \~ 100 feet below the
+penstocks (blue)
 
 ### (ii) Reduce Hydropower Generation
 
@@ -571,24 +576,24 @@ generation.
 ### (iii) Reduce evaporation loss
 
 The combined evaporated volume changes less than 0.12 maf (red numbers) when
-preferentially storing water in Lake Mead or Lake Powell (Figure 9). We do not
+preferentially storing water in Lake Mead or Lake Powell (Figure 10). We do not
 recommend to use reservoir evaporation as a criteria for splitting water between
 Lake Powell and Lake Mead.
 
 ![](media/d095609b8bf5c3f1101d49faec90b82c.png)
 
-**Figure 9. Combined evaporated volume changes little (red numbers) to
+**Figure 10. Combined evaporated volume changes little (red numbers) to
 preferentially store water in Lake Mead or Lake Powell.**
 
 ### (iv) Current operations
 
 Since 2007, the current operations sought to equalize storage in Lake Powell and
 Lake Mead (enter 50%)(USBR, 2007). Prior to 2007, managers kept more storage in
-Lake Mead (Figure 10).
+Lake Mead (Figure 11).
 
 ![](media/7128adb1e89cc18da0e645df2d567c43.png)
 
-**Figure 10. Lake Powell-Lake Mead coordination rules (blue fill) and historical
+**Figure 11. Lake Powell-Lake Mead coordination rules (blue fill) and historical
 lake levels before and after the 2007 interim guidelines (pink and purple
 lines)(Wheeler et al., 2019).**
 
