@@ -39,7 +39,7 @@ Four plots show:
  5. Grand Canyon intervening flows are a critical component of inflow to Lake Mead . Their variability and uncertainty should be considered in Lake Mead operations.
 
 ## Requested Citation
-David E. Rosenberg (2021), "Grand Canyon Intermediary Flows." Utah State University. Logan, Utah. https://github.com/dzeke/ColoradoRiverFutures/tree/master/ICS
+David E. Rosenberg (2021), "Grand Canyon Intermediary Flows." Utah State University. Logan, Utah. https://github.com/dzeke/ColoradoRiverCoding/blob/main/GrandCanyonInterveningFlow/GrandCanyonTribFlow.pdf
 
 ## References
 Homa Salehabadi and David Tarboton (2020), "Sequence-Average and Cumulative Flow Loss Analyses for Colorado River Streamflow at Lees Ferry." Hydroshare. http://www.hydroshare.org/resource/bbe8dffacb07458783b2e6924aa615bb. 	
@@ -279,7 +279,7 @@ print(paste("Correlation in USGS after 1990 = ",round(mCorr[1,2],2)))
 
 ```
 
-# Figures 4 and 5. Sequence average flows for USGS and Natural Flow data sets
+# Figures 4 and 5. Sequence average flows for USGS (1990-2020) and Natural Flow (1905-2016) data sets
 ```{r ICSFig4, echo=FALSE, warning=FALSE, message=FALSE}
 
 
