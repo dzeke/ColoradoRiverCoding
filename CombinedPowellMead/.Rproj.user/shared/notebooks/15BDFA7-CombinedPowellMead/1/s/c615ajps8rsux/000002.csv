@@ -1,0 +1,7 @@
+"0","nDataYearMax <- 2021
+nMonthLast <- 9
+dfJointStorageFlexStack <- dfJointStorage %>% filter(Year == nDataYearMax, month == nMonthLast)
+"
+"2","Error in dfJointStorage %>% filter(Year == nDataYearMax, month == nMonthLast) : 
+  could not find function ""%>%""
+"
