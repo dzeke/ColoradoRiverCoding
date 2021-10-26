@@ -473,6 +473,8 @@ dfVolumes <- (dfJointStorageFlexStackMelt %>% filter(Year == nMaxYearResData) %>
 dfAccounts$xPositionFlex <- xPosAsYear
 #Mexico gets offset
 dfAccounts$xPositionFlex[3] <- 2020.25
+dfAccounts$xPositionFlex[2] <- 2021 + 0.25/2
+dfAccounts$xPositionFlex[4] <- 2021 + 0.25/2
 
 dfAccounts <- left_join(dfAccounts, dfVolumes , by = c("Name" = "variable")) 
 
@@ -509,7 +511,7 @@ ggplot() +
   
 
   #Scales
-  scale_x_continuous(labels = NULL) +
+  #scale_x_continuous(labels = NULL) +
   #scale_y_continuous(limits = c(0,NA)) +
   # secondary axis is not working
   # scale_y_continuous(limits = c(0,NA), sec_axis(~. +0, name = "", breaks = dfKeyVolumes$Volume, labels = dfKeyVolumes$Volume)) +
@@ -520,7 +522,7 @@ ggplot() +
   
   #    scale_y_continuous(breaks = c(0,5.98,9.6,12.2,dfMaxStor[2,2]),labels=c(0,5.98,9.6,12.2,dfMaxStor[2,2]),  sec.axis = sec_axis(~. +0, name = "Mead Level (feet)", breaks = c(0,5.98,9.6,12.2,dfMaxStor[2,2]), labels = c(895,1025,1075,1105,1218.8))) +
   #scale_x_discrete(breaks=cMonths, labels= cMonthsLabels) +
-  #scale_x_continuous(breaks=seq(1960,2020,by=10), labels= seq(1960,2020,by=10)) +
+  scale_x_continuous(limits = c(2020,2021.25), labels= NULL) +
   
   
   #scale_fill_manual(breaks=c(1:6),values = palBlues[2:7]) + #,labels = variable) + 

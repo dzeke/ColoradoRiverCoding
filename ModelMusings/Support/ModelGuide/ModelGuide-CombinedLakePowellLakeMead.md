@@ -69,7 +69,7 @@ parties (Table 1)(1922; IBWC, 2021; USBR, 2019; USBR, 2020).
 | Mexico               | 1944 U.S.-Mexico Treaty and subsequent Minutes                                      | Continue mandatory conservation and cutback from 1.5 maf per year as Lake Mead levels decline (IBWC, 2021). See *MandatoryConservation* sheet. Conserve more water beyond mandatory targets. Sell some water to other parties to gain money to build non-water projects.                                                          |
 | Colorado River Delta | Section VIII of Minute 323 (IBWC, 2021)                                             | Save until have enough water for a 0.06 maf pulse flood every few years. Save until have enough water for a longer duration 0.08 maf pulse flood. Scientists are still figuring our the ecological and other benefits of 0.08 or 0.06 maf pulse floods. Buy water and make more frequent pulse floods.                            |
 | First Nations        | Include more parties (USBR, 2020) Tribal water study (Ten Tribes Partnership, 2018) | Develop and use 2.0 maf per year of rights. 1.1 maf of use by First Nations in the Upper Basin and 0.95 maf by First Nations in the Lower Basin. Lease undeveloped water. Save water for future use.                                                                                                                              |
-| Shared, Reserve      | Protect Lake Powell and Lake Mead elevations of 3,525 and 1,020 feet (USBR, 2019)   | Maintain combined protection volume (11.6 maf). Account managed by consensus of all parties. Assume parties do not agree on releases, so no releases, steady storage. Transfer some water without payment to party in need.                                                                                                       |
+| Shared, Reserve      | Protect Lake Powell and Lake Mead elevations of 3,525 and 1,020 feet (USBR, 2019)   | Maintain combined protection volume (11.6 maf). Account managed by consensus of all parties. Assume parties do not agree on releases, so no releases, steady account balance. Transfer some water without payment to party in need.                                                                                               |
 
 Each participant can play one or more roles.
 
@@ -276,10 +276,12 @@ the same or more storage water as they get with current operations. In the
 current operations there are no Lake Powell storage accounts and only Lake Mead
 conservation accounts for Lower Basin and Mexico.
 
-![](media/fdae5948f0f33ee22db5b70cfbdf1ca7.png)
+![](media/1036aa6d2f63875ec7e5bd838f6c9b87.png)
 
-**Figure 5. Assign combined Lake Powell and Lake Mead storage (left) to flex
-accounts (right).**
+![](media/9a195e29d15576b7bffbb944cfbba5e6.png)
+
+**Figure 5. Assign combined Lake Powell and Lake Mead storage (top) to flex
+accounts (bottom).**
 
 ## 3A. Begin of year reservoir storage
 
@@ -452,7 +454,7 @@ agree to a purchase or sale (Figure 7).
 
 ![](media/a79e48b88087e7f5f57068fd3824cd97.png)
 
-**Figure 7. All Shared, Reserve Account choices are a joint decision by all
+**Figure 7. Shared, Reserve account choices are a joint decision by all
 parties.**
 
 The current recommendation is keep the shared, reserve account balance steady –
@@ -461,19 +463,20 @@ no sales or gifts to parties in distress.
 Selling or gifting water from the shared, reserve account to other parties will
 lower Lake Powell and/or Lake Mead levels:
 
+-   Reduce storage in Lake Powell, heat the water temperature of Lake Powell
+    storage (less stratification), increase the release water temperature, and
+    push native, endangered fish of the Grand Canyon into unchartered territory
+    \-- more susceptible to prey by non-native fish. Higher Lake Powell levels
+    and colder releases maintain the status quo for endangered fish. The
+    worksheet *PowellReleaseTemperature* provides a table and figure of the
+    impacts on fish of less water storage in Lake Powell.
+
 -   Reduce the head available for hydropower generation, and speed the time that
     reservoirs reach their minimum power pools (where they can no longer
     generate energy). When energy generation declines, Lake Powell and Lake Mead
     energy producers must go on the spot energy market to purchase the energy
     shortfall. The synchronous model does not quantify the impacts of reduced
     hydropower generation.
-
--   Reduce storage in Lake Powell, heat the water temperature of Lake Powell
-    storage (less stratification), increase the release water temperature, and
-    make the native, endangered fish of the Grand Canyon more susceptible to
-    prey by non-native fish. The worksheet *PowellReleaseTemperature* provides a
-    table and figure of the impacts on fish of less water storage in Lake
-    Powell.
 
 Both impacts will depend on how combined storage is split between Lake Powell
 and Lake Mead (see next section).
@@ -527,10 +530,11 @@ et al., 2021, Appendix 1).
 
 ### (iv) Suitability for native, endangered fish of the Grand Canyon
 
-As release water temperature rises, the native fish of the Grand Canyon become
-more susceptible to competition and prey by introduced non-native fish. Table 8
-shows the breakpoints of temperature suitability for native fish (Wheeler et
-al., 2021, Appendix 1).
+As release water temperature rises, push the native, endangered fish of the
+Grand Canyon into unchartered territory -- become more susceptible to
+competition and prey by introduced non-native fish. Colder releases preserve the
+status quo. Table 8 shows the breakpoints of temperature suitability for native
+fish (Wheeler et al., 2021, Appendix 1).
 
 ### (v) Suitability for tailwater trout
 
@@ -546,20 +550,22 @@ Box 2 shows an example of the impacts of 13.8 maf of combined storage if assign
 
 ## 7A. Consider four issues to split the combined storage between the two reservoirs:
 
-### (i) Protect endangered, native fish of the Grand Canyon
+### (i) Preserve status quo for endangered, native fish of the Grand Canyon
 
 As Lake Powell water storage drops to the turbine release elevation of 3,490
 feet (4 maf), the water stored in Lake Powell heats (less stratification),
-increases release water temperature through the hydropower turbines, and makes
-the native, endangered fish of the Grand Canyon more susceptible to prey by
-non-native fish (Figure 8, left). Table 8 summarizes the important Lake Powell
-elevation break points for fish. To delay these negative impacts on fish,
-managers can forego release and hydropower generation through the turbines and
-instead release water through the low elevation river outlets (elevation 3,370
-feet; 0 maf; Figure 9). For example, an 18oC release through the river outlets
-requires 5.9 maf less storage than an 18oC release through hydropower turbines
-(elevation 3,600 feet on Figure 9 left plot to 3,525 feet on right plot). This
-information is also presented on the *PowellReleaseTemperature* worksheet.
+increases release water temperature through the hydropower turbines, and pushes
+native, endangered fish of the Grand Canyon into unchartered territory -- more
+susceptible to prey by non-native fish (Figure 8, left). Higher Lake Powell
+levels and colder water releases preserve the status quo. Table 8 summarizes the
+important Lake Powell elevation break points for fish. To delay these negative
+impacts on fish, managers can forego release and hydropower generation through
+the turbines and instead release water through the low elevation river outlets
+(elevation 3,370 feet; 0 maf; Figure 9). For example, an 18oC release through
+the river outlets requires 5.9 maf less storage than an 18oC release through
+hydropower turbines (elevation 3,600 feet on Figure 9 left plot compared to
+3,525 feet on right plot). This information is also presented on the
+*PowellReleaseTemperature* worksheet.
 
 | ![](media/b39ba7a9554f8f13f605b538c1c85f10.png) | ![](media/f20a2551b5487617dfcf35586456b582.png) |
 |-------------------------------------------------|-------------------------------------------------|
