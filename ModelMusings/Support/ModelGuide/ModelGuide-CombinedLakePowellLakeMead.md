@@ -183,9 +183,7 @@ The 1.9 maf per year value in the model is the 2.7 maf per year total in Table
 First Nations in the Upper Basin. This assignment assumes Upper Basin First
 Nations water rights all have a priority before 1922.
 
-Table 4. Upper Basin pre-compact water rights (million acre-feet per year)
-
-My test text
+**Table 4. Upper Basin pre-compact water rights (million acre-feet per year)**
 
 ![](media/a79de07a2d1c72df5959416552330307.png)
 
