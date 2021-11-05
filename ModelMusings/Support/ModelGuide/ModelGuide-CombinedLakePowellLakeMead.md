@@ -185,7 +185,9 @@ Nations water rights all have a priority before 1922.
 
 Table 4. Upper Basin pre-compact water rights (million acre-feet per year)
 
-![](media/0b5c0c31e319ebd55cd41c2d5fc6162d.emf)
+My test text
+
+![](media/a79de07a2d1c72df5959416552330307.png)
 
 # Step 2. Specify natural inflow to Lake Powell
 
