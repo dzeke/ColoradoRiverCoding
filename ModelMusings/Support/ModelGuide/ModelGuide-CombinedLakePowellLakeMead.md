@@ -169,6 +169,24 @@ Lake Powell natural flow above 4.2 maf.
 
 **Figure 1. Lake Powell Releases**
 
+### Upper Basin pre-1922 water rights
+
+Upper Basin water rights in million acre-feet per year prior to 1922 when the
+Colorado River Compact was signed (Table 4). These water rights have a seniority
+date prior to the compact. In the assignment of inflow (see Step 2), these
+rights are filled first ahead of the Lower Basin’s right to 75 million acre-feet
+every consecutive 10-years by Article III(d) of the Compact. Presently, pre 1922
+water rights for New Mexico are unknown.
+
+The 1.9 maf per year value in the model is the 2.7 maf per year total in Table
+3, plus an assumed 0.3 maf per year for New Mexico, minus 1.06 maf per year for
+First Nations in the Upper Basin. This assignment assumes Upper Basin First
+Nations water rights all have a priority before 1922.
+
+Table 4. Upper Basin pre-compact water rights (million acre-feet per year)
+
+![](media/0b5c0c31e319ebd55cd41c2d5fc6162d.emf)
+
 # Step 2. Specify natural inflow to Lake Powell
 
 Specify natural inflow to Lake Powell as the water in the Green, San Juan,
@@ -314,13 +332,10 @@ evaporation or 0.1 maf that year.
 
 Mexico’s water allocation is its 1.5 maf per year treaty amount minus mandatory
 conservation volumes specified in Minutes 319 and 323 for declining Lake Mead
-levels (Table 4)(IBWC, 2021). The *MandatoryConservation* sheet shows the Mexico
+levels (Table 5)(IBWC, 2021). The *MandatoryConservation* sheet shows the Mexico
 and Lower Basin conservation schedules.
 
-**  
-**
-
-**Table 4. Mexico Mandatory Conservation under Minutes 319 and 323**
+**Table 5. Mexico Mandatory Conservation under Minutes 319 and 323**
 
 ![](media/b0fe2d1f33974bd4dd7bbe699d52fd44.png)
 
@@ -330,41 +345,65 @@ Split the combined natural inflow – natural inflow to Lake Powell, plus
 intervening Grand Canyon inflow, plus Mead to Imperial Dam intervening inflow,
 minus Havasu / Parker evaporation and ET (see Sections 2A-C) – among accounts.
 This split is a joint party (political) decision. There are lots of ways to
-split. Table 5 shows one way to split that draws on existing operations. In
-these operations, first assign volumes to the Shared, reserve, Delta, and Mexico
-accounts. Next, assign a volume to First Nations from the Lake Powell natural
-flow and other sources in proportion to First Nations’ use above and below Glen
-Canyon Dam. Then assign the next 6.55 maf of Lake Powell Inflow to the Lower
-Basin (reduced from 7.5 maf because First Nations already assigned 0.95 maf for
-uses below Glen Canyon Dam. And last, assign any remaining Lake Powell natural
-flow to the Upper Basin. These volumes draw from the sources in different
-amounts (Table 6). I expect it easier to assign each year’s inflow than
-negotiate ever larger mandatory conservation targets.
+split. Table 6 shows one way to split that draws on existing operations. In
+these operations, first assign volumes to the Shared water reserve, Delta,
+Mexico, and First Nations accounts (Lake Powell Natural flow up to 3.5 maf per
+year). Assign the next 1.9 maf per year of Lake Powell Natural flow to Upper
+Basin pre-1922 water rights (pre Compact). Assign the next 5.8 maf of Lake
+Powell Natural Inflow to the Lower Basin (reduced from 7.5 maf because First
+Nations already assigned 0.95 maf for uses below Glen Canyon Dam and carriage
+losses for Lake Mohave/Lake Parker evaporation and evapotranspiration. Last,
+assign any remaining Lake Powell natural flow to the Upper Basin.
 
-**Table 5. Assign inflow to parties**
+**Table 6. Assign inflow to parties**
 
-| **Party**            | **Volume (MCM)**                 | **Comment**                                                                                                                           | **Existing Operations**                            |
-|----------------------|----------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------|
-| Shared, Reserve      | Varies by Evap.                  | Assign share of inflow that offsets the account’s evaporation volume. This keeps the account balance steady year to year.             | Drought Contingency Plans (USBR, 2019)             |
-| Colorado River Delta | 0.016                            | 0.016 maf is 67% of the 9-year, 0.21 maf volume pledged by the U.S. and Mexico.                                                       | Minute 323 (IBWC, 2021)                            |
-| Mexico               | 1.5 minus mandatory conservation | Mandatory conservation volumes increase as Lake Mead level’s decreases. This volume is the same as Section 3C.                        | 1944 Treaty, Minutes 319 and 323 (IBWC, 2021)      |
-| First Nations        | 2.01                             | Rights of 1.06 and 0.952 in the Upper and Lower Basins. Excludes claimed amounts.                                                     | Tribal Water Study (Ten Tribes Partnership, 2018). |
-| Lower Basin          | 6.55                             | All remaining Grand Canyon tributary and Mead to Imperial natural flow plus smaller of remaining Lake Powell natural flow or 7.5 maf. | 1922 Compact Article III(d)                        |
-| Upper Basin          | Remain                           | Remaining Lake Powell natural flow.                                                                                                   | 1922 Compact Article III(d)                        |
+| **Party**            | **Volume (MCM)**                                     | **Event**                                                                                                                                                                                         | **Existing Operations**                            |
+|----------------------|------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------|
+| Shared, Reserve      | Varies by Evap.                                      | Assign share of inflow that offsets the evaporation volume for the shared, reserve account. This assignment keeps the account balance steady year to year.                                        | Drought Contingency Plans (USBR, 2019)             |
+| Colorado River Delta | 0.016                                                | 0.016 maf is 67% of the 9-year, 0.21 maf volume pledged by the U.S. and Mexico.                                                                                                                   | Minute 323 (IBWC, 2021)                            |
+| Mexico               | 1.5 minus mandatory conservation minus carriage loss | Mandatory conservation volumes increase as Lake Mead level’s decreases (see Section 3C). Carriage loss is Mexico’s share of Havasu/Parker Evaporation and Evapotranspiration (1.5/8.7 = 17.2%)    | 1944 Treaty, Minutes 319 and 323 (IBWC, 2021)      |
+| First Nations        | 2.01 minus Lower Basin carriage loss                 | Rights of 1.06 and 0.952 maf in the Upper and Lower Basins. Excludes claimed amounts. Lower Basin carriage loss is share of Havasu/Parker Evaporation and ET in the Lower Basin (0.95/8.7 = 11%). | Tribal Water Study (Ten Tribes Partnership, 2018). |
+| Lower Basin          | 7.5 minus 0.95 minus carriage loss                   | Quantified rights of 7.5 maf minus rights of First Nations in the Lower Basin minus share of Havasu/Parker Evaporation and ET ([7.5 – 0.95]/8.7 = 75.3%).                                         | 1922 Compact Article III(d)                        |
+| Upper Basin          | 1.9 + Remain                                         | Pre-compact rights plus any remaining Lake Powell natural flow.                                                                                                                                   | 1922 Compact Article III(d)                        |
 
-**  
-**
+The volumes in Table 6 draw from the inflow sources in different amounts (Table
+7). I expect it easier to assign each year’s inflow than negotiate ever larger
+mandatory conservation targets.
 
-Table 6. Assign inflow sources to parties
+Table 7. Assign inflow sources to parties
 
-| **Party**            | **Lake Powell Natural Flow** | **Grand Canyon Intervening + Mead to Imperial** |
-|----------------------|------------------------------|-------------------------------------------------|
-| Shared, Reserve      | 50%                          | 50%                                             |
-| Colorado River Delta | 50%                          | 50%                                             |
-| Mexico               | 50%                          | 50%                                             |
-| First Nations        | 1.06 maf                     | 0.95 maf                                        |
-| Lower Basin          | min(6.55, Remain)            | Remain                                          |
-| Upper Basin          | Remain                       | --                                              |
+| **Party**                     | **Lake Powell Natural Flow** | **Grand Canyon Intervening + Mead to Imperial** |
+|-------------------------------|------------------------------|-------------------------------------------------|
+| Shared, Reserve               | 50%                          | 50%                                             |
+| Colorado River Delta          | 50%                          | 50%                                             |
+| Mexico                        | 50%                          | 50%                                             |
+| First Nations                 | 1.06 maf                     | 0.95 maf                                        |
+| Upper Basin (pre-1922 rights) | min(1.9, Remain)             | --                                              |
+| Lower Basin                   | min(5.8, Remain)             | Remain                                          |
+| Upper Basin (post 1922)       | Remain                       | --                                              |
+| Havasu/Parker Evap. and ET    | --                           | 100%                                            |
+
+The volumes in Table 6 differ from the customary accounting of first 8.23 maf of
+Lake Powell Natural flow to Lower Basin plus Mexico and remaining amount to the
+Upper Basin. The difference arises because:
+
+-   Mexico, First Nations, Colorado River Delta, and Havasu/Parker evaporation
+    and evapotranspiration are accounted for separately in Flex accounting.
+
+-   Mexico’s amount is reduced by conservation under Minutes 319 and 323.
+
+-   The Shared, Reserve account is charged a share of the combined reservoir
+    evaporation.
+
+-   Lower Basin, Mexico, and First Nations in the Lower Basin are charged
+    carriage loss (Havasu/Parker evaporation and evapotranspiration).
+
+-   1922 Pre-Compact Upper Basin water rights are given priority over the Lower
+    Basin.
+
+The present configuration is valid for Lake Powell Natural flows down to 3.7 maf
+per year. Below that value, I am unclear whether to assign natural flow to First
+Nations or Mexico first or to share the assignment.
 
 # Step 5. Player Dashboards – Conserve, Consume, and Trade
 
@@ -392,7 +431,7 @@ and the seller can make more water available in future years (Rosenberg, 2021e).
 
 Enter compensation – payments for buying, receipts for sales – in \$ millions.
 Enter as a formula. Multiple the sale price in \$/acre-foot by the buy or sell
-volume in maf. Table 7 shows rough Colorado River water prices.
+volume in maf. Table 8 shows rough Colorado River water prices.
 
 -   For example, a purchase of 0.5 maf at \$500 per acre-foot is (0.5)(500) =
     \$250 million.
@@ -405,7 +444,7 @@ Compensation = (0.5)(500) + (0.2)(1,200) = \$850 million.
 **  
 **
 
-**Table 7. Rough Colorado River water prices**
+**Table 8. Rough Colorado River water prices**
 
 | Description                                     | Price (\$/acre-foot) |
 |-------------------------------------------------|----------------------|
@@ -533,14 +572,14 @@ et al., 2021, Appendix 1).
 As release water temperature rises, push the native, endangered fish of the
 Grand Canyon into unchartered territory -- become more susceptible to
 competition and prey by introduced non-native fish. Colder releases preserve the
-status quo. Table 8 shows the breakpoints of temperature suitability for native
+status quo. Table 9 shows the breakpoints of temperature suitability for native
 fish (Wheeler et al., 2021, Appendix 1).
 
 ### (v) Suitability for tailwater trout
 
 The tailwater trout are an introduced species, require colder water, and live in
 the Colorado River reach from Glen Canyon Dam to Lee Ferry (and possibly below).
-Table 8 shows the breakpoints of temperature suitability for tailwater trout
+Table 9 shows the breakpoints of temperature suitability for tailwater trout
 (Wheeler et al., 2021, Appendix 1).
 
 Box 2 shows an example of the impacts of 13.8 maf of combined storage if assign
@@ -557,7 +596,7 @@ feet (4 maf), the water stored in Lake Powell heats (less stratification),
 increases release water temperature through the hydropower turbines, and pushes
 native, endangered fish of the Grand Canyon into unchartered territory -- more
 susceptible to prey by non-native fish (Figure 8, left). Higher Lake Powell
-levels and colder water releases preserve the status quo. Table 8 summarizes the
+levels and colder water releases preserve the status quo. Table 9 summarizes the
 important Lake Powell elevation break points for fish. To delay these negative
 impacts on fish, managers can forego release and hydropower generation through
 the turbines and instead release water through the low elevation river outlets
@@ -574,7 +613,7 @@ hydropower turbines (elevation 3,600 feet on Figure 9 left plot compared to
 turbines (elevation 3,490 feet; left) and river outlets (elevation 3,370 feet;
 right) for different water surface elevations (Wheeler et al., 2021).**
 
-**Table 8. Effects of Summer Lake Powell Elevation on Fish**
+**Table 9. Effects of Summer Lake Powell Elevation on Fish**
 
 ![](media/537447e0fae8a59cab74e5b713473cbd.png)
 
