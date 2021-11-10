@@ -431,7 +431,8 @@ and the seller can make more water available in future years (Rosenberg, 2021e).
 
 Enter compensation – payments for buying, receipts for sales – in \$ millions.
 Enter as a formula. Multiple the sale price in \$/acre-foot by the buy or sell
-volume in maf. Table 8 shows rough Colorado River water prices.
+volume in maf. Table 8 shows rough Colorado River water prices. Table 9 shows
+example compensation for different water prices and target water volumes.
 
 -   For example, a purchase of 0.5 maf at \$500 per acre-foot is (0.5)(500) =
     \$250 million.
@@ -441,17 +442,17 @@ volume in maf. Table 8 shows rough Colorado River water prices.
 
 Compensation = (0.5)(500) + (0.2)(1,200) = \$850 million.
 
-**  
-**
+The recently proposed 500-Plus plan seeks to reduce Lower Basin water use by 0.5
+maf per year. Potential compensation amounts are shown in green fill in Table 9.
 
 **Table 8. Rough Colorado River water prices**
 
-| Description                                     | Price (\$/acre-foot) |
-|-------------------------------------------------|----------------------|
-| Pilot System Conservation Program (USBR, 2021e) | \$100 - \$250        |
-| Low value agriculture – Upper Basin             | \$300 - \$500        |
-| Agriculture - Lower Basin                       | \$700 - \$1,000      |
-| Desalination in the Sea of Cortez (James, 2021) | \$2,000              |
+![](media/2e21113751f1ecc62156c946998f9c9d.emf)
+
+**Table 9. Compensation (\$ million) at different water prices (\$/acre-foot)to
+purchase different target water volumes (maf)**
+
+![](media/13db460d851ab03c37c7bd7e2db78933.emf)
 
 ### (iii) Net Trade Volume all Players
 
@@ -572,14 +573,14 @@ et al., 2021, Appendix 1).
 As release water temperature rises, push the native, endangered fish of the
 Grand Canyon into unchartered territory -- become more susceptible to
 competition and prey by introduced non-native fish. Colder releases preserve the
-status quo. Table 9 shows the breakpoints of temperature suitability for native
+status quo. Table 10 shows the breakpoints of temperature suitability for native
 fish (Wheeler et al., 2021, Appendix 1).
 
 ### (v) Suitability for tailwater trout
 
 The tailwater trout are an introduced species, require colder water, and live in
 the Colorado River reach from Glen Canyon Dam to Lee Ferry (and possibly below).
-Table 9 shows the breakpoints of temperature suitability for tailwater trout
+Table 10 shows the breakpoints of temperature suitability for tailwater trout
 (Wheeler et al., 2021, Appendix 1).
 
 Box 2 shows an example of the impacts of 13.8 maf of combined storage if assign
@@ -596,14 +597,14 @@ feet (4 maf), the water stored in Lake Powell heats (less stratification),
 increases release water temperature through the hydropower turbines, and pushes
 native, endangered fish of the Grand Canyon into unchartered territory -- more
 susceptible to prey by non-native fish (Figure 8, left). Higher Lake Powell
-levels and colder water releases preserve the status quo. Table 9 summarizes the
-important Lake Powell elevation break points for fish. To delay these negative
-impacts on fish, managers can forego release and hydropower generation through
-the turbines and instead release water through the low elevation river outlets
-(elevation 3,370 feet; 0 maf; Figure 9). For example, an 18oC release through
-the river outlets requires 5.9 maf less storage than an 18oC release through
-hydropower turbines (elevation 3,600 feet on Figure 9 left plot compared to
-3,525 feet on right plot). This information is also presented on the
+levels and colder water releases preserve the status quo. Table 10 summarizes
+the important Lake Powell elevation break points for fish. To delay these
+negative impacts on fish, managers can forego release and hydropower generation
+through the turbines and instead release water through the low elevation river
+outlets (elevation 3,370 feet; 0 maf; Figure 9). For example, an 18oC release
+through the river outlets requires 5.9 maf less storage than an 18oC release
+through hydropower turbines (elevation 3,600 feet on Figure 9 left plot compared
+to 3,525 feet on right plot). This information is also presented on the
 *PowellReleaseTemperature* worksheet.
 
 | ![](media/b39ba7a9554f8f13f605b538c1c85f10.png) | ![](media/f20a2551b5487617dfcf35586456b582.png) |
@@ -613,7 +614,7 @@ hydropower turbines (elevation 3,600 feet on Figure 9 left plot compared to
 turbines (elevation 3,490 feet; left) and river outlets (elevation 3,370 feet;
 right) for different water surface elevations (Wheeler et al., 2021).**
 
-**Table 9. Effects of Summer Lake Powell Elevation on Fish**
+**Table 10. Effects of Summer Lake Powell Elevation on Fish**
 
 ![](media/537447e0fae8a59cab74e5b713473cbd.png)
 
