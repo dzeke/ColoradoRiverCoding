@@ -108,7 +108,7 @@ in Lake Mead storage volume (Rosenberg, 2021a).
 
 ### (ii) Start storage
 
-Reservoir start storage is taken from data portals (USBR, 2021b; USBR, 2021c).
+Reservoir start storage is taken from data portals (USBR, 2021c; USBR, 2021d).
 Text in Column D lists the date.
 
 ### (iii) Protection elevations
@@ -212,13 +212,13 @@ Powell as a scenario of possible future flows. Develop a scenario from:
     model time progresses.
 
 5.  Optionally, refer to unregulated inflows from 1960 to 1999 (USBR,
-    2021d)(Figure 4) and add \~3 maf to get a natural flow. The addition
+    2021e)(Figure 4) and add \~3 maf to get a natural flow. The addition
     represents non-reservoir consumptive use in the Upper Basin. Figure 5 shows
-    how to conserve from unregulated to natural flow.
+    how to convert from unregulated to natural flow.
 
 ![](media/b57879648c06879037af4e2573b81241.png)
 
-**Figure 2. Estimated natural inflow to Lake Powell {USBR, 2021 \#2836}**
+**Figure 2. Estimated natural inflow to Lake Powell (USBR, 2021a)**
 
 ![](media/83c6e979375d6b1b644dd9a9f413c51e.png)
 
@@ -227,7 +227,7 @@ Colorado River at Lees Ferry (Salehabadi et al., 2020).**
 
 ![](media/9e513f8f357cf9e3758d943c8a253767.png)
 
-**Figure 4. Unregulated flow to Lake Powell (USBR, 2021d). Add \~ 3 maf for
+**Figure 4. Unregulated flow to Lake Powell (USBR, 2021e). Add \~ 3 maf for
 natural flow.**
 
 ![](media/e2e03f375e85e6262a6f39c2b3604617.png)
@@ -269,7 +269,7 @@ This value results evaporation from Lakes Havasu and Parker and the
 evapotranspiration of riverbank vegetation from Hoover Dam down to Lake Havasu.
 A default value of 0.6 maf per year is used and represents the value used in
 Lake Mead accounting. Find annual estimates of the Havasu/Parker evaporations
-and evapotranspiration from 1995 to 2014 at USBR (2021a).
+and evapotranspiration from 1995 to 2014 at USBR (2021b).
 
 # Step 3. Split existing reservoir storage among parties (year 1 only)
 
@@ -285,7 +285,7 @@ Basin drought contingency plans and the Minute 323 to the U.S.-Mexico Treaty
     protection volume for Lake Mead (USBR, 2019).
 
 -   Assign the 0.17 maf in Mexico’s Lake Mead conservation account to Mexico
-    (USBR, 2021a).
+    (USBR, 2021b).
 
 -   Assign the 2.8 maf balance in Lower Basin Lake Mead conservation (ICS)
     accounts to the Lower Basin.
@@ -833,19 +833,23 @@ Shortages and Coordinated Operations for Lake Powell and Lake Mead." U.S. Bureau
 of Reclamation, U.S. Department of Interior.
 <https://www.usbr.gov/ColoradoRiverBasin/documents/7.D.Review_FinalReport_12-18-2020.pdf>.
 
-USBR. (2021a). "Boulder Canyon Operations Office - Program and Activities: Water
+USBR. (2021a). "21st Century Colorado River: Hydrology and Risk of Lake Mead
+Reaching Critically Low Elevations." U.S. Bureau of Reclamation.
+<https://github.com/dzeke/ColoradoRiverCoding/raw/main/500PlusPlan/MeadRisk-LBActionsWebianr11-5-21.pdf>.
+
+USBR. (2021b). "Boulder Canyon Operations Office - Program and Activities: Water
 Accounting Reports." U.S. Bureau of Reclamation.
 <https://www.usbr.gov/lc/region/g4000/wtracct.html>.
 
-USBR. (2021b). "Glen Canyon Dam, Current Status, Lake Powell Inflow Forecast."
+USBR. (2021c). "Glen Canyon Dam, Current Status, Lake Powell Inflow Forecast."
 U.S. Bureau of Reclamation. <https://www.usbr.gov/uc/water/crsp/cs/gcd.html>.
 
-USBR. (2021c). "Lake Mead at Hoover Dam, End of Month Elevation." Lower Colorado
+USBR. (2021d). "Lake Mead at Hoover Dam, End of Month Elevation." Lower Colorado
 River Operations, U.S. Buruea of Reclamation.
 <https://www.usbr.gov/lc/region/g4000/hourly/mead-elv.html>. [Accessed on:
 October 5, 2021].
 
-USBR. (2021d). "Lake Powell Unregulated Inflow."
+USBR. (2021e). "Lake Powell Unregulated Inflow."
 <https://www.usbr.gov/uc/water/crsp/studies/images/PowellForecast.png>.
 [Accessed on: September 28, 2021].
 
