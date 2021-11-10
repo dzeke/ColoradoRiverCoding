@@ -443,7 +443,8 @@ example compensation for different water prices and target water volumes.
 Compensation = (0.5)(500) + (0.2)(1,200) = \$850 million.
 
 The recently proposed 500-Plus plan seeks to reduce Lower Basin water use by 0.5
-maf per year. Potential compensation amounts are shown in green fill in Table 9.
+maf per year (Allhands, 2021). Potential compensation amounts are shown in green
+fill in Table 9.
 
 **Table 8. Rough Colorado River water prices**
 
@@ -743,6 +744,9 @@ to the actual documents:
 <https://www.usbr.gov/lc/region/pao/pdfiles/crcompct.pdf>. [Accessed on: October
 5, 2021].
 
+Allhands, J. (2021). "It could take at least 500,000 acre-feet of water a year
+to keep Lake Mead from tanking." *Arizona Republic*, November 8, 2021.
+
 Carson, C. A., Stone, C. H., Wilson, F. E., Watson, E. H., and Bishop, L. C.
 (1948). "Upper Colorado River Basin Compact." U.S. Bureau of Reclamation.
 <https://www.usbr.gov/lc/region/g1000/pdfiles/ucbsnact.pdf>. [Accessed on:
@@ -755,9 +759,6 @@ IBWC. (2021). "Minutes between the United States and Mexican Sections of the
 IBWC." United States Section.
 <https://www.ibwc.gov/Treaties_Minutes/Minutes.html>. [Accessed on: July 22,
 2021].
-
-James, I. (2021). "Southwest braces for water cutbacks as drought deepens along
-the Colorado River." *Arizona Republic*.
 
 Kuhn, E., and Fleck, J. (2019). *Science Be Dammed: How Ignoring Inconvenient
 Science Drained the Colorado River*, University of Arizona Press.
@@ -838,10 +839,6 @@ October 5, 2021].
 USBR. (2021d). "Lake Powell Unregulated Inflow."
 <https://www.usbr.gov/uc/water/crsp/studies/images/PowellForecast.png>.
 [Accessed on: September 28, 2021].
-
-USBR. (2021e). "Pilot System Conservation Program." U.S. Bureau of Reclamation.
-<https://www.usbr.gov/lc/region/programs/PilotSysConsProg/pilotsystem.html>.
-[Accessed on: October 14, 2021].
 
 Wheeler, K., Kuhn, E., Bruckerhoff, L., Udall, B., Wang, J., Gilbert, L.,
 Goeking, S., Kasprak, A., Mihalevich, B., Neilson, B., Salehabadi, H., and
