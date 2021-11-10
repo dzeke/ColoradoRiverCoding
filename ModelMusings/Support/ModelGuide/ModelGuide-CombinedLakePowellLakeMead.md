@@ -195,38 +195,47 @@ there were no upstream human consumptive use or reservoirs. Once a Lake Powell
 natural flow is specified, the rows below populate with data.
 
 Because future flows are uncertain, we can only specify natural inflow to Lake
-Powell as a scenario of possible future flows. Specify a scenario from flows
-reconstructed from the historical (1905 to 2015) or paleo (1416 to 2015) periods
-(Meko et al., 2017; Prairie, 2020). See workbook tab *HydrologicScenarios* for
-some flow scenarios from these periods.
+Powell as a scenario of possible future flows. Develop a scenario from:
 
-Alternatively, look at the mean natural flow of low-flow sequences in the paleo
-reconstructed or recent observed periods (Figure 2). For example, a 5-year
-drought that started in 1580 AD had a reconstructed average flow of 9 maf per
-year.
+1.  The most recent 22 years, where estimated natural inflow to Lake Powell
+    varied from 6 to 20 maf per year (Figure 2).
+
+2.  Flow values reconstructed from the historical (1905 to 2015) or paleo (1416
+    to 2015) periods (Meko et al., 2017; Prairie, 2020). See workbook tab
+    *HydrologicScenarios* for some flow scenarios from these periods.
+
+3.  The mean natural flow of low-flow sequences in the paleo reconstructed or
+    recent observed periods (Figure 3). For example, a 5-year drought that
+    started in 1580 AD had a reconstructed average flow of 9 maf per year.
+
+4.  Devise a time series of flows on your own or adapt values year-to-year as
+    model time progresses.
+
+5.  Optionally, refer to unregulated inflows from 1960 to 1999 (USBR,
+    2021d)(Figure 4) and add \~3 maf to get a natural flow. The addition
+    represents non-reservoir consumptive use in the Upper Basin. Figure 5 shows
+    how to conserve from unregulated to natural flow.
+
+![](media/b57879648c06879037af4e2573b81241.png)
+
+**Figure 2. Estimated natural inflow to Lake Powell {USBR, 2021 \#2836}**
 
 ![](media/83c6e979375d6b1b644dd9a9f413c51e.png)
 
-**Figure 2. Sequence-average plot of the tree-ring reconstructed flow of the
+**Figure 3. Sequence-average plot of the tree-ring reconstructed flow of the
 Colorado River at Lees Ferry (Salehabadi et al., 2020).**
-
-Or include flows representative of the more recent observations. Use the
-unregulated inflow tracked and projected by (USBR, 2021d)(Figure 3) and add \~3
-maf. The addition represents the non-reservoir consumptive use in the Upper
-Basin. Figure 4 shows how to conserve from unregulated to natural flow.
 
 ![](media/9e513f8f357cf9e3758d943c8a253767.png)
 
-**Figure 3. Unregulated flow to Lake Powell (USBR, 2021d). Add \~ 3 maf for
+**Figure 4. Unregulated flow to Lake Powell (USBR, 2021d). Add \~ 3 maf for
 natural flow.**
 
 ![](media/e2e03f375e85e6262a6f39c2b3604617.png)
 
-**Figure 4. Process to go from gaged (measured) flow to natural flow (Wheeler et
+**Figure 5. Process to go from gaged (measured) flow to natural flow (Wheeler et
 al., 2019).**
 
-Alternatively, devise a time series of flows on your own or adapt values
-year-to-year as model time progresses.
+Alternatively,
 
 The model uses natural flow as in input because the model first credits a share
 of the year’s natural flow to each party’s flex account. Then parties consume
@@ -240,12 +249,12 @@ plus seeps on the Grand Canyon from Glen Canyon Dam to Lake Mead. This
 intervening flow excludes Lake Powell release or other upstream consumptive use
 on the rivers. A compilation of USGS gaged data from 1990 to 2020 show a mean
 intervening Grand Canyon flow of 0.9 maf per year with 5-year sequences below
-0.75 maf (Figure 4)(Rosenberg, 2021b). By default, the model uses an intervening
+0.75 maf (Figure 5)(Rosenberg, 2021b). By default, the model uses an intervening
 Grad Canyon flow of 0.8 maf per year.
 
 ![](media/504930ff99a905946ec9839391007127.png)
 
-**Figure 4. Mean Grand Canyon tributary flow (Glen Canyon Dam to Lake Mead) for
+**Figure 5. Mean Grand Canyon tributary flow (Glen Canyon Dam to Lake Mead) for
 different sequence lengths.**
 
 ## 2B. Mead to Imperial Dam intervening flow
@@ -264,7 +273,7 @@ and evapotranspiration from 1995 to 2014 at USBR (2021a).
 
 # Step 3. Split existing reservoir storage among parties (year 1 only)
 
-Split the starting combined reservoir storage (Figure 5) entered in Section 1B
+Split the starting combined reservoir storage (Figure 6) entered in Section 1B
 among the parties. These assignments are joint party (political) decisions.
 There are many possibilities. Here, the default values in Column B apply Interim
 Guidelines Intentionally Created Surplus (ICS) accounts, the Lower and Upper
@@ -298,7 +307,7 @@ conservation accounts for Lower Basin and Mexico.
 
 ![](media/9a195e29d15576b7bffbb944cfbba5e6.png)
 
-**Figure 5. Assign combined Lake Powell and Lake Mead storage (top) to flex
+**Figure 6. Assign combined Lake Powell and Lake Mead storage (top) to flex
 accounts (bottom).**
 
 ## 3A. Begin of year reservoir storage
@@ -408,9 +417,9 @@ Nations or Mexico first or to share the assignment.
 # Step 5. Player Dashboards – Conserve, Consume, and Trade
 
 Each player has a dashboard where they can trade, conserve, and consume their
-available water (Figure 6). ![](media/01cc590a3794cac0adbe1ae9f78eb803.png)
+available water (Figure 7). ![](media/01cc590a3794cac0adbe1ae9f78eb803.png)
 
-**Figure 6. Upper Basin Dashboard annotated. A Lake Powell natural flow of 9 maf
+**Figure 7. Upper Basin Dashboard annotated. A Lake Powell natural flow of 9 maf
 gives the Upper Basin 5.7 maf of available water to sell or consume. No trades
 or withdraws have been entered.**
 
@@ -491,11 +500,11 @@ withdraws and consumptive use. End of Year balance = Available Water – Withdra
 ## 5A. Shared, Reserve Dashboard
 
 The dashboard for the shared, reserve account is orange fill – all parties must
-agree to a purchase or sale (Figure 7).
+agree to a purchase or sale (Figure 8).
 
 ![](media/a79e48b88087e7f5f57068fd3824cd97.png)
 
-**Figure 7. Shared, Reserve account choices are a joint decision by all
+**Figure 8. Shared, Reserve account choices are a joint decision by all
 parties.**
 
 The current recommendation is keep the shared, reserve account balance steady –
@@ -546,14 +555,14 @@ After entering a percent split, the following items will calculate:
 
 The model uses the elevation-area-volume relationships for the reservoirs to
 calculate storage level from volume. See the left and right hand side of Figure
-9 for critical levels and volumes such as dead pool (0 maf storage) and minimum
+10 for critical levels and volumes such as dead pool (0 maf storage) and minimum
 power pool (penstock elevations) to avoid.
 
 ### (ii) Lake Powell release to achieve Powell and Mead storage volumes
 
 This is the annual release from Lake Powell to achieve the specified storage
 volumes in Lake Powell and Lake Mead. Compare to numbers such as 7 to 9 maf per
-year that are the target of equalization releases (Figure 11)(USBR, 2007). Note
+year that are the target of equalization releases (Figure 12)(USBR, 2007). Note
 that as combined storage declines, it will become harder to achieve the 7-9 maf
 targets. This Powell release is calculated as (all terms maf):
 
@@ -597,21 +606,21 @@ As Lake Powell water storage drops to the turbine release elevation of 3,490
 feet (4 maf), the water stored in Lake Powell heats (less stratification),
 increases release water temperature through the hydropower turbines, and pushes
 native, endangered fish of the Grand Canyon into unchartered territory -- more
-susceptible to prey by non-native fish (Figure 8, left). Higher Lake Powell
+susceptible to prey by non-native fish (Figure 9, left). Higher Lake Powell
 levels and colder water releases preserve the status quo. Table 10 summarizes
 the important Lake Powell elevation break points for fish. To delay these
 negative impacts on fish, managers can forego release and hydropower generation
 through the turbines and instead release water through the low elevation river
-outlets (elevation 3,370 feet; 0 maf; Figure 9). For example, an 18oC release
+outlets (elevation 3,370 feet; 0 maf; Figure 10). For example, an 18oC release
 through the river outlets requires 5.9 maf less storage than an 18oC release
-through hydropower turbines (elevation 3,600 feet on Figure 9 left plot compared
-to 3,525 feet on right plot). This information is also presented on the
+through hydropower turbines (elevation 3,600 feet on Figure 10 left plot
+compared to 3,525 feet on right plot). This information is also presented on the
 *PowellReleaseTemperature* worksheet.
 
 | ![](media/b39ba7a9554f8f13f605b538c1c85f10.png) | ![](media/f20a2551b5487617dfcf35586456b582.png) |
 |-------------------------------------------------|-------------------------------------------------|
 
-**Figure 8. Lake Powell release water temperatures through the hydropower
+**Figure 9. Lake Powell release water temperatures through the hydropower
 turbines (elevation 3,490 feet; left) and river outlets (elevation 3,370 feet;
 right) for different water surface elevations (Wheeler et al., 2021).**
 
@@ -621,7 +630,7 @@ right) for different water surface elevations (Wheeler et al., 2021).**
 
 ![](media/877589caf87b4d9ac26001628c8596cb.png)
 
-Figure 9. Glen Canyon Dam river outlets (red) are \~ 100 feet below the
+Figure 10. Glen Canyon Dam river outlets (red) are \~ 100 feet below the
 penstocks (blue)
 
 ### (ii) Reduce Hydropower Generation
@@ -637,26 +646,26 @@ generation.
 ### (iii) Reduce evaporation loss
 
 The combined evaporated volume changes less than 0.12 maf to preferentially
-store water in Lake Mead or Lake Powell (Figure 10, red numbers). These volumes
-are inside the margin of error of the evaporated volumes (Figure 10, black bars)
+store water in Lake Mead or Lake Powell (Figure 11, red numbers). These volumes
+are inside the margin of error of the evaporated volumes (Figure 11, black bars)
 calculated from the evaporation rates (Section 1Bi). This analysis suggests
 there is no water supply or evaporation benefit to preferentially store combined
 storage in Lake Powell or Lake Mead.
 
 ![](media/d095609b8bf5c3f1101d49faec90b82c.png)
 
-**Figure 10. Combined evaporated volume changes little (red numbers) to
+**Figure 11. Combined evaporated volume changes little (red numbers) to
 preferentially store water in Lake Mead or Lake Powell.**
 
 ### (iv) Current operations
 
 Since 2007, the current operations sought to equalize storage in Lake Powell and
 Lake Mead (enter 50%)(USBR, 2007). Prior to 2007, managers kept more storage in
-Lake Mead (Figure 11).
+Lake Mead (Figure 12).
 
 ![](media/7128adb1e89cc18da0e645df2d567c43.png)
 
-**Figure 11. Lake Powell-Lake Mead coordination rules (blue fill) and historical
+**Figure 12. Lake Powell-Lake Mead coordination rules (blue fill) and historical
 lake levels before and after the 2007 interim guidelines (pink and purple
 lines)(Wheeler et al., 2019).**
 
