@@ -448,12 +448,12 @@ fill in Table 9.
 
 **Table 8. Rough Colorado River water prices**
 
-![](media/2e21113751f1ecc62156c946998f9c9d.emf)
+![](media/58c16acd5ac18a1344300f77d50a99a4.png)
 
 **Table 9. Compensation (\$ million) at different water prices (\$/acre-foot)to
 purchase different target water volumes (maf)**
 
-![](media/13db460d851ab03c37c7bd7e2db78933.emf)
+![](media/58f5dcd266e42ced7e38e40b84641e39.png)
 
 ### (iii) Net Trade Volume all Players
 
