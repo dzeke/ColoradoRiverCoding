@@ -18,8 +18,8 @@ individual and group choice and explains how choices build on existing Colorado
 River management (Appendix A). The document also suggest potential values to
 enter.
 
-Find quick links to support information (the sections of this document) in the
-Model file, *Master* worksheet, Column N.
+Find quick links to this support information -- the sections and subsections of
+this document -- in the Model file, *Master* worksheet, Column N.
 
 # Get Started
 
@@ -62,14 +62,14 @@ parties (Table 1)(1922; IBWC, 2021; USBR, 2019; USBR, 2020).
 
 **Table 1. Parties, Reason(s) to include in model, and Potential Strategies**
 
-| **Party**            |                                                                                     | **Potential Strategy(s)**                                                                                                                                                                                                                                                                                                         |
-|----------------------|-------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Upper Basin          | Article II(c to g) of the Colorado River Compact (1922).                            | Continue to consume \~ 4.0 maf/year (historical consumptive use). 4.0 maf includes 1.1 maf of use by First Nations in the Upper Basin.  Increase consumptive use above 4.0 maf/year to fulfil aspirations to further develop. Sell some water, get paid to conserve, and prepare for shortage and curtailment (Rosenberg, 2021e). |
-| Lower Basin          | Article II(c to g) of the Colorado River Compact (1922).                            | Continue mandatory conservation and cutback from 7.5 maf per year as Lake Mead level declines (USBR, 2019). See cutback schedule in *MandatoryConservation* sheet. 7.5 maf includes 0.95 maf of use by First Nations in the Lower Basin. Buy water to reduce mandatory conservation.  Save some water for future years.           |
-| Mexico               | 1944 U.S.-Mexico Treaty and subsequent Minutes                                      | Continue mandatory conservation and cutback from 1.5 maf per year as Lake Mead levels decline (IBWC, 2021). See *MandatoryConservation* sheet. Conserve more water beyond mandatory targets. Sell some water to other parties to gain money to build non-water projects.                                                          |
-| Colorado River Delta | Section VIII of Minute 323 (IBWC, 2021)                                             | Save until have enough water for a 0.06 maf pulse flood every few years. Save until have enough water for a longer duration 0.08 maf pulse flood. Scientists are still figuring our the ecological and other benefits of 0.08 or 0.06 maf pulse floods. Buy water and make more frequent pulse floods.                            |
-| First Nations        | Include more parties (USBR, 2020) Tribal water study (Ten Tribes Partnership, 2018) | Develop and use 2.0 maf per year of rights. 1.1 maf of use by First Nations in the Upper Basin and 0.95 maf by First Nations in the Lower Basin. Lease undeveloped water. Save water for future use.                                                                                                                              |
-| Shared, Reserve      | Protect Lake Powell and Lake Mead elevations of 3,525 and 1,020 feet (USBR, 2019)   | Maintain combined protection volume (11.6 maf). Account managed by consensus of all parties. Assume parties do not agree on releases, so no releases, steady account balance. Transfer some water without payment to party in need.                                                                                               |
+| **Party**            |                                                                                     | **Potential Strategy(s)**                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+|----------------------|-------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Upper Basin          | Article II(c to g) of the Colorado River Compact (1922).                            | Continue to consume \~ 3.0 maf/year (historical consumptive use). 3.0 maf excludes 1.1 maf of use by First Nations in the Upper Basin.  Increase consumptive use above 3.0 maf/year to fulfil aspirations to further develop. Sell some water, get paid to conserve, and prepare for shortage and curtailment (Rosenberg, 2021e).                                                                                                                                    |
+| Lower Basin          | Article II(c to g) of the Colorado River Compact (1922).                            | Continue mandatory conservation and cutback from 6.55 to 5.45 maf per year as Lake Mead level declines from 1,090 to 1,025 feet (USBR, 2019). See cutback schedule in *MandatoryConservation* sheet. These values exclude 0.95 maf per year of use by First Nations in the Lower Basin. Cut back an addition 0.5 maf per year to represent the recent 500-Plus Plan (Allhands, 2021). Buy water to reduce mandatory conservation.  Save some water for future years. |
+| Mexico               | 1944 U.S.-Mexico Treaty and subsequent Minutes                                      | Continue mandatory conservation and cutback from 1.5 maf per year as Lake Mead levels decline (IBWC, 2021). See *MandatoryConservation* sheet. Conserve more water beyond mandatory targets. Sell water to get money for non-water projects.                                                                                                                                                                                                                         |
+| Colorado River Delta | Section VIII of Minute 323 (IBWC, 2021)                                             | Save until have enough water for a 0.06 maf pulse flood every few years. Save until have enough water for a longer duration 0.08 maf pulse flood. Scientists are still figuring out the ecological and other benefits of 0.08 or 0.06 maf pulse floods. Buy water and make more frequent pulse floods.                                                                                                                                                               |
+| First Nations        | Include more parties (USBR, 2020) Tribal water study (Ten Tribes Partnership, 2018) | Develop and use 2.0 maf per year of rights. 1.1 maf of use by First Nations in the Upper Basin and 0.95 maf by First Nations in the Lower Basin. Lease undeveloped water to acquire capital to build new projects. Save water for future use.                                                                                                                                                                                                                        |
+| Shared, Reserve      | Protect Lake Powell and Lake Mead elevations of 3,525 and 1,020 feet (USBR, 2019)   | Maintain combined protection volume (11.6 maf). Account managed by consensus of all parties. Assume parties do not agree on releases, so no releases, steady account balance. Transfer some water without payment to party in need.                                                                                                                                                                                                                                  |
 
 Each participant can play one or more roles.
 
@@ -78,6 +78,11 @@ Mexico in the Upper Basin — can team up to role play a party like the Upper
 Basin. When teaming, draw on prior water sharing agreements such as an Upper
 Basin Compact where parties share water in specified percentages (Carson et al.,
 1948).
+
+Including First Nations with a separate account differs from current operations
+where First Nation’s water rights are typically managed under state systems —
+often with a time immortal water right — and First Nations cannot trade water
+across state boundaries.
 
 ## 1A. Explain cell types
 
@@ -194,8 +199,8 @@ mainstem Colorado, and other tributaries that would flow into Lake Powell if
 there were no upstream human consumptive use or reservoirs. Once a Lake Powell
 natural flow is specified, the rows below populate with data.
 
-Because future flows are uncertain, we can only specify natural inflow to Lake
-Powell as a scenario of possible future flows. Develop a scenario from:
+Because future flows are uncertain, specify natural inflow to Lake Powell as a
+scenario of possible future flows. Develop a scenario from:
 
 1.  The most recent 22 years, where estimated natural inflow to Lake Powell
     varied from 6 to 20 maf per year (Figure 2).
@@ -205,8 +210,9 @@ Powell as a scenario of possible future flows. Develop a scenario from:
     *HydrologicScenarios* for some flow scenarios from these periods.
 
 3.  The mean natural flow of low-flow sequences in the paleo reconstructed or
-    recent observed periods (Figure 3). For example, a 5-year drought that
-    started in 1580 AD had a reconstructed average flow of 9 maf per year.
+    recent observed periods (Figure 3). For example, the 5-year drought that
+    started in 1580 AD had the lowest reconstructed 5-year average flow: 9 maf
+    per year.
 
 4.  Devise a time series of flows on your own or adapt values year-to-year as
     model time progresses.
