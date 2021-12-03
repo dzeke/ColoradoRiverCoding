@@ -60,6 +60,15 @@ Colorado River Compact, 1944 U.S.-Mexico Treaty, subsequent Minutes 319 and 323,
 Upper and Lower Basin drought contingency plans, and desire to include more
 parties (Table 1)(1922; IBWC, 2021; USBR, 2019; USBR, 2020).
 
+**Maps of party areas**
+
+-   [Upper Basin, Lower Basin,
+    Mexico](https://www.usbr.gov/lc/images/maps/CRBSmap.jpg) (USGS, 2016)
+
+-   [First
+    Nations](http://www.naturalresourcespolicy.org/images/col-river-basin/map-tribes-crb.jpg)
+    (Ten Tribes Partnership, 2018)
+
 **Table 1. Parties, Reason(s) to include in model, and Potential Strategies**
 
 | **Party**            |                                                                                     | **Potential Strategy(s)**                                                                                                                                                                                                                                                                                                                                                                                                                                            |
@@ -859,12 +868,15 @@ USBR. (2021e). "Lake Powell Unregulated Inflow."
 <https://www.usbr.gov/uc/water/crsp/studies/images/PowellForecast.png>.
 [Accessed on: September 28, 2021].
 
+USGS. (2016). "Colorado River Basin map." U.S. Geological Survey.
+<https://www.usgs.gov/media/images/colorado-river-basin-map>.
+
 Wheeler, K., Kuhn, E., Bruckerhoff, L., Udall, B., Wang, J., Gilbert, L.,
 Goeking, S., Kasprak, A., Mihalevich, B., Neilson, B., Salehabadi, H., and
 Schmidt, J. C. (2021). "Alternative Management Paradigms for the Future of the
 Colorado and Green Rivers." Center for Colorado River Studies, Utah State
 University, Logan, Utah.
-<https://qcnr.usu.edu/coloradoriver/files/WhitePaper6.pdf>.
+<https://qcnr.usu.edu/coloradoriver/files/WhitePaper_6.pdf>.
 
 Wheeler, K. G., Schmidt, J. C., and Rosenberg, D. E. (2019). "Water Resource
 Modelling of the Colorado River – Present and Future Strategies." Center for
