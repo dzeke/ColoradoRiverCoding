@@ -87,10 +87,8 @@ Open the "Versions" worksheet to see a list of changes over time.
 1. Wang, J., and Rosenberg, D. E. (2021). "[Living within our Means: Adapting Colorado River Basin depletions to available water]( https://digitalcommons.usu.edu/water_pubs/171/)." Submitted to Journal of Water Resources Planning and Management.
 1. Wang, J., Rosenberg, D. E., Schmidt, J. C., and Wheeler, K. G. (2020). "[Managing the Colorado River for an Uncertain Future](http://qcnr.usu.edu/coloradoriver/files/CCRS_White_Paper_3.pdf)." Center for Colorado River Studies, Utah State University, Logan, Utah.
 
-## Share Feedback
-Please share your feedback about this synchronous model and role play -- things you like, things to improve.
-* Preferred method: Submit an [issue](https://github.com/dzeke/ColoradoRiverCoding/issues) via Github (2nd menu item below dzeke/ColoradoRiverCodng). Describe things you like, things to inprove. If you provide a copy of the Excel workbook, please summarize changes made.
-* Alternative:  Email things you like, things to improve to David Rosenberg at david.rosenberg@usu.edu. Use the subject line "Feedback: Colorado River numerical model".
+## Status
+This model is currently used as a demonstration and educational tool. 
 
 ## Requested Citation
 David E. Rosenberg (2021). "Pilot flex accounting to encourage more water conservation in a combined Lake Powell-Lake Mead system." Utah State University, Logan, UT. https://github.com/dzeke/ColoradoRiverCoding/tree/main/ModelMusings.
