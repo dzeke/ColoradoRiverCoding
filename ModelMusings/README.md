@@ -1,26 +1,22 @@
-# Interactive Models for the Colorador River Basin
+# Pilot flex accounting for a combined Lake Powell-Lake Mead system (synchronous model)
 
 ## Quick download links:
-### [Pilot flex accounting to encourage more water conservation in a combined Lake Powell-Lake Mead system](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/PilotFlexAccounting-CombinedPowellMead.xlsx) (Excel model file)
+### [Pilot flex accounting for a combined Lake Powell-Lake Mead system](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/PilotFlexAccounting-CombinedPowellMead.xlsx) (Excel model file)
 ### [Slides of Key Ideas](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/PilotFlexAccounting-KeyIdeas.pdf) (pdf file)
 ### [Synchronous Model Guide](https://github.com/dzeke/ColoradoRiverCoding/blob/main/ModelMusings/Support/ModelGuide/ModelGuide-CombinedLakePowellLakeMead.md) (Help file)
 
 ## Overview														
-**The purpose of the interactive models in this Github repository are to provoke thought and discussion** about renegotiations of operations for Lake Powell and Lake Mead. More specifically: how to convert a shrinking pie (lose-lose) water conflict -- our Colorado River basin becoming more arid -- into more positive processes for people and endangered fish? Links to existing Lake Powell and Lake Mead operations:
+**The purpose of the synchronous model in this Github repository is to provoke thought and discussion** about renegotiations of operations for Lake Powell and Lake Mead. More specifically: how to convert a shrinking pie (lose-lose) water conflict -- our Colorado River basin becoming more arid -- into more positive processes for people and endangered fish? Links to existing Lake Powell and Lake Mead operations:
 
  * [2007 Interim Guidelines](https://www.usbr.gov/lc/region/programs/strategies/RecordofDecision.pdf).
  * [2019 Drought Contingency Plans](https://www.usbr.gov/dcp/finaldocs.html). **Both operations expire in 2026**.
 
-**Interactive Model**: Participants synchronously connect to a cloud model for the Colorado River basin. Participants role play Upper Basin, Lower Basin, Mexico, and other parties. Participants make 
- year-to-year water conservation, consumption, purchase, and sale decisions for their party while they track other players' choices, account balances, reservoir storage, and impacts to Grand Canyon fish.
+**Synchronous Model**: Participants synchronously connect to a Google Sheet model for the Colorado River basin. Participants role play Upper Basin, Lower Basin, Mexico, First Nations, and Colorado River Delta parties. Participants make 
+ year-to-year water conservation, consumption, purchase, and sale decisions for their party while they track other players' choices, account balances, and combined reservoir storage. Participants jointly decide to split the combined storage between Lake Powell and Lake Mead. Participants track impacts of water storage on Grand Canyon fish and continue to the next year.
 
-Each interactive model includes a name, key features, requirements and directions to use, files, and comparisons to current basin operations.
+ * **To make synchronous**: download the [Excel model file](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/PilotFlexAccounting-CombinedPowellMead.xlsx) and move into a Google Sheet. Invite the other participants.
 
-Presently there is one interactive model in the repository.
-
- * **To make interactive**: download the [Excel model file](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/PilotFlexAccounting-CombinedPowellMead.xlsx) and move into a Google Sheet.
-
-## Pilot flex accounting to encourage more water conservation in a combined Lake Powell-Lake Mead system
+The current version is the result of demo-ing, role playing, and discussing the model with 24 Colorado River managers and experts from June to November, 2021.
 
 **Visuals of key benefits and features: [PilotFlexAccounting-KeyIdeas.pdf](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/PilotFlexAccounting-KeyIdeas.pdf)**.
 
@@ -34,9 +30,9 @@ Presently there is one interactive model in the repository.
 1. Carry over Lower Basin and Mexico conservation account balances into flex accounts.
 1. Nudge "my basin", "my reservoir", and "my contingency plan" mentality towards "our" reservoirs.
 
-**How the process works**
+**How the synchronous model works**
 
-1. Stretch the Lee Ferry compact point into a region of combined management that starts with Lake Powell inflows and ends with Lake Mead releases (see [Slide #3](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/PilotFlexAccounting-KeyIdeas.pdf))
+1. Define a region of combined management that starts with Lake Powell inflows and ends with Lake Mead releases (see [Slide #3](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/PilotFlexAccounting-KeyIdeas.pdf))
 1. Assign parties a flex account in the combined Lake Powell-Lake Mead system.
 1. Assign existing reservoir storage to accounts.
 1. Parties split each year's natural flow.
@@ -57,10 +53,10 @@ Presently there is one interactive model in the repository.
 
 ## Model Structure
 
-This interactive model is a structured **spreadsheet** (Google Sheet). 
- * **Rows** represent the components of an interactive water budget for a combined Lake Powell-Lake Mead system.
+This synchronous model is a structured **spreadsheet** (Google Sheet). 
+ * **Rows** represent the components of an synchronous water budget for a combined Lake Powell-Lake Mead system.
  * **Colummns** represent years. 
- * **Interactive** means the players enter some components of the water budget year by year. Interactive components are individual and joint
+ * **synchronous** means the players enter some components of the water budget year by year. Synchronous components include individual and joint
  political/management decisions such as:
       * Water consumption and conservation.
 	  * Water purchases or sales: volumes and payments. 
@@ -76,11 +72,14 @@ This interactive model is a structured **spreadsheet** (Google Sheet).
  
 ## Requirements to Use
 1. A Google account. [Create a Google account](https://accounts.google.com/signup/v2/webcreateaccount?hl=en&flowName=GlifWebSignIn&flowEntry=SignUp)
-1. Another participant (for synchronous, interactive modeling). A participant may role play one or more parties (e.g., Upper Basin and Mexico).
+1. Another participant (for synchronous, synchronous modeling). A participant may role play one or more parties (e.g., Upper Basin and Mexico).
 1. ~ 1 to 2 hours. Go slow. If you run out of time, schedule another session.
 
 ## Compare to Current Operations
 The **Master**, **8.1-Trade**, and **MillenniumRecover** worksheets come with companion **-LawOfRiver** and **-Plots** worksheets. Select the **-Plots** worksheets to compare flex accounting entries to current operations (Law of the River). Use the **Master** worksheet to compare your entries to current operations.  
+
+## Versions
+Open the "Versions" worksheet to see a list of changes over time. 
  
 ## Publications
 1. Rosenberg, D. E. (2021). "[Adapt Lake Mead releases to inflow to give managers more flexibility to slow reservoir draw down](https://digitalcommons.usu.edu/water_pubs/170/)." Utah State University, Logan, Utah.
@@ -89,7 +88,7 @@ The **Master**, **8.1-Trade**, and **MillenniumRecover** worksheets come with co
 1. Wang, J., Rosenberg, D. E., Schmidt, J. C., and Wheeler, K. G. (2020). "[Managing the Colorado River for an Uncertain Future](http://qcnr.usu.edu/coloradoriver/files/CCRS_White_Paper_3.pdf)." Center for Colorado River Studies, Utah State University, Logan, Utah.
 
 ## Share Feedback
-Please share your feedback about this interactive model and role play -- things you like, things to improve.
+Please share your feedback about this synchronous model and role play -- things you like, things to improve.
 * Preferred method: Submit an [issue](https://github.com/dzeke/ColoradoRiverCoding/issues) via Github (2nd menu item below dzeke/ColoradoRiverCodng). Describe things you like, things to inprove. If you provide a copy of the Excel workbook, please summarize changes made.
 * Alternative:  Email things you like, things to improve to David Rosenberg at david.rosenberg@usu.edu. Use the subject line "Feedback: Colorado River numerical model".
 
