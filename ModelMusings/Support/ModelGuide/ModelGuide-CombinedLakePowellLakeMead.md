@@ -632,12 +632,15 @@ through hydropower turbines (elevation 3,600 feet on Figure 10 left plot
 compared to 3,525 feet on right plot). This information is also presented on the
 *PowellReleaseTemperature* worksheet.
 
-| ![](media/b39ba7a9554f8f13f605b538c1c85f10.png) | ![](media/f20a2551b5487617dfcf35586456b582.png) |
-|-------------------------------------------------|-------------------------------------------------|
+**![](media/f970c7704b7304b95cc35179a850cfdd.png)**
 
 **Figure 9. Lake Powell release water temperatures through the hydropower
 turbines (elevation 3,490 feet; left) and river outlets (elevation 3,370 feet;
-right) for different water surface elevations (Wheeler et al., 2021).**
+right) for different water surface elevations (Wheeler et al., 2021). Dashed
+black line represents Nov 16, 2021 storage.**
+
+**  
+**
 
 **Table 10. Effects of Summer Lake Powell Elevation on Fish**
 

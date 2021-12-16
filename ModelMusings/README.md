@@ -1,4 +1,4 @@
-# Pilot flex accounting for a combined Lake Powell-Lake Mead system (synchronous model)
+# Flex accounting for a combined Lake Powell-Lake Mead system (synchronous model)
 
 ## Quick download links:
 ### [Excel model file](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/PilotFlexAccounting-CombinedPowellMead.xlsx) (.xlsx)
@@ -6,7 +6,7 @@
 ### [Synchronous Model Guide](https://github.com/dzeke/ColoradoRiverCoding/blob/main/ModelMusings/Support/ModelGuide/ModelGuide-CombinedLakePowellLakeMead.md) (Help file)
 
 ## Overview														
-**The purpose of the synchronous model in this Github repository is to provoke thought and discussion** about renegotiations of operations for Lake Powell and Lake Mead. More specifically: how to convert a shrinking pie (lose-lose) water conflict -- our Colorado River basin becoming more arid -- into more positive processes for people and endangered fish? Links to existing Lake Powell and Lake Mead operations:
+**The purpose of the synchronous model in this Github repository is to provoke thought and discussion** about new operations for Lake Powell and Lake Mead. More specifically: how to convert a shrinking pie (lose-lose) water conflict -- our Colorado River basin becoming more arid -- into more positive processes for people and endangered fish? Links to existing Lake Powell and Lake Mead operations:
 
  * [2007 Interim Guidelines](https://www.usbr.gov/lc/region/programs/strategies/RecordofDecision.pdf).
  * [2019 Drought Contingency Plans](https://www.usbr.gov/dcp/finaldocs.html). **Both operations expire in 2026**.
@@ -16,7 +16,7 @@
 
  * **To make synchronous**: download the [Excel model file](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/PilotFlexAccounting-CombinedPowellMead.xlsx) and move into a Google Sheet. Invite the other participants.
 
-The current version is the result of demo-ing, role playing, and discussing the model with 24 Colorado River managers and experts from June to November, 2021.
+The current version is the result of demo-ing, role playing, and discussing the model with 26 Colorado River managers and experts from June to November, 2021.
 
 **Visuals of key benefits and features: [PilotFlexAccounting-KeyIdeas.pdf](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/PilotFlexAccounting-KeyIdeas.pdf)**.
 
@@ -48,23 +48,24 @@ The current version is the result of demo-ing, role playing, and discussing the 
 1. All participants open the **Master** worksheet.
 1. Duplicate the **Master** worksheet to save a blank version for later use.
 1. Follow directions in Column A.
-1. Find linked help in Column N.
+1. Find linked help for each row in Column N.
 1. View the **Master-Plots** worksheet to compare entries to current operations (Law of River).
 
 ## Model Structure
 
-This synchronous model is a structured **spreadsheet** (Google Sheet). 
+This synchronous model is a **spreadsheet** (Google Sheet). 
  * **Rows** represent the components of an synchronous water budget for a combined Lake Powell-Lake Mead system.
  * **Colummns** represent years. 
- * **synchronous** means the players enter some components of the water budget year by year. Synchronous components include individual and joint
+ * **Synchronous** means the players enter some components of the water budget year by year. Synchronous components include 
  political/management decisions such as:
-      * Water consumption and conservation.
-	  * Water purchases or sales: volumes and payments. 
-      * Add parties or stakeholders.
-	  * Split existing reservoir storage among parties.
-	  * Split future inflows among parties. 
-	  * Raise or lower the level of the shared, reserve account.
-      * Physically split combined storage between Lake Powell and Lake Mead. 	  
+      * Desecribe party strategy for next few years (individual)
+	  * Water consumption and conservation (individual).
+	  * Water purchases or sales: volumes and payments (joint). 
+      * Add parties or stakeholders (joint).
+	  * Split existing reservoir storage among parties (joint).
+	  * Split future inflows among parties (joint). 
+	  * Raise or lower the level of the shared water reserve account (joint)
+      * Physically split combined storage between Lake Powell and Lake Mead (joint). 	  
   
 **Treatment of Uncertainties**:
  * Hydrologic: Players or a facilitator choose each year's basin natural flows.
@@ -88,10 +89,10 @@ Open the "Versions" worksheet to see a list of changes over time.
 1. Wang, J., Rosenberg, D. E., Schmidt, J. C., and Wheeler, K. G. (2020). "[Managing the Colorado River for an Uncertain Future](http://qcnr.usu.edu/coloradoriver/files/CCRS_White_Paper_3.pdf)." Center for Colorado River Studies, Utah State University, Logan, Utah.
 
 ## Status
-This model is currently used as a demonstration and educational tool. 
+This model is currently used as a demonstration tool. I am writing the lessons from sharing the tool with 26 Colorado River managers and experts.
 
 ## Requested Citation
-David E. Rosenberg (2021). "Pilot flex accounting to encourage more water conservation in a combined Lake Powell-Lake Mead system." Utah State University, Logan, UT. https://github.com/dzeke/ColoradoRiverCoding/tree/main/ModelMusings.
+David E. Rosenberg (2021). "Flex accounting to encourage more water conservation in a combined Lake Powell-Lake Mead system." Utah State University, Logan, UT. https://github.com/dzeke/ColoradoRiverCoding/tree/main/ModelMusings.
 
 ## Donate to Support this Work
 Make a tax deductible gift -- for as little as $5 -- to Utah State University (USU) to support this work:
