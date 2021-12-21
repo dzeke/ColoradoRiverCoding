@@ -1,0 +1,134 @@
+---
+title: "Participants Choices for Lake Powell Natural Flow"
+author: "David E. Rosenberg"
+date: "December 20, 2021"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Description
+
+This is an R Markdown document. This document shows the Lake Powell natural flows participants choose during 13 synchronous modeling sessions of Flex accounting in a combined Lake Powell-Lake Mead system.
+
+1. Load natural flow to Lake Powell scenarios from Excel file. These scenarios were choosen by Flex account participants.
+2. Plot natural flows as a histogram.
+3. Overlay with 2000 to 2021 (20-year Millennium drought) average of 12.4 maf
+
+
+## Requested Citation
+David E. Rosenberg (2021), "Participants Choices for Lake Powell Natural Flow." Utah State University. Logan, Utah. https://github.com/dzeke/ColoradoRiverFutures/tree/master/ModelMusings/Support/ParticipantChoosePowellNaturalFlow.
+
+```{r ParticipantChoice1, echo=FALSE, warning=FALSE, message=FALSE}
+
+# ParticipantChoosePowellNaturalFlow.R
+#
+# Loads natural flow to Lake Powell scenarios from Excel file. These scenarios were choosen by Flex accounting participants.
+# Plots as a histogram with an overlay for the 20-year Millennium drought average of 12.4 maf
+#
+# This is a beginning R-programming effort! There could be lurking bugs or basic coding errors that I am not even aware of.
+# Please report bugs/feedback to me (contact info below)
+#
+# David E. Rosenberg
+# December 20, 2021
+# Utah State University
+# david.rosenberg@usu.edu
+
+rm(list = ls())  #Clear history
+
+# Load required libraies
+
+if (!require(tidyverse)) { 
+  install.packages("tidyverse", repos="http://cran.r-project.org") 
+  library(tidyverse) 
+}
+
+if (!require(readxl)) { 
+  install.packages("readxl", repos="http://cran.r-project.org") 
+  library(readxl) 
+}
+
+  
+if (!require(RColorBrewer)) { 
+  install.packages("RColorBrewer",repos="http://cran.r-project.org") 
+  library(RColorBrewer) # 
+}
+
+if (!require(dplyr)) { 
+  install.packages("dplyr",repos="http://cran.r-project.org") 
+  library(dplyr) # 
+}
+
+if (!require(expss)) { 
+  install.packages("expss",repos="http://cran.r-project.org") 
+  library(expss) # 
+}
+
+if (!require(reshape2)) { 
+  install.packages("reshape2", repos="http://cran.r-project.org") 
+  library(reshape2) 
+}
+
+if (!require(pracma)) { 
+  install.packages("pracma", repos="http://cran.r-project.org") 
+  library(pracma) 
+}
+
+if (!require(lubridate)) { 
+  install.packages("lubridate", repos="http://cran.r-project.org") 
+  library(lubridate) 
+}
+
+if (!require(directlabels)) { 
+  install.packages("directlabels", repo="http://cran.r-project.org")
+  library(directlabels) 
+}
+
+
+if (!require(plyr)) { 
+  install.packages("plyr", repo="http://cran.r-project.org")
+  library(plyr) 
+}
+
+if (!require(ggrepel)) { 
+  devtools::install_github("slowkow/ggrepel")
+  library(ggrepel) 
+}
+
+
+
+# Read in Lake Powell natural flow scenarios from Excel
+sExcelFile <- 'ParticipantChoosePowellNaturalFlow.xlsx'
+dfFlowScenarios <- read_excel(sExcelFile, sheet = "Sheet1",  range = "A4:B30")
+
+#Get the color palettes
+#Get the blue color bar
+pBlues <- brewer.pal(9,"Blues")
+pReds <- brewer.pal(9,"Reds")
+
+
+```
+
+# Figure 1. Participant choices for Lake Powell natural inflow.
+```{r ParticipantChoice2, echo=FALSE, warning=FALSE, message=FALSE}
+
+#Plot the histogram with vertical line overlay for 12.4 maf per year
+ggplot(dfFlowScenarios, aes(x=`Lake Powell natural inflow (maf per year)`)) +
+  geom_histogram(color="darkmagenta", fill="magenta", binwidth = 1) +
+  #Add vertical line for 20-year millennium drought average
+  geom_vline(xintercept = 12.4, linetype ="longdash", color = "Black", size = 3) +
+  #Label the vertical line
+  geom_text(aes(x=12.8, y=6.5, label="2000 to 2020 average"), angle = 90, color = "Black", size=5) +
+  
+  #Define scales
+  scale_x_continuous(limits = c(2,14), breaks = seq(2,14,by=1), minor_breaks = seq(2,14,by=1)) +
+  scale_y_continuous(breaks = seq(0,11,by=1), minor_breaks = seq(0,11,by=1)) +
+ 
+  labs(x="Lake Powell Natural Inflow\n(million acre-feet per year)", y="Frequency") +
+  theme(text = element_text(size=20), legend.title=element_blank(), legend.text=element_text(size=18),
+        legend.key = element_blank())
+
+
+```
