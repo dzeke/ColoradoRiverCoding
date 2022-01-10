@@ -4,6 +4,7 @@
 ### [Excel model file](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/PilotFlexAccounting-CombinedPowellMead.xlsx) (.xlsx)
 ### [Slides of Key Ideas](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/PilotFlexAccounting-KeyIdeas.pdf) (pdf file)
 ### [Synchronous Model Guide](https://github.com/dzeke/ColoradoRiverCoding/blob/main/ModelMusings/Support/ModelGuide/ModelGuide-CombinedLakePowellLakeMead.md) (Help file)
+### [Lessons from synchronously modeling combined Lake Powell-Lake Mead system with 26 Colorado River Managers and Experts](https://github.com/dzeke/ColoradoRiverCoding/raw/main/BlogDrafts/3-LessonsFromSynchronouslyModelCombinedLakePowellLakeMeadSystemWith26ColoradoRiverManagersExperts.docx) (Draft manuscript)
 
 ## Overview														
 **The purpose of the synchronous model in this Github repository is to provoke thought and discussion** about new operations for Lake Powell and Lake Mead. More specifically: how to convert a shrinking pie (lose-lose) water conflict -- our Colorado River basin becoming more arid -- into more positive processes for people and endangered fish? Links to existing Lake Powell and Lake Mead operations:
