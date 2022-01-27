@@ -81,7 +81,6 @@ if (!require(stringr)) {
   library(stringr) 
 }
 
-
 # Load Data
 # Set up a dataframe to describe locations in the Excel workbook where the data is
 
@@ -89,10 +88,16 @@ sStartCol <- 3
 nCols <- 3
 
 #Create column headers for year
-cColHeads <- paste(rep("Year",nCols),seq(1:nCols),"")
+dfColHeads <- data.frame(Years = paste(rep("Year",nCols),seq(1:nCols),""),
+                        xNums = seq(1,nCols,by=1))
+
+dfSheetNames <- data.frame(Sheet = c("Participants", "LawOfRiver"),
+                           sNum = seq(1,2, by=1),
+                           Name = c("Participants", "Law of River"))
 
 dfDataToLoad <- data.frame(Description = c("Combined Storage", "Combined Storage", "Consumptive Use-Lower Basin", "Consumptive Use-Lower Basin", "Consumptive Use-Upper Basin", "Consumptive Use-Upper Basin", "Storage in Powell", "Storage in Powell", "Powell Release Temperature", "Powell Release Temperature", "Fish Outcome", "Fish Outcome"),
                            Sheet = rep(c("Participants", "LawOfRiver"),6),
+                           Ynum = rep(c(1,2),6),
                            Row = c(131, 127, 119, 115, 118, 114, 132, 128, 139, 135, 140, 136))
 
 # Calculate the cell range from the provided information
@@ -110,48 +115,110 @@ for(i in 2:nrow(dfDataToLoad)){
 }
                            
 # Rename the column headers
-colnames(dfAllData) <- cColHeads
+colnames(dfAllData) <- dfColHeads$Years
 # Add in the remaining meta data for Data type and trace type
 dfAllData$DataType <- dfDataToLoad$Description
 dfAllData$Trace <- dfDataToLoad$Sheet
 
-# Melt the data so get columns
-dfAllDataMelt <- melt(dfAllData, id.vars = c("DataType", "Trace"), measure.vars = cColHeads)
+#Cast the data so there are fields of consumptive use, storage, etc.
 
+
+# Melt the data so get columns
+dfAllDataMelt <- melt(dfAllData, id.vars = c("DataType", "Trace"), measure.vars = dfColHeads$Years)
+
+#Join to include a new field that is the numeric year
+dfAllDataMelt <- left_join(dfAllDataMelt, dfColHeads, by = c("variable" = "Years"))
+
+#Join to include a new field that is the numeric sheet
+dfAllDataMelt <- left_join(dfAllDataMelt, dfSheetNames, by = c("Trace" = "Sheet"))
+
+# Calculate a new field so can get all the consumptive use, upper basin, trace in one field
+dfAllDataMelt$DataTrace <- paste0(dfAllDataMelt$DataType,dfAllDataMelt$Trace, sep = "-")
+
+dfAllDataCast <- dcast(dfAllDataMelt, Trace + variable ~ DataType, value)
+
+
+#Grab the red and blue color scales
+palBlues <- brewer.pal(9, "Blues")
+palReds <- brewer.pal(9, "Reds")
+
+#Create a divergent color scale where reds on the left and blues are on the right
+palRedBlue <- c(rev(palReds), palBlues)
+#Show the palleltte barplot(rep(1,18), col=palRedBlue)
+
+#Data frame to position Upper and Lower Basin labels on consumption plot
+dfBasinLabels <- data.frame(label = c("Upper\nBasin", "Lower\nBasin"),
+                            x = 3.2, y = c(2.25, 5))
 
 ### First Plot: Combined Storage
 
-ggplot(data = dfAllDataMelt %>% filter(DataType == "Combined Storage"), aes(x= variable, y =as.numeric(value), color = Trace, group = Trace, linetype = Trace)) +
+p1Combined <- ggplot(data = dfAllDataMelt %>% filter(DataType == "Combined Storage"), aes(x= variable, y =as.numeric(value), color = Trace, group = Trace, linetype = Trace)) +
   geom_line(size = 2) +
   theme_bw() +
   
   #Scales
   scale_y_continuous(limits = c(10,20), breaks = seq(10,20, by = 2)) +
   #scale_x_continuous(limits = c(0.5, nCols)) +
-  scale_color_discrete(breaks = c("Participants","LawOfRiver"), labels=c("Participants", "Law of River")) +
+  scale_color_manual(values = c(palReds[8], palBlues[8]), breaks = c("Participants","LawOfRiver"), labels=c("Participants", "Law of River")) +
   scale_linetype_manual(values = c("solid", "longdash"), breaks = c("Participants","LawOfRiver"), labels=c("Participants", "Law of River")) +
   
-  labs(x="", y="Combined Storage (MAF)") +
+  labs(x="", y="Combined Storage\n(MAF)") +
   theme(text = element_text(size=20),  legend.title = element_blank(), 
         legend.text=element_text(size=18),
         legend.position= c(0.7,0.80))
+
+print(p1Combined)
 
 
 ### Second Plot: Consumptive use
-ggplot(data = dfAllDataMelt %>% filter((DataType == "Consumptive Use-Lower Basin") | (DataType == "Consumptive Use-Upper Basin")) , 
-        aes(x= variable, y =as.numeric(value), color = Trace, group = interaction(Trace, DataType), linetype = Trace)) +
-  geom_line(size = 2) +
-  theme_bw() +
+p2Consume <- ggplot(data = dfAllDataMelt[str_detect(dfAllDataMelt$DataType, "Consumptive Use"),]) + 
+
+  geom_line(aes(x= variable, y =as.numeric(value), color = DataTrace, group = DataTrace, linetype = DataTrace), size = 2) +
   
+  #Position the Basin text labels
+  geom_text(data = dfBasinLabels, aes(x = x, y = y, label = label), size=5, color = "Black") +
+    
   #Scales
-  scale_y_continuous(limits = c(0,10), breaks = seq(0,10, by = 2)) +
+  scale_y_continuous(limits = c(0,8), breaks = seq(0,8, by = 2)) +
   #scale_x_continuous(limits = c(0.5, nCols)) +
-  scale_color_discrete(breaks = c("Participants","LawOfRiver"), labels=c("Participants", "Law of River")) +
-  scale_linetype_manual(values = c("solid", "longdash"), breaks = c("Participants","LawOfRiver"), labels=c("Participants", "Law of River")) +
+  scale_color_manual(values = c(palReds[8], palBlues[8], palReds[5], palBlues[5]) ) +
+  scale_linetype_manual(values = c("solid", "longdash", "solid", "longdash"), ) +
   
-  labs(x="", y="Combined Storage (MAF)") +
+  #Turn of the legends
+  guides(linetype = "none", color = "none") + 
+  
+  labs(x="", y="Consumptive use\n(MAF)") +
+  theme_bw() +
   theme(text = element_text(size=20),  legend.title = element_blank(), 
         legend.text=element_text(size=18),
         legend.position= c(0.7,0.80))
 
+print(p2Consume)
 
+### Third plot: Fraction of combined storage in Lake Powell.
+### This is a color tile. The color is the run -- participants or law of river.
+### A text value inside shows the value
+
+dfPercentInPowell <- dfAllDataMelt %>% filter(DataType == "Storage in Powell")
+#Turn Law of River elements negative so work on diverging color scheme
+dfPercentInPowell$AdjustValue <- as.numeric(dfPercentInPowell$value)
+dfPercentInPowell$AdjustValue <- ifelse(dfPercentInPowell$Trace == "LawOfRiver", -dfPercentInPowell$AdjustValue, dfPercentInPowell$AdjustValue)
+
+ggplot(data = dfPercentInPowell, aes(x = xNums, y = sNum, fill = Trace)) +
+      #geom_tile() +
+      #Overplot the data value
+      geom_text(aes(label = sprintf("%g%%",100*(as.numeric(value))), color = AdjustValue), size = 6) + 
+      
+      scale_x_continuous(limits = c(0.5, 3.5), breaks = seq(1,nCols,by=1), labels = unique(dfPercentInPowell$variable)) +
+      scale_y_continuous(limits = c(0.5, 2.5), minor_breaks = seq(0.5, 2.5, by=1), breaks = c(1,2), labels = unique(dfPercentInPowell$Name)) +
+      scale_fill_manual(values = c(palReds[8], palBlues[8])) +  
+      scale_color_continuous(low = "red", high = "blue") +
+      #Turn of the legends
+      guides(fill = "none", color = "none") +      
+  
+      labs(x="", y="") +
+      theme_bw() +
+      theme(text = element_text(size=20),  legend.title = element_blank(), 
+                    legend.text=element_text(size=18),
+                    legend.position= c(0.7,0.80),
+            panel.grid.major = element_line(colour = "white"))
