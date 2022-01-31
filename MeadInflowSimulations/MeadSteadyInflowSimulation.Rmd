@@ -96,7 +96,8 @@ if (!require(tinytex)) {
   library(tinytex) 
 }
 
-
+#Use to debug Tinytex
+options(tinytex.verbose = TRUE)
 
 # New function MeadInflowToPowellRelease that takes an annual Mead Inflow value and estimates the Annual Powell Release
 # Simplistic relationship: just add Grand Canyon tributary inflow
