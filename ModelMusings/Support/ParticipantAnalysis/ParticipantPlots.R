@@ -176,7 +176,7 @@ p2Consume <- ggplot(data = dfAllDataMelt[str_detect(dfAllDataMelt$DataType, "Con
   geom_line(aes(x= variable, y =as.numeric(value), color = DataTrace, group = DataTrace, linetype = DataTrace), size = 2) +
   
   #Position the Basin text labels
-  geom_text(data = dfBasinLabels, aes(x = x, y = y, label = label), size=5, color = "Black") +
+  geom_text(data = dfBasinLabels, aes(x = x, y = y, label = label), size=6, color = "Black") +
     
   #Scales
   scale_y_continuous(limits = c(0,8), breaks = seq(0,8, by = 2)) +
@@ -199,15 +199,16 @@ print(p2Consume)
 ### This is a color tile. The color is the run -- participants or law of river.
 ### A text value inside shows the value
 
-dfPercentInPowell <- dfAllDataMelt %>% filter(DataType == "Storage in Powell")
+dfPercentInPowell <- dfAllDataMelt %>% filter(DataType %in% c("Storage in Powell","Powell Release Temperature", "Fish Outcome"))
 #Turn Law of River elements negative so work on diverging color scheme
-dfPercentInPowell$AdjustValue <- as.numeric(dfPercentInPowell$value)
-dfPercentInPowell$AdjustValue <- ifelse(dfPercentInPowell$Trace == "LawOfRiver", -dfPercentInPowell$AdjustValue, dfPercentInPowell$AdjustValue)
+dfPercentInPowell$AdjustValue = ifelse(dfPercentInPowell$DataType == "Storage in Powell", as.numeric(dfPercentInPowell$value), dfPercentInPowell$value)
 
-ggplot(data = dfPercentInPowell, aes(x = xNums, y = sNum, fill = Trace)) +
+dfPercentInPowell$AdjustValue[(dfPercentInPowell$DataType == "Storage in Powell") & (dfPercentInPowell$Trace == "LawOfRiver")] <- -dfPercentInPowell$AdjustValue[(dfPercentInPowell$DataType == "Storage in Powell") & (dfPercentInPowell$Trace == "LawOfRiver")]
+
+ggplot(data = dfPercentInPowell) +
       #geom_tile() +
       #Overplot the data value
-      geom_text(aes(label = sprintf("%g%%",100*(as.numeric(value))), color = AdjustValue), size = 6) + 
+      geom_text(aes(x = xNums, y = sNum + 0.3, label = sprintf("%g%%",100*(as.numeric(value))), color = AdjustValue), size = 6) + 
       
       scale_x_continuous(limits = c(0.5, 3.5), breaks = seq(1,nCols,by=1), labels = unique(dfPercentInPowell$variable)) +
       scale_y_continuous(limits = c(0.5, 2.5), minor_breaks = seq(0.5, 2.5, by=1), breaks = c(1,2), labels = unique(dfPercentInPowell$Name)) +
