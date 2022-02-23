@@ -1,0 +1,7 @@
+%!
+%% $Id: Fontmap 7680 2008-04-27 12:21:15Z reinhardk $
+
+% See Fontmap.TeXLive for the syntax of real Fontmap files.
+%% Replace 1 (Fontmap.TeXLive)
+
+(Fontmap.TeXLive) .runlibfile

@@ -1,0 +1,8 @@
+name latexmk.win32
+category Package
+revision 15404
+shortdesc win32 files of latexmk
+containersize 684
+containerchecksum 6ffbaea9c44da9fc73228a44f55d98219e8515ed595fafeda03a2794f3c7dc1f96bff22b4e7dcdc6c5ce4ee0ce8ca07f15150ed00b8ecfcbdd12b89b685be616
+binfiles arch=win32 size=1
+ bin/win32/latexmk.exe

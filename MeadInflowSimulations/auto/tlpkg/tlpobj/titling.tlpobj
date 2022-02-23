@@ -1,0 +1,22 @@
+name titling
+category Package
+revision 15878
+shortdesc Control over the typesetting of the \maketitle command
+longdesc The titling package provides control over the typesetting of
+longdesc the \maketitle command and \thanks commands, and makes the
+longdesc \title, \author and \date information permanently available.
+longdesc Multiple titles are allowed in a single document. New titling
+longdesc elements can be added and a titlepage title can be centered on
+longdesc a physical page.
+containersize 2524
+containerchecksum 2a321a17b1ff74f57e7bf3f9d72d1b66a0623ed286c8aa75df6d55f1e62b214954ff38456f27f172789bc4cb500688656ab156609933faef67e62954d05d0ce2
+doccontainersize 175188
+doccontainerchecksum e69af16331da73c2a61b063ca4dc4c5f70f7958c366b06e96745a2bc92397f89210ebfe598f445ff33ce7705d0f0b56fc3a46f93bcc89145d50b92d56820f61b
+srccontainersize 14800
+srccontainerchecksum 1b32988678f184fb335c70ee59d47cc3e20a7ee0f1606495d77880aa915677ed4a885557a406cfc5f5a67878cdd0675ecad503a6457056d901b96124f7eb171a
+runfiles size=2
+ texmf-dist/tex/latex/titling/titling.sty
+catalogue-ctan /macros/latex/contrib/titling
+catalogue-license lppl
+catalogue-topics titlepage
+catalogue-version 2.1d

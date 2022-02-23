@@ -1,0 +1,21 @@
+name gsftopk
+category TLCore
+revision 52851
+shortdesc Convert "Ghostscript fonts" to PK files
+longdesc Designed for use with xdvi and dvips this utility converts
+longdesc Adobe Type 1 fonts to PK bitmap format. It should not
+longdesc ordinarily be much used nowadays, since both its target
+longdesc applications are now capable of dealing with Type 1 fonts,
+longdesc direct.
+depend gsftopk.ARCH
+containersize 3548
+containerchecksum cb9aebd7428d10b627d80ea40d297f3e6de006859c7dd713478ff193458494f90017ecd0737376ac1f47638b059e02e8a46ea53a7c56b8561af75f770e214413
+doccontainersize 27540
+doccontainerchecksum 0a597e2908438fc00fc2bafa7ec635a82b70aad9d7f7e86851a654c0b72b719b8c550be0c20ecf6c8d96627863a48e6a387156ad2c7e71d1e296dd4937d60805
+runfiles size=2
+ texmf-dist/dvips/gsftopk/render.ps
+catalogue-contact-home http://math.berkeley.edu/~vojta/gsftopk.html
+catalogue-ctan /fonts/utilities/gsftopk
+catalogue-license gpl
+catalogue-topics font-cvt
+catalogue-version 1.19.2

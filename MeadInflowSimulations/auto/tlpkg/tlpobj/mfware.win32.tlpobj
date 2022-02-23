@@ -1,0 +1,13 @@
+name mfware.win32
+category TLCore
+revision 58783
+shortdesc win32 files of mfware
+containersize 58956
+containerchecksum 773d29f9c0c09e2d05aaf4588aa56da6a7cee9210bb952a6477d7ac3b40549df25af8d42f6807d508ce4242811b3dad04cad9f3d164678741dc140f2e3f96c54
+binfiles arch=win32 size=45
+ bin/win32/gftodvi.exe
+ bin/win32/gftopk.exe
+ bin/win32/gftype.exe
+ bin/win32/mft.exe
+ bin/win32/pktogf.exe
+ bin/win32/pktype.exe

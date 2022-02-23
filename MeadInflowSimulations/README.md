@@ -16,9 +16,10 @@ Open the file **[MeadSteadyInflowSimulation.pdf](https://github.com/dzeke/Colora
 ## Requirements to Run
 * R version 4.1.1. Download from https://cran.r-project.org/.
 * R Studio 1.1.456. Download from https://www.rstudio.com/.
+* MikTex version 21.12. Download from https://miktex.org/download. (Used to render MeadSteadyInflowSimulation.pdf from the R markdown file MeadSteadyInflowSimulation.Rmd)
 
 ## Directions to Generate Results
-1. Download and install R and RStudio (see Requirements).
+1. Download and install R, RStudio, and MikTex (see Requirements).
 1. Open the **MeadSteadyInflowSimulation.R Project** file. R Studio will open
 1. Select the file tab **MeadSteadyInflowSimulation.Rmd**. 
 1. On the row below the file tab, click the **Knit** button. The **MeadSteadyInflowSimulation.pdf** file will generate.

@@ -1,0 +1,8 @@
+name luaotfload.win32
+category Package
+revision 34647
+shortdesc win32 files of luaotfload
+containersize 692
+containerchecksum 63131e841af17292f1f0794688c90752864478afb827f6ce47ca11574b139b877e0f045db2bf8d25ceb4a9bb03c8228c36b81f9efae697532c01017e999d0b77
+binfiles arch=win32 size=1
+ bin/win32/luaotfload-tool.exe

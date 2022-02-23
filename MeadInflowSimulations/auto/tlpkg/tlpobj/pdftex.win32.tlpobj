@@ -1,0 +1,11 @@
+name pdftex.win32
+category TLCore
+revision 59813
+shortdesc win32 files of pdftex
+containersize 709344
+containerchecksum eaf469b1597262913a5150bb043203d923c0ff274c9501fd47669df4c44fafa6baa332c94beb13cc600d95e513d2d35ce898838c1f347527460dfe909bfe3a72
+binfiles arch=win32 size=459
+ bin/win32/etex.exe
+ bin/win32/pdfetex.exe
+ bin/win32/pdftex.dll
+ bin/win32/pdftex.exe

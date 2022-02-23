@@ -1,0 +1,23 @@
+name texlive-scripts.win32
+category TLCore
+revision 58829
+shortdesc win32 files of texlive-scripts
+containersize 36308
+containerchecksum 79231b3b328dbbb9e32c28a466d7afa982b2c4e8a584ef324bc79b12d2bdb7b0737b2393adcdb9896b1f98dab004c82f726a9f442ab6ebef8bcb113bb5a56a6c
+binfiles arch=win32 size=40
+ bin/win32/fmtutil-sys.exe
+ bin/win32/fmtutil-user.exe
+ bin/win32/fmtutil.exe
+ bin/win32/mktexfmt.exe
+ bin/win32/mktexmf.exe
+ bin/win32/mktexpk.exe
+ bin/win32/mktextfm.exe
+ bin/win32/rungs.exe
+ bin/win32/texhash.exe
+ bin/win32/updmap-sys.exe
+ bin/win32/updmap-user.exe
+ bin/win32/updmap.exe
+ install-tl-windows.bat
+ tl-tray-menu.exe
+ tlpkg/installer/tl-cmd.bat
+ tlpkg/installer/tl-tray-menu.ini

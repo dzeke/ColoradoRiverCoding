@@ -1,0 +1,12 @@
+[Tue Feb 22 21:41:22 2022] install: caption
+[Tue Feb 22 21:41:23 2022] install: grfext
+[Tue Feb 22 21:41:25 2022] install: gsftopk.win32
+[Tue Feb 22 21:41:26 2022] install: gsftopk
+[Tue Feb 22 21:41:28 2022] install: latex-base-dev
+[Tue Feb 22 21:41:30 2022] install: makeindex.win32
+[Tue Feb 22 21:41:31 2022] install: makeindex
+[Tue Feb 22 21:41:33 2022] install: mathspec
+[Tue Feb 22 21:41:34 2022] install: oberdiek
+[Tue Feb 22 21:41:36 2022] install: titling
+[Tue Feb 22 21:41:37 2022] install: upquote
+[Tue Feb 22 21:41:37 2022] command: mktexlsr
