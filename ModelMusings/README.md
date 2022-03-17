@@ -1,9 +1,11 @@
-# Flex accounting for a combined Lake Powell-Lake Mead system (synchronous model)
+# Lessons from synchronously modeling a combined Lake Powell-Lake Mead system with 26 Colorado River managers and experts
 
 ## Quick download links:
-### [Excel model file](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/PilotFlexAccounting-CombinedPowellMead.xlsx) (.xlsx)
+### [Excel Model File](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/PilotFlexAccounting-CombinedPowellMead.xlsx) (.xlsx)
 ### [Slides of Key Ideas](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/PilotFlexAccounting-KeyIdeas.pdf) (pdf file)
 ### [Synchronous Model Guide](https://github.com/dzeke/ColoradoRiverCoding/blob/main/ModelMusings/Support/ModelGuide/ModelGuide-CombinedLakePowellLakeMead.md) (Help file)
+### [Draft write up](https://github.com/dzeke/ColoradoRiverCoding/raw/main/BlogDrafts/3-LessonsFromSynchronouslyModelCombinedLakePowellLakeMeadSystemWith26ColoradoRiverManagersExperts.docx) (.docx)
+)
 
 ## Overview														
 **The purpose of the synchronous model in this Github repository is to provoke thought and discussion** about new operations for Lake Powell and Lake Mead. More specifically: how to convert a shrinking pie (lose-lose) water conflict -- our Colorado River basin becoming more arid -- into more positive processes for people and endangered fish? Links to existing Lake Powell and Lake Mead operations:
@@ -90,10 +92,10 @@ Open the "Versions" worksheet to see a list of changes over time.
 1. Wang, J., Rosenberg, D. E., Schmidt, J. C., and Wheeler, K. G. (2020). "[Managing the Colorado River for an Uncertain Future](http://qcnr.usu.edu/coloradoriver/files/CCRS_White_Paper_3.pdf)." Center for Colorado River Studies, Utah State University, Logan, Utah.
 
 ## Status
-This model is currently used as a demonstration tool. A am currently soliciting feedback on the draft write-up [Lessons from synchronously modeling a combined Lake Powell-Lake Mead system with 26 Colorado River Managers and Experts](https://github.com/dzeke/ColoradoRiverCoding/raw/main/BlogDrafts/3-LessonsFromSynchronouslyModelCombinedLakePowellLakeMeadSystemWith26ColoradoRiverManagersExperts.docx). 
+This model is currently used as a demonstration tool. I am currently soliciting feedback on the draft write-up [Lessons from synchronously modeling a combined Lake Powell-Lake Mead system with 26 Colorado River managers and experts](https://github.com/dzeke/ColoradoRiverCoding/raw/main/BlogDrafts/3-LessonsFromSynchronouslyModelCombinedLakePowellLakeMeadSystemWith26ColoradoRiverManagersExperts.docx). 
 
 ## Requested Citation
-David E. Rosenberg (2022). "Lessons from synchronously modeling a combined Lake Powell-Lake Mead system with 26 Colorado River Managers and Experts." Utah State University, Logan, UT. https://github.com/dzeke/ColoradoRiverCoding/tree/main/ModelMusings.
+David E. Rosenberg (2022). "Lessons from synchronously modeling a combined Lake Powell-Lake Mead system with 26 Colorado River managers and experts." Utah State University, Logan, UT. https://github.com/dzeke/ColoradoRiverCoding/tree/main/ModelMusings.
 
 ## Donate to Support this Work
 Make a tax deductible gift -- for as little as $5 -- to Utah State University (USU) to support this work:
