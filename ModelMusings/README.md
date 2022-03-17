@@ -1,4 +1,4 @@
-## Lessons from synchronously modeling a combined Lake Powell-Lake Mead system with 26 Colorado River managers and experts
+## Lessons from synchronously modeling flex accounts in a combined Lake Powell-Lake Mead system with 26 Colorado River managers and experts
 
 ## Quick download links:
 ### [Excel Model File](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/PilotFlexAccounting-CombinedPowellMead.xlsx) (.xlsx)
@@ -84,7 +84,7 @@ The **Master**, **8.1-Trade**, and **MillenniumRecover** worksheets come with co
 Open the "Versions" worksheet to see a list of changes over time. 
  
 ## Publications
-1. Rosenberg, D. E. (2022). "[Lessons from synchronously modeling a combined Lake Powell-Lake Mead system with 26 Colorado River Managers and Experts](https://github.com/dzeke/ColoradoRiverCoding/raw/main/BlogDrafts/3-LessonsFromSynchronouslyModelCombinedLakePowellLakeMeadSystemWith26ColoradoRiverManagersExperts.docx)." (Draft manuscript)
+1. Rosenberg, D. E. (2022). "[Lessons from synchronously modeling flex accounts in a combined Lake Powell-Lake Mead system with 26 Colorado River Managers and Experts](https://github.com/dzeke/ColoradoRiverCoding/raw/main/BlogDrafts/3-LessonsFromSynchronouslyModelCombinedLakePowellLakeMeadSystemWith26ColoradoRiverManagersExperts.docx)." (Draft manuscript)
 1. Rosenberg, D. E. (2021). "[Adapt Lake Mead releases to inflow to give managers more flexibility to slow reservoir draw down](https://digitalcommons.usu.edu/water_pubs/170/)." Utah State University, Logan, Utah.
 1. Rosenberg, D. E. (2021). "[Invest in Farm Water Conservation to Curtail Buy and Dry](https://digitalcommons.usu.edu/water_pubs/169/)." Utah State University, Logan, Utah.
 1. Wang, J., and Rosenberg, D. E. (2021). "[Living within our Means: Adapting Colorado River Basin depletions to available water]( https://digitalcommons.usu.edu/water_pubs/171/)." Submitted to Journal of Water Resources Planning and Management.
@@ -94,7 +94,7 @@ Open the "Versions" worksheet to see a list of changes over time.
 This model is currently used as a demonstration tool. I am currently soliciting feedback on the draft write-up [Lessons from synchronously modeling a combined Lake Powell-Lake Mead system with 26 Colorado River managers and experts](https://github.com/dzeke/ColoradoRiverCoding/raw/main/BlogDrafts/3-LessonsFromSynchronouslyModelCombinedLakePowellLakeMeadSystemWith26ColoradoRiverManagersExperts.docx). 
 
 ## Requested Citation
-David E. Rosenberg (2022). "Lessons from synchronously modeling a combined Lake Powell-Lake Mead system with 26 Colorado River managers and experts." Utah State University, Logan, UT. https://github.com/dzeke/ColoradoRiverCoding/tree/main/ModelMusings.
+David E. Rosenberg (2022). "Lessons from synchronously modeling flex accounts in a combined Lake Powell-Lake Mead system with 26 Colorado River managers and experts." Utah State University, Logan, UT. https://github.com/dzeke/ColoradoRiverCoding/tree/main/ModelMusings.
 
 ## Donate to Support this Work
 Make a tax deductible gift -- for as little as $5 -- to Utah State University (USU) to support this work:
