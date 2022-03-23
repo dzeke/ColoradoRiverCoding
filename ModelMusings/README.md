@@ -99,9 +99,10 @@ David E. Rosenberg (2022). "Lessons from synchronously modeling flex accounts in
 ## Donate to Support this Work
 Make a tax deductible gift -- for as little as $5 -- to Utah State University (USU) to support this work:
 
-1. Goto [USU Gift Webform](https://www.usu.edu/advancement/annualgiving/gift).
-1. In the box **I would like to make a gift to support:** select *Other*. 
-1. In the **Comments** box enter *for David Rosenberg – Colorado River*.
+1. Goto [USU Gift Webform](https://www.usu.edu/advancement/give/index).
+1. Set the box **Designation** to *Other*. 
+1. In the **Gift Instructions** box enter *for David Rosenberg – Colorado River*.
+1. Enter your contact information.
 
 All donors will be added to an email list and receive periodic updates.
 
