@@ -1,10 +1,10 @@
-## Lessons from 26 Colorado River managers and experts experimenting with flex accounts in a combined Lake Powell-Lake Mead 
+## Lessons from 26 Colorado River managers and experts experimenting with flex accounts in a combined Lake Powell-Lake Mead  system
 
 ## Quick download links:
 ### [Excel Model File](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/PilotFlexAccounting-CombinedPowellMead.xlsx) (.xlsx)
 ### [Slides of Key Ideas](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/PilotFlexAccounting-KeyIdeas.pdf) (pdf file)
 ### [Synchronous Model Guide](https://github.com/dzeke/ColoradoRiverCoding/blob/main/ModelMusings/Support/ModelGuide/ModelGuide-CombinedLakePowellLakeMead.md) (Help file)
-### [Draft write up](https://github.com/dzeke/ColoradoRiverCoding/raw/main/BlogDrafts/3-LessonsFromSynchronouslyModelCombinedLakePowellLakeMeadSystemWith26ColoradoRiverManagersExperts.docx) (.docx)
+### [Write up](https://github.com/dzeke/ColoradoRiverCoding/raw/main/BlogDrafts/3-LessonsFromSynchronouslyModelCombinedLakePowellLakeMeadSystemWith26ColoradoRiverManagersExperts.docx) (.docx)
 
 ## Overview														
 This repository gives users the opportunity to experiment with flex accounts in a combined Lake Powell-Lake Mead system. The purpose of the activity to is provoke thought and discussion about new operations for Lake Powell and Lake Mead.
@@ -21,13 +21,14 @@ This repository gives users the opportunity to experiment with flex accounts in 
 1. Move the Excel file to your Google Drive. Open as a Google Sheet.
 1. Open the **Versions** Worksheet to see updates.
 1. Duplicate the **Master** Worksheet to save a blank version for later use. 
-1. Invite 1 or more other people to join the Google Sheet. In the upper right of the Google Sheet, click the **Share** button. Add emails, and set permissions so players can access the Google Sheet. Copy and share the URL to the Sheet. 
-1. Participants enter values on the **Master** Worksheet, Column A, for rows with blue text.
-   1. For example, in Rows 4-10, particants select a *Party* and enter a *Strategy*. If fewer than 6 participants, participants can select multiple parties.
+1. Invite 1 or more other people to join the Google Sheet.
+   1. In the upper right of the Google Sheet, click the **Share** button. Add emails, and set permissions so players can access the Google Sheet. Or copy and share the sheet's URL. 
+1. On the **Master** Worksheet, scroll down Column A to rows with ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) `Blue text`.
+   1. For example, in Rows 4-10, particants select a **Party** and enter a **Strategy**. If fewer than 6 participants, participants select multiple parties.
    1. Enter the Lake Powell natural flow for Year 1 in Cell C28.
-   1. Fill in Year 1 (Column C) down to Row 142. Players enter values in row blocks with ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) `Blue text`
+   1. Fill in Year 1 (Column C) down to Row 142. Players enter values in row blocks with 
    1. Move to Year 2 (Column D). Enter Lake Powell natural flow in Cell D28.
-1. Find linked help for each row in Column N.
+1. Find linked help for each row in ![#FFE5B4](https://via.placeholder.com/15/FFE5B4/000000?text=+) `Column N`.
 1. View the **Master-Plots** worksheet to compare entries to current operations (Law of River).
 1. **ReadMe-Directions** Worksheet also has these directions.
 
