@@ -11,7 +11,9 @@ This repository gives users the opportunity to experiment with flex accounts in 
 
 ## Rquirements
 **Number of People**: 2 or more (facilitator may also play).
+
 **Time**: 1 to 3 hours.
+
 **Software**: Facilitator has a Google Account.
 
 ## Facilitation Directions
