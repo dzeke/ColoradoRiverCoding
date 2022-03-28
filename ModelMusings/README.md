@@ -25,7 +25,7 @@ This repository gives users the opportunity to experiment with flex accounts in 
 1. Participants enter values on the **Master** Worksheet, Column A, for rows with blue text.
    1. For example, in Rows 4-10, particants select a *Party* and enter a *Strategy*. If fewer than 6 participants, participants can select multiple parties.
    1. Enter the Lake Powell natural flow for Year 1 in Cell C28.
-   1. Fill in Year 1 (Column C) down to Row 142. Players enter values in blocks with ![#1589F0](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings) `Blue text`
+   1. Fill in Year 1 (Column C) down to Row 142. Players enter values in row blocks with ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) `Blue text`
    1. Move to Year 2 (Column D) and enter Lake Powell natural flow in Cell D28.
 1. Find linked help for each row in Column N.
 1. View the **Master-Plots** worksheet to compare entries to current operations (Law of River).
