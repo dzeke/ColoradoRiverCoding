@@ -1,4 +1,4 @@
-## Lessons from 26 Colorado River managers and experts experimenting with flex accounts in a combined Lake Powell-Lake Mead. 
+## Lessons from 26 Colorado River managers and experts experimenting with flex accounts in a combined Lake Powell-Lake Mead 
 
 ## Quick download links:
 ### [Excel Model File](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/PilotFlexAccounting-CombinedPowellMead.xlsx) (.xlsx)
@@ -26,7 +26,7 @@ This repository gives users the opportunity to experiment with flex accounts in 
    1. For example, in Rows 4-10, particants select a *Party* and enter a *Strategy*. If fewer than 6 participants, participants can select multiple parties.
    1. Enter the Lake Powell natural flow for Year 1 in Cell C28.
    1. Fill in Year 1 (Column C) down to Row 142. Players enter values in row blocks with ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) `Blue text`
-   1. Move to Year 2 (Column D) and enter Lake Powell natural flow in Cell D28.
+   1. Move to Year 2 (Column D). Enter Lake Powell natural flow in Cell D28.
 1. Find linked help for each row in Column N.
 1. View the **Master-Plots** worksheet to compare entries to current operations (Law of River).
 1. **ReadMe-Directions** Worksheet also has these directions.
@@ -34,27 +34,26 @@ This repository gives users the opportunity to experiment with flex accounts in 
 ## Additional Information
  
  * **Visuals of Flex accounts and Combined Management**: [PilotFlexAccounting-KeyIdeas.pdf](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/PilotFlexAccounting-KeyIdeas.pdf).
- * ** Spreadsheet structure**
+ * **Spreadsheet structure**
    * **Rows** represent the components of the water budget for a combined Lake Powell-Lake Mead system.
    * **Colummns** represent years. 
  * **Players decide**:
-      * Desecribe party strategy for next few years (individual).
+      * Party strategy for next few years (individual).
 	  * Water consumption and conservation (individual).
 	  * Water purchases or sales: volumes and payments (joint). 
-      * Add parties or stakeholders (joint).
 	  * Split existing reservoir storage among parties (joint).
 	  * Split future inflows among parties (joint). 
 	  * Raise or lower the level of the shared water reserve account (joint)
-      * Physically split combined storage between Lake Powell and Lake Mead (joint). 
+      * Split combined storage between Lake Powell and Lake Mead (joint). 
  * **Existing operations**:
 	  * [2007 Interim Guidelines](https://www.usbr.gov/lc/region/programs/strategies/RecordofDecision.pdf).
 	  * [2019 Drought Contingency Plans](https://www.usbr.gov/dcp/finaldocs.html). **Both operations expire in 2026**.
   
 ## Compare to Current Operations
-The **Master**, **8.1-Trade**, and **MillenniumRecover** worksheets come with companion **-LawOfRiver** and **-Plots** worksheets. Select the **-Plots** worksheets to compare flex accounting entries to current operations (Law of the River). Use the **Master** worksheet to compare your entries to current operations.  
+The **Master-Plots** worksheet compares flex accounting entries to estimated Law of River Operations. Estimated Law of River operations are calculated on the **Master-LawOfRiver** worksheet.
 
 ## Versions
-Open the "Versions" worksheet to see a list of changes over time. 
+Open the **Versions** Worksheet to see a list of changes over time. 
  
 ## Publications
 1. Rosenberg, D. E. (2022). "[Lessons from 26 Colorado River managers and experts experimenting with flex accounts in a combined Lake Powell-Lake Mead system](https://github.com/dzeke/ColoradoRiverCoding/raw/main/BlogDrafts/3-LessonsFromSynchronouslyModelCombinedLakePowellLakeMeadSystemWith26ColoradoRiverManagersExperts.docx)." (Draft manuscript)
@@ -64,7 +63,7 @@ Open the "Versions" worksheet to see a list of changes over time.
 1. Wang, J., Rosenberg, D. E., Schmidt, J. C., and Wheeler, K. G. (2020). "[Managing the Colorado River for an Uncertain Future](http://qcnr.usu.edu/coloradoriver/files/CCRS_White_Paper_3.pdf)." Center for Colorado River Studies, Utah State University, Logan, Utah.
 
 ## Requested Citation
-David E. Rosenberg (2022). "Lessons from synchronously modeling flex accounts in a combined Lake Powell-Lake Mead system with 26 Colorado River managers and experts." Utah State University, Logan, UT. https://github.com/dzeke/ColoradoRiverCoding/tree/main/ModelMusings.
+David E. Rosenberg (2022). "Lessons from 26 Colorado River managers and experts experimenting with flex accounts in a combined Lake Powell-Lake Mead." Utah State University, Logan, UT. https://github.com/dzeke/ColoradoRiverCoding/tree/main/ModelMusings.
 
 ## Donate to Support this Work
 Make a tax deductible gift -- for as little as $5 -- to Utah State University (USU) to support new Colorado River work:
