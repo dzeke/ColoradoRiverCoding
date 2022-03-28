@@ -46,12 +46,13 @@ This repository gives users the opportunity to experiment with flex accounts in 
 	  * Split future inflows among parties (joint). 
 	  * Raise or lower the level of the shared water reserve account (joint)
       * Split combined storage between Lake Powell and Lake Mead (joint). 
- * **Existing operations**:
-	  * [2007 Interim Guidelines](https://www.usbr.gov/lc/region/programs/strategies/RecordofDecision.pdf).
-	  * [2019 Drought Contingency Plans](https://www.usbr.gov/dcp/finaldocs.html). **Both operations expire in 2026**.
   
 ## Compare to Current Operations
 The **Master-Plots** worksheet compares flex accounting entries to estimated Law of River Operations. Estimated Law of River operations are calculated on the **Master-LawOfRiver** worksheet.
+
+**Existing operations**:
+* [2007 Interim Guidelines](https://www.usbr.gov/lc/region/programs/strategies/RecordofDecision.pdf).
+* [2019 Drought Contingency Plans](https://www.usbr.gov/dcp/finaldocs.html). **Both operations expire in 2026**.
 
 ## Versions
 Open the **Versions** Worksheet to see a list of changes over time. 
