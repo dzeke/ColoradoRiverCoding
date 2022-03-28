@@ -22,10 +22,11 @@ This repository gives users the opportunity to experiment with flex accounts in 
 1. Open the **Versions** Worksheet to see updates.
 1. Duplicate the **Master** Worksheet to save a blank version for later use. 
 1. Invite 1 or more other people to join the Google Sheet. In the upper right of the Google Sheet, click the **Share** button. Add emails, and set permissions so players can access the Google Sheet. Copy and share the URL to the Sheet. 
-1. Follow directions on the **Master** Worksheet, Column A.
+1. Participants enter values on the **Master** Worksheet, Column A, for rows with blue text.
    1. For example, in Rows 4-10, particants select a *Party* and enter a *Strategy*. If fewer than 6 participants, participants can select multiple parties.
    1. Enter the Lake Powell natural flow for Year 1 in Cell C28.
-   1. Fill in Year 1 (Column C) down to Row 142. Then enter the Year 2 Lake Powell natural flow in Cell D28.
+   1. Fill in Year 1 (Column C) down to Row 142. Players enter values in blocks with ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) `Blue text`
+   1. Move to Year 2 (Column D) and enter Lake Powell natural flow in Cell D28.
 1. Find linked help for each row in Column N.
 1. View the **Master-Plots** worksheet to compare entries to current operations (Law of River).
 1. **ReadMe-Directions** Worksheet also has these directions.
