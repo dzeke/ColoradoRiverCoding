@@ -22,7 +22,8 @@ This repository gives users the opportunity to experiment with flex accounts in 
 1. Open the **Versions** Worksheet to see updates.
 1. Duplicate the **Master** Worksheet to save a blank version for later use. 
 1. Invite 1 or more other people to join the Google Sheet.
-   1. In the upper right of the Google Sheet, click the **Share** button. Add emails, and set permissions so players can access the Google Sheet. Or copy and share the sheet's URL. 
+   1. In the upper right of the Google Sheet, click the **Share** button.
+   1. Add emails, and set permissions so players can access the Google Sheet. Or copy and share the sheet's URL. 
 1. On the **Master** Worksheet, scroll down Column A to rows with ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) `Blue text`.
    1. For example, in Rows 4-10, particants select a **Party** and enter a **Strategy**. If fewer than 6 participants, participants select multiple parties.
    1. Enter the Lake Powell natural flow for Year 1 in ![#ace1af](https://via.placeholder.com/15/ace1af/000000?text=+) `Cell C28`.
