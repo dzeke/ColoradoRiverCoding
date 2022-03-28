@@ -1,4 +1,4 @@
-## Lessons from synchronously modeling flex accounts in a combined Lake Powell-Lake Mead system with 26 Colorado River managers and experts
+## Lessons from 26 Colorado River managers and experts experimenting with flex accounts in a combined Lake Powell-Lake Mead. 
 
 ## Quick download links:
 ### [Excel Model File](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/PilotFlexAccounting-CombinedPowellMead.xlsx) (.xlsx)
@@ -7,76 +7,46 @@
 ### [Draft write up](https://github.com/dzeke/ColoradoRiverCoding/raw/main/BlogDrafts/3-LessonsFromSynchronouslyModelCombinedLakePowellLakeMeadSystemWith26ColoradoRiverManagersExperts.docx) (.docx)
 
 ## Overview														
-**The purpose of the synchronous model in this Github repository is to provoke thought and discussion** about new operations for Lake Powell and Lake Mead. More specifically: how to convert a shrinking pie (lose-lose) water conflict -- our Colorado River basin becoming more arid -- into more positive processes for people and endangered fish? Links to existing Lake Powell and Lake Mead operations:
+This repository gives users the opportunity to experiment with flex accounts in a combined Lake Powell-Lake Mead system. The purpose of the activity to is provoke thought and discussion about new operations for Lake Powell and Lake Mead.
 
- * [2007 Interim Guidelines](https://www.usbr.gov/lc/region/programs/strategies/RecordofDecision.pdf).
- * [2019 Drought Contingency Plans](https://www.usbr.gov/dcp/finaldocs.html). **Both operations expire in 2026**.
+## Rquirements
+**Number of People**: 2 or more (facilitator may also play).
+**Time**: 1 to 3 hours.
+**Software**: Facilitator has a Google Account.
 
-**Synchronous Model**: Participants synchronously connect to a Google Sheet model for the Colorado River basin. Participants role play Upper Basin, Lower Basin, Mexico, First Nations, and Colorado River Delta parties. Participants make 
- year-to-year water conservation, consumption, purchase, and sale decisions for their party while they track other players' choices, account balances, and combined reservoir storage. Participants jointly decide to split the combined storage between Lake Powell and Lake Mead. Participants track impacts of water storage on Grand Canyon fish and continue to the next year.
-
- * **To make synchronous**: download the [Excel model file](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/PilotFlexAccounting-CombinedPowellMead.xlsx) and move into a Google Sheet. Invite the other participants.
-
-The current version is the result of demo-ing, role playing, and discussing the model with 26 Colorado River managers and experts from June to November, 2021.
-
-**Visuals of key benefits and features: [PilotFlexAccounting-KeyIdeas.pdf](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/PilotFlexAccounting-KeyIdeas.pdf)**.
-
-## Individual and Collective Benefits
-
-1. Give each party more flexibility to make their individual water consumption, conservation, and reservoir storage decisions independent of other parties.
-1. Parties manage all available water not just prior conserved water (Intentionally Created Surplus balances).
-1. Adapt parties consumption and conservation decisions to basin inflows to give more flexibility to slow reservoir draw down ([Rosenberg, 2021a](https://github.com/dzeke/ColoradoRiverCoding/raw/main/BlogDrafts/2-AdaptLakeMeadReleasesToInflowsToGiveManagersMoreFlexibilityToSlowReservoirDrawDown.docx)).
-1. Include more parties such as Colorado River Delta managers, First Nations, and managers for Grand Canyon ecosystems.
-1. More flexibility to store water in Lake Powell and release cooler water that maintains the status quo for native, endangered fish of the Grand Canyon ([Wheeler et al, 2021, Sidebar 1, p. 47](https://qcnr.usu.edu/coloradoriver/files/WhitePaper6.pdf)).
-1. Carry over Lower Basin and Mexico conservation account balances into flex accounts.
-1. Nudge "my basin", "my reservoir", and "my contingency plan" mentality towards "our" reservoirs.
-
-**How the synchronous model works**
-
-1. Define a region of combined management that starts with Lake Powell inflows and ends with Lake Mead releases (see [Slide #3](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/PilotFlexAccounting-KeyIdeas.pdf))
-1. Assign parties a flex account in the combined Lake Powell-Lake Mead system.
-1. Assign existing reservoir storage to accounts.
-1. Parties split each year's natural flow.
-1. Each party's available water is their flex account balance, plus share of natural flow, minus share of reservoir evaporation, plus water purchases, minus sales (see [Slide #4](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/PilotFlexAccounting-KeyIdeas.pdf))
-1. Parties may buy or sell water from other parties. These are transactions among flex accounts in the combined system. Avoids wheeling.
-1. Each party conserves or consumes within their available water independent of other parties.
-1. Parties jointly decide how physically store water in Lake Powell and Lake Mead (e.g., consider fish and hydropower). Parties retain access to storage whether water is in Lake Powell or Lake Mead.
-
-## Directions to Use
+## Facilitation Directions
 1. Download the file **[PilotFlexAccounting-CombinedPowellMead.xlsx](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/PilotFlexAccounting-CombinedPowellMead.xlsx)** to your computer.
 1. Move the Excel file to your Google Drive.
-1. Invite the other players to join the Google Sheet. Copy + share the URL to the Sheet. Or in the upper right of the Google Sheet, click the **Share** button. Add emails, and set permissions so players can access the Google Sheet.
-1. All participants open the **Master** worksheet.
-1. Duplicate the **Master** worksheet to save a blank version for later use.
-1. Follow directions in Column A.
+1. Open the **Versions** Worksheet to see updates.
+1. Duplicate the **Master** Worksheet to save a blank version for later use. 
+1. Invite 1 or more other people to join the Google Sheet. In the upper right of the Google Sheet, click the **Share** button. Add emails, and set permissions so players can access the Google Sheet. Copy and share the URL to the Sheet. 
+1. Follow directions on the **Master** Worksheet, Column A.
+   1.1. For example, in Rows 4-10, particants select a *Party* and enter a *Strategy*. If fewer than 6 participants, participants can select multiple parties.
+   1.1. Enter the Lake Powell natural flow for Year 1 in Cell C28.
+   1.1. Fill in Year 1 (Column C) down to Row 142. Then enter the Year 2 Lake Powell natural flow in Cell D28.
 1. Find linked help for each row in Column N.
 1. View the **Master-Plots** worksheet to compare entries to current operations (Law of River).
+1. Find more detailed directions on the **ReadMe-Directions** Worksheet.
 
-## Model Structure
-
-This synchronous model is a **spreadsheet** (Google Sheet). 
- * **Rows** represent the components of an synchronous water budget for a combined Lake Powell-Lake Mead system.
- * **Colummns** represent years. 
- * **Synchronous** means the players enter some components of the water budget year by year. Synchronous components include 
- political/management decisions such as:
-      * Desecribe party strategy for next few years (individual)
+## Additional Information
+ 
+ * **Visuals of Flex accounts and Combined Management**: [PilotFlexAccounting-KeyIdeas.pdf](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/PilotFlexAccounting-KeyIdeas.pdf).
+ * ** Spreadsheet structure**
+   * **Rows** represent the components of the water budget for a combined Lake Powell-Lake Mead system.
+   * **Colummns** represent years. 
+ * **Players decide**:
+      * Desecribe party strategy for next few years (individual).
 	  * Water consumption and conservation (individual).
 	  * Water purchases or sales: volumes and payments (joint). 
       * Add parties or stakeholders (joint).
 	  * Split existing reservoir storage among parties (joint).
 	  * Split future inflows among parties (joint). 
 	  * Raise or lower the level of the shared water reserve account (joint)
-      * Physically split combined storage between Lake Powell and Lake Mead (joint). 	  
+      * Physically split combined storage between Lake Powell and Lake Mead (joint). 
+ * **Existing operations**:
+	  * [2007 Interim Guidelines](https://www.usbr.gov/lc/region/programs/strategies/RecordofDecision.pdf).
+	  * [2019 Drought Contingency Plans](https://www.usbr.gov/dcp/finaldocs.html). **Both operations expire in 2026**.
   
-**Treatment of Uncertainties**:
- * Hydrologic: Players or a facilitator choose each year's basin natural flows.
- * Water demands: Players enter their water conservation and consumption choices year by year within their available water independent of other parties.
- 
-## Requirements to Use
-1. A Google account. [Create a Google account](https://accounts.google.com/signup/v2/webcreateaccount?hl=en&flowName=GlifWebSignIn&flowEntry=SignUp)
-1. Another participant (for synchronous, synchronous modeling). A participant may role play one or more parties (e.g., Upper Basin and Mexico).
-1. ~ 1 to 2 hours. Go slow. If you run out of time, schedule another session.
-
 ## Compare to Current Operations
 The **Master**, **8.1-Trade**, and **MillenniumRecover** worksheets come with companion **-LawOfRiver** and **-Plots** worksheets. Select the **-Plots** worksheets to compare flex accounting entries to current operations (Law of the River). Use the **Master** worksheet to compare your entries to current operations.  
 
@@ -84,20 +54,17 @@ The **Master**, **8.1-Trade**, and **MillenniumRecover** worksheets come with co
 Open the "Versions" worksheet to see a list of changes over time. 
  
 ## Publications
-1. Rosenberg, D. E. (2022). "[Lessons from synchronously modeling flex accounts in a combined Lake Powell-Lake Mead system with 26 Colorado River Managers and Experts](https://github.com/dzeke/ColoradoRiverCoding/raw/main/BlogDrafts/3-LessonsFromSynchronouslyModelCombinedLakePowellLakeMeadSystemWith26ColoradoRiverManagersExperts.docx)." (Draft manuscript)
+1. Rosenberg, D. E. (2022). "[Lessons from 26 Colorado River managers and experts experimenting with flex accounts in a combined Lake Powell-Lake Mead system](https://github.com/dzeke/ColoradoRiverCoding/raw/main/BlogDrafts/3-LessonsFromSynchronouslyModelCombinedLakePowellLakeMeadSystemWith26ColoradoRiverManagersExperts.docx)." (Draft manuscript)
 1. Rosenberg, D. E. (2021). "[Adapt Lake Mead releases to inflow to give managers more flexibility to slow reservoir draw down](https://digitalcommons.usu.edu/water_pubs/170/)." Utah State University, Logan, Utah.
 1. Rosenberg, D. E. (2021). "[Invest in Farm Water Conservation to Curtail Buy and Dry](https://digitalcommons.usu.edu/water_pubs/169/)." Utah State University, Logan, Utah.
 1. Wang, J., and Rosenberg, D. E. (2021). "[Living within our Means: Adapting Colorado River Basin depletions to available water]( https://digitalcommons.usu.edu/water_pubs/171/)." Submitted to Journal of Water Resources Planning and Management.
 1. Wang, J., Rosenberg, D. E., Schmidt, J. C., and Wheeler, K. G. (2020). "[Managing the Colorado River for an Uncertain Future](http://qcnr.usu.edu/coloradoriver/files/CCRS_White_Paper_3.pdf)." Center for Colorado River Studies, Utah State University, Logan, Utah.
 
-## Status
-This model is currently used as a demonstration tool. I am currently soliciting feedback on the draft write-up [Lessons from synchronously modeling a combined Lake Powell-Lake Mead system with 26 Colorado River managers and experts](https://github.com/dzeke/ColoradoRiverCoding/raw/main/BlogDrafts/3-LessonsFromSynchronouslyModelCombinedLakePowellLakeMeadSystemWith26ColoradoRiverManagersExperts.docx). 
-
 ## Requested Citation
 David E. Rosenberg (2022). "Lessons from synchronously modeling flex accounts in a combined Lake Powell-Lake Mead system with 26 Colorado River managers and experts." Utah State University, Logan, UT. https://github.com/dzeke/ColoradoRiverCoding/tree/main/ModelMusings.
 
 ## Donate to Support this Work
-Make a tax deductible gift -- for as little as $5 -- to Utah State University (USU) to support this work:
+Make a tax deductible gift -- for as little as $5 -- to Utah State University (USU) to support new Colorado River work:
 
 1. Goto [USU Gift Webform](https://www.usu.edu/advancement/give/index).
 1. Set the box **Designation** to *Other*. 
