@@ -1,6 +1,5 @@
 ## Lessons from 26 Colorado River managers and experts experimenting with flex accounts in a combined Lake Powell-Lake Mead  system
 
-## Quick download links:
 ### [Excel Model File](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/PilotFlexAccounting-CombinedPowellMead.xlsx) (.xlsx)
 ### [Slides of Key Ideas](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/PilotFlexAccounting-KeyIdeas.pdf) (pdf file)
 ### [Synchronous Model Guide](https://github.com/dzeke/ColoradoRiverCoding/blob/main/ModelMusings/Support/ModelGuide/ModelGuide-CombinedLakePowellLakeMead.md) (Help file)
@@ -24,42 +23,19 @@ This repository gives users the opportunity to experiment with flex accounts in 
 1. Invite 1 or more other people to join the Google Sheet.
    1. In the upper right of the Google Sheet, click the **Share** button.
    1. Add emails, and set permissions so players can access the Google Sheet. Or copy and share the sheet's URL. 
-1. On the **Master** Worksheet, scroll down Column A to rows with ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) `Blue text`.
+1. On the **Master** Worksheet, scroll down Column A. Participants enter values in rows with ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) `Blue text`.
    1. For example, in Rows 4-10, particants select a **Party** and enter a **Strategy**. If fewer than 6 participants, participants select multiple parties.
-   1. Enter the Lake Powell natural flow for Year 1 in ![#ace1af](https://via.placeholder.com/15/ace1af/000000?text=+) `Cell C28`.
+   1. Enter the Lake Powell natural flow for Year 1 in ![#ace1af](https://via.placeholder.com/15/ace1af/000000?text=+) `Cell C28`. Cells below will populate.
    1. Participants continue to enter values in Year 1 (Column C) down to Row 142 in row blocks with ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) `Blue text`.
    1. Move to Year 2 (Column D). Enter Lake Powell natural flow in ![#ace1af](https://via.placeholder.com/15/ace1af/000000?text=+) `Cell D28`.
 1. Find linked help for each row in ![#FFE5B4](https://via.placeholder.com/15/FFE5B4/000000?text=+) `Column N`.
 1. View the **Master-Plots** worksheet to compare entries to current operations (Law of River).
 1. **ReadMe-Directions** Worksheet also has these directions.
 
-## Additional Information
- 
- * **Visuals of Flex accounts and Combined Management**: [PilotFlexAccounting-KeyIdeas.pdf](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/PilotFlexAccounting-KeyIdeas.pdf).
- * **Spreadsheet structure**
-   * **Rows** represent the components of the water budget for a combined Lake Powell-Lake Mead system.
-   * **Colummns** represent years. 
- * **Players decide**:
-      * Party strategy for next few years (individual).
-	  * Water consumption and conservation (individual).
-	  * Water purchases or sales: volumes and payments (joint). 
-	  * Split existing reservoir storage among parties (joint).
-	  * Split future inflows among parties (joint). 
-	  * Raise or lower the level of the shared water reserve account (joint)
-      * Split combined storage between Lake Powell and Lake Mead (joint). 
-  
-## Compare to Current Operations
-The **Master-Plots** worksheet compares flex accounting entries to estimated Law of River Operations. Estimated Law of River operations are calculated on the **Master-LawOfRiver** worksheet.
-
-**Existing operations**:
-* [2007 Interim Guidelines](https://www.usbr.gov/lc/region/programs/strategies/RecordofDecision.pdf).
-* [2019 Drought Contingency Plans](https://www.usbr.gov/dcp/finaldocs.html). **Both operations expire in 2026**.
-
-## Versions
-Open the **Versions** Worksheet to see a list of changes over time. 
- 
+**Visuals of Flex accounts and Combined Management**: [PilotFlexAccounting-KeyIdeas.pdf](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/PilotFlexAccounting-KeyIdeas.pdf).
+    
 ## Publications
-1. Rosenberg, D. E. (2022). "[Lessons from 26 Colorado River managers and experts experimenting with flex accounts in a combined Lake Powell-Lake Mead system](https://github.com/dzeke/ColoradoRiverCoding/raw/main/BlogDrafts/3-LessonsFromSynchronouslyModelCombinedLakePowellLakeMeadSystemWith26ColoradoRiverManagersExperts.docx)." (Draft manuscript)
+1. Rosenberg, D. E. (2022). "[Lessons from 26 Colorado River managers and experts experimenting with flex accounts in a combined Lake Powell-Lake Mead system](https://github.com/dzeke/ColoradoRiverCoding/raw/main/BlogDrafts/3-LessonsFromSynchronouslyModelCombinedLakePowellLakeMeadSystemWith26ColoradoRiverManagersExperts.docx)." (Manuscript)
 1. Rosenberg, D. E. (2021). "[Adapt Lake Mead releases to inflow to give managers more flexibility to slow reservoir draw down](https://digitalcommons.usu.edu/water_pubs/170/)." Utah State University, Logan, Utah.
 1. Rosenberg, D. E. (2021). "[Invest in Farm Water Conservation to Curtail Buy and Dry](https://digitalcommons.usu.edu/water_pubs/169/)." Utah State University, Logan, Utah.
 1. Wang, J., and Rosenberg, D. E. (2021). "[Living within our Means: Adapting Colorado River Basin depletions to available water]( https://digitalcommons.usu.edu/water_pubs/171/)." Submitted to Journal of Water Resources Planning and Management.
@@ -79,8 +55,8 @@ Make a tax deductible gift -- for as little as $5 -- to Utah State University (U
 All donors will be added to an email list and receive periodic updates.
 
 ## File Descriptions
-1. **[PilotFlexAccounting-CombinedPowellMead.xlsx](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/PilotFlexAccounting-CombinedPowellMead.xlsx)** - An Excel file with the pilot flex accounting tool. Follow **Facillation Directions** (above) or open **ReadMe-Directions** Worksheet.
-1. **[PilotFlexAccounting-KeyIdeas.pdf](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/PilotFlexAccounting-KeyIdeas.pdf)** - A PDF file that illustrates key ideas for this model musing.
+1. **[PilotFlexAccounting-CombinedPowellMead.xlsx](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/PilotFlexAccounting-CombinedPowellMead.xlsx)** - An Excel file with the flex accounting tool. Follow **Facillation Directions** (above) or open **ReadMe-Directions** Worksheet.
+1. **[PilotFlexAccounting-KeyIdeas.pdf](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/PilotFlexAccounting-KeyIdeas.pdf)** - A PDF file that illustrates key management ideas for flex accounts in a combined Lake Powell-Lake Mead system.
 1. **[Synchronous Model Guide](https://github.com/dzeke/ColoradoRiverCoding/blob/main/ModelMusings/Support/ModelGuide/ModelGuide-CombinedLakePowellLakeMead.md)** - Online help file that provides context and explanations for each spreadsheet row. In **Master** Worksheet, link to help in ![#FFE5B4](https://via.placeholder.com/15/FFE5B4/000000?text=+) `Column N`.
 1. **Support folders**:
    1. **Hydrology** - Excel files used to generate scenarios on **HydrologicScenarios** Worksheet. **CRB_29gages.xlsx**: Gages in the Colorado River basin used to estimate natural flow. **NaturalFlows1906-2018_20200110.xlsx**: Natural flow hydrology downloaded from the USBR website and modified to pick out particular 10- and 20- year sequences of flows from the observed and paleo reconstructed records.
