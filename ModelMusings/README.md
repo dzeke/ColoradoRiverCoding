@@ -30,7 +30,7 @@ This repository gives users the opportunity to experiment with flex accounts in 
    1. Move to Year 2 (Column D). Enter Lake Powell natural flow in ![#ace1af](https://via.placeholder.com/15/ace1af/000000?text=+) `Cell D28`.
 1. Find linked help for each row in ![#FFE5B4](https://via.placeholder.com/15/FFE5B4/000000?text=+) `Column N`.
 1. View the **Master-Plots** worksheet to compare entries to current operations (Law of River).
-1. **ReadMe-Directions** Worksheet also has these directions.
+1. **ReadMe-Directions** Worksheet also has these directions and describes all worksheets in the Workbook.
 
 **Visuals of Flex accounts and Combined Management**: [PilotFlexAccounting-KeyIdeas.pdf](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/PilotFlexAccounting-KeyIdeas.pdf).
     
