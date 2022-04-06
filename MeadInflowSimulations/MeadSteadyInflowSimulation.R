@@ -292,7 +292,7 @@ vMedGCFlow <- median(dfGCFlowsByYear$GCFlow)
 
 # Read in the ISG and DCP cutbacks from Excel
 dfCutbacksElev <- read_excel(sExcelFile, sheet = "Data",  range = "H21:H41") #Elevations
-dfCutbacksVols <- read_excel(sExcelFile, sheet = "Data",  range = "O21:U41") #ISG and DCP for states + MX
+dfCutbacksVols <- read_excel(sExcelFile, sheet = "Data",  range = "N21:U41") #ISG and DCP for states + MX
 dfCutbacksVolsFed <- read_excel(sExcelFile, sheet = "Data",  range = "Y21:Y41") # Federal cutback
 #Merge into one data frame
 dfCutbacks <- dfCutbacksElev
@@ -315,14 +315,14 @@ dfCutbacks <- replace(dfCutbacks,is.na(dfCutbacks),0)
 dfCutbacks$MeadActiveVolume <- interp1(xi = dfCutbacks$`Mead Elevation (ft)`,x=dfMeadElevStor$`Elevation (ft)` , y=dfMeadElevStor$`Live Storage (ac-ft)`, method="linear")
 
 #Calculate Total Reductions for ISG (use Federal and Mexico dating to 2012 )
-dfCutbacks <- dfCutbacks %>% mutate(Total2007ISG = `Mexico Reduction (Minute 323) [2017]`+ 
+dfCutbacks <- dfCutbacks %>% mutate(Total2007ISG = `Mexico Reduction (Minute 319) [2012]`+ 
                                       `2007-AZ Reduction (ac-ft)` + `2007-NV Reduction (ac-ft)` + `2007-CA Reduction (ac-ft)` +
                                      `DCP Federal Government (ac-ft)`)
 #Remove federal amount at 1090 ft since IGS only starts at 1075 ft
 dfCutbacks$Total2007ISG[dfCutbacks$`Mead Elevation (ft)` == 1090] <- 0
 
 #Calculate Total Reudctions for DCP
-dfCutbacks <- dfCutbacks %>% mutate(TotalDCP = `Mexico Reduction (Minute 323) [2017]`+ 
+dfCutbacks <- dfCutbacks %>% mutate(TotalDCP = `Mexico Reduction (Minute 319) [2012]`+  `Mexico Reduction (Minute 323) [2017]`+
                                       `DCP-AZ Reduction (ac-ft)` + `DCP-NV Reduction (ac-ft)` + `DCP-CA Reduction (ac-ft)` +
                                       `DCP Federal Government (ac-ft)`)
 
