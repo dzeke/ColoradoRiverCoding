@@ -110,6 +110,7 @@ dfReservedFlood$month_num <- month(as.POSIXlt(dfReservedFlood$Month, format="%Y-
 sPowellHistoricalFile <- 'PowellDataUSBRJan2019.csv'
 sPowellHistoricalFile <- 'PowellDataUSBRMay2021.csv'
 sPowellHistoricalFile <- 'PowellDataUSBROct2021.csv'
+sPowellHistoricalFile <- 'PowellDataUSBRMar2022-Try2.csv'
 
 # File name to read in Mead end of month reservoir level in feet - cross tabulated by year (1st column) and month (subsequent columns)
 #    LAKE MEAD AT HOOVER DAM, END OF MONTH ELEVATION (FEET), Lower COlorado River Operations, U.S. Buruea of Reclamation
@@ -117,6 +118,7 @@ sPowellHistoricalFile <- 'PowellDataUSBROct2021.csv'
 
 sMeadHistoricalFile <- 'MeadLevel.xlsx'
 sMeadHistoricalFile <- 'MeadLevelOct2021.xlsx'
+sMeadHistoricalFile <- 'MeadLevelMar2022.xlsx'
 
 # Read in the historical Powell data
 dfPowellHistorical <- read.csv(file=sPowellHistoricalFile, 
@@ -125,6 +127,7 @@ dfPowellHistorical <- read.csv(file=sPowellHistoricalFile,
                                stringsAsFactors=FALSE,
                                sep=",")
 
+#dfPowellHistorical <- read_excel('PowellDataUSBRMar2022-Test.xlsx')
 # Read in the historical Mead data
 dfMeadHistorical <- read_excel(sMeadHistoricalFile)
 
@@ -135,13 +138,15 @@ dfMeadHist$BeginOfMon <- as.Date(dfMeadHist$BeginOfMonStr, "%Y-%b-%d")
 dfMeadHist$BeginNextMon <- dfMeadHist$BeginOfMon %m+% months(1)
 #Filter out NAs
 dfMeadHist <- dfMeadHist %>% filter(!is.na(dfMeadHist$value))
+#Convert the text values to numerics
+dfMeadHist$value <- as.numeric(dfMeadHist$value)
 #Filter out low storages below min
 dfMeadHist <- dfMeadHist %>% filter(dfMeadHist$value > min(dfMeadElevStor$`Elevation (ft)`))
 dfMeadHist$Stor <- interp1(xi = dfMeadHist$value,y=dfMeadElevStor$`Live Storage (ac-ft)`,x=dfMeadElevStor$`Elevation (ft)`, method="linear")
 
 #Interpolate Powell storage from level to check
 dtStart <- as.Date("1963-12-22")
-dfPowellHist <- dfPowellHistorical[15:708,] #%>% filter(dfPowellHistorical$Date >= dtStart) # I don't like this hard coding but don't know a way around
+dfPowellHist <- dfPowellHistorical[15:714,] #%>% filter(dfPowellHistorical$Date >= dtStart) # I don't like this hard coding but don't know a way around
 #Convert date text to date value
 dfPowellHist$DateAsValueError <- as.Date(dfPowellHist$Date,"%d-%b-%y")
 #Apparently R breaks the century at an odd place
@@ -164,6 +169,25 @@ dfJointStorage <- dfJointStorage[, !names(dfJointStorage) %in% c("Storage..af.",
 #Add a column for decade
 dfJointStorage$decade <- round_any(as.numeric(format(dfJointStorage$DateAsValue,"%Y")),10,f=floor)
 #dfJointStorage$DecadeAsClass <- dfJointStorage %>% mutate(category=cut(decade, breaks=seq(1960,2020,by=10), labels=seq(1960,2020,by=10)))
+
+#Calculate the annual volume drop from each October 1
+#Calculate month
+dfJointStorage$month <- month(dfJointStorage$DateAsValue)
+
+#Filter Octobers to calculate annual lake drop
+dfJointStorageAnnual <- dfJointStorage %>% filter(month == 10)
+
+#Calculate the difference for Lake Powell
+Temp <- data.table(dfJointStorageAnnual %>% select(Year, PowellStorage))
+Temp <- Temp[, list(Year, PowellStorage,PowellDiff=diff(PowellStorage))]
+#Merge back into the data frame
+dfJointStorageAnnual <- merge(dfJointStorageAnnual,Temp %>% select(Year,PowellDiff), by = c("Year" = "Year"))
+
+#Calculate the difference for Lake Mead
+Temp <- data.table(dfJointStorageAnnual %>% select(Year, MeadStorage))
+Temp <- Temp[, list(Year, MeadStorage,MeadDiff=diff(MeadStorage))]
+#Merge back into the data frame
+dfJointStorageAnnual <- merge(dfJointStorageAnnual,Temp %>% select(Year,MeadDiff), by = c("Year" = "Year"))
 
 
 # Define maximum storages
