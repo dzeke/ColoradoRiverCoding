@@ -1,0 +1,502 @@
+---
+title: "Lake Powell Inflows and Releases"
+author: "David E. Rosenberg"
+date: "August 24, 2021"
+output: pdf_document
+---
+
+```{r setup, include=FALSE, echo=FALSE, warning=FALSE, message=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Overview
+
+This is an R Markdown document. This document reads daily USBR data on Lake Powell Inflows and Releases (https://www.usbr.gov/rsvrWater/HistoricalApp.htm). The code aggregates data to yearly (water year starting Oct 1), 9-year, and decadal values and then compares Lake Powell releases to The 1922 Compact Article 3(d) requirement. The document alsow shows histograms of Powell inflows and realeases.
+
+* 10-year 75 maf requirement: Upper Basin delivers to Lower Basin by Article 3(d) of 1922 Compact
+* 10-year 82.3 maf requirement: Upper Basin delivers to Lower Basin by 1922 Compact Article 3(d) and half of 1.5 maf per year United States obligation to Mexico by 1944 Treaty.
+* Presently, the Upper Basin's 0.75 maf per year obligation to Mexico may be revised down by contigency plans in Minutes 319 and 323 to US-Mexico Treaty.
+* 9-Year target is used to show Upper Basin flexibility to allow inflow to pass to Lower Basin in current 10th year.
+
+## Requested Citation
+David E. Rosenberg (2021), "Lake Powell Inflows and Releases." Utah State University. Logan, Utah. https://github.com/dzeke/ColoradoRiverFutures/tree/master/Powell10year.
+
+```{r PowellAnnualDecade, include=FALSE, echo=FALSE, warning=FALSE, message=FALSE}
+
+# Powell10Year.r
+#
+# Plot 10-year running total release from Lake Powell
+#
+# This is a beginning R-programming effort! There could be lurking bugs or basic coding errors that I am not even aware of.
+# Please report bugs/feedback to me (contact info below)
+#
+# Data from USBR (2020) - https://www.usbr.gov/rsvrWater/HistoricalApp.html
+#
+# David E. Rosenberg
+# June 1, 2020
+# Utah State University
+# david.rosenberg@usu.edu
+
+rm(list = ls())  #Clear history
+
+# Load required libraies
+
+if (!require(plyr)) {
+  install.packages("plyr", repo="http://cran.r-project.org")
+  library(plyr)
+}
+
+
+if (!require(tidyverse)) {
+  install.packages("tidyverse", repos="http://cran.r-project.org")
+  library(tidyverse)
+}
+
+if (!require(readxl)) {
+  install.packages("readxl", repos="http://cran.r-project.org")
+  library(readxl)
+}
+
+
+if (!require(RColorBrewer)) {
+  install.packages("RColorBrewer",repos="http://cran.r-project.org")
+  library(RColorBrewer) #
+}
+
+
+if (!require(dplyr)) {
+  install.packages("dplyr",repos="http://cran.r-project.org")
+  library(dplyr) #
+}
+
+if (!require(expss)) {
+  install.packages("expss",repos="http://cran.r-project.org")
+  library(expss) #
+}
+
+if (!require(reshape2)) {
+  install.packages("reshape2", repos="http://cran.r-project.org")
+  library(reshape2)
+}
+
+if (!require(pracma)) {
+  install.packages("pracma", repos="http://cran.r-project.org")
+  library(pracma)
+}
+
+if (!require(lubridate)) {
+  install.packages("lubridate", repos="http://cran.r-project.org")
+  library(lubridate)
+}
+
+if (!require(directlabels)) {
+  install.packages("directlabels", repo="http://cran.r-project.org")
+  library(directlabels)
+}
+
+library(ggplot2)
+
+if (!require(ggplot2)) {
+  install.packages("colorspace", type = "source")
+  library(colorspace)
+  install.packages("yaml", type = "source")
+  library(yaml)
+  install.packages("ggplot2", type = "source", dependencies = TRUE)
+  library(ggplot2)
+}
+
+
+
+if (!require(ggrepel)) {
+  devtools::install_github("slowkow/ggrepel")
+  library(ggrepel)
+}
+
+#For rollapply - running sum
+if (!require(zoo)) { 
+  install.packages("zoo", type = "source")
+  library(zoo) 
+}
+
+installed.packages()
+
+
+sPowellHistoricalFile <- 'PowellDataUSBRMay2020.csv'
+sPowellHistoricalFile <- 'PowellDataUSBRMay2021.csv'
+
+# File name to read in Mead end of month reservoir level in feet - cross tabulated by year (1st column) and month (subsequent columns)
+#    LAKE MEAD AT HOOVER DAM, END OF MONTH ELEVATION (FEET), Lower COlorado River Operations, U.S. Buruea of Reclamation
+#    https://www.usbr.gov/lc/region/g4000/hourly/mead-elv.html
+
+# Read in the historical Powell data
+dfPowellHistorical <- read.csv(file=sPowellHistoricalFile, 
+                               header=TRUE, 
+                               
+                               stringsAsFactors=FALSE,
+                               sep=",")
+
+
+#Interpolate Powell storage from level to check
+## For 2020 data
+dtStart <- as.Date("1963-12-22")
+dfPowellHist <- dfPowellHistorical[15:692,] #%>% filter(dfPowellHistorical$Date >= dtStart) # I don't like this hard coding but don't know a way around
+dAddInterval <- 12  # months
+
+# For 2021 data
+dtStart <- as.Date("1963-06-29")
+dfPowellHist <- dfPowellHistorical[112:21237,] #%>% filter(dfPowellHistorical$Date >= dtStart) # I don't like this hard coding but don't know a way around
+dAddInterval <- 365 #days
+
+#Convert date text to date value
+dfPowellHist$DateAsValueError <- as.Date(dfPowellHist$Date,"%d-%b-%y")
+#Apparently R breaks the century at an odd place
+#Coerce the years after 2030 (really 1930) to be in prior century (as.Date conversion error)
+dfPowellHist$Year <- as.numeric(format(dfPowellHist$DateAsValueError,"%Y"))
+dfPowellHist$DateAsValue <- dfPowellHist$DateAsValueError
+dfPowellHist$DateAsValue[dfPowellHist$Year > 2030] <- dfPowellHist$DateAsValue[dfPowellHist$Year > 2030] %m-% months(12*100)
+
+# Convert CFS to Acre-feet per month
+nCFStoAFMon <- 60.37
+nCFStoAFDay <- nCFStoAFMon/30.5
+
+nCFSToAF <- nCFStoAFDay
+
+
+#Annual total release
+dfPowellHist$OneYearRelease <- rollapply(dfPowellHist$Total.Release..cfs.*nCFSToAF/1e6, dAddInterval,sum, fill=NA, align="right")
+
+#Annual inflow
+dfPowellHist$OneYearInflow <- rollapply(dfPowellHist$Inflow....cfs.*nCFSToAF/1e6, dAddInterval,sum, fill=NA, align="right")
+
+#Annual evaporation
+dfPowellHist$OneYearEvap <- rollapply(dfPowellHist$Evaporation..af./1e6, dAddInterval,sum, fill=NA, align="right")
+
+#10-year total release
+dfPowellHist$TenYearRelease <- rollapply(dfPowellHist$Total.Release..cfs.*nCFSToAF/1e6, dAddInterval*10,sum, fill=NA, align="right")
+#9-year total
+dfPowellHist$NineYearRelease <- rollapply(dfPowellHist$Total.Release..cfs.*nCFSToAF /1e6, dAddInterval*9,sum, fill=NA, align="right")
+
+#75 and 82.5 MAF ten-year targets
+dfPowellHist$TenYearTarget <- 75
+dfPowellHist$TenYearTarget82 <- 75 + 7.5
+# Difference between 10-year and target
+dfPowellHist$Diff <- dfPowellHist$TenYearRelease - dfPowellHist$TenYearTarget82
+
+#Filter to get yearly amounts. Filter on October
+dfPowellHist$Month <- month(dfPowellHist$DateAsValue)
+dfPowellHist$Year <- year(dfPowellHist$DateAsValue)
+
+#Calculate day
+dfPowellHist$Day <- day(dfPowellHist$DateAsValue)
+
+#dfPowellHistAnnual <- dfPowellHist %>% filter(Month==10)
+dfPowellHistAnnual <- dfPowellHist %>% filter(Month==10, Day == 1)
+
+# Add text for the decade
+# 10-year values
+dfPowellHistAnnual$Decade <- paste0(dfPowellHistAnnual$Year - 10 + 1," to ",dfPowellHistAnnual$Year)
+dfPowellHistAnnual$TenYearReleaseRnd <- round(dfPowellHistAnnual$TenYearRelease, digits=1)
+dfPowellHistAnnual$TenYearDiffRnd <- round(dfPowellHistAnnual$Diff, digits=1)
+
+# 9-year value
+dfPowellHistAnnual$NineYearPeriod <- paste0(dfPowellHistAnnual$Year - 9 + 1," to ",dfPowellHistAnnual$Year)
+dfPowellHistAnnual$NineYearReleaseRnd <- round(dfPowellHistAnnual$NineYearRelease, digits=1)
+dfPowellHistAnnual$NineYearDiffRnd <- round(dfPowellHistAnnual$NineYearRelease - 8.23*9, digits=1)
+
+
+
+# Select into two columns and reverse sort
+dfPowellByDecade <- dfPowellHistAnnual %>% arrange(Year, decreasing = TRUE) %>% select(Decade, TenYearReleaseRnd,TenYearDiffRnd, NineYearDiffRnd) 
+
+#Export to CSV
+write.csv(dfPowellByDecade,"DecadePowellRelease.csv" )
+#### Powell Release over time - monthly
+
+
+```
+
+# 10-Year Powell Release in relation to Compact Article IIId Requirements
+
+
+```{r 10YearRelease, echo=FALSE, warning=FALSE, message=FALSE}
+
+library(ggplot2)
+
+# ggplot() +
+#   #Powell release - monthly
+#   geom_line(data=dfPowellHist,aes(x=DateAsValue,y=Total.Release..cfs.*nCFStoAF/1e6, color="Monthly"), size=2) +
+#   # Powell release-  annual
+#   geom_line(data=dfPowellHist,aes(x=DateAsValue,y=OneYearRelease, color="1-year"), size=2) +
+#   
+#   #  10-year sum
+#   geom_line(data=dfPowellHist,aes(x=DateAsValue,y=TenYearRelease, color="10-year"), size=2) +
+#   
+#   geom_line(data=dfPowellHist,aes(x=DateAsValue,y=TenYearTarget, color="Target"), size=2) +
+#   
+#  
+#   theme_bw() +
+#   #coord_fixed() +
+#   labs(x="", y="Powel Release (million acre-feet)") +
+#   theme(text = element_text(size=20), legend.title=element_blank(), legend.text=element_text(size=18))
+#   #theme(text = element_text(size=20), legend.text=element_text(size=16)
+
+
+#### Powell Release over time - annual
+
+ggplot() +
+  #Powell release - monthly
+  #geom_line(data=dfPowellHistAnnual,aes(x=DateAsValue,y=Total.Release..cfs.*nCFStoAF/1e6, color="Monthly"), size=2) +
+  # Powell release-  annual
+  geom_line(data=dfPowellHistAnnual,aes(x=DateAsValue,y=OneYearRelease, color="1-Year Total"), size=2) +
+  #geom_bar(data=dfPowellHistAnnual,aes(x=DateAsValue,y=OneYearRelease, color="1-Year Total")) +
+  
+  #  10-year sum
+  geom_line(data=dfPowellHistAnnual,aes(x=DateAsValue,y=TenYearRelease, color="10-Year Total"), size=2) +
+  
+  # 10-year 75 MAF target
+ # geom_line(data=dfPowellHistAnnual,aes(x=DateAsValue,y=TenYearTarget, color="75 MAF Target"), size=2) +
+  # 10-year 82.3 MAF target. 82.3 = 75 to Lower Basin + 7.25 to Mexico - 0.2 Help from Paria River
+  geom_line(data=dfPowellHistAnnual,aes(x=DateAsValue,y=TenYearTarget82, color="82.3 MAF Target"), size=2) +
+  
+  scale_color_manual(values = c("Blue","Red", "Purple"), breaks = c("10-Year Total", "82.3 MAF Target","1-Year Total" )) +
+  
+  theme_bw() +
+  #coord_fixed() +
+  labs(x="", y="Powel Release (million acre-feet)") +
+  theme(text = element_text(size=20), legend.title=element_blank(), legend.text=element_text(size=18))
+#theme(text = element_text(size=20), legend.text=element_text(size=16)
+
+
+#### 10-Year Difference between Release and 82.3 target
+
+```
+
+# Difference between Release and 82.3 MAF (10-Year) and 74.1 MAF (9-Year) Targets
+
+
+```{r TenYearDifference, echo=FALSE, warning=FALSE, message=FALSE}
+
+library(ggplot2)
+
+ggplot() +
+  #  10-year sum
+  geom_line(data=dfPowellHistAnnual,aes(x=DateAsValue,y=TenYearDiffRnd, color="10-Year"), size=2) +
+  geom_line(data=dfPowellHistAnnual,aes(x=DateAsValue,y=NineYearDiffRnd, color="9-Year"), size=2) +
+
+  scale_color_manual(" ", values = c("10-Year" = "red", "9-Year" = "blue")) +
+  
+  theme_bw() +
+  #coord_fixed() +
+  labs(x="", y="Powell Release above Requirement\n(million acre-feet)") +
+  theme(text = element_text(size=14), legend.title=element_blank(), legend.text=element_text(size=14))
+#theme(text = element_text(size=20), legend.text=element_text(size=16)
+
+### Powell Annual Inflow
+
+#### Powell Release over time - annual
+
+# As double line plot
+# ggplot() +
+#   # Powell Annual Inflow
+#   geom_line(data=dfPowellHistAnnual,aes(x=DateAsValue,y=OneYearInflow, color="Inflow", linetype="Inflow"), size=2) +
+#   geom_line(data=dfPowellHistAnnual,aes(x=DateAsValue,y=OneYearRelease, color="Release", linetype="Release"), size=2) +
+#   #geom_bar(data=dfPowellHistAnnual,aes(x=DateAsValue,y=OneYearRelease, color="1-Year Total")) +
+#   
+#   scale_color_manual(values=c("red","blue"), guide="legend") +
+#   scale_linetype_manual(values=c("solid", "dashed")) +
+#   guides(color=guide_legend(""), linetype=guide_legend("")) +
+#   theme_bw() +
+#   #coord_fixed() +
+#   labs(x="", y="Water Volume\n(million acre-feet per year)") +
+#   theme(text = element_text(size=20), legend.title=element_blank(), legend.text=element_text(size=18))
+#theme(text = element_text(size=20), legend.text=element_text(size=16)
+
+# As mixed bar (inflow) line (release) plot
+
+# Report the most recent 9-year release, target, and difference 
+sprintf("Nine year Lake Powell release of %s maf (%s) is %s maf above 74.1 maf requirement",round(dfPowellHistAnnual[nrow(dfPowellHistAnnual), "NineYearRelease"],1), dfPowellHistAnnual[nrow(dfPowellHistAnnual), "NineYearPeriod"],  dfPowellHistAnnual[nrow(dfPowellHistAnnual), "NineYearDiffRnd"])
+
+
+```
+
+# 9-Year Release in comparison to delivery target
+
+
+```{r NineYearRelease, echo=FALSE, warning=FALSE, message=FALSE}
+
+library(ggplot2)
+
+ggplot() +
+  #  10-year sum
+  #geom_line(data=dfPowellHistAnnual,aes(x=DateAsValue,y=TenYearDiffRnd, color="10-Year"), size=2) +
+  geom_line(data=dfPowellHistAnnual,aes(x=DateAsValue,y=NineYearDiffRnd, color="9-Year"), size=2) +
+
+  scale_color_manual(" ", values = c("10-Year" = "red", "9-Year" = "blue")) +
+  
+  theme_bw() +
+  #coord_fixed() +
+  labs(x="", y="Powell Release above Requirement\n(million acre-feet)") +
+  theme(text = element_text(size=14), legend.title=element_blank(), legend.text=element_text(size=14))
+
+```
+
+# 9-Year Powell Release in relation to target and 1-year
+
+
+```{r 9YearRelease, echo=FALSE, warning=FALSE, message=FALSE}
+
+library(ggplot2)
+
+# ggplot() +
+#   #Powell release - monthly
+#   geom_line(data=dfPowellHist,aes(x=DateAsValue,y=Total.Release..cfs.*nCFStoAF/1e6, color="Monthly"), size=2) +
+#   # Powell release-  annual
+#   geom_line(data=dfPowellHist,aes(x=DateAsValue,y=OneYearRelease, color="1-year"), size=2) +
+#   
+#   #  10-year sum
+#   geom_line(data=dfPowellHist,aes(x=DateAsValue,y=TenYearRelease, color="10-year"), size=2) +
+#   
+#   geom_line(data=dfPowellHist,aes(x=DateAsValue,y=TenYearTarget, color="Target"), size=2) +
+#   
+#  
+#   theme_bw() +
+#   #coord_fixed() +
+#   labs(x="", y="Powel Release (million acre-feet)") +
+#   theme(text = element_text(size=20), legend.title=element_blank(), legend.text=element_text(size=18))
+#   #theme(text = element_text(size=20), legend.text=element_text(size=16)
+
+
+#### Powell Release over time - annual
+
+ggplot() +
+  #Powell release - monthly
+  #geom_line(data=dfPowellHistAnnual,aes(x=DateAsValue,y=Total.Release..cfs.*nCFStoAF/1e6, color="Monthly"), size=2) +
+  # Powell release-  annual
+  geom_line(data=dfPowellHistAnnual,aes(x=DateAsValue,y=OneYearRelease, color="1-Year", linetye="1-Year"), size=2) +
+  #geom_bar(data=dfPowellHistAnnual,aes(x=DateAsValue,y=OneYearRelease, color="1-Year Total")) +
+  
+  geom_line(data=dfPowellHistAnnual,aes(x=DateAsValue,y=NineYearReleaseRnd, color="9-Year", linetype="9-Year"), size=2) +
+    #
+  # 10-year 75 MAF target
+ # geom_line(data=dfPowellHistAnnual,aes(x=DateAsValue,y=TenYearTarget, color="75 MAF Target"), size=2) +
+  # 9-year target 82.3 MAF target. 82.3 = 75 to Lower Basin + 7.25 to Mexico - 0.2 Help from Paria River
+  geom_line(data=dfPowellHistAnnual,aes(x=DateAsValue,y=TenYearTarget82*9/10, color="Target", linetype="Target"), size=1.5) +
+  
+  scale_color_manual(values = c("Blue","Red", "Purple"), breaks = c("9-Year", "Target","1-Year" )) +
+  scale_linetype_manual(values = c("solid", "dashed", "solid"), breaks = c("9-Year", "Target","1-Year" )) +
+  
+  scale_linetype(guide = FALSE) +
+  
+  theme_bw() +
+  #coord_fixed() +
+  labs(x="", y="Powell Release\n(million acre-feet)") +
+  theme(text = element_text(size=20), legend.title=element_blank(), legend.text=element_text(size=18))
+#theme(text = element_text(size=20), legend.text=element_text(size=16)
+
+
+```
+
+# Powell Annual Regulated Inflow and Release
+
+```{r PowellInflowRelease, echo=FALSE, warning=FALSE, message=FALSE}
+
+library(ggplot2)
+
+ggplot(dfPowellHistAnnual, aes(DateAsValue)) +
+  geom_bar(aes(y=OneYearInflow, fill = "Inflow"), stat="identity") +
+  geom_line(aes(y=OneYearRelease, group = 1, color="Release"), size=2) +
+  scale_color_manual(" ", values = c("Inflow" = "grey50", "Release" = "blue")) +
+  scale_fill_manual("", values="grey50") +
+  labs(x="", y="Water Volume\n(million acre-feet per year)") +  
+  
+  theme(text = element_text(size=20), legend.title=element_blank(), legend.text=element_text(size=18),
+        legend.key = element_blank())
+
+
+```
+
+# Histogram of Powell Regulated Inflows
+
+```{r PowellInflowHistogram, echo=FALSE, warning=FALSE, message=FALSE}
+
+library(ggplot2)
+
+#Histogram -- frequency of annual inflow volumes
+ggplot(dfPowellHistAnnual, aes(x=OneYearInflow)) +
+  geom_histogram(color="darkmagenta", fill="magenta", binwidth = 2) +
+
+  scale_x_continuous(limits = c(2,22), breaks = seq(2,22,by=2)) +
+  scale_y_continuous(breaks = seq(0,11,by=2)) +
+  
+  labs(x="Powell Inflow\n(million acre feet per year)", y="Frequency\n(number of years)") +
+  theme(text = element_text(size=20), legend.title=element_blank(), legend.text=element_text(size=18),
+      legend.key = element_blank())
+
+```
+
+# Histogram of Powell Releases
+
+```{r PowellReleaseHistogram, echo=FALSE, warning=FALSE, message=FALSE}
+
+#Histogram -- frequency of annual release volumes
+ggplot(dfPowellHistAnnual, aes(x=OneYearRelease)) +
+  geom_histogram(color="darkmagenta", fill="magenta", binwidth = 1) +
+  
+  scale_x_continuous(limits = c(2,22), breaks = seq(2,22,by=1)) +
+  #scale_y_continuous(breaks = seq(0,11,by=1)) +
+  
+  labs(x="Powell Release\n(million acre feet per year)", y="Frequency\n(number of years)") +
+  theme(text = element_text(size=20), legend.title=element_blank(), legend.text=element_text(size=18),
+        legend.key = element_blank())
+
+ggsave("PowellInflowHistogram.png", width=9, height = 6.5, units="in")
+
+print(paste0("Number of Years of Powell releases = ", max(dfPowellHistAnnual$Year) - min(dfPowellHistAnnual$Year) + 1))
+
+# Sort the Powell releases by value and year to faciliate easy identify of years
+dfPowellHistAnnualSort <- dfPowellHistAnnual[order(dfPowellHistAnnual$OneYearRelease,dfPowellHistAnnual$Year), c("OneYearRelease","Year")]
+
+```
+
+# Compare Powell Releaes and Inflows
+
+```{r PowellReleaseInflow, echo=FALSE, warning=FALSE, message=FALSE}
+
+#Compare plot
+ggplot(dfPowellHistAnnual, aes(x=OneYearInflow, y=OneYearRelease)) +
+  geom_point(color="darkmagenta", fill="magenta") +
+  
+  #Add 1:1 line
+  geom_abline(slope=1, intercept=0, size=2) +
+  
+  scale_x_continuous(limits = c(6,22), breaks = seq(6,22,by=2)) +
+  scale_y_continuous(limits = c(6,22), breaks = seq(6,22,by=2)) +
+  #scale_y_continuous(breaks = seq(0,11,by=1)) +
+  
+  labs(x="Inflow\n(million acre feet per year)", y="Release\n(million acre feet per year)") +
+  theme(text = element_text(size=20), legend.title=element_blank(), legend.text=element_text(size=18),
+        legend.key = element_blank())
+
+
+
+```
+
+# Powell Evaporation
+
+```{r PowellEvaporation, echo=FALSE, warning=FALSE, message=FALSE}
+#Compare Powell USBR data evaporation to from 
+
+ggplot(dfPowellHistAnnual, aes(DateAsValue)) +
+  geom_bar(aes(y=OneYearEvap, fill = "Powell (USBR data)"), stat="identity") +
+ # geom_line(aes(y=OneYearRelease, group = 1, color="Release"), size=2) +
+  scale_color_manual(" ", values = c("Powell (USBR data)" = "grey50")) +
+  scale_fill_manual("", values="grey50") +
+  labs(x="", y="Evaporation\n(million acre-feet per year)") +  
+  
+  theme(text = element_text(size=20), legend.title=element_blank(), legend.text=element_text(size=18),
+        legend.key = element_blank())
+
+
+
+
+```
