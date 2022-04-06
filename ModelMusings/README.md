@@ -2,7 +2,7 @@
 
 ### [Excel Model File](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/PilotFlexAccounting-CombinedPowellMead.xlsx) (.xlsx)
 ### [Slides of Key Ideas](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/PilotFlexAccounting-KeyIdeas.pdf) (pdf file)
-### [Synchronous Model Guide](https://github.com/dzeke/ColoradoRiverCoding/blob/main/ModelMusings/Support/ModelGuide/ModelGuide-CombinedLakePowellLakeMead.md) (Help file)
+### [Model Guide](https://github.com/dzeke/ColoradoRiverCoding/blob/main/ModelMusings/Support/ModelGuide/ModelGuide-CombinedLakePowellLakeMead.md) (Help file)
 ### [Write up](https://github.com/dzeke/ColoradoRiverCoding/raw/main/BlogDrafts/3-LessonsFromSynchronouslyModelCombinedLakePowellLakeMeadSystemWith26ColoradoRiverManagersExperts.docx) (.docx)
 
 ## Overview														
@@ -61,7 +61,7 @@ All donors will be added to an email list and receive periodic updates.
 ## File Descriptions
 1. **[PilotFlexAccounting-CombinedPowellMead.xlsx](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/PilotFlexAccounting-CombinedPowellMead.xlsx)** - An Excel file with the flex accounting tool. Follow **Facillation Directions** (above) or open **ReadMe-Directions** Worksheet.
 1. **[PilotFlexAccounting-KeyIdeas.pdf](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/PilotFlexAccounting-KeyIdeas.pdf)** - A PDF file that illustrates key management ideas for flex accounts in a combined Lake Powell-Lake Mead system.
-1. **[Synchronous Model Guide](https://github.com/dzeke/ColoradoRiverCoding/blob/main/ModelMusings/Support/ModelGuide/ModelGuide-CombinedLakePowellLakeMead.md)** - Online help file that provides context and explanations for each spreadsheet row. In **Master** Worksheet, link to help in ![#FFE5B4](https://via.placeholder.com/15/FFE5B4/000000?text=+) `Column N`.
+1. **[Model Guide](https://github.com/dzeke/ColoradoRiverCoding/blob/main/ModelMusings/Support/ModelGuide/ModelGuide-CombinedLakePowellLakeMead.md)** - Online help file that provides context and explanations for each spreadsheet row. In **Master** Worksheet, link to help in ![#FFE5B4](https://via.placeholder.com/15/FFE5B4/000000?text=+) `Column N`.
 1. **Support folders**:
    1. **Hydrology** - Excel files used to generate scenarios on **HydrologicScenarios** Worksheet. **CRB_29gages.xlsx**: Gages in the Colorado River basin used to estimate natural flow. **NaturalFlows1906-2018_20200110.xlsx**: Natural flow hydrology downloaded from the USBR website and modified to pick out particular 10- and 20- year sequences of flows from the observed and paleo reconstructed records.
    1. **OldVersions** - Older versions of the Flex accounting tool (see **Versions** Worksheet).

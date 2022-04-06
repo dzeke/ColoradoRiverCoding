@@ -1,18 +1,18 @@
-# Synchronous Model Guide
+# Model Guide
 
-## Flex Accounting for a Combined Lake Powell-Lake Mead System
+## Flex Accounting in a Combined Lake Powell-Lake Mead System
 
 David E. Rosenberg \| Utah State University \|
 [david.rosenberg@usu.edu](mailto:david.rosenberg@usu.edu) \| @WaterModeler
 
-October 15, 2021
+April 5, 2022
 
 # I**ntroduction**
 
-This document supports participants to use the synchronous model for a combined
-Lake Powell-Lake Mead system (Rosenberg, 2021d). Synchronous means multiple
-participants connect to the same cloud model and enter individual water
-conservation and consumption choices and group decisions as model time
+This document supports participants to use the Google Sheet model of flex
+accounts in a combined Lake Powell-Lake Mead system (Rosenberg, 2021d).
+Participants connect to the same Google Sheet (cloud) model and enter individual
+water conservation and consumption choices and group decisions as model time
 progresses year-by-year. This document provides context information for each
 individual and group choice and explains how choices build on existing Colorado
 River management (Appendix A). The document also suggest potential values to
@@ -21,16 +21,19 @@ enter.
 Find quick links to this support information -- the sections and subsections of
 this document -- in the Model file, *Master* worksheet, Column N.
 
-# Get Started
+# Facilitation Instructions
 
-Follow the Setup and Play instructions in Box 1. The rest of the document
+Review the main canons of existing Colorado River management (Appendix A;
+persons not familiar with current Colorado River operations).
+
+Follow the setup and plan instructions (Box 1). The rest of the document
 provides guidance on the steps to play.
 
-![](media/5c59964991d45df1a4f3a8b3644c9470.png)
+![](media/c70c17f4531306eb50e9c7743229dc53.png)
 
 ## Types of Use
 
-The synchronous model can be used in two modes:
+The model can be used in two modes:
 
 1.  Synchronously by multiple people where each person plays one or more parties
     (in Google Drive).
@@ -381,14 +384,14 @@ assign any remaining Lake Powell natural flow to the Upper Basin.
 
 **Table 6. Assign inflow to parties**
 
-| **Party**            | **Volume (MCM)**                                     | **Event**                                                                                                                                                                                         | **Existing Operations**                            |
-|----------------------|------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------|
-| Shared, Reserve      | Varies by Evap.                                      | Assign share of inflow that offsets the evaporation volume for the shared, reserve account. This assignment keeps the account balance steady year to year.                                        | Drought Contingency Plans (USBR, 2019)             |
-| Colorado River Delta | 0.016                                                | 0.016 maf is 67% of the 9-year, 0.21 maf volume pledged by the U.S. and Mexico.                                                                                                                   | Minute 323 (IBWC, 2021)                            |
-| Mexico               | 1.5 minus mandatory conservation minus carriage loss | Mandatory conservation volumes increase as Lake Mead level’s decreases (see Section 3C). Carriage loss is Mexico’s share of Havasu/Parker Evaporation and Evapotranspiration (1.5/8.7 = 17.2%)    | 1944 Treaty, Minutes 319 and 323 (IBWC, 2021)      |
-| First Nations        | 2.01 minus Lower Basin carriage loss                 | Rights of 1.06 and 0.952 maf in the Upper and Lower Basins. Excludes claimed amounts. Lower Basin carriage loss is share of Havasu/Parker Evaporation and ET in the Lower Basin (0.95/8.7 = 11%). | Tribal Water Study (Ten Tribes Partnership, 2018). |
-| Lower Basin          | 7.5 minus 0.95 minus carriage loss                   | Quantified rights of 7.5 maf minus rights of First Nations in the Lower Basin minus share of Havasu/Parker Evaporation and ET ([7.5 – 0.95]/8.7 = 75.3%).                                         | 1922 Compact Article III(d)                        |
-| Upper Basin          | 1.9 + Remain                                         | Pre-compact rights plus any remaining Lake Powell natural flow.                                                                                                                                   | 1922 Compact Article III(d)                        |
+| **Step** | **Existing Operations**                                                                                                                                                                                                                                                                           |                                                    |
+|----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------|
+| 1.       | Assign the **shared, reserve account** the *first block of inflow* to exactly offset the evaporation volume of the account. This assignment keeps the shared, reserve balance steady year to year. Volume depends on reservoir storage.                                                           | Drought Contingency Plans (USBR, 2019)             |
+| 2.       | Assign **Mexico** the next *1.5 maf* of inflow *minus mandatory conservation minus carriage loss*. Mandatory conservation volumes increase as Lake Mead level’s decreases (see Section 3C). Carriage loss is Mexico’s share of Havasu/Parker Evaporation and Evapotranspiration (1.5/8.7 = 17.2%) | 1944 Treaty, Minutes 319 and 323 (IBWC, 2021)      |
+| 3.       | Assign the **Colorado River Delta** the next *0.016 maf* of inflow. This volume is 67% of the 9-year, 0.21 maf volume pledged by the U.S. and Mexico.                                                                                                                                             | Minute 323 (IBWC, 2021)                            |
+| 4.       | Assign **First Nations** the next *2.01 maf* of inflow *minus Lower Basin carriage loss*. 2.01 maf is 1.06 plus 0.952 maf in the Upper and Lower Basins. Excludes claimed amounts. Lower Basin carriage loss is share of Havasu/Parker Evaporation and ET in the Lower Basin (0.95/8.7 = 11%).    | Tribal Water Study (Ten Tribes Partnership, 2018). |
+| 5.       | Assign the **Lower Basin** *6.55 maf minus share of Havasu/Parker Evaporation and ET* (6.55/8.7 = 75.3%)*.* 6.55 maf is 7.5 maf Compact allotment minus 0.952 maf of First Nations in the Lower Basin.                                                                                            | 1922 Compact Article III(d)                        |
+| 6.       | Assign the **Upper Basin** *1.9 maf of pre-compact rights plus all remaining* Lake Powell natural flow.                                                                                                                                                                                           | 1922 Compact Article III(d)                        |
 
 The volumes in Table 6 draw from the inflow sources in different amounts (Table
 7). I expect it easier to assign each year’s inflow than negotiate ever larger
