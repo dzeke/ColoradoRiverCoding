@@ -9,7 +9,7 @@ Dr. David E. Rosenberg
 
 david.rosenberg@usu.edu | [@WaterModeler](https://twitter.com/WaterModeler)
 
-September 22, 2021
+April 6, 2022
 
 Utah State University
 
