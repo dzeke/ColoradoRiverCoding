@@ -51,7 +51,7 @@ an alternative management paradigm where reservoir evaporation is counted as par
 1. **ProtectLakePowell** - Figure of tools to protect Lake Powell elevations of 3,525 and 3,490 feet.
 1. **Runge_MCDM_Analysis** - interactive parallel coordinate plot visualization of the 18 objectives use in the analysis by Runge et al of Glend Canyon Dam management alternatives. Runge, M. C., LaGory, K. E., Russell, K., Balsom, J. R., Butler, R. A., Coggins, J. L. G., Grantz, K. A., Hayse, J., Hlohowskyj, I., Korman, J., May, J. E., O'Rourke, D. J., Poch, L. A., Prairie, J. R., VanKuiken, J. C., Van Lonkhuyzen, R. A., Varyu, D. R., Verhaaren, B. T., Veselka, T. D., Williams, N. T., Wuthrich, K. K., Yackulic, C. B., Billerbeck, R. P., and Knowles, G. W. (2015). "Decision analysis to support development of the Glen Canyon Dam long-term experimental and management plan." 2015-5176, U.S. Geological Survey, Reston, VA. http://pubs.er.usgs.gov/publication/sir20155176.
 1. **TimeToDeadPool** - a steady deterministic scenario analysis of the number of years to hit Lake Mead dead pool (or other target elevation) given a starting storage volume and steady reservoir inflow. Used to explore scenarios of inflow from 7 to 14 maf per year every year and identify potential effects of additional voluntary water conservation.
-1. **TribalWater** - Digitizes some of the data in the Tribal Waer Study by the USBR.
+1. **TribalWater** - Digitizes some of the data in the Tribal Water Study by the USBR.
 1. **UpperBasinAgriculture** - Costs of demand management in Upper Basin.
 
 ## License
