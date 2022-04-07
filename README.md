@@ -31,11 +31,13 @@ Utah State University
 
 ## Explanation of Contents
 
+1. **500PlusPlan** - Total costs for different 500,000 acre-feet plan for Lake Mead prices and volumes.
 1. **BlogDrafts** - Preprints of blogs in the series "Encouraging more water conservation in the Colorado River Basin".
 1. **CombinedPowellMead** - Plots of combined Lake Powell and Lake Mead storage over time.
 1. **EvapCalcs** - Plots to show reservoir evaporation for Lakes Mead and Powell as a function of reservoir storage/level. This supports
 an alternative management paradigm where reservoir evaporation is counted as part of lower basin users consumptive use.
 1. **GrandCanyonInterveningFlow** - Plots of Grand Canyon intervening flow between Lake Powell and Lake Mead to help characterize inflows to Lake Mead.
+1. **HeadwatersReservoirs** - Storage for Upper Basin headwaters reservoirs (Fontenelle, Flaming Gorge).
 1. **ICS** - Plots of intentionally created surplus (ICS) for Lake Mead account balances, puts and takes, limits, and comparison of ICS efforts to mandatory Drought Contigency Plan contributions.
 1. **InterimShortageGuidelines** - Plots of cutbacks in deliveries as a function of Lake Mead level. Both for the Interim Guidelines and newly released Drought Contingency Plan.
 1. **LakePowellTemperatureScenarios** - Calcualtes the Lake Powell release temperatures for different lake levels. Assigns release temperatures to different fish scenarios.
@@ -45,9 +47,12 @@ an alternative management paradigm where reservoir evaporation is counted as par
 1. **ModelMusings** - Pilot flex accounting to encourage more water conservation in a combined Lake Powell-Lake Mead system. Cloud-based interactive model for the Colorado River basin. When participants synchronously connect, they can role play Upper Basin, Lower Basin, Mexico, and other parties. Participants make 
  year-to-year water conservation, consumption, purchase, and sale decisions for their party while they track other players' choices, account balances, reservoir storage, and impacts to Grand Canyon fish.
 1. **Powell10Year** - Plots showing Lake Powell 10-year releases in comparison to Colorado River Compact Article III(d) requirement
+1. **Pre1922CompactWaterUse** - Table of Pre-1922 Compact water use by state.
+1. **ProtectLakePowell** - Figure of tools to protect Lake Powell elevations of 3,525 and 3,490 feet.
 1. **Runge_MCDM_Analysis** - interactive parallel coordinate plot visualization of the 18 objectives use in the analysis by Runge et al of Glend Canyon Dam management alternatives. Runge, M. C., LaGory, K. E., Russell, K., Balsom, J. R., Butler, R. A., Coggins, J. L. G., Grantz, K. A., Hayse, J., Hlohowskyj, I., Korman, J., May, J. E., O'Rourke, D. J., Poch, L. A., Prairie, J. R., VanKuiken, J. C., Van Lonkhuyzen, R. A., Varyu, D. R., Verhaaren, B. T., Veselka, T. D., Williams, N. T., Wuthrich, K. K., Yackulic, C. B., Billerbeck, R. P., and Knowles, G. W. (2015). "Decision analysis to support development of the Glen Canyon Dam long-term experimental and management plan." 2015-5176, U.S. Geological Survey, Reston, VA. http://pubs.er.usgs.gov/publication/sir20155176.
 1. **TimeToDeadPool** - a steady deterministic scenario analysis of the number of years to hit Lake Mead dead pool (or other target elevation) given a starting storage volume and steady reservoir inflow. Used to explore scenarios of inflow from 7 to 14 maf per year every year and identify potential effects of additional voluntary water conservation.
 1. **TribalWater** - Digitizes some of the data in the Tribal Waer Study by the USBR.
+1. **UpperBasinAgriculture** - Costs of demand management in Upper Basin.
 
 ## License
 BSD-3-Clause (https://github.com/dzeke/ColoradoRiverFutures/blob/master/LICENSE). Available to use, modify, distribute, etc. for free.
