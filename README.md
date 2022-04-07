@@ -1,6 +1,6 @@
 # Colorado River Coding 
 
-Small and bigger coding efforts to support Colorado River work. 
+Small and bigger coding efforts to support Colorado River work. See Contents #1-20 below.
 
 Most of these efforts are beginning coding efforts and works in progress. Find current versions at https://github.com/dzeke/ColoradoRiverCoding.
 
