@@ -1,7 +1,7 @@
 ---
 title: "Adapt Lake Mead releases to inflow to give managers more flexibility to slow reservoir draw down"
 author: "David E. Rosenberg"
-date: "September 22, 2021"
+date: "April 6, 2022"
 output: pdf_document
 ---
 
@@ -17,11 +17,11 @@ This is an R Markdown document. This work supports the piece "[Adapt Lake Mead r
 
 2. A line plot shows evolution of Lake Mead Active storage (y-axis) over time (x-axis) for mandatory conservation with different steady inflow scenarios. Pink area denotes the storage volumes/elevations of mandatory conservation target. Red area denotes lower storage. Simulations assume max DCP cutback in red area below 1,025 feet. We hope that if reservoir level gets that low the Lower Basin States and Mexico will cut back release further (depends on inflow) to stabilize reservoir level.
 
-3. The Lake Mead release needed to stabilize reservoir storage at different reservoir elvations and inflows. This release is calculated by resolving the reservoir mass balance equation for release = inflow - evaporation.
+3. The Lake Mead release to stabilize reservoir storage at different reservoir elevations and inflows. This release is calculated by resolving the reservoir mass balance equation for release = inflow - evaporation.
 
 4. Lake Mead recovery simulations from two elevation 1,050 feet for different reservoir inflows and additional conservation efforts beyond mandatory targets.
 
-Data from 2019 Lower Basin Drought Contingency Plan (DCP), U.S.-Mexico Minute 323, and CRSS.  
+Data from 2019 Lower Basin Drought Contingency Plan (DCP), U.S.-Mexico Minutes 319 and 323, and CRSS.  
 
 
 ## Requested Citation
@@ -272,7 +272,7 @@ sExcelFile <- 'MeadDroughtContingencyPlan.xlsx'
 dfMeadElevStor <- read_excel(sExcelFile, sheet = "Mead-Elevation-Area",  range = "A4:D676")
 dfPowellElevStor <- read_excel(sExcelFile, sheet = 'Powell-Elevation-Area',  range = "A4:D689")
 
-# Read in pre-processes pool definitions for Lake Mead from CSV
+# Read in pre-processed pool definitions for Lake Mead from CSV
 dfMeadPoolsPlot2 <- read.csv("dfMeadPoolsPlot2.csv",header=TRUE)
 
 #Evaporation rates from CRSS
@@ -329,7 +329,7 @@ vMedGCFlow <- median(dfGCFlowsByYear$GCFlow)
 
 # Read in the ISG and DCP cutbacks from Excel
 dfCutbacksElev <- read_excel(sExcelFile, sheet = "Data",  range = "H21:H41") #Elevations
-dfCutbacksVols <- read_excel(sExcelFile, sheet = "Data",  range = "O21:U41") #ISG and DCP for states + MX
+dfCutbacksVols <- read_excel(sExcelFile, sheet = "Data",  range = "N21:U41") #ISG and DCP for states + MX
 dfCutbacksVolsFed <- read_excel(sExcelFile, sheet = "Data",  range = "Y21:Y41") # Federal cutback
 #Merge into one data frame
 dfCutbacks <- dfCutbacksElev
@@ -352,14 +352,21 @@ dfCutbacks <- replace(dfCutbacks,is.na(dfCutbacks),0)
 dfCutbacks$MeadActiveVolume <- interp1(xi = dfCutbacks$`Mead Elevation (ft)`,x=dfMeadElevStor$`Elevation (ft)` , y=dfMeadElevStor$`Live Storage (ac-ft)`, method="linear")
 
 #Calculate Total Reductions for ISG (use Federal and Mexico dating to 2012 )
-dfCutbacks <- dfCutbacks %>% mutate(Total2007ISG = `Mexico Reduction (Minute 323) [2017]`+ 
+dfCutbacks <- dfCutbacks %>% mutate(Total2007ISG = `Mexico Reduction (Minute 319) [2012]`+ 
                                       `2007-AZ Reduction (ac-ft)` + `2007-NV Reduction (ac-ft)` + `2007-CA Reduction (ac-ft)` +
                                      `DCP Federal Government (ac-ft)`)
+
+
+#Calculate Total Reductions for ISG (use Federal and Mexico dating to 2012 )
+#dfCutbacks <- dfCutbacks %>% mutate(Total2007ISG = `Mexico Reduction (Minute 323) [2017]`+ 
+#                                      `2007-AZ Reduction (ac-ft)` + `2007-NV Reduction (ac-ft)` + `2007-CA Reduction (ac-ft)` +
+#                                     `DCP Federal Government (ac-ft)`)
+
 #Remove federal amount at 1090 ft since IGS only starts at 1075 ft
 dfCutbacks$Total2007ISG[dfCutbacks$`Mead Elevation (ft)` == 1090] <- 0
 
 #Calculate Total Reudctions for DCP
-dfCutbacks <- dfCutbacks %>% mutate(TotalDCP = `Mexico Reduction (Minute 323) [2017]`+ 
+dfCutbacks <- dfCutbacks %>% mutate(TotalDCP = `Mexico Reduction (Minute 319) [2012]`+ `Mexico Reduction (Minute 323) [2017]`+
                                       `DCP-AZ Reduction (ac-ft)` + `DCP-NV Reduction (ac-ft)` + `DCP-CA Reduction (ac-ft)` +
                                       `DCP Federal Government (ac-ft)`)
 
@@ -715,7 +722,10 @@ nLowFlow <- 7
 
 cInflowScenRecover <- c(seq(nLowFlow,14, by=0.05))*1e6
 
-cElevations <- c(1025,1030,1045,1050,1075,1090)
+cElevations <- c(1025,1030,1045,1050,1060,1075,1090)
+
+#Elevations to use in facets
+cElevationsToUse <- c(1025, 1060)
 
 nFlowScensRecover <- length(cInflowScenRecover)
 nElevations <- length(cElevations)
@@ -745,7 +755,7 @@ dfReleaseToStabilize$Release <- ifelse(dfReleaseToStabilize$ReleaseToStabilize >
                                        dfReleaseToStabilize$ReleaseToStabilize)
 
 #Label and position the traces
-dfTraceLabels <- data.frame(Elevation=c(rep(1090,3),rep(1025,3)),Inflow = c(8.5,7.6,8.5,8.2,7.4,8.5), Release = c(9.6-0.3/2, 8.3, 5,9.6-.65/2,7.7,5), Label=rep(c("Mandatory conservation", "More\nconservation", "Reservoir level\nrises"),2))
+dfTraceLabels <- data.frame(Elevation=c(rep(cElevationsToUse[2],3),rep(cElevationsToUse[1],3)),Inflow = c(8.25,7.6,8.5,8.2,7.4,8.5), Release = c(9.6-0.71/2, 8.3, 5,9.6-.85/2,7.7,5), Label=rep(c("Mandatory conservation", "More\nconservation", "Reservoir level\nrises"),2))
 
 #Calculate the additional conservation needed beyond DCP target
 dfReleaseToStabilize$AdditionalConservation <- dfReleaseToStabilize$DeliveryTarget  - dfReleaseToStabilize$MandatoryConservationTarget - dfReleaseToStabilize$Release
@@ -755,18 +765,24 @@ dfReleaseToStabilize$AdditionalConservation <- ifelse(dfReleaseToStabilize$Addit
 dfReleaseToStabilizeMelt <- melt(dfReleaseToStabilize, id.vars = c("Elevation", "Volume", "Inflow"), measure.vars = c("MandatoryConservationTarget","AdditionalConservation","Release") )
 
 #Create a data frame to right label the y-axis
-dfReleaseLabels <- data.frame(Release = c(vLowerBasinDeliveryTarget,vLowerBasinDeliveryTarget - max(dfReleaseToStabilize$MandatoryConservationTarget),600000),
-                                          Label = c("Target\nrelease","Max. mandatory\n conservation", "Havasu/Parker\nevap. + ET"))
+# As Max. mandatory conservation
+#dfReleaseLabels <- data.frame(Release = c(vLowerBasinDeliveryTarget,vLowerBasinDeliveryTarget - max(dfReleaseToStabilize$MandatoryConservationTarget),600000),
+#                                          Label = c("Target\nrelease","Max. mandatory\n conservation", "Havasu/Parker\nevap. + ET"))
+
+#As 500+ plan
+dfReleaseLabels <- data.frame(Release = c(vLowerBasinDeliveryTarget,vLowerBasinDeliveryTarget - as.numeric(dfCutbacks %>% filter(`Mead Elevation (ft)` == 1075) %>% select(TotalDCP)) - 500000,600000),
+                                          Label = c("Target\nrelease","Add 500+ plan", "Havasu/Parker\nevap. + ET"))
 
 
-ggplot(data = dfReleaseToStabilizeMelt %>% filter(Elevation %in% c("1025","1090"))) +
+
+ggplot(data = dfReleaseToStabilizeMelt %>% filter(Elevation %in% cElevationsToUse)) +
   #The main types
   geom_area(aes(x=Inflow/1e6, y=value/1e6, fill=variable)) +
 
   #Overplot a line for the line of releases to stabilize inflow
-  geom_line(data=dfReleaseToStabilize %>% filter(Elevation %in% c("1025","1090")), aes(x=Inflow/1e6, y = ReleaseToStabilize/1e6), linetype = "longdash", size = 2, color = pBlues[8]) +
+  geom_line(data=dfReleaseToStabilize %>% filter(Elevation %in% cElevationsToUse), aes(x=Inflow/1e6, y = ReleaseToStabilize/1e6), linetype = "longdash", size = 2, color = pBlues[8]) +
   #Labelthe  line of release to stabilize reservoir level
-  geom_text(data = dfElevations %>% filter(Elevation %in% c("1025","1090")), aes(x= x, y= y - offset, label="Release to stabilize reservoir level"), size=3, color=pBlues[8], angle = -26, fontface = "bold") +
+  geom_text(data = dfElevations %>% filter(Elevation %in% cElevationsToUse), aes(x= x, y= y - offset, label="Release to stabilize reservoir level"), size=3, color=pBlues[8], angle = -26, fontface = "bold") +
   #label the traces
   geom_text(data=dfTraceLabels, aes(x = Inflow, y = Release, label = Label), size=3, fontface ="bold") +
     
