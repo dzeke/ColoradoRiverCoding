@@ -17,7 +17,7 @@ drawdown for the prior 2 years and storage remaining to draw down to the minimum
 power pool and elevation where the dam no longer can release 8.3 maf per year
 through its outlets and meet downstream water delivery targets.
 
-![](media/f0f666a91fe379de917bb70d2f5f64f5.png)
+![](media/67f3bc5c3ebc69a58eec51ca754a83de.png)
 
 **Figure 1. Factors that affect Lake Powell storage.**
 
@@ -27,24 +27,24 @@ Colorado River managers still control **Lake Powell releases** and **upstream
 water conservation**.
 
 The insight from the data assembly is that managers from the Colorado River
-Upper and Lower Basins and First Nations can together *decrease Lake Powell
-releases* and *increase upstream water conservation* to slow reservoir drawdown
-to elevation 3,490 feet better than any party acting solo. These coordinated
-actions can help to continue to generate electricity for rural communities
-across 7 western states, supply downstream water users, and sustain endangered,
-native fish of the Grand Canyon. We ask: how to improve this brief and how to
-make more actionable the suggestions for coordinated actions to decrease Lake
+Upper and Lower Basins and First Nations can *together* **decrease Lake Powell
+releases** and **increase upstream water conservation** to slow reservoir
+drawdown to elevation 3,490 feet better than any party acting solo. These
+coordinated actions can help to continue to generate electricity for rural
+communities across 7 western states, supply downstream water users, and sustain
+endangered, native fish of the Grand Canyon. We ask: how to improve this brief?
+And how to make more actionable the coordinated suggestions to decrease Lake
 Powell releases and increase upstream water conservation?
 
-## Feedback
+## Requested Feedback
 
-Please email feedback to improve this brief and make the suggestions to slow
-Lake Powell drawdown more actionable to
-[david.rosenberg@usu.edu](mailto:david.rosenberg@usu.edu). Use the subject line
-“Lake Powell in Brief”. Feedback will be accepted up until April 30, 2022.
-Persons who contribute feedback that improve the brief will be invited to join
-as co-authors. On May 1, 2022, the brief will be formatted and submitted for
-publication in a high-quality peer-reviewed journal.
+Please email feedback to improve this brief and make more actionable the
+coordinated suggestions to decrease Lake Powell releases and increase upstream
+water conservation to [david.rosenberg@usu.edu](mailto:david.rosenberg@usu.edu).
+Use the subject line “Lake Powell in Brief”. Feedback will be accepted up until
+April 30, 2022. We will invite persons who contribute feedback that improves the
+brief to join as a co-author. On May 1, 2022, the brief will be re-formatted and
+submitted for publication in a high-quality peer-reviewed journal.
 
 ## Authors
 
@@ -75,18 +75,24 @@ David E. Rosenberg, Utah State University.
 
 ## Folder Contents
 
--   **PowellInBrief-DecreaseReleasesIncreaseInflowsToProtectPowerSupplyFish.docx**
-    – Word source file for this document.
+-   [**PowellInBrief-DecreaseReleasesIncreaseInflowsToProtectPowerSupplyFish.docx**](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ProtectPowellInBrief/ProtectPowellInBrief-CoordinatedActionsToHelpGeneratePowerDeliverWaterSustainNativeFish.docx)
+    – Word source file for the brief.
 
--   **LakePowell04-08-2022T11.32.01.csv** – Monthly Lake Powell operations data
-    downloaded from (USBR, 2020).
+-   [**PowellInBrief-DecreaseReleasesIncreaseInflowsToProtectPowerSupplyFish.md**](https://github.com/dzeke/ColoradoRiverCoding/blob/main/ProtectPowellInBrief/ProtectPowellInBrief-CoordinatedActionsToHelpGeneratePowerDeliverWaterSustainNativeFish.md)
+    – Markdown version of Word doc for viewing on Github.
 
--   **PowellBypass.xlsx** – Lake Powell bypass elevation-capacity curve
-    downloaded from the Colorado River Simulation System model.
+-   [**LakePowell04-08-2022T11.32.01.csv**](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ProtectPowellInBrief/LAKEPOWELL04-08-2022T11.32.01.csv)
+    – Monthly Lake Powell operations data downloaded from (USBR, 2020).
 
--   **ProtectLakePowell-InBrief.pptx** – Powerpoint source file for Figure 1.
+-   [**PowellBypass.xlsx**](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ProtectPowellInBrief/PowellBypass.xlsx)
+    – Lake Powell bypass elevation-capacity curve downloaded from the Colorado
+    River Simulation System model.
 
--   **ProtectLakePowell-InBrief.png** – PNG version of Figure 1.
+-   [**ProtectLakePowellInBrief-DataAssembly.pptx**](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ProtectPowellInBrief/ProtectLakePowellInBrief-DataAssembly.pptx)
+    – Powerpoint source file for data assembly in Figure 1.
+
+-   [**ProtectLakePowellInBrief-DataAssembly.png**](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ProtectPowellInBrief/ProtectLakePowellInBrief-DataAssembly.png)
+    – PNG version of Figure 1.
 
 ## References
 
