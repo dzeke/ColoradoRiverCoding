@@ -1,5 +1,7 @@
 ## Protect Lake Powell in brief: Coordinated actions to help generate electricity, supply water, and sustain endangered fish of the Grand Canyon
 
+**Short URL:** <http://tinyurl.com/ProtectLakePowellInBrief>
+
 ## **Introduction**
 
 There is still opportunity to protect Lake Powell’s minimum power pool elevation
