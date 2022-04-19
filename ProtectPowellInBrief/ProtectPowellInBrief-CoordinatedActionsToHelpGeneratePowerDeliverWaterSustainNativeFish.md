@@ -18,7 +18,7 @@ September 2021 is about the same volume as remains to drawdown to elevation
 3,455 feet where Glen Canyon dam can no longer release 7.5 maf per year to meet
 downstream water delivery targets.
 
-![](media/67f3bc5c3ebc69a58eec51ca754a83de.png)
+![](media/d335e1f8f0af946274497454e53cd66f.png)
 
 **Figure 1. Inflow and Outflow factors that affect Lake Powell storage.**
 
