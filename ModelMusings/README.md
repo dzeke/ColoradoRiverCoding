@@ -1,14 +1,15 @@
-## Lessons from 26 Colorado River managers and experts experimenting with flex accounts in a combined Lake Powell-Lake Mead  system
+## Colorado River Basin Accounts: Provoke Thought and Discussion about New Operations
 
-### [Excel Model File](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/PilotFlexAccounting-CombinedPowellMead.xlsx) (.xlsx)
-### [Slides of Key Ideas](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/PilotFlexAccounting-KeyIdeas.pdf) (pdf file)
+### [Excel Model File](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/ColoradoRiverBasinAccounts.xlsx) (.xlsx)
+### [Slides of Key Ideas](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/ColoradoRiverBasinAccounts-KeyIdeas.pdf) (pdf file)
 ### [Model Guide](https://github.com/dzeke/ColoradoRiverCoding/blob/main/ModelMusings/Support/ModelGuide/ModelGuide-CombinedLakePowellLakeMead.md) (Help file)
 ### [Write up](https://github.com/dzeke/ColoradoRiverCoding/raw/main/BlogDrafts/3-LessonsFromSynchronouslyModelCombinedLakePowellLakeMeadSystemWith26ColoradoRiverManagersExperts.docx) (.docx)
 
 ## Overview														
-This repository gives users the opportunity to experiment with flex accounts in a combined Lake Powell-Lake Mead system. The purpose of the activity to is provoke thought and discussion about new operations for Lake Powell and Lake Mead.
-
+This tool gives users the opportunity to experiment with Colorado River basin accounts as a more flexible option to reservoir equalization operations that expire in 2026. The purpose is provoke thought and discussion about new Colorado River operations.
 ## Rquirements
+**Facilitator**: 1 person to setup in Google Sheets (see Setup below), invite participants, and organize play.											
+
 **Number of People**: 2 or more (facilitator may also participate).
 
 **Time**: 1 to 3 hours.
@@ -18,7 +19,7 @@ This repository gives users the opportunity to experiment with flex accounts in 
 ## Facilitation Directions
 
 **Setup**
-1. Download the file **[PilotFlexAccounting-CombinedPowellMead.xlsx](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/PilotFlexAccounting-CombinedPowellMead.xlsx)** to your computer.
+1. Download the file **[ColoradoRiverBasinAccounts.xlsx](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/ColoradoRiverBasinAccounts.xlsx)** to your computer.
 1. Move the Excel file to your Google Drive. Open as a Google Sheet.
 1. Open the **Versions** Worksheet to see updates.
 1. Duplicate the **Master** Worksheet to save a blank version for later use. 
@@ -46,7 +47,7 @@ This repository gives users the opportunity to experiment with flex accounts in 
 1. Wang, J., Rosenberg, D. E., Schmidt, J. C., and Wheeler, K. G. (2020). "[Managing the Colorado River for an Uncertain Future](http://qcnr.usu.edu/coloradoriver/files/CCRS_White_Paper_3.pdf)." Center for Colorado River Studies, Utah State University, Logan, Utah.
 
 ## Requested Citation
-David E. Rosenberg (2022). "Lessons from 26 Colorado River managers and experts experimenting with flex accounts in a combined Lake Powell-Lake Mead." Utah State University, Logan, UT. https://github.com/dzeke/ColoradoRiverCoding/tree/main/ModelMusings.
+David E. Rosenberg (2022). "Colorado River Basin Accounts: Provoke Thought and Discussion about New Operations." Utah State University, Logan, UT. https://github.com/dzeke/ColoradoRiverCoding/tree/main/ModelMusings.
 
 ## Donate to Support this Work
 Make a tax deductible gift -- for as little as $5 -- to Utah State University (USU) to support new Colorado River work:
@@ -59,12 +60,15 @@ Make a tax deductible gift -- for as little as $5 -- to Utah State University (U
 All donors will be added to an email list and receive periodic updates.
 
 ## File Descriptions
-1. **[PilotFlexAccounting-CombinedPowellMead.xlsx](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/PilotFlexAccounting-CombinedPowellMead.xlsx)** - An Excel file with the flex accounting tool. Follow **Facillation Directions** (above) or open **ReadMe-Directions** Worksheet.
-1. **[PilotFlexAccounting-KeyIdeas.pdf](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/PilotFlexAccounting-KeyIdeas.pdf)** - A PDF file that illustrates key management ideas for flex accounts in a combined Lake Powell-Lake Mead system.
+1. **[ColoradoRiverBasinAccounts.xlsx](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/ColoradoRiverBasinAccounts.xlsx)** - An Excel file with the Colorado River Basin Accounts tool. Follow **Facillation Directions** (above) or open **ReadMe-Directions** Worksheet.
+1. **[ColoradoRiverBasinAccounts-KeyIdeas.pdf](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/ColoradoRiverBasinAccounts-KeyIdeas.pdf)** - A PDF file that illustrates key management ideas for flex accounts in a combined Lake Powell-Lake Mead system.
 1. **[Model Guide](https://github.com/dzeke/ColoradoRiverCoding/blob/main/ModelMusings/Support/ModelGuide/ModelGuide-CombinedLakePowellLakeMead.md)** - Online help file that provides context and explanations for each spreadsheet row. In **Master** Worksheet, link to help in ![#FFE5B4](https://via.placeholder.com/15/FFE5B4/000000?text=+) `Column N`.
 1. **Support folders**:
    1. **Hydrology** - Excel files used to generate scenarios on **HydrologicScenarios** Worksheet. **CRB_29gages.xlsx**: Gages in the Colorado River basin used to estimate natural flow. **NaturalFlows1906-2018_20200110.xlsx**: Natural flow hydrology downloaded from the USBR website and modified to pick out particular 10- and 20- year sequences of flows from the observed and paleo reconstructed records.
+   1. **ModelGuide** - Files to create the Model Guide.
    1. **OldVersions** - Older versions of the Flex accounting tool (see **Versions** Worksheet).
+   1. **ParticipantAnalysis** - Files to analyze one session
+   1. **ParticipantChoosePowellNaturalFlow** - Files to produce the plot in the manuscript that shows how participants choose Lake Powell natural inflow.
 
 ## License
 BSD-3-Clause (https://github.com/dzeke/ColoradoRiverCoding/blob/main/LICENSE). Available to use, modify, distribute, etc. for free.
