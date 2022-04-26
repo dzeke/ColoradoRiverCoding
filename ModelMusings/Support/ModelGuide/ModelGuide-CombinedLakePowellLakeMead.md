@@ -481,7 +481,7 @@ fill in Table 9.
 
 **Table 8. Approximate Colorado River water prices**
 
-![](media/d268b46d45f463993729a9c57b4a698b.emf)
+![](media/4c2398d5d138a1209900b80d6d3b4e0c.png)
 
 **Table 9. Compensation (\$ million) at different water prices (\$/acre-foot) to
 purchase different target water volumes (maf)**
