@@ -1,7 +1,7 @@
 ## Colorado River Basin Accounts: Provoke Thought and Discussion about New Operations
 
 ### [Excel Model File](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/ColoradoRiverBasinAccounts.xlsx) (.xlsx)
-### [Slides of Key Ideas](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/ColoradoRiverBasinAccounts-KeyIdeas.pdf) (pdf file)
+### [Slides of Key Ideas](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/ColoradoRiverBasinAccounts-LetsStart.pdf) (pdf file)
 ### [Model Guide](https://github.com/dzeke/ColoradoRiverCoding/blob/main/ModelMusings/Support/ModelGuide/ModelGuide-CombinedLakePowellLakeMead.md) (Help file)
 ### [Write up](https://github.com/dzeke/ColoradoRiverCoding/raw/main/BlogDrafts/3-LessonsFromSynchronouslyModelCombinedLakePowellLakeMeadSystemWith26ColoradoRiverManagersExperts.docx) (.docx)
 
@@ -37,8 +37,8 @@ This tool gives users the opportunity to experiment with Colorado River basin ac
 1. View the **Master-Plots** worksheet to compare entries to current operations (Law of River).
 1. **ReadMe-Directions** Worksheet also has these directions and describes all worksheets in the Workbook.
 
-## Visual Directions
-[ColoradoRiverBasinAccounts-KeyIdeas.pdf](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/ColoradoRiverBasinAccounts-KeyIdeas.pdf).
+## Lets Start (Visual Directions)
+[ColoradoRiverBasinAccounts-LetsStart.pdf](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/ColoradoRiverBasinAccounts-LetsStart.pdf).
     
 ## Publications
 1. Rosenberg, D. E. (2022). "[Lessons from 26 Colorado River managers and experts experimenting with flex accounts in a combined Lake Powell-Lake Mead system](https://github.com/dzeke/ColoradoRiverCoding/raw/main/BlogDrafts/3-LessonsFromSynchronouslyModelCombinedLakePowellLakeMeadSystemWith26ColoradoRiverManagersExperts.docx)." (Manuscript)
@@ -62,7 +62,7 @@ All donors will be added to an email list and receive periodic updates.
 
 ## File Descriptions
 1. **[ColoradoRiverBasinAccounts.xlsx](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/ColoradoRiverBasinAccounts.xlsx)** - An Excel file with the Colorado River Basin Accounts tool. Follow **Facillation Directions** (above) or open **ReadMe-Directions** Worksheet.
-1. **[ColoradoRiverBasinAccounts-KeyIdeas.pdf](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/ColoradoRiverBasinAccounts-KeyIdeas.pdf)** - A PDF file that illustrates key management ideas for flex accounts in a combined Lake Powell-Lake Mead system.
+1. **[ColoradoRiverBasinAccounts-LetsStart.pdf](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/ColoradoRiverBasinAccounts-LetsStart.pdf)** - A PDF file that shows how to start the activity.
 1. **[Model Guide](https://github.com/dzeke/ColoradoRiverCoding/blob/main/ModelMusings/Support/ModelGuide/ModelGuide-CombinedLakePowellLakeMead.md)** - Online help file that provides context and explanations for each spreadsheet row. In **Master** Worksheet, link to help in ![#FFE5B4](https://via.placeholder.com/15/FFE5B4/000000?text=+) `Column N`.
 1. **Support folders**:
    1. **Hydrology** - Excel files used to generate scenarios on **HydrologicScenarios** Worksheet. **CRB_29gages.xlsx**: Gages in the Colorado River basin used to estimate natural flow. **NaturalFlows1906-2018_20200110.xlsx**: Natural flow hydrology downloaded from the USBR website and modified to pick out particular 10- and 20- year sequences of flows from the observed and paleo reconstructed records.
