@@ -194,28 +194,25 @@ Lee Ferry. The Upper Basin can keep all Lake Powell natural flow above 4.2 maf.
 ### Upper Basin pre-1922 water rights
 
 Upper Basin water rights in million acre-feet per year prior to 1922 when the
-Colorado River Compact was signed (Table 4). These water rights have a seniority
-date prior to the compact. In the assignment of inflow (see Step 2), these
-rights are filled first ahead of the Lower Basin’s right to 75 million acre-feet
-every consecutive 10-years by Article III(d) of the Compact. Presently, pre 1922
-water rights for New Mexico are unknown.
+Colorado River Compact was signed (Table 4). These pre-1922 water rights have a
+seniority date prior to the compact. In the assignment of inflow (see Step 2),
+these rights are filled concurrent to Lower Basin pre-1922 water rights.
 
-The 1.9 maf per year value in the model is the 2.7 maf per year total in Table
-3, plus an assumed 0.3 maf per year for New Mexico, minus 1.06 maf per year for
-First Nations in the Upper Basin. This assignment assumes Upper Basin First
-Nations water rights all have a priority before 1922.
+The 1.2 maf per year value in the model is the 2.3 maf per year total in Table
+4, minus 1.06 maf per year for First Nations in the Upper Basin. This assignment
+assumes Upper Basin First Nations water rights all have a priority before 1922.
 
-**Table 4. Upper Basin pre-compact water rights (million acre-feet per year)**
+**Table 4. Pre-compact water rights (million acre-feet per year)(Leeflang,
+2021)**
 
-![](media/a79de07a2d1c72df5959416552330307.png)
+![](media/7c02e4128e2bbbb6f5479d4f4d5cf2ed.emf)
 
 # Step 2. Specify natural inflow to Lake Powell
 
-Specify natural inflow to Lake Powell as the water in the Green, San Juan,
-mainstem Colorado, and other tributaries that would flow into Lake Powell if
-there were no upstream human consumptive use or reservoirs. Participants specify
-a natural inflow to Lake Powell together. Once a Lake Powell natural flow is
-specified, the rows below populate with data.
+Participants together choose a natural inflow to Lake Powell as the water in the
+Green, San Juan, mainstem Colorado, and other tributaries that would flow into
+Lake Powell if there were no upstream human consumptive use or reservoirs. Once
+a Lake Powell natural flow is specified, the rows below populate with data.
 
 Because future flows are uncertain, specify natural inflow to Lake Powell as a
 scenario of possible future flows. Develop a scenario from:
@@ -295,12 +292,11 @@ and evapotranspiration from 1995 to 2014 at USBR (2021b).
 
 # Step 3. Split existing reservoir storage among accounts (year 1 only)
 
-Split the starting combined reservoir storage (Figure 6) entered in Section 1B
-among the accounts. These assignments are joint decisions. There are many
-possibilities. Here, the default values in Column B apply Interim Guidelines
-Intentionally Created Surplus (ICS) accounts, the Lower and Upper Basin drought
-contingency plans and the Minute 323 to the U.S.-Mexico Treaty (IBWC, 2021;
-USBR, 2019).
+Participants split the starting combined reservoir storage (Figure 6) entered in
+Section 1B among the basin accounts. There are many possibilities. Here, the
+default values in Column B apply Interim Guidelines Intentionally Created
+Surplus (ICS) accounts, the Lower and Upper Basin drought contingency plans and
+the Minute 323 to the U.S.-Mexico Treaty (IBWC, 2021; USBR, 2019).
 
 -   Assign the 11.6 maf protection volume to the shared, reserve account. 11.6
     maf is the sum of 5.9 maf protection volume for Lake Powell plus 5.7 maf
@@ -361,10 +357,12 @@ evaporation or 0.1 maf that year.
 
 ## 3C. Calculate Mexico Water Allocation
 
-Mexico’s water allocation is its 1.5 maf per year treaty amount minus mandatory
+Mexico’s water allocation is its 1.5 maf per year treaty amount, minus mandatory
 conservation volumes specified in Minutes 319 and 323 for declining Lake Mead
-levels (Table 5)(IBWC, 2021). The *MandatoryConservation* sheet shows the Mexico
-and Lower Basin conservation schedules.
+levels(Table 5), minus Mexico’s contribution to the Colorado River Delta listed
+in Minute 323 (IBWC, 2021), minus Mexcio’s portion of the Lake Havasu / Parker
+evaporation and evapotranspiration. The *MandatoryConservation* sheet shows the
+Mexico and Lower Basin conservation schedules.
 
 **Table 5. Mexico Mandatory Conservation under Minutes 319 and 323**
 
@@ -372,38 +370,33 @@ and Lower Basin conservation schedules.
 
 # Split combined natural inflow among accounts
 
-Split the basin natural inflow among accounts (Figure 7). Basin natural inflows
-include natural inflow to Lake Powell, plus intervening Grand Canyon inflow,
-plus Mead to Imperial Dam intervening inflow (see Sections 2A-C).
+Participants split the basin natural inflow among accounts (Figure 7). Basin
+natural inflows include natural inflow to Lake Powell, plus intervening Grand
+Canyon inflow, plus Mead to Imperial Dam intervening inflow (see Sections 2A-C).
 
-![](media/a88e01126aa6f19431cd64b52938c40a.png)
+![](media/47d5061c3fea7a491418f52e09e7f66a.png)
 
 **Figure 7. Split natural flow among Colorado River basin accounts.**
 
-The split of natural flow among accounts is a joint decision. There are lots of
-ways to split. Table 6 provides justifications for one way shown in Figure 7 to
-split that draws on existing operations.
+There are lots of ways to split inflow among the basin accounts. Table 6
+justifies the default splits shown in Figure 7 that draw on existing operations.
 
 **Table 6. Assign inflow to accounts**
 
-|    | **Step**                                                                                                                                                                                                                                                                                          | **Existing Operations**                            |
-|----|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------|
-| 1. | Assign the **shared, reserve account** the *first block of inflow* to exactly offset the evaporation volume of the account. This assignment keeps the shared, reserve balance steady year to year. Volume depends on reservoir storage.                                                           | Drought Contingency Plans (USBR, 2019)             |
-| 2. | Assigned inflow to equal Lake Havasu / Parker evaporation and evapotranspiration (carriage loss). These assignments were deductions from Mexico, Lower Basin, and First Nations in the Lower Basin accounts in proportion to each entities historic consumptive use.                              |                                                    |
-| 3. | Assign **First Nations** the next *2.01 maf* of inflow *minus Lower Basin carriage loss*. 2.01 maf is 1.06 plus 0.952 maf in the Upper and Lower Basins. Excludes claimed amounts. Lower Basin carriage loss is share of Havasu/Parker Evaporation and ET in the Lower Basin (0.95/8.7 = 11%).    | Tribal Water Study (Ten Tribes Partnership, 2018). |
-| 4. | Assign the **Colorado River Delta** the next *0.016 maf* of inflow. This volume is 67% of the 9-year, 0.21 maf volume pledged by the U.S. and Mexico.                                                                                                                                             | Minute 323 (IBWC, 2021)                            |
-| 5. | Assign **Mexico** the next *1.5 maf* of inflow *minus mandatory conservation minus carriage loss*. Mandatory conservation volumes increase as Lake Mead level’s decreases (see Section 3C). Carriage loss is Mexico’s share of Havasu/Parker Evaporation and Evapotranspiration (1.5/8.7 = 17.2%) | 1944 Treaty, Minutes 319 and 323 (IBWC, 2021)      |
-| 6. | Split the next 4.6 maf per year natural flow between the **Upper** and **Lower Basins** because the Basins have 2.3 and 3.5 maf per year of pre-1922 water rights.                                                                                                                                | (Leeflang, 2021)                                   |
-| 7. | Assign the **Lower Basin** the next 4.2 *maf* of natural flow. 4.2 maf plus 2.3 maf pre-1922 use plus 0.95 maf of decreed water for First Nations below Hoover dam plus half of Mexico’s assignment resulted in 8.2 maf per year that is the Lake Powell objective release.                       | 1922 Compact Article III(d)                        |
-| 7. | Assign the **Upper Basin** *all remaining* Lake Powell natural flow.                                                                                                                                                                                                                              | 1922 Compact Article III(d)                        |
-
-The present configuration is valid for Lake Powell natural flows down to 3.7 maf
-per year. Below that value, it’s unclear whether to first assign natural flow to
-First Nations or Mexico or share the assignment.
+|    | **Step**                                                                                                                                                                                                                                                                                                                              | **Existing Operations**                               |
+|----|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------|
+| 1. | Assign the **shared, reserve account** the *first block of inflow* to exactly offset the evaporation volume of the account. This assignment keeps the shared, reserve balance steady year to year. Volume depends on reservoir storage.                                                                                               | Drought Contingency Plans (USBR, 2019)                |
+| 2. | Assigned inflow to equal Lake Havasu / Parker evaporation and evapotranspiration. This assignment is drawn from inflow assignments to Mexico, Lower Basin, and First Nations in the Lower Basin.                                                                                                                                      | None. Existing operations do not discus these losses. |
+| 3. | Assigned **First Nations** the next *1.94 maf* per year of decreed water rights because First Nations managed their water independently of Basin States. The volume is 1.06 plus 0.952 maf in the Upper and Lower Basins minus First Nations in the Lower Basin’s share of Havasu/Parker losses. The amount excludes claimed amounts. | Tribal Water Study (Ten Tribes Partnership, 2018).    |
+| 4. | Assigned the **Colorado River Delta** the next *0.016 maf* of inflow. This volume is 67% of the 9-year, 0.21 maf volume pledged by the U.S. and Mexico.                                                                                                                                                                               | Minute 323 (IBWC, 2021)                               |
+| 5. | Assigned **Mexico** the next *1.5 maf* of inflow *minus mandatory conservation minus Mexico’s portion* of Havasu/Parker losses. Mandatory conservation volumes increase as Lake Mead level’s decreases (see Section 3C).                                                                                                              | 1944 Treaty, Minutes 319 and 323 (IBWC, 2021)         |
+| 6. | Split the next 2.4 maf per year natural flow between the **Upper** and **Lower Basins** because the Basins have 1.2 and 2.45 maf per year of pre-1922 water rights after deducting use by First Nations.                                                                                                                              | (Leeflang, 2021; Ten Tribes Partnership, 2018)        |
+| 7. | Assign the **Lower Basin** the next 5.3 *maf* of natural flow. 5.2 maf plus 1.2 maf pre-1922 use plus 0.95 maf of First Nations use below Hoover dam plus half of Mexico’s assignment resulted in 8.2 maf per year that is the Lake Powell objective release.                                                                         | 1922 Compact Article III(d)                           |
+| 7. | Assign the **Upper Basin** *all remaining* Lake Powell natural flow.                                                                                                                                                                                                                                                                  | 1922 Compact Article III(d)                           |
 
 Figure 7 and Table 6 are one way to assign natural inflow to the basin accounts.
-Other methods might prioritize the Colorado River Delta, First Nations, and
-Mexico differently.
+Other methods may prioritize the Colorado River Delta, First Nations, and Mexico
+differently.
 
 # Step 5. Participant Dashboards – Conserve, Consume, and Trade
 
@@ -774,6 +767,9 @@ IBWC." United States Section.
 
 Kuhn, E., and Fleck, J. (2019). *Science Be Dammed: How Ignoring Inconvenient
 Science Drained the Colorado River*, University of Arizona Press.
+
+(Leeflang, B.). (2021). "Colorado River Coding: Pre 1922 Compact Water Use."
+<https://github.com/dzeke/ColoradoRiverCoding/tree/main/Pre1922CompactWaterUse>.
 
 Meko, D., Bigio, E., and Woodhouse, C. A. (2017). "Colorado River at Lees Ferry,
 CO River (Updated Skill)." *Treeflow*.
