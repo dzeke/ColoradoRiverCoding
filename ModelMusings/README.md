@@ -3,7 +3,7 @@
 ### [Excel Model File](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/ColoradoRiverBasinAccounts.xlsx) (.xlsx)
 ### [Lets Start (visual directions)](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/ColoradoRiverBasinAccounts-LetsStart.pdf) (pdf file)
 ### [Model Guide](https://github.com/dzeke/ColoradoRiverCoding/blob/main/ModelMusings/Support/ModelGuide/ModelGuide-CombinedLakePowellLakeMead.md) (Help file)
-### [Write up](https://github.com/dzeke/ColoradoRiverCoding/raw/main/BlogDrafts/3-LessonsFromSynchronouslyModelCombinedLakePowellLakeMeadSystemWith26ColoradoRiverManagersExperts.docx) (.docx)
+### [Manuscript](https://github.com/dzeke/ColoradoRiverCoding/raw/main/BlogDrafts/3-LessonsFromUseGoogleSheetsZoomToDiscussMoreFlexibleSustainableColoradoRiverOperations.docx) (.docx)
 
 ## Overview														
 The purpose of this activity is to provoke participants to discuss more flexible and sustainable Colorado River operations than existing operations that equalize reservoirs and expire in 2026. Participants use a Google Sheet to consume, save, and trade water in 6 basin accounts, protect Lake Powell and Lake Mead, and sustain endangered, native fish of the Grand Canyon.
@@ -39,15 +39,14 @@ The purpose of this activity is to provoke participants to discuss more flexible
 1. **ReadMe-Directions** Worksheet also has these directions and describes all worksheets in the Workbook.
   
 ## Publications
-1. Rosenberg, D. E. (2022). "[Lessons from 26 Colorado River managers and experts experimenting with flex accounts in a combined Lake Powell-Lake Mead system](https://github.com/dzeke/ColoradoRiverCoding/raw/main/BlogDrafts/3-LessonsFromSynchronouslyModelCombinedLakePowellLakeMeadSystemWith26ColoradoRiverManagersExperts.docx)." (Manuscript)
-1. Rosenberg, D. E. (2021). "[Adapt Lake Mead releases to inflow to give managers more flexibility to slow reservoir draw down](https://digitalcommons.usu.edu/water_pubs/170/)." Utah State University, Logan, Utah.
-1. Rosenberg, D. E. (2021). "[Invest in Farm Water Conservation to Curtail Buy and Dry](https://digitalcommons.usu.edu/water_pubs/169/)." Utah State University, Logan, Utah.
+1. Rosenberg, D. E. (2022). "[Lessons from using Google Sheets and Zoom to provoke discussion about more flexible and sustainable Colorado River operations](https://github.com/dzeke/ColoradoRiverCoding/raw/main/BlogDrafts/3-LessonsFromUseGoogleSheetsZoomToDiscussMoreFlexibleSustainableColoradoRiverOperations.docx)." (Manuscript)
+1. Rosenberg, D. E. (In press). "[Adapt Lake Mead releases to inflow to give managers more flexibility to slow reservoir draw down](https://digitalcommons.usu.edu/water_pubs/170/)." Journal of Water Resources Planning and Management.
+1. Rosenberg, D. E. (In press). "[Invest in Farm Water Conservation to Curtail Buy and Dry](https://digitalcommons.usu.edu/water_pubs/169/)." Journal of Water Resources Planning and Management.
 1. Wang, J., and Rosenberg, D. E. (2021). "[Living within our Means: Adapting Colorado River Basin depletions to available water]( https://digitalcommons.usu.edu/water_pubs/171/)." Submitted to Journal of Water Resources Planning and Management.
 1. Wang, J., Rosenberg, D. E., Schmidt, J. C., and Wheeler, K. G. (2020). "[Managing the Colorado River for an Uncertain Future](http://qcnr.usu.edu/coloradoriver/files/CCRS_White_Paper_3.pdf)." Center for Colorado River Studies, Utah State University, Logan, Utah.
 
-## Requested Citation
-David E. Rosenberg (2022). "Colorado River Basin Accounts: Provoke discussion about more flexible and sustainable operations." Utah State University, Logan, UT. https://github.com/dzeke/ColoradoRiverCoding/tree/main/ModelMusings.
-
+## Requested Citation (permanent link)
+David E. Rosenberg (2022). "Colorado River Basin Accounts: Provoke discussion about more flexible and sustainable operations." Hydroshare.org. https://doi.org/10.4211/hs.57ad7df425b84da2874e9c19e7b34aad.
 ## Donate to Support this Work
 Make a tax deductible gift -- for as little as $5 -- to Utah State University (USU) to support new Colorado River work:
 
