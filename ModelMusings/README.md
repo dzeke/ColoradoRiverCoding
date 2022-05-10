@@ -46,7 +46,7 @@ The purpose of this activity is to provoke participants to discuss more flexible
 1. Wang, J., Rosenberg, D. E., Schmidt, J. C., and Wheeler, K. G. (2020). "[Managing the Colorado River for an Uncertain Future](http://qcnr.usu.edu/coloradoriver/files/CCRS_White_Paper_3.pdf)." Center for Colorado River Studies, Utah State University, Logan, Utah.
 
 ## Requested Citation
-David E. Rosenberg (2022). "Colorado River Basin Accounts: Provoke thought and discussion about new operations." Utah State University, Logan, UT. https://github.com/dzeke/ColoradoRiverCoding/tree/main/ModelMusings.
+David E. Rosenberg (2022). "Colorado River Basin Accounts: Provoke discussion about more flexible and sustainable operations." Utah State University, Logan, UT. https://github.com/dzeke/ColoradoRiverCoding/tree/main/ModelMusings.
 
 ## Donate to Support this Work
 Make a tax deductible gift -- for as little as $5 -- to Utah State University (USU) to support new Colorado River work:
