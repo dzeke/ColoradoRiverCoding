@@ -1,4 +1,4 @@
-## Colorado River Basin Accounts: Provoke thought and discussion about new operations
+## Colorado River Basin Accounts: Provoke discussion about more flexible and sustainable operations
 
 ### [Excel Model File](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/ColoradoRiverBasinAccounts.xlsx) (.xlsx)
 ### [Lets Start (visual directions)](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/ColoradoRiverBasinAccounts-LetsStart.pdf) (pdf file)
@@ -6,7 +6,8 @@
 ### [Write up](https://github.com/dzeke/ColoradoRiverCoding/raw/main/BlogDrafts/3-LessonsFromSynchronouslyModelCombinedLakePowellLakeMeadSystemWith26ColoradoRiverManagersExperts.docx) (.docx)
 
 ## Overview														
-The purpose of this activity is to provoke thought and discussion about new Colorado River operations. The activity gives participants the opportunity to experiment with Colorado River basin accounts as a more flexible option to reservoir equalization operations that expire in 2026. 
+The purpose of this activity is to provoke participants to discuss more flexible and sustainable Colorado River operations than the existing reservoir equalization operations that expire in 2026. Participants use a Google Sheet to consume, save, and trade water in 6 basin accounts, protect Lake Powell and Lake Mead, and sustain native fish.
+
 ## Rquirements
 **Facilitator**: 1 person to setup in Google Sheets (see Setup below), invite participants, and organize play.											
 
