@@ -6,7 +6,7 @@
 ### [Write up](https://github.com/dzeke/ColoradoRiverCoding/raw/main/BlogDrafts/3-LessonsFromSynchronouslyModelCombinedLakePowellLakeMeadSystemWith26ColoradoRiverManagersExperts.docx) (.docx)
 
 ## Overview														
-The purpose of this activity is to provoke participants to discuss more flexible and sustainable Colorado River operations than existing operations that equalize reservoirs and expire in 2026. Participants use a Google Sheet to consume, save, and trade water in 6 basin accounts, protect Lake Powell and Lake Mead, and sustain native fish.
+The purpose of this activity is to provoke participants to discuss more flexible and sustainable Colorado River operations than existing operations that equalize reservoirs and expire in 2026. Participants use a Google Sheet to consume, save, and trade water in 6 basin accounts, protect Lake Powell and Lake Mead, and sustain endangered, native fish of the Grand Canyon.
 
 ## Rquirements
 **Facilitator**: 1 person to setup in Google Sheets (see Setup below), invite participants, and organize play.											
