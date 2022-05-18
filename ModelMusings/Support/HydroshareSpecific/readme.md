@@ -5,7 +5,7 @@
 1. **ColoradoRiverBasinAccounts.xlsx** - Basin Accounts Tool. Move into Google Sheets and follow Facilitation Directions (below). Or open ReadMe-Directions Worksheet.
 1. **ColoradoRiverBasinAccounts-LetsStart.pdf** - Lets Start (visual directions).
 1. **[Model Guide](https://github.com/dzeke/ColoradoRiverCoding/blob/main/ModelMusings/Support/ModelGuide/ModelGuide-CombinedLakePowellLakeMead.md)** - Online help file that provides context and explanations for each spreadsheet row. 
-1. **3-LessonsFromUseGoogleSheetsZoomToDiscussMoreFlexibleSustainableColoradoRiverOperations.docx** - Manuscript for publication as a journal article.
+1. **3-LessonsUseGoogleSheetsZoomToDiscussMoreFlexibleSustainableColoradoRiverOperations.docx** - Manuscript for publication as a journal article.
 
 ### Requirements
 **Facilitator**: 1 person to setup in Google Sheets (see Setup below), invite participants, and organize play.											
@@ -53,7 +53,7 @@
 1. **ReadMe-Directions** Worksheet also has these directions and describes all worksheets in the Workbook.
   
 ### Publications
-1. Rosenberg, D. E. (2022). "Lessons from using Google Sheets and Zoom to provoke discussion about more flexible and sustainable Colorado River operations." (3-LessonsFromUseGoogleSheetsZoomToDiscussMoreFlexibleSustainableColoradoRiverOperations.docx).
+1. Rosenberg, D. E. (2022). "Lessons from using Google Sheets and Zoom to provoke discussion about more flexible and sustainable Colorado River operations." (3-LessonsUseGoogleSheetsZoomToDiscussMoreFlexibleSustainableColoradoRiverOperations.docx).
 1. Rosenberg, D. E. (In press). "[Adapt Lake Mead releases to inflow to give managers more flexibility to slow reservoir draw down](https://digitalcommons.usu.edu/water_pubs/170/)." Journal of Water Resources Planning and Management.
 1. Rosenberg, D. E. (2022). "[Invest in Farm Water Conservation to Curtail Buy and Dry](https://digitalcommons.usu.edu/water_pubs/169/)." Utah State University, Logan, Utah.
 1. Wang, J., and Rosenberg, D. E. (2021). "[Living within our Means: Adapting Colorado River Basin depletions to available water]( https://digitalcommons.usu.edu/water_pubs/171/)." Submitted to Journal of Water Resources Planning and Management.
