@@ -6,8 +6,7 @@
 ### [Manuscript](https://github.com/dzeke/ColoradoRiverCoding/raw/main/BlogDrafts/3-LessonsUseGoogleSheetsZoomToDiscussMoreFlexibleSustainableColoradoRiverOperations.docx) (.docx)
 
 ## Overview														
-The purpose of this activity is to provoke participants to discuss more flexible and sustainable Colorado River operations than existing operations that equalize reservoirs and expire in 2026. Participants use a Google Sheet to consume, save, and trade water in 6 basin accounts, protect Lake Powell and Lake Mead, and sustain endangered, native fish of the Grand Canyon.
-
+The purpose of this activity is to discuss more flexible and sustainable Colorado River operations than existing operations that equalize reservoirs and expire in 2026. To provoke discussion, participants use a Google Sheet with accounts for Upper Basin, Lower Basin, Mexico, Colorado River Delta, First Nations, and a shared reserve. Over one or more years, participants consume, save, and trade water in the accounts, protec reservoirs, and sustain endangered, native fish of the Grand Canyon. Participants repeat for one or more years.
 ## Rquirements
 **Facilitator**: 1 person to setup in Google Sheets (see Setup below), invite participants, and organize play.											
 
@@ -41,8 +40,8 @@ The purpose of this activity is to provoke participants to discuss more flexible
 ## Publications
 1. Rosenberg, D. E. (2022). "[Lessons from using Google Sheets and Zoom to discuss more flexible and sustainable operations with Colorado River managers and experts](https://github.com/dzeke/ColoradoRiverCoding/raw/main/BlogDrafts/3-LessonsUseGoogleSheetsZoomToDiscussMoreFlexibleSustainableColoradoRiverOperations.docx)." (Manuscript)
 1. Rosenberg, D. E. (In press). "[Adapt Lake Mead releases to inflow to give managers more flexibility to slow reservoir draw down](https://digitalcommons.usu.edu/water_pubs/170/)." Journal of Water Resources Planning and Management.
-1. Rosenberg, D. E. (In press). "[Invest in Farm Water Conservation to Curtail Buy and Dry](https://digitalcommons.usu.edu/water_pubs/169/)." Journal of Water Resources Planning and Management.
-1. Wang, J., and Rosenberg, D. E. (2021). "[Living within our Means: Adapting Colorado River Basin depletions to available water]( https://digitalcommons.usu.edu/water_pubs/171/)." Submitted to Journal of Water Resources Planning and Management.
+1. Rosenberg, D. E. (In press). "[Invest in Farm Water Conservation to Curtail Buy and Dry](https://ascelibrary.org/doi/full/10.1061/%28ASCE%29WR.1943-5452.0001584) [Preprint](https://digitalcommons.usu.edu/water_pubs/169/)." Journal of Water Resources Planning and Management. 148(8) 01822001.
+1. Wang, J., and Rosenberg, D. E. (Submitted). "[Living within our Means: Adapting Colorado River Basin depletions to available water]( https://digitalcommons.usu.edu/water_pubs/171/)." Submitted to Journal of Water Resources Planning and Management.
 1. Wang, J., Rosenberg, D. E., Schmidt, J. C., and Wheeler, K. G. (2020). "[Managing the Colorado River for an Uncertain Future](http://qcnr.usu.edu/coloradoriver/files/CCRS_White_Paper_3.pdf)." Center for Colorado River Studies, Utah State University, Logan, Utah.
 
 ## Requested Citation (permanent link)
