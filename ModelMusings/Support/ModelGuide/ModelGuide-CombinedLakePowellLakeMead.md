@@ -104,7 +104,7 @@ Four model cell types are defined by fill color (Table 2).
 
 **Table 2. Model Cell Types**
 
-![](media/99acb67ed8fb8b3ab7de20c333fa0a9c.emf)
+![](media/d0cf234ab869f6af3f049b1c58fbe2d1.png)
 
 ## 1B. Make Assumptions
 
