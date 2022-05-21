@@ -28,7 +28,7 @@ The purpose of this activity is to discuss more flexible and sustainable Colorad
    1. Add emails, and set permissions so players can access the Google Sheet. Or copy and share the sheet's URL. 
 
 **Play**
-1. On the **Master** Worksheet, scroll down Column A. Participants enter values in rows with ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) `Blue text`.
+1. On the **Master** Worksheet, scroll down Column A. Participants enter values in rows with 🟦 Blue text. ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) `Blue text`
    1. For example, in Rows 4-10, particants select a **Party** and enter a **Strategy**. If fewer than 6 participants, participants select multiple parties.
    1. Enter the Lake Powell natural flow for Year 1 in ![#ace1af](https://via.placeholder.com/15/ace1af/000000?text=+) `Cell C28`. Cells below will populate.
    1. Participants continue to enter values in Year 1 (Column C) down to Row 142 in row blocks with ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) `Blue text`.
@@ -40,7 +40,7 @@ The purpose of this activity is to discuss more flexible and sustainable Colorad
 ## Publications
 1. Rosenberg, D. E. (2022). "[Lessons from using Google Sheets and Zoom to discuss more flexible and sustainable operations with Colorado River managers and experts](https://github.com/dzeke/ColoradoRiverCoding/raw/main/BlogDrafts/3-LessonsUseGoogleSheetsZoomToDiscussMoreFlexibleSustainableColoradoRiverOperations.docx)." (Manuscript)
 1. Rosenberg, D. E. (In press). "[Adapt Lake Mead releases to inflow to give managers more flexibility to slow reservoir draw down](https://digitalcommons.usu.edu/water_pubs/170/)." Journal of Water Resources Planning and Management.
-1. Rosenberg, D. E. (In press). "[Invest in Farm Water Conservation to Curtail Buy and Dry](https://ascelibrary.org/doi/full/10.1061/%28ASCE%29WR.1943-5452.0001584)." Journal of Water Resources Planning and Management. 148(8) 01822001. [Preprint](https://digitalcommons.usu.edu/water_pubs/169/)
+1. Rosenberg, D. E. (In press). "[Invest in Farm Water Conservation to Curtail Buy and Dry](https://ascelibrary.org/doi/full/10.1061/%28ASCE%29WR.1943-5452.0001584)." Journal of Water Resources Planning and Management. 148(8) 01822001. [Preprint](https://digitalcommons.usu.edu/water_pubs/169/).
 1. Wang, J., and Rosenberg, D. E. (Submitted). "[Living within our Means: Adapting Colorado River Basin depletions to available water]( https://digitalcommons.usu.edu/water_pubs/171/)." Submitted to Journal of Water Resources Planning and Management.
 1. Wang, J., Rosenberg, D. E., Schmidt, J. C., and Wheeler, K. G. (2020). "[Managing the Colorado River for an Uncertain Future](http://qcnr.usu.edu/coloradoriver/files/CCRS_White_Paper_3.pdf)." Center for Colorado River Studies, Utah State University, Logan, Utah.
 
