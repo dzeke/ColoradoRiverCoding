@@ -3,7 +3,7 @@
 ### [Excel Model File](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/ColoradoRiverBasinAccounts.xlsx) (.xlsx)
 ### [Lets Start (visual directions)](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/ColoradoRiverBasinAccounts-LetsStart.pdf) (pdf file)
 ### [Model Guide](https://github.com/dzeke/ColoradoRiverCoding/blob/main/ModelMusings/Support/ModelGuide/ModelGuide-CombinedLakePowellLakeMead.md) (Help file)
-### [Manuscript](https://github.com/dzeke/ColoradoRiverCoding/raw/main/BlogDrafts/3-LessonsUseGoogleSheetsZoomToDiscussMoreFlexibleSustainableColoradoRiverOperations.docx) (.docx)
+### [Manuscript](https://digitalcommons.usu.edu/cee_facpub/3778/) (Manuscript)
 
 ## Overview														
 The purpose of this activity is to discuss more flexible and sustainable Colorado River operations than existing operations that equalize reservoirs and expire in 2026. To provoke discussion, participants use a Google Sheet with accounts for Upper Basin, Lower Basin, Mexico, Colorado River Delta, First Nations, and a shared reserve. Over one or more years, participants consume, save, and trade water in the accounts, protec reservoirs, and sustain endangered, native fish of the Grand Canyon. Participants repeat for one or more years.
@@ -38,7 +38,7 @@ The purpose of this activity is to discuss more flexible and sustainable Colorad
 1. **ReadMe-Directions** Worksheet also has these directions and describes all worksheets in the Workbook.
   
 ## Publications
-1. Rosenberg, D. E. (2022). "[Lessons from using Google Sheets and Zoom to discuss more flexible and sustainable operations with Colorado River managers and experts](https://github.com/dzeke/ColoradoRiverCoding/raw/main/BlogDrafts/3-LessonsUseGoogleSheetsZoomToDiscussMoreFlexibleSustainableColoradoRiverOperations.docx)." (Manuscript)
+1. Rosenberg, D. E. (2022). "[Lessons from using Google Sheets and Zoom to discuss more flexible and sustainable operations with Colorado River managers and experts](https://digitalcommons.usu.edu/cee_facpub/3778/)." (Manuscript)
 1. Rosenberg, D. E. (In press). "[Adapt Lake Mead releases to inflow to give managers more flexibility to slow reservoir draw down](https://digitalcommons.usu.edu/water_pubs/170/)." Journal of Water Resources Planning and Management.
 1. Rosenberg, D. E. (In press). "[Invest in Farm Water Conservation to Curtail Buy and Dry](https://ascelibrary.org/doi/full/10.1061/%28ASCE%29WR.1943-5452.0001584)." Journal of Water Resources Planning and Management. 148(8) 01822001. [Preprint](https://digitalcommons.usu.edu/water_pubs/169/).
 1. Wang, J., and Rosenberg, D. E. (Submitted). "[Living within our Means: Adapting Colorado River Basin depletions to available water]( https://digitalcommons.usu.edu/water_pubs/171/)." Submitted to Journal of Water Resources Planning and Management.
