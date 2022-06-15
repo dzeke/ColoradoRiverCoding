@@ -6,7 +6,7 @@
 ### [Manuscript](https://digitalcommons.usu.edu/cee_facpub/3778/) (USU Digital Commons)
 
 ## Overview														
-The purpose of this activity is to discuss more adaptive Colorado River operations than existing operations that equalize reservoirs and expire in 2026. To provoke discussion, download the [Excel Model File](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/ColoradoRiverBasinAccounts.xlsx), move to Google Sheets, and invite participants. There accounts for the Upper Basin, Lower Basin, Mexico, Colorado River Delta, First Nations, and a shared reserve. Over one or more years, participants consume, save, and trade water in the accounts, protect reservoirs, and sustain endangered, native fish of the Grand Canyon. Read on for directions to use.
+The purpose of this activity is to discuss more adaptive Colorado River operations than existing operations that equalize reservoirs and expire in 2026. To provoke discussion, download the [Excel Model File](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/ColoradoRiverBasinAccounts.xlsx), move to Google Sheets, and invite participants. There are accounts for the Upper Basin, Lower Basin, Mexico, Colorado River Delta, First Nations, and a shared reserve. Over one or more years, participants consume, save, and trade water in the accounts, protect reservoirs, and sustain endangered, native fish of the Grand Canyon. Read on for directions to use.
 ## Rquirements
 **Facilitator**: 1 person to setup in Google Sheets (see Setup below), invite participants, and organize play.											
 
