@@ -1,6 +1,6 @@
 # Model Guide
 
-## Colorado River Basin Accounts: Provoke thought and discussion about new operations
+## Colorado River Basin Accounts: Provoke discussion about more adaptive operations
 
 David E. Rosenberg \| Utah State University \|
 [david.rosenberg@usu.edu](mailto:david.rosenberg@usu.edu) \| @WaterModeler
@@ -9,13 +9,13 @@ April 25, 2022
 
 # I**ntroduction**
 
-This document supports participants to use Colorado River Basin Accounts (Google
-Sheet model)(Rosenberg, 2022). Participants connect to the same Google Sheet
-(cloud) model and enter individual water conservation and consumption choices
-and group decisions as model time progresses year-by-year. This document
-provides context information for each individual and group choice and explains
-how choices build on existing Colorado River management (Appendix A). The
-document also suggest potential values to enter.
+This document supports participants to use a Google Sheet model of Colorado
+River Basin Accounts (Rosenberg, 2022). Participants connect to the same Google
+Sheet. Participants enter individual and group water consumption, conservation,
+and trade choices as model time progresses year-by-year. This document provides
+context information for each individual and group choice. The document also
+explains how choices build on existing Colorado River management (Appendix A).
+The document also suggest potential values to enter.
 
 Find quick links to this support information -- the sections and subsections of
 this document -- in the Model file, *Master* worksheet, Column N.
