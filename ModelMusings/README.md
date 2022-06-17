@@ -1,4 +1,4 @@
-## Colorado River Basin Accounts: Provoke discussion about more adaptable operations
+## Colorado River Basin Accounts: Provoke discussion about more adaptive operations
 
 ### [Excel Model File](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/ColoradoRiverBasinAccounts.xlsx) (.xlsx) (download and move to Google Sheets)
 ### [Lets Start (visual directions)](https://github.com/dzeke/ColoradoRiverCoding/raw/main/ModelMusings/ColoradoRiverBasinAccounts-LetsStart.pdf) (pdf file)
@@ -38,7 +38,7 @@ The purpose of this activity is to discuss more adaptive Colorado River operatio
 1. **ReadMe-Directions** Worksheet also has these directions and describes all worksheets in the Workbook.
   
 ## Publications
-1. Rosenberg, D. E. (2022). "[Lessons from using Google Sheets and Zoom to discuss more adaptable operations with Colorado River managers and experts](https://digitalcommons.usu.edu/cee_facpub/3778/)." (USU Digital Commons).
+1. Rosenberg, D. E. (2022). "[Lessons from using Google Sheets and Zoom to discuss more adaptive operations with Colorado River managers and experts](https://digitalcommons.usu.edu/cee_facpub/3778/)." (USU Digital Commons).
 1. Rosenberg, D. E. (In press). "[Adapt Lake Mead releases to inflow to give managers more flexibility to slow reservoir draw down](https://digitalcommons.usu.edu/water_pubs/170/)." Journal of Water Resources Planning and Management.
 1. Rosenberg, D. E. (2022). "[Invest in Farm Water Conservation to Curtail Buy and Dry](https://ascelibrary.org/doi/full/10.1061/%28ASCE%29WR.1943-5452.0001584)." Journal of Water Resources Planning and Management. 148(8) 01822001.
 1. Wang, J., and Rosenberg, D. E. (Submitted). "[Living within our Means: Adapting Colorado River Basin depletions to available water]( https://digitalcommons.usu.edu/water_pubs/171/)." Submitted to Journal of Water Resources Planning and Management.
