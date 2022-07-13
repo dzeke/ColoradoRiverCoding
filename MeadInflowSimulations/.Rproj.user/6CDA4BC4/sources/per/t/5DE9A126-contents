@@ -827,9 +827,9 @@ ggplot(data = dfReleaseToStabilizeMelt %>% filter(Elevation %in% cElevationsToUs
   #Overplot a line for the line of releases to stabilize inflow
   geom_line(data=dfReleaseToStabilize %>% filter(Elevation %in% cElevationsToUse), aes(x=Inflow/1e6, y = ReleaseToStabilize/1e6), linetype = "longdash", size = 2, color = pBlues[8]) +
   #Labelthe  line of release to stabilize reservoir level
-  geom_text(data = dfElevations %>% filter(Elevation %in% cElevationsToUse), aes(x= x, y= y - offset, label="Release to stabilize reservoir level"), size=3, color=pBlues[8], angle = -25, fontface = "bold") +
+  geom_text(data = dfElevations %>% filter(Elevation %in% cElevationsToUse), aes(x= x, y= y - offset, label="Release to stabilize reservoir level"), size=3.5, color=pBlues[8], angle = -25, fontface = "bold") +
   #label the traces
-  geom_text(data=dfTraceLabels %>% filter(Elevation %in% 1060), aes(x = Inflow, y = Release, label = Label), size=3, fontface ="bold") +
+  geom_text(data=dfTraceLabels %>% filter(Elevation %in% 1060), aes(x = Inflow, y = Release, label = Label), size=3.5, fontface ="bold") +
     
 #  facet_wrap( ~ Elevation) +
   
@@ -852,7 +852,7 @@ ggplot(data = dfReleaseToStabilizeMelt %>% filter(Elevation %in% cElevationsToUs
   labs(x="Inflow\n(MAF per year)", y="Release\n(MAF per year)", fill="") +
   #theme(text = element_text(size=20), legend.title=element_blank(), legend.text=element_text(size=18),
   #      legend.position = c(0.8,0.7))
-  theme(text = element_text(size=12), legend.text=element_text(size=10), legend.position = "none")
+  theme(text = element_text(size=14), legend.text=element_text(size=12), legend.position = "none")
 
 
 ```
