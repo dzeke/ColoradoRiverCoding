@@ -20,22 +20,37 @@ The purpose of this activity is to discuss more adaptive Colorado River operatio
 ## Facilitation Directions
 
 **Setup**
+
 1. Download the file **ColoradoRiverBasinAccounts.xlsx** to your computer.
+
 1. Move the Excel file to your Google Drive. Open as a Google Sheet.
+
 1. Open the **Versions** Worksheet to see updates.
-1. Duplicate the **Master** Worksheet to save a blank version for later use. 
+
+1. Duplicate the **Master** Worksheet to save a blank version for later use.
+
 1. Invite 1 or more other people to join the Google Sheet.
+
    1. In the upper right of the Google Sheet, click the **Share** button.
-   1. Add emails, and set permissions so players can access the Google Sheet. Or copy and share the sheet's URL. 
+   
+   1. Add emails, and set permissions so players can access the Google Sheet. Or copy and share the sheet's URL.
 
 **Use**
-1. On the **Master** Worksheet, scroll down Column A. Participants enter values in rows with 🟦 `Blue text`
+
+1. On the **Master** Worksheet, scroll down Column A. Participants enter values in rows with 🟦 `Blue text`.
+
    1. For example, in Rows 4-10, particants select a **Account** and enter a **Strategy**. If fewer than 6 participants, participants select multiple parties.
+   
    1. Enter the Lake Powell natural flow for Year 1 in 🟩 `Cell C28`. Cells below will populate.
+   
    1. Participants continue to enter values in Year 1 (Column C) down to Row 142 in row blocks with 🟦 `Blue text`.
+   
    1. Move to Year 2 (Column D). Enter Lake Powell natural flow in 🟩 `Cell D28`.
+   
 1. Find linked help for each row in 🟨 `Column N`.
+
 1. View the **Master-Plots** worksheet to compare entries to current operations (Law of River).
+
 1. **ReadMe-Directions** Worksheet also has these directions and describes all worksheets in the Workbook.
   
 ## Publications

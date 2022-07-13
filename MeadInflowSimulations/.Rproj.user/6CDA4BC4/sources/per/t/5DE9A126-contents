@@ -808,7 +808,53 @@ ggplot(data = dfReleaseToStabilizeMelt %>% filter(Elevation %in% cElevationsToUs
   #theme(text = element_text(size=20), legend.title=element_blank(), legend.text=element_text(size=18),
   #      legend.position = c(0.8,0.7))
   theme(text = element_text(size=12), legend.text=element_text(size=10), legend.position = "none")
+
+```
+
+\newpage
+
+## Figure 3b. Single panel of elevation 1,060 feet.
+
+```{r Fig3bMeadSimulation, echo=FALSE, warning=FALSE, message=FALSE, fig.width=4.5}
+## New figure to only show 1 panel
+
+cElevationsToUse <- c(1060)  #1025
+
+ggplot(data = dfReleaseToStabilizeMelt %>% filter(Elevation %in% cElevationsToUse)) +
+  #The main types
+  geom_area(aes(x=Inflow/1e6, y=value/1e6, fill=variable)) +
+
+  #Overplot a line for the line of releases to stabilize inflow
+  geom_line(data=dfReleaseToStabilize %>% filter(Elevation %in% cElevationsToUse), aes(x=Inflow/1e6, y = ReleaseToStabilize/1e6), linetype = "longdash", size = 2, color = pBlues[8]) +
+  #Labelthe  line of release to stabilize reservoir level
+  geom_text(data = dfElevations %>% filter(Elevation %in% cElevationsToUse), aes(x= x, y= y - offset, label="Release to stabilize reservoir level"), size=3, color=pBlues[8], angle = -25, fontface = "bold") +
+  #label the traces
+  geom_text(data=dfTraceLabels %>% filter(Elevation %in% 1060), aes(x = Inflow, y = Release, label = Label), size=3, fontface ="bold") +
+    
+#  facet_wrap( ~ Elevation) +
   
+  #Limit the x-axis to reasonable inflows
+  #xlim(7,10) +
+  
+  #Reverse x-axis so go from High to Low
+  scale_x_reverse(limits = c(10,nLowFlow)) +
+  scale_y_continuous(limits = c(0,10), breaks = seq(0,10,by=2), sec.axis = sec_axis(~. +0, name = "", breaks = dfReleaseLabels$Release/1e6, labels = dfReleaseLabels$Label)) +
+  scale_fill_manual(values = c("Red","Pink", pBlues[4]), labels = c("Mandatory conservation\ntarget", "Additional conservation", "Release")) +
+  
+  #Add line annotations
+  #Horizonal line for Havasu Parker
+  geom_hline(yintercept = dfReleaseLabels$Release[3]/1e6, linetype = "dashed", size = 1.25, color = pBlues[9]) +
+  #Sloped line for release to stabalize level
+  #geom_abline(slope = -1, intercept =-0.4, linetype = "longdash", size = 2 ) +
+  
+  theme_bw() +
+  
+  labs(x="Inflow\n(MAF per year)", y="Release\n(MAF per year)", fill="") +
+  #theme(text = element_text(size=20), legend.title=element_blank(), legend.text=element_text(size=18),
+  #      legend.position = c(0.8,0.7))
+  theme(text = element_text(size=12), legend.text=element_text(size=10), legend.position = "none")
+
+
 ```
 
 ## Figure 4. Lake Mead recovery from elevation 1,050 feet. Numeric line labels (maf per year) indicate the sum of reservoir inflow and additional conservation beyond mandatory targets.
