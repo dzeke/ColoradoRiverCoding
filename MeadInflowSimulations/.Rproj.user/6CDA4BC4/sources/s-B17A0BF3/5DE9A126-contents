@@ -725,7 +725,7 @@ cInflowScenRecover <- c(seq(nLowFlow,14, by=0.05))*1e6
 cElevations <- c(1025,1030,1045,1050,1060,1075,1090)
 
 #Elevations to use in facets
-cElevationsToUse <- c(1025, 1060)
+cElevationsToUse <- c(1025, 1045, 1060)
 
 nFlowScensRecover <- length(cInflowScenRecover)
 nElevations <- length(cElevations)
@@ -755,7 +755,7 @@ dfReleaseToStabilize$Release <- ifelse(dfReleaseToStabilize$ReleaseToStabilize >
                                        dfReleaseToStabilize$ReleaseToStabilize)
 
 #Label and position the traces
-dfTraceLabels <- data.frame(Elevation=c(rep(cElevationsToUse[2],3),rep(cElevationsToUse[1],3)),Inflow = c(8.25,7.6,8.5,8.2,7.4,8.5), Release = c(9.6-0.71/2, 8.3, 5,9.6-.85/2,7.7,5), Label=rep(c("Mandatory conservation", "More\nconservation", "Reservoir level\nrises"),2))
+dfTraceLabels <- data.frame(Elevation=c(rep(cElevationsToUse[3],3),rep(cElevationsToUse[2],3),rep(cElevationsToUse[1],3)),Inflow = c(8.25,7.6,8.5,8.25,7.6,8.5,8.2,7.4,8.5), Release = c(9.6-0.71/2, 8.3, 5, 9.6-0.71/2, 8.0, 5,9.6-.85/2,7.7,5), Label=rep(c("Mandatory conservation", "More\nconservation", "Reservoir level\nrises"),3))
 
 #Calculate the additional conservation needed beyond DCP target
 dfReleaseToStabilize$AdditionalConservation <- dfReleaseToStabilize$DeliveryTarget  - dfReleaseToStabilize$MandatoryConservationTarget - dfReleaseToStabilize$Release
@@ -849,7 +849,58 @@ ggplot(data = dfReleaseToStabilizeMelt %>% filter(Elevation %in% cElevationsToUs
   
   theme_bw() +
   
-  labs(x="Inflow\n(MAF per year)", y="Release\n(MAF per year)", fill="") +
+  labs(x="Reservoir Inflow\n(MAF per year)", y="Consumption\n(MAF per year)", fill="") +
+  #theme(text = element_text(size=20), legend.title=element_blank(), legend.text=element_text(size=18),
+  #      legend.position = c(0.8,0.7))
+  theme(text = element_text(size=14), legend.text=element_text(size=12), legend.position = "none")
+
+
+```
+
+\newpage
+
+## Figure 3C. Single panel of elevation 1,045 to 1,040 feet.
+
+```{r Fig3cMeadSimulation, echo=FALSE, warning=FALSE, message=FALSE, fig.width=4.5}
+## New figure to only show 1 panel
+
+cElevationsToUse <- c(1045)  #1025
+
+#Recalculate the 500+ plan tick
+dfReleaseLabels <- data.frame(Release = c(vLowerBasinDeliveryTarget,vLowerBasinDeliveryTarget - as.numeric(dfCutbacks %>% filter(`Mead Elevation (ft)` == cElevationsToUse) %>% select(TotalDCP)) - 500000,600000),
+                                          Label = c("Target\nrelease","Add 500+ plan", "Havasu/Parker\nevap. + ET"))
+
+
+ggplot(data = dfReleaseToStabilizeMelt %>% filter(Elevation %in% cElevationsToUse)) +
+  #The main types
+  geom_area(aes(x=Inflow/1e6, y=value/1e6, fill=variable)) +
+
+  #Overplot a line for the line of releases to stabilize inflow
+  geom_line(data=dfReleaseToStabilize %>% filter(Elevation %in% cElevationsToUse), aes(x=Inflow/1e6, y = ReleaseToStabilize/1e6), linetype = "longdash", size = 2, color = pBlues[8]) +
+  #Labelthe  line of release to stabilize reservoir level
+  geom_text(data = dfElevations %>% filter(Elevation %in% cElevationsToUse), aes(x= x, y= y - offset, label="Release to stabilize reservoir level"), size=3.5, color=pBlues[8], angle = -25, fontface = "bold") +
+  #label the traces
+  geom_text(data=dfTraceLabels %>% filter(Elevation %in% cElevationsToUse), aes(x = Inflow, y = Release, label = Label), size=3.5, fontface ="bold") +
+    
+#  facet_wrap( ~ Elevation) +
+  
+  #Limit the x-axis to reasonable inflows
+  #xlim(7,10) +
+  
+  #Reverse x-axis so go from High to Low
+  scale_x_reverse(limits = c(10,nLowFlow)) +
+  scale_y_continuous(limits = c(0,10), breaks = seq(0,10,by=2), sec.axis = sec_axis(~. +0, name = "", breaks = dfReleaseLabels$Release/1e6, labels = dfReleaseLabels$Label)) +
+  scale_fill_manual(values = c("Red","Pink", pBlues[4]), labels = c("Mandatory conservation\ntarget", "Additional conservation", "Release")) +
+  
+  #Add line annotations
+  #Horizonal line for Havasu Parker
+  geom_hline(yintercept = dfReleaseLabels$Release[3]/1e6, linetype = "dashed", size = 1.25, color = pBlues[9]) +
+  #Sloped line for release to stabalize level
+  #geom_abline(slope = -1, intercept =-0.4, linetype = "longdash", size = 2 ) +
+  
+  theme_bw() +
+  
+  labs(x="Reservoir Inflow\n(MAF per year)", y="Consumption\n(MAF per year)", fill="") +
   #theme(text = element_text(size=20), legend.title=element_blank(), legend.text=element_text(size=18),
   #      legend.position = c(0.8,0.7))
   theme(text = element_text(size=14), legend.text=element_text(size=12), legend.position = "none")
