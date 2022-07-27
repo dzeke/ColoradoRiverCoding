@@ -1,7 +1,7 @@
 ---
 title: "Adapt Lake Mead releases to inflow to give managers more flexibility to slow reservoir draw down"
 author: "David E. Rosenberg"
-date: "April 6, 2022"
+date: "July 26, 2022"
 output: pdf_document
 ---
 
@@ -19,13 +19,15 @@ This is an R Markdown document. This work supports the piece "[Adapt Lake Mead r
 
 3. The Lake Mead release to stabilize reservoir storage at different reservoir elevations and inflows. This release is calculated by resolving the reservoir mass balance equation for release = inflow - evaporation.
 
+Figures 3b and 3c show individual plots for Lake Mead elevations of 1,060 and 1,045 to 1,040 feet.
+
 4. Lake Mead recovery simulations from two elevation 1,050 feet for different reservoir inflows and additional conservation efforts beyond mandatory targets.
 
 Data from 2019 Lower Basin Drought Contingency Plan (DCP), U.S.-Mexico Minutes 319 and 323, and CRSS.  
 
 
 ## Requested Citation
-David E. Rosenberg (2021), "Add reservoir inflow as new criteria to give Lake Mead managers more flexibility and independence to conserve water." Utah State University. Logan, Utah. https://github.com/dzeke/ColoradoRiverFutures/tree/master/MeadInflowSimulation.
+David E. Rosenberg (2021), "Adapt Lake Mead releases to inflow to give managers more flexibility to slow reservoir draw down." Utah State University. Logan, Utah. https://github.com/dzeke/ColoradoRiverFutures/tree/master/MeadInflowSimulation.
 
 ```{r PrelimCalcs, echo=FALSE, warning=FALSE, message=FALSE}
 
