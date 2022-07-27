@@ -757,7 +757,7 @@ dfReleaseToStabilize$Release <- ifelse(dfReleaseToStabilize$ReleaseToStabilize >
                                        dfReleaseToStabilize$ReleaseToStabilize)
 
 #Label and position the traces
-dfTraceLabels <- data.frame(Elevation=c(rep(cElevationsToUse[3],3),rep(cElevationsToUse[2],3),rep(cElevationsToUse[1],3)),Inflow = c(8.25,7.6,8.5,8.25,7.6,8.5,8.2,7.4,8.5), Release = c(9.6-0.71/2, 8.3, 5, 9.6-0.71/2, 8.0, 5,9.6-.85/2,7.7,5), Label=rep(c("Mandatory conservation", "More\nconservation", "Reservoir level\nrises"),3))
+dfTraceLabels <- data.frame(Elevation=c(rep(cElevationsToUse[3],3),rep(cElevationsToUse[2],3),rep(cElevationsToUse[1],3)),Inflow = c(8.25,7.6,8.5,8.25,7.6,8.5,8.2,7.4,8.5), Release = c(9.6-0.71/2, 8.3, 5, 9.6-0.71/2, 8.0, 5,9.6-.85/2,7.7,5), Label=rep(c("Mandatory conservation", "Conserve\nmore", "Reservoir level\nrises"),3))
 
 #Calculate the additional conservation needed beyond DCP target
 dfReleaseToStabilize$AdditionalConservation <- dfReleaseToStabilize$DeliveryTarget  - dfReleaseToStabilize$MandatoryConservationTarget - dfReleaseToStabilize$Release
