@@ -116,7 +116,7 @@ pReds <- brewer.pal(9,"Reds")
 
 #Plot the histogram with vertical line overlay for 12.4 maf per year
 ggplot(dfFlowScenarios, aes(x=`Lake Powell natural inflow (maf per year)`)) +
-  geom_histogram(color="darkmagenta", fill="magenta", binwidth = 1) +
+  geom_histogram(color="black", fill="grey70", binwidth = 1) +
   #Add vertical line for 20-year millennium drought average
   geom_vline(xintercept = 12.4, linetype ="longdash", color = "Black", size = 3) +
   #Label the vertical line
