@@ -3,7 +3,7 @@
 1. **Excel Model File** - ColoradoRiverBasinAccounts.xlsx. Basin Accounts Tool. Move into Google Sheets and follow Facilitation Directions (below). Or open ReadMe-Directions Worksheet.
 1. **Lets Start** - ColoradoRiverBasinAccounts-LetsStart.pdf. Visual directions.
 1. **[Model Guide](https://github.com/dzeke/ColoradoRiverCoding/blob/main/ModelMusings/Support/ModelGuide/ModelGuide-CombinedLakePowellLakeMead.md)** - Online help file that provides context and explanations for each spreadsheet row. 
-1. **Manuscript** - 3-LessonsUseGoogleSheetsZoomToDiscussMoreFlexibleSustainableColoradoRiverOperations.docx. Write up for publication as a journal article. Cite-able version at https://digitalcommons.usu.edu/cee_facpub/3778/.
+1. **Manuscript** - 3-LessonsRealTimeOnlineModelingToDiscussMoreAdaptableReservoirOperations.docx. Write up for publication as a journal article. Earlier, cite-able version at https://digitalcommons.usu.edu/cee_facpub/3778/.
 1. **readme.md** - Requirements, facilitation directions, publications, file contents, and more (this file).
 
 ## Overview														
