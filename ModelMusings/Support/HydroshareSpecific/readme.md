@@ -1,4 +1,4 @@
-## Colorado River Basin Accounts: Provoke discussion about more adaptive operations
+## Colorado River Basin Water Accounts: Provoke discussion about more adaptive operations
 
 1. **Excel Model File** - ColoradoRiverBasinAccounts.xlsx. Basin Accounts Tool. Move into Google Sheets and follow Facilitation Directions (below). Or open ReadMe-Directions Worksheet.
 1. **Lets Start** - ColoradoRiverBasinAccounts-LetsStart.pdf. Visual directions.
