@@ -73,7 +73,7 @@ All donors will be added to an email list and receive periodic updates.
 ## Support Folder Contents
 1. **Hydrology** - Excel files used to generate scenarios on **HydrologicScenarios** Worksheet. **CRB_29gages.xlsx**: Gages in the Colorado River basin used to estimate natural flow. **NaturalFlows1906-2018_20200110.xlsx**: Natural flow hydrology downloaded from the USBR website and modified to pick out particular 10- and 20- year sequences of flows from the observed and paleo reconstructed records.
 1. **HydroShareSpecific** - This readme.md file.
-1. **InflowSplit** - R code to generate figure in manuscript that shows split of inflow amoung accounts.
+1. **InflowSplit** - R code to generate figure in manuscript that shows split of whole basin inflow amoung accounts.
 1. **LetsStart** - Source powerpoint file for pdf file of Lets Start (visual directions).
 1. **ModelGuide** - Files to create the Model Guide.
 1. **OldVersions** - Older versions of the Flex accounting tool (see **Versions** Worksheet).
