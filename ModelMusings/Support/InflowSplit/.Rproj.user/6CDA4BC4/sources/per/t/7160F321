@@ -3,7 +3,7 @@
     "path": "C:/Rosenberg/Work/USU/Research/ColoradoRiver/RCode/ColoradoRiverCoding2/ModelMusings/Support/InflowSplit/InflowSplit.R",
     "project_path": "InflowSplit.R",
     "type": "r_source",
-    "hash": "4187815452",
+    "hash": "1352425363",
     "contents": "",
     "dirty": false,
     "created": 1651089853741.0,
@@ -12,15 +12,15 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "189,63",
-        "scrollLine": "0"
+        "cursorPosition": "222,63",
+        "scrollLine": "196"
     },
     "folds": "",
-    "lastKnownWriteTime": 1651101620,
+    "lastKnownWriteTime": 1686167059,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1651101620173,
+    "last_content_update": 1686167059618,
     "read_only": false,
     "read_only_alternatives": []
 }

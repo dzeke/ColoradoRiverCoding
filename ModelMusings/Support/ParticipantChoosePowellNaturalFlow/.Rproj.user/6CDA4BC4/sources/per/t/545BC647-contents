@@ -81,9 +81,9 @@ dfFlowScenarios <- read_excel(sExcelFile, sheet = "Sheet1",  range = "A4:B30")
 pBlues <- brewer.pal(9,"Blues")
 pReds <- brewer.pal(9,"Reds")
 
-#Plot the histogram with vertical line overlay for 12.4 maf per year
+#Plot the histogram with vertical line overlay for 12.4 maf per year - Customary units
 ggplot(dfFlowScenarios, aes(x=`Lake Powell natural inflow (maf per year)`)) +
-  geom_histogram(color="darkmagenta", fill="magenta", binwidth = 1) +
+  geom_histogram(color="black", fill="grey70", binwidth = 1) +
   #Add vertical line for 20-year millennium drought average
   geom_vline(xintercept = 12.4, linetype ="longdash", color = "Black", size = 3) +
   #Label the vertical line
@@ -94,5 +94,32 @@ ggplot(dfFlowScenarios, aes(x=`Lake Powell natural inflow (maf per year)`)) +
   scale_y_continuous(breaks = seq(0,11,by=1), minor_breaks = seq(0,11,by=1)) +
  
   labs(x="Lake Powell Natural Inflow\n(million acre-feet per year)", y="Frequency") +
+  theme(text = element_text(size=25), legend.title=element_blank(), legend.text=element_text(size=18),
+        legend.key = element_blank())
+
+#Conversion Factors from MAF to BCM
+cMAFtoBCM <- 1.23
+
+c_xLimitsMAF <- c(2,14) #maf
+c_xBreaksMAF <- seq(2,14,by=1) #maf
+
+c_xLimitsBCM <- c_xLimitsMAF * cMAFtoBCM
+c_xBreaksBCM <- round(c_xBreaksMAF * cMAFtoBCM, digits = 1)
+
+
+#Plot the histogram with vertical line overlay for 12.4 maf per year - Customary units bottom, SI units top
+ggplot(dfFlowScenarios, aes(x=`Lake Powell natural inflow (maf per year)`)) +
+  geom_histogram(color="black", fill="grey70", binwidth = 1) +
+  #Add vertical line for 20-year millennium drought average
+  geom_vline(xintercept = 12.4, linetype ="longdash", color = "Black", size = 3) +
+  #Label the vertical line
+  geom_text(aes(x=12.2, y=5.5, label="2000 to 2020 average"), angle = 90, color = "Black", size=7) +
+  
+  #Define scales
+  scale_x_continuous(limits = c_xLimitsMAF, breaks = c_xBreaksMAF, minor_breaks = c_xBreaksMAF,
+                     sec.axis = sec_axis(~ ., name="Lake Powell Natural Inflow\n(bcm per year)", breaks = c_xBreaksMAF, labels = c_xBreaksBCM)) +
+  scale_y_continuous(breaks = seq(0,11,by=1), minor_breaks = seq(0,11,by=1)) +
+  
+  labs(x="Lake Powell Natural Inflow\n(maf per year)", y="Frequency") +
   theme(text = element_text(size=25), legend.title=element_blank(), legend.text=element_text(size=18),
         legend.key = element_blank())

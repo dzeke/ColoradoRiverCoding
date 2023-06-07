@@ -167,7 +167,7 @@ dfAccountLabels$yPos[1] <- 12.5
 pBlues <- brewer.pal(9,"Blues")
 
 
-#Plot the histogram with vertical line overlay for 12.4 maf per year
+#Plot split of inflow - Customary units only on Flow Assignment (y-axis) and Basin Natural Flow (x-axis)
 ggplot(dfInflowSplitMelt, aes(x = Flow , y = value, fill=AccountName)) +
   #Area plot with lines
   geom_area(color="Black", linetype = "solid", size = 0.25) +
@@ -185,6 +185,39 @@ ggplot(dfInflowSplitMelt, aes(x = Flow , y = value, fill=AccountName)) +
   scale_x_continuous(limits = c(0,18), breaks = seq(0,18,by=2), minor_breaks = seq(0,18,by=2)) +
   scale_y_continuous(breaks = seq(0,18,by=2), minor_breaks = seq(0,18,by=2)) +
  
-  labs(x="Basin Natural Inflow\n(million acre-feet per year)", y="Flow assignment\n(maf per year)") +
+  labs(x="Whole Basin Inflow\n(million acre-feet per year)", y="Flow Assignment\n(maf per year)") +
+  theme(text = element_text(size=25), legend.title=element_blank(), legend.text=element_text(size=18),
+        legend.key = element_blank(), legend.position = "none")
+
+#Convert MAF to BCM
+cMAFtoBCM <- 1.23
+
+c_xLimitsMAF <- c(0,18) #maf
+c_xBreaksMAF <- seq(0,18,by=2) #maf
+
+c_xLimitsBCM <- c_xLimitsMAF * cMAFtoBCM
+c_xBreaksBCM <- round(c_xBreaksMAF * cMAFtoBCM, digits = 1)
+
+#Plot split of inflow - Customary units of MAF on left and bottom axes. SI units of BCM on top and right axes
+ggplot(dfInflowSplitMelt, aes(x = Flow , y = value, fill=AccountName)) +
+  #Area plot with lines
+  geom_area(color="Black", linetype = "solid", size = 0.25) +
+  
+  #Fill with Blues light to dark
+  scale_fill_manual(values = pBlues[2:9]) +
+  
+  #Label each area
+  geom_text(data = dfAccountLabels, aes(label = AccountName, x = xPos, y = yPos), size = 3.5, color = "black") +
+  
+  #Label the vertical line
+  #geom_text(aes(x=12.2, y=5.5, label="2000 to 2020 average"), angle = 90, color = "Black", size=7) +
+  
+  #Define scales
+  scale_x_continuous(limits = c_xLimitsMAF, breaks = c_xBreaksMAF, minor_breaks = c_xBreaksMAF,
+                     sec.axis = sec_axis(~ ., name="Whole Basin Inflow\n(bcm per year)", breaks = c_xBreaksMAF, labels = c_xBreaksBCM)) +
+  scale_y_continuous(breaks = c_xBreaksMAF, minor_breaks = c_xBreaksMAF,
+                     sec.axis = sec_axis(~ ., name="Flow Assignment\n(bcm per year)", breaks = c_xBreaksMAF, labels = c_xBreaksBCM)) +
+  
+  labs(x="Whole Basin Inflow\n(maf per year)", y="Flow Assignment\n(maf per year)") +
   theme(text = element_text(size=25), legend.title=element_blank(), legend.text=element_text(size=18),
         legend.key = element_blank(), legend.position = "none")

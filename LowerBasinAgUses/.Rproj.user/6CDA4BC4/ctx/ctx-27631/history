@@ -1,0 +1,512 @@
+#scale_fill_manual(values = c(palReds[4:9],palBlues(9))) +
+#scale_fill_manual(name="Guide1",values = c(palBlues(15))) +
+#scale_color_manual(name="Guide2", values=c("Black")) +
+scale_x_continuous(limits = c(2020,2030), breaks = seq(2020,2030, by=2)) +
+#scale_y_continuous(breaks=seq(0,3,by=1),labels=seq(0,3,by=1), sec.axis = sec_axis(~. +0, name = "", breaks = c(nMaxBalance$Total[2])/1e6, labels = c("Max Balance"))) +
+#guides(fill = guide_legend(keywidth = 1, keyheight = 1), color=FALSE) +
+facet_wrap(~State) +
+theme_bw() +
+labs(x="", y="CRSS Requested Depletion (TAF)") +
+theme(text = element_text(size=20),  legend.title = element_blank(),
+legend.text=element_text(size=18)) #,
+ggplot() +
+geom_bar(data=dfAllDepletionSeas, aes(fill=District,y=SeasTotal,x=Year+ SeasonNum/12),position="stack", stat="identity") +
+#geom_line(data=dfMaxBalance, aes(color="Max Balance", y=MaxBal/1e6,x=Year), size=2) +
+#scale_fill_manual(name="Guide1",values = c(palBlues(15)), breaks = c(cAZDistricts, cCADistricts), labels = c(cAZDistricts, cCADistricts)) +
+scale_fill_manual(values = dfDistrictColor$FillColor, breaks = dfDistrictColor$District, labels = dfDistrictColor$District) +
+#scale_fill_manual(values = c(palReds[4:9],palBlues(9))) +
+#scale_fill_manual(name="Guide1",values = c(palBlues(15))) +
+#scale_color_manual(name="Guide2", values=c("Black")) +
+scale_x_continuous(limits = c(2020,2030), breaks = seq(2020,2030, by=2)) +
+#scale_y_continuous(breaks=seq(0,3,by=1),labels=seq(0,3,by=1), sec.axis = sec_axis(~. +0, name = "", breaks = c(nMaxBalance$Total[2])/1e6, labels = c("Max Balance"))) +
+#guides(fill = guide_legend(keywidth = 1, keyheight = 1), color=FALSE) +
+facet_wrap(~State) +
+theme_bw() +
+labs(x="", y="CRSS Requested Depletion (TAF)") +
+theme(text = element_text(size=20),  legend.title = element_blank(),
+legend.text=element_text(size=18)) #,
+ggplot() +
+geom_bar(data=dfAllDepletionSeas, aes(fill=District,y=SeasTotal,x=Year+ SeasonNum/12, width = (nSummerEnd - SeasonNum + 0.2)),position="stack", stat="identity") +
+#geom_line(data=dfMaxBalance, aes(color="Max Balance", y=MaxBal/1e6,x=Year), size=2) +
+#scale_fill_manual(name="Guide1",values = c(palBlues(15)), breaks = c(cAZDistricts, cCADistricts), labels = c(cAZDistricts, cCADistricts)) +
+scale_fill_manual(values = dfDistrictColor$FillColor, breaks = dfDistrictColor$District, labels = dfDistrictColor$District) +
+#scale_fill_manual(values = c(palReds[4:9],palBlues(9))) +
+#scale_fill_manual(name="Guide1",values = c(palBlues(15))) +
+#scale_color_manual(name="Guide2", values=c("Black")) +
+scale_x_continuous(limits = c(2020,2030), breaks = seq(2020,2030, by=2)) +
+#scale_y_continuous(breaks=seq(0,3,by=1),labels=seq(0,3,by=1), sec.axis = sec_axis(~. +0, name = "", breaks = c(nMaxBalance$Total[2])/1e6, labels = c("Max Balance"))) +
+#guides(fill = guide_legend(keywidth = 1, keyheight = 1), color=FALSE) +
+facet_wrap(~State) +
+theme_bw() +
+labs(x="", y="CRSS Requested Depletion (TAF)") +
+theme(text = element_text(size=20),  legend.title = element_blank(),
+legend.text=element_text(size=18)) #,
+ggplot() +
+geom_bar(data=dfAllDepletionSeas, aes(fill=District,y=SeasTotal,x=Year+ SeasonNum/12, width = (nSummerEnd/12 - SeasonNum/12 + 0.2)),position="stack", stat="identity") +
+#geom_line(data=dfMaxBalance, aes(color="Max Balance", y=MaxBal/1e6,x=Year), size=2) +
+#scale_fill_manual(name="Guide1",values = c(palBlues(15)), breaks = c(cAZDistricts, cCADistricts), labels = c(cAZDistricts, cCADistricts)) +
+scale_fill_manual(values = dfDistrictColor$FillColor, breaks = dfDistrictColor$District, labels = dfDistrictColor$District) +
+#scale_fill_manual(values = c(palReds[4:9],palBlues(9))) +
+#scale_fill_manual(name="Guide1",values = c(palBlues(15))) +
+#scale_color_manual(name="Guide2", values=c("Black")) +
+scale_x_continuous(limits = c(2020,2030), breaks = seq(2020,2030, by=2)) +
+#scale_y_continuous(breaks=seq(0,3,by=1),labels=seq(0,3,by=1), sec.axis = sec_axis(~. +0, name = "", breaks = c(nMaxBalance$Total[2])/1e6, labels = c("Max Balance"))) +
+#guides(fill = guide_legend(keywidth = 1, keyheight = 1), color=FALSE) +
+facet_wrap(~State) +
+theme_bw() +
+labs(x="", y="CRSS Requested Depletion (TAF)") +
+theme(text = element_text(size=20),  legend.title = element_blank(),
+legend.text=element_text(size=18)) #,
+ggplot() +
+geom_bar(data=dfAllDepletionSeas, aes(fill=District,y=SeasTotal,x=Year+ SeasonNum/12, width = (nSummerEnd/12 - SeasonNum/12 + 0.1)),position="stack", stat="identity") +
+#geom_line(data=dfMaxBalance, aes(color="Max Balance", y=MaxBal/1e6,x=Year), size=2) +
+#scale_fill_manual(name="Guide1",values = c(palBlues(15)), breaks = c(cAZDistricts, cCADistricts), labels = c(cAZDistricts, cCADistricts)) +
+scale_fill_manual(values = dfDistrictColor$FillColor, breaks = dfDistrictColor$District, labels = dfDistrictColor$District) +
+#scale_fill_manual(values = c(palReds[4:9],palBlues(9))) +
+#scale_fill_manual(name="Guide1",values = c(palBlues(15))) +
+#scale_color_manual(name="Guide2", values=c("Black")) +
+scale_x_continuous(limits = c(2020,2030), breaks = seq(2020,2030, by=2)) +
+#scale_y_continuous(breaks=seq(0,3,by=1),labels=seq(0,3,by=1), sec.axis = sec_axis(~. +0, name = "", breaks = c(nMaxBalance$Total[2])/1e6, labels = c("Max Balance"))) +
+#guides(fill = guide_legend(keywidth = 1, keyheight = 1), color=FALSE) +
+facet_wrap(~State) +
+theme_bw() +
+labs(x="", y="CRSS Requested Depletion (TAF)") +
+theme(text = element_text(size=20),  legend.title = element_blank(),
+legend.text=element_text(size=18)) #,
+ggplot() +
+geom_bar(data=dfAllDepletionSeas, aes(fill=District,y=SeasTotal,x=Year+ SeasonNum/12, width = 0.1),position="stack", stat="identity") +
+#geom_line(data=dfMaxBalance, aes(color="Max Balance", y=MaxBal/1e6,x=Year), size=2) +
+#scale_fill_manual(name="Guide1",values = c(palBlues(15)), breaks = c(cAZDistricts, cCADistricts), labels = c(cAZDistricts, cCADistricts)) +
+scale_fill_manual(values = dfDistrictColor$FillColor, breaks = dfDistrictColor$District, labels = dfDistrictColor$District) +
+#scale_fill_manual(values = c(palReds[4:9],palBlues(9))) +
+#scale_fill_manual(name="Guide1",values = c(palBlues(15))) +
+#scale_color_manual(name="Guide2", values=c("Black")) +
+scale_x_continuous(limits = c(2020,2030), breaks = seq(2020,2030, by=2)) +
+#scale_y_continuous(breaks=seq(0,3,by=1),labels=seq(0,3,by=1), sec.axis = sec_axis(~. +0, name = "", breaks = c(nMaxBalance$Total[2])/1e6, labels = c("Max Balance"))) +
+#guides(fill = guide_legend(keywidth = 1, keyheight = 1), color=FALSE) +
+facet_wrap(~State) +
+theme_bw() +
+labs(x="", y="CRSS Requested Depletion (TAF)") +
+theme(text = element_text(size=20),  legend.title = element_blank(),
+legend.text=element_text(size=18)) #,
+ggplot() +
+geom_bar(data=dfAllDepletionSeas, aes(fill=District,y=SeasTotal,x=Year+ SeasonNum/12, width = 0.3),position="stack", stat="identity") +
+#geom_line(data=dfMaxBalance, aes(color="Max Balance", y=MaxBal/1e6,x=Year), size=2) +
+#scale_fill_manual(name="Guide1",values = c(palBlues(15)), breaks = c(cAZDistricts, cCADistricts), labels = c(cAZDistricts, cCADistricts)) +
+scale_fill_manual(values = dfDistrictColor$FillColor, breaks = dfDistrictColor$District, labels = dfDistrictColor$District) +
+#scale_fill_manual(values = c(palReds[4:9],palBlues(9))) +
+#scale_fill_manual(name="Guide1",values = c(palBlues(15))) +
+#scale_color_manual(name="Guide2", values=c("Black")) +
+scale_x_continuous(limits = c(2020,2030), breaks = seq(2020,2030, by=2)) +
+#scale_y_continuous(breaks=seq(0,3,by=1),labels=seq(0,3,by=1), sec.axis = sec_axis(~. +0, name = "", breaks = c(nMaxBalance$Total[2])/1e6, labels = c("Max Balance"))) +
+#guides(fill = guide_legend(keywidth = 1, keyheight = 1), color=FALSE) +
+facet_wrap(~State) +
+theme_bw() +
+labs(x="", y="CRSS Requested Depletion (TAF)") +
+theme(text = element_text(size=20),  legend.title = element_blank(),
+legend.text=element_text(size=18)) #,
+ggplot() +
+geom_bar(data=dfAllDepletionSeas, aes(fill=District,y=SeasTotal,x=Year+ SeasonNum/12, width = 0.4*(nSeasonEnd - SeasonNum)/(nSeasonEnd-nSeasonStart) + 0.3),position="stack", stat="identity") +
+#geom_line(data=dfMaxBalance, aes(color="Max Balance", y=MaxBal/1e6,x=Year), size=2) +
+#scale_fill_manual(name="Guide1",values = c(palBlues(15)), breaks = c(cAZDistricts, cCADistricts), labels = c(cAZDistricts, cCADistricts)) +
+scale_fill_manual(values = dfDistrictColor$FillColor, breaks = dfDistrictColor$District, labels = dfDistrictColor$District) +
+#scale_fill_manual(values = c(palReds[4:9],palBlues(9))) +
+#scale_fill_manual(name="Guide1",values = c(palBlues(15))) +
+#scale_color_manual(name="Guide2", values=c("Black")) +
+scale_x_continuous(limits = c(2020,2030), breaks = seq(2020,2030, by=2)) +
+#scale_y_continuous(breaks=seq(0,3,by=1),labels=seq(0,3,by=1), sec.axis = sec_axis(~. +0, name = "", breaks = c(nMaxBalance$Total[2])/1e6, labels = c("Max Balance"))) +
+#guides(fill = guide_legend(keywidth = 1, keyheight = 1), color=FALSE) +
+facet_wrap(~State) +
+theme_bw() +
+labs(x="", y="CRSS Requested Depletion (TAF)") +
+theme(text = element_text(size=20),  legend.title = element_blank(),
+legend.text=element_text(size=18)) #,
+ggplot() +
+geom_bar(data=dfAllDepletionSeas, aes(fill=District,y=SeasTotal,x=Year+ SeasonNum/12, width = 0.4*(nSummerEnd - SeasonNum)/(nSeasonEnd-nSummerStart) + 0.3),position="stack", stat="identity") +
+#geom_line(data=dfMaxBalance, aes(color="Max Balance", y=MaxBal/1e6,x=Year), size=2) +
+#scale_fill_manual(name="Guide1",values = c(palBlues(15)), breaks = c(cAZDistricts, cCADistricts), labels = c(cAZDistricts, cCADistricts)) +
+scale_fill_manual(values = dfDistrictColor$FillColor, breaks = dfDistrictColor$District, labels = dfDistrictColor$District) +
+#scale_fill_manual(values = c(palReds[4:9],palBlues(9))) +
+#scale_fill_manual(name="Guide1",values = c(palBlues(15))) +
+#scale_color_manual(name="Guide2", values=c("Black")) +
+scale_x_continuous(limits = c(2020,2030), breaks = seq(2020,2030, by=2)) +
+#scale_y_continuous(breaks=seq(0,3,by=1),labels=seq(0,3,by=1), sec.axis = sec_axis(~. +0, name = "", breaks = c(nMaxBalance$Total[2])/1e6, labels = c("Max Balance"))) +
+#guides(fill = guide_legend(keywidth = 1, keyheight = 1), color=FALSE) +
+facet_wrap(~State) +
+theme_bw() +
+labs(x="", y="CRSS Requested Depletion (TAF)") +
+theme(text = element_text(size=20),  legend.title = element_blank(),
+legend.text=element_text(size=18)) #,
+ggplot() +
+geom_bar(data=dfAllDepletionSeas, aes(fill=District,y=SeasTotal,x=Year+ SeasonNum/12, width = 0.4*(nSummerEnd - SeasonNum)/(nSummerEnd-nSummerStart) + 0.3),position="stack", stat="identity") +
+#geom_line(data=dfMaxBalance, aes(color="Max Balance", y=MaxBal/1e6,x=Year), size=2) +
+#scale_fill_manual(name="Guide1",values = c(palBlues(15)), breaks = c(cAZDistricts, cCADistricts), labels = c(cAZDistricts, cCADistricts)) +
+scale_fill_manual(values = dfDistrictColor$FillColor, breaks = dfDistrictColor$District, labels = dfDistrictColor$District) +
+#scale_fill_manual(values = c(palReds[4:9],palBlues(9))) +
+#scale_fill_manual(name="Guide1",values = c(palBlues(15))) +
+#scale_color_manual(name="Guide2", values=c("Black")) +
+scale_x_continuous(limits = c(2020,2030), breaks = seq(2020,2030, by=2)) +
+#scale_y_continuous(breaks=seq(0,3,by=1),labels=seq(0,3,by=1), sec.axis = sec_axis(~. +0, name = "", breaks = c(nMaxBalance$Total[2])/1e6, labels = c("Max Balance"))) +
+#guides(fill = guide_legend(keywidth = 1, keyheight = 1), color=FALSE) +
+facet_wrap(~State) +
+theme_bw() +
+labs(x="", y="CRSS Requested Depletion (TAF)") +
+theme(text = element_text(size=20),  legend.title = element_blank(),
+legend.text=element_text(size=18)) #,
+ggplot() +
+geom_bar(data=dfAllDepletionSeas, aes(fill=District,y=SeasTotal,x=Year+ SeasonNum/12 + (SeasonNum-nSummerEnd)/(nSummerStart-nSummerEnd)*(nSummerEnd-nSummerStart)/12/2, width = 0.4*(nSummerEnd - SeasonNum)/(nSummerEnd-nSummerStart) + 0.3),position="stack", stat="identity") +
+#geom_line(data=dfMaxBalance, aes(color="Max Balance", y=MaxBal/1e6,x=Year), size=2) +
+#scale_fill_manual(name="Guide1",values = c(palBlues(15)), breaks = c(cAZDistricts, cCADistricts), labels = c(cAZDistricts, cCADistricts)) +
+scale_fill_manual(values = dfDistrictColor$FillColor, breaks = dfDistrictColor$District, labels = dfDistrictColor$District) +
+#scale_fill_manual(values = c(palReds[4:9],palBlues(9))) +
+#scale_fill_manual(name="Guide1",values = c(palBlues(15))) +
+#scale_color_manual(name="Guide2", values=c("Black")) +
+scale_x_continuous(limits = c(2020,2030), breaks = seq(2020,2030, by=2)) +
+#scale_y_continuous(breaks=seq(0,3,by=1),labels=seq(0,3,by=1), sec.axis = sec_axis(~. +0, name = "", breaks = c(nMaxBalance$Total[2])/1e6, labels = c("Max Balance"))) +
+#guides(fill = guide_legend(keywidth = 1, keyheight = 1), color=FALSE) +
+facet_wrap(~State) +
+theme_bw() +
+labs(x="", y="CRSS Requested Depletion (TAF)") +
+theme(text = element_text(size=20),  legend.title = element_blank(),
+legend.text=element_text(size=18)) #,
+ggplot() +
+geom_bar(data=dfAllDepletionSeas, aes(fill=District,y=SeasTotal,x=Year+ SeasonNum/12 , width = 0.4*(nSummerEnd - SeasonNum)/(nSummerEnd-nSummerStart) + 0.3),position="stack", stat="identity") +
+#geom_bar(data=dfAllDepletionSeas, aes(fill=District,y=SeasTotal,x=Year+ SeasonNum/12 + (SeasonNum-nSummerEnd)/(nSummerStart-nSummerEnd)*(nSummerEnd-nSummerStart)/12/2, width = 0.4*(nSummerEnd - SeasonNum)/(nSummerEnd-nSummerStart) + 0.3),position="stack", stat="identity") +
+#geom_line(data=dfMaxBalance, aes(color="Max Balance", y=MaxBal/1e6,x=Year), size=2) +
+#scale_fill_manual(name="Guide1",values = c(palBlues(15)), breaks = c(cAZDistricts, cCADistricts), labels = c(cAZDistricts, cCADistricts)) +
+scale_fill_manual(values = dfDistrictColor$FillColor, breaks = dfDistrictColor$District, labels = dfDistrictColor$District) +
+#scale_fill_manual(values = c(palReds[4:9],palBlues(9))) +
+#scale_fill_manual(name="Guide1",values = c(palBlues(15))) +
+#scale_color_manual(name="Guide2", values=c("Black")) +
+scale_x_continuous(limits = c(2020,2030), breaks = seq(2020,2030, by=2)) +
+#scale_y_continuous(breaks=seq(0,3,by=1),labels=seq(0,3,by=1), sec.axis = sec_axis(~. +0, name = "", breaks = c(nMaxBalance$Total[2])/1e6, labels = c("Max Balance"))) +
+#guides(fill = guide_legend(keywidth = 1, keyheight = 1), color=FALSE) +
+facet_wrap(~State) +
+theme_bw() +
+labs(x="", y="CRSS Requested Depletion (TAF)") +
+theme(text = element_text(size=20),  legend.title = element_blank(),
+legend.text=element_text(size=18)) #,
+ggplot() +
+geom_bar(data=dfAllDepletionSeas, aes(fill=District,y=SeasTotal,x=Year+ SeasonNum/12 - (SeasonNum - nSummerEnd)/(nSummerStart - nSummerEnd)*2/12 , width = 0.4*(nSummerEnd - SeasonNum)/(nSummerEnd-nSummerStart) + 0.3),position="stack", stat="identity") +
+#geom_bar(data=dfAllDepletionSeas, aes(fill=District,y=SeasTotal,x=Year+ SeasonNum/12 + (SeasonNum-nSummerEnd)/(nSummerStart-nSummerEnd)*(nSummerEnd-nSummerStart)/12/2, width = 0.4*(nSummerEnd - SeasonNum)/(nSummerEnd-nSummerStart) + 0.3),position="stack", stat="identity") +
+#geom_line(data=dfMaxBalance, aes(color="Max Balance", y=MaxBal/1e6,x=Year), size=2) +
+#scale_fill_manual(name="Guide1",values = c(palBlues(15)), breaks = c(cAZDistricts, cCADistricts), labels = c(cAZDistricts, cCADistricts)) +
+scale_fill_manual(values = dfDistrictColor$FillColor, breaks = dfDistrictColor$District, labels = dfDistrictColor$District) +
+#scale_fill_manual(values = c(palReds[4:9],palBlues(9))) +
+#scale_fill_manual(name="Guide1",values = c(palBlues(15))) +
+#scale_color_manual(name="Guide2", values=c("Black")) +
+scale_x_continuous(limits = c(2020,2030), breaks = seq(2020,2030, by=2)) +
+#scale_y_continuous(breaks=seq(0,3,by=1),labels=seq(0,3,by=1), sec.axis = sec_axis(~. +0, name = "", breaks = c(nMaxBalance$Total[2])/1e6, labels = c("Max Balance"))) +
+#guides(fill = guide_legend(keywidth = 1, keyheight = 1), color=FALSE) +
+facet_wrap(~State) +
+theme_bw() +
+labs(x="", y="CRSS Requested Depletion (TAF)") +
+theme(text = element_text(size=20),  legend.title = element_blank(),
+legend.text=element_text(size=18)) #,
+ggplot() +
+#geom_bar(data=dfAllDepletionSeas, aes(fill=District,y=SeasTotal,x=Year+ SeasonNum/12, width = 0.4*(nSummerEnd - SeasonNum)/(nSummerEnd-nSummerStart) + 0.3),position="stack", stat="identity") +
+#geom_line(data=dfMaxBalance, aes(color="Max Balance", y=MaxBal/1e6,x=Year), size=2) +
+#scale_fill_manual(name="Guide1",values = c(palBlues(15)), breaks = c(cAZDistricts, cCADistricts), labels = c(cAZDistricts, cCADistricts)) +
+scale_fill_manual(values = dfDistrictColor$FillColor, breaks = dfDistrictColor$District, labels = dfDistrictColor$District) +
+#scale_fill_manual(values = c(palReds[4:9],palBlues(9))) +
+#scale_fill_manual(name="Guide1",values = c(palBlues(15))) +
+#scale_color_manual(name="Guide2", values=c("Black")) +
+scale_x_continuous(limits = c(2020,2030), breaks = seq(2020,2030, by=2)) +
+#scale_y_continuous(breaks=seq(0,3,by=1),labels=seq(0,3,by=1), sec.axis = sec_axis(~. +0, name = "", breaks = c(nMaxBalance$Total[2])/1e6, labels = c("Max Balance"))) +
+#guides(fill = guide_legend(keywidth = 1, keyheight = 1), color=FALSE) +
+facet_wrap(~State) +
+theme_bw() +
+labs(x="", y="CRSS Requested Depletion (TAF)") +
+theme(text = element_text(size=20),  legend.title = element_blank(),
+legend.text=element_text(size=18)) #,
+ggplot() +
+geom_bar(data=dfAllDepletionSeas, aes(fill=District,y=SeasTotal,x=Year+ SeasonNum/12, width = 0.4*(nSummerEnd - SeasonNum)/(nSummerEnd-nSummerStart) + 0.3),position="stack", stat="identity") +
+#geom_line(data=dfMaxBalance, aes(color="Max Balance", y=MaxBal/1e6,x=Year), size=2) +
+#scale_fill_manual(name="Guide1",values = c(palBlues(15)), breaks = c(cAZDistricts, cCADistricts), labels = c(cAZDistricts, cCADistricts)) +
+scale_fill_manual(values = dfDistrictColor$FillColor, breaks = dfDistrictColor$District, labels = dfDistrictColor$District) +
+#scale_fill_manual(values = c(palReds[4:9],palBlues(9))) +
+#scale_fill_manual(name="Guide1",values = c(palBlues(15))) +
+#scale_color_manual(name="Guide2", values=c("Black")) +
+scale_x_continuous(limits = c(2020,2030), breaks = seq(2020,2030, by=2)) +
+#scale_y_continuous(breaks=seq(0,3,by=1),labels=seq(0,3,by=1), sec.axis = sec_axis(~. +0, name = "", breaks = c(nMaxBalance$Total[2])/1e6, labels = c("Max Balance"))) +
+#guides(fill = guide_legend(keywidth = 1, keyheight = 1), color=FALSE) +
+facet_wrap(~State) +
+theme_bw() +
+labs(x="", y="CRSS Requested Depletion (TAF)") +
+theme(text = element_text(size=20),  legend.title = element_blank(),
+legend.text=element_text(size=18)) #,
+dfAllDepletionSeas$Offset <- ifelse(dfAllDepletionSeas$Season ==  "Summer", (nSummerEnd - nSummerStart)/2, 12)
+dfAllDepletionSeas$Offset <- ifelse(dfAllDepletionSeas$Season ==  "Summer", (nSummerEnd - nSummerStart)/2/12, (12-nSummerEnd)/12)
+ggplot() +
+geom_bar(data=dfAllDepletionSeas, aes(fill=District,y=SeasTotal,x=Year+ SeasonNum/12 + Offset , width = 0.4*(nSummerEnd - SeasonNum)/(nSummerEnd-nSummerStart) + 0.3),position="stack", stat="identity") +
+#geom_line(data=dfMaxBalance, aes(color="Max Balance", y=MaxBal/1e6,x=Year), size=2) +
+#scale_fill_manual(name="Guide1",values = c(palBlues(15)), breaks = c(cAZDistricts, cCADistricts), labels = c(cAZDistricts, cCADistricts)) +
+scale_fill_manual(values = dfDistrictColor$FillColor, breaks = dfDistrictColor$District, labels = dfDistrictColor$District) +
+#scale_fill_manual(values = c(palReds[4:9],palBlues(9))) +
+#scale_fill_manual(name="Guide1",values = c(palBlues(15))) +
+#scale_color_manual(name="Guide2", values=c("Black")) +
+scale_x_continuous(limits = c(2020,2030), breaks = seq(2020,2030, by=2)) +
+#scale_y_continuous(breaks=seq(0,3,by=1),labels=seq(0,3,by=1), sec.axis = sec_axis(~. +0, name = "", breaks = c(nMaxBalance$Total[2])/1e6, labels = c("Max Balance"))) +
+#guides(fill = guide_legend(keywidth = 1, keyheight = 1), color=FALSE) +
+facet_wrap(~State) +
+theme_bw() +
+labs(x="", y="CRSS Requested Depletion (TAF)") +
+theme(text = element_text(size=20),  legend.title = element_blank(),
+legend.text=element_text(size=18)) #,
+dfAllDepletionSeas$Offset <- ifelse(dfAllDepletionSeas$Season ==  "Summer", (nSummerEnd - nSummerStart)/2/12, (12-nSummerEnd + 1)/12)
+ggplot() +
+geom_bar(data=dfAllDepletionSeas, aes(fill=District,y=SeasTotal,x=Year+ SeasonNum/12 + Offset , width = 0.4*(nSummerEnd - SeasonNum)/(nSummerEnd-nSummerStart) + 0.3),position="stack", stat="identity") +
+#geom_line(data=dfMaxBalance, aes(color="Max Balance", y=MaxBal/1e6,x=Year), size=2) +
+#scale_fill_manual(name="Guide1",values = c(palBlues(15)), breaks = c(cAZDistricts, cCADistricts), labels = c(cAZDistricts, cCADistricts)) +
+scale_fill_manual(values = dfDistrictColor$FillColor, breaks = dfDistrictColor$District, labels = dfDistrictColor$District) +
+#scale_fill_manual(values = c(palReds[4:9],palBlues(9))) +
+#scale_fill_manual(name="Guide1",values = c(palBlues(15))) +
+#scale_color_manual(name="Guide2", values=c("Black")) +
+scale_x_continuous(limits = c(2020,2030), breaks = seq(2020,2030, by=2)) +
+#scale_y_continuous(breaks=seq(0,3,by=1),labels=seq(0,3,by=1), sec.axis = sec_axis(~. +0, name = "", breaks = c(nMaxBalance$Total[2])/1e6, labels = c("Max Balance"))) +
+#guides(fill = guide_legend(keywidth = 1, keyheight = 1), color=FALSE) +
+facet_wrap(~State) +
+theme_bw() +
+labs(x="", y="CRSS Requested Depletion (TAF)") +
+theme(text = element_text(size=20),  legend.title = element_blank(),
+legend.text=element_text(size=18)) #,
+dfAllDepletionSeas$Offset <- ifelse(dfAllDepletionSeas$Season ==  "Summer", (nSummerEnd - nSummerStart)/2/12, (12-nSummerEnd - 1)/12)
+ggplot() +
+geom_bar(data=dfAllDepletionSeas, aes(fill=District,y=SeasTotal,x=Year+ SeasonNum/12 + Offset , width = 0.4*(nSummerEnd - SeasonNum)/(nSummerEnd-nSummerStart) + 0.3),position="stack", stat="identity") +
+#geom_line(data=dfMaxBalance, aes(color="Max Balance", y=MaxBal/1e6,x=Year), size=2) +
+#scale_fill_manual(name="Guide1",values = c(palBlues(15)), breaks = c(cAZDistricts, cCADistricts), labels = c(cAZDistricts, cCADistricts)) +
+scale_fill_manual(values = dfDistrictColor$FillColor, breaks = dfDistrictColor$District, labels = dfDistrictColor$District) +
+#scale_fill_manual(values = c(palReds[4:9],palBlues(9))) +
+#scale_fill_manual(name="Guide1",values = c(palBlues(15))) +
+#scale_color_manual(name="Guide2", values=c("Black")) +
+scale_x_continuous(limits = c(2020,2030), breaks = seq(2020,2030, by=2)) +
+#scale_y_continuous(breaks=seq(0,3,by=1),labels=seq(0,3,by=1), sec.axis = sec_axis(~. +0, name = "", breaks = c(nMaxBalance$Total[2])/1e6, labels = c("Max Balance"))) +
+#guides(fill = guide_legend(keywidth = 1, keyheight = 1), color=FALSE) +
+facet_wrap(~State) +
+theme_bw() +
+labs(x="", y="CRSS Requested Depletion (TAF)") +
+theme(text = element_text(size=20),  legend.title = element_blank(),
+legend.text=element_text(size=18)) #,
+dfAllDepletionSeas$Offset <- ifelse(dfAllDepletionSeas$Season ==  "Summer", (nSummerEnd - nSummerStart)/2/12, (12-nSummerEnd - 0.5)/12)
+ggplot() +
+geom_bar(data=dfAllDepletionSeas, aes(fill=District,y=SeasTotal,x=Year+ SeasonNum/12 + Offset , width = 0.4*(nSummerEnd - SeasonNum)/(nSummerEnd-nSummerStart) + 0.3),position="stack", stat="identity") +
+#geom_line(data=dfMaxBalance, aes(color="Max Balance", y=MaxBal/1e6,x=Year), size=2) +
+#scale_fill_manual(name="Guide1",values = c(palBlues(15)), breaks = c(cAZDistricts, cCADistricts), labels = c(cAZDistricts, cCADistricts)) +
+scale_fill_manual(values = dfDistrictColor$FillColor, breaks = dfDistrictColor$District, labels = dfDistrictColor$District) +
+#scale_fill_manual(values = c(palReds[4:9],palBlues(9))) +
+#scale_fill_manual(name="Guide1",values = c(palBlues(15))) +
+#scale_color_manual(name="Guide2", values=c("Black")) +
+scale_x_continuous(limits = c(2020,2030), breaks = seq(2020,2030, by=2)) +
+#scale_y_continuous(breaks=seq(0,3,by=1),labels=seq(0,3,by=1), sec.axis = sec_axis(~. +0, name = "", breaks = c(nMaxBalance$Total[2])/1e6, labels = c("Max Balance"))) +
+#guides(fill = guide_legend(keywidth = 1, keyheight = 1), color=FALSE) +
+facet_wrap(~State) +
+theme_bw() +
+labs(x="", y="CRSS Requested Depletion (TAF)") +
+theme(text = element_text(size=20),  legend.title = element_blank(),
+legend.text=element_text(size=18)) #,
+ggplot() +
+geom_bar(data=dfAllDepletionSeas, aes(fill=District,y=SeasTotal,x=Year+ SeasonNum/12 + Offset , width = 0.4*(nSummerEnd - SeasonNum)/(nSummerEnd-nSummerStart) + 0.3),position="stack", stat="identity") +
+#geom_line(data=dfMaxBalance, aes(color="Max Balance", y=MaxBal/1e6,x=Year), size=2) +
+#scale_fill_manual(name="Guide1",values = c(palBlues(15)), breaks = c(cAZDistricts, cCADistricts), labels = c(cAZDistricts, cCADistricts)) +
+scale_fill_manual(values = dfDistrictColor$FillColor, breaks = dfDistrictColor$District, labels = dfDistrictColor$District) +
+#scale_fill_manual(values = c(palReds[4:9],palBlues(9))) +
+#scale_fill_manual(name="Guide1",values = c(palBlues(15))) +
+#scale_color_manual(name="Guide2", values=c("Black")) +
+scale_x_continuous(limits = c(2020,2030), breaks = seq(2020,2030, by=2)) +
+#scale_y_continuous(breaks=seq(0,3,by=1),labels=seq(0,3,by=1), sec.axis = sec_axis(~. +0, name = "", breaks = c(nMaxBalance$Total[2])/1e6, labels = c("Max Balance"))) +
+#guides(fill = guide_legend(keywidth = 1, keyheight = 1), color=FALSE) +
+facet_wrap(~State) +
+#Add a text label to define summer
+geom_text(paste("Summer from Month ",nSummerStart," to ",nSummerEnd),0.5,0.5) +
+theme_bw() +
+labs(x="", y="CRSS Requested Depletion (TAF)") +
+theme(text = element_text(size=20),  legend.title = element_blank(),
+legend.text=element_text(size=18)) #,
+ggplot() +
+geom_bar(data=dfAllDepletionSeas, aes(fill=District,y=SeasTotal,x=Year+ SeasonNum/12 + Offset , width = 0.4*(nSummerEnd - SeasonNum)/(nSummerEnd-nSummerStart) + 0.3),position="stack", stat="identity") +
+#geom_line(data=dfMaxBalance, aes(color="Max Balance", y=MaxBal/1e6,x=Year), size=2) +
+#scale_fill_manual(name="Guide1",values = c(palBlues(15)), breaks = c(cAZDistricts, cCADistricts), labels = c(cAZDistricts, cCADistricts)) +
+scale_fill_manual(values = dfDistrictColor$FillColor, breaks = dfDistrictColor$District, labels = dfDistrictColor$District) +
+#scale_fill_manual(values = c(palReds[4:9],palBlues(9))) +
+#scale_fill_manual(name="Guide1",values = c(palBlues(15))) +
+#scale_color_manual(name="Guide2", values=c("Black")) +
+scale_x_continuous(limits = c(2020,2030), breaks = seq(2020,2030, by=2)) +
+#scale_y_continuous(breaks=seq(0,3,by=1),labels=seq(0,3,by=1), sec.axis = sec_axis(~. +0, name = "", breaks = c(nMaxBalance$Total[2])/1e6, labels = c("Max Balance"))) +
+#guides(fill = guide_legend(keywidth = 1, keyheight = 1), color=FALSE) +
+facet_wrap(~State) +
+#Add a text label to define summer
+geom_text(aes(data=paste("Summer from Month ",nSummerStart," to ",nSummerEnd),x=2026,y= 2000)) +
+theme_bw() +
+labs(x="", y="CRSS Requested Depletion (TAF)") +
+theme(text = element_text(size=20),  legend.title = element_blank(),
+legend.text=element_text(size=18)) #,
+ggplot() +
+geom_bar(data=dfAllDepletionSeas, aes(fill=District,y=SeasTotal,x=Year+ SeasonNum/12 + Offset , width = 0.4*(nSummerEnd - SeasonNum)/(nSummerEnd-nSummerStart) + 0.3),position="stack", stat="identity") +
+#geom_line(data=dfMaxBalance, aes(color="Max Balance", y=MaxBal/1e6,x=Year), size=2) +
+#scale_fill_manual(name="Guide1",values = c(palBlues(15)), breaks = c(cAZDistricts, cCADistricts), labels = c(cAZDistricts, cCADistricts)) +
+scale_fill_manual(values = dfDistrictColor$FillColor, breaks = dfDistrictColor$District, labels = dfDistrictColor$District) +
+#scale_fill_manual(values = c(palReds[4:9],palBlues(9))) +
+#scale_fill_manual(name="Guide1",values = c(palBlues(15))) +
+#scale_color_manual(name="Guide2", values=c("Black")) +
+scale_x_continuous(limits = c(2020,2030), breaks = seq(2020,2030, by=2)) +
+#scale_y_continuous(breaks=seq(0,3,by=1),labels=seq(0,3,by=1), sec.axis = sec_axis(~. +0, name = "", breaks = c(nMaxBalance$Total[2])/1e6, labels = c("Max Balance"))) +
+#guides(fill = guide_legend(keywidth = 1, keyheight = 1), color=FALSE) +
+facet_wrap(~State) +
+#Add a text label to define summer
+geom_text(aes(label=paste("Summer from Month ",nSummerStart," to ",nSummerEnd),x=2026,y= 2000)) +
+theme_bw() +
+labs(x="", y="CRSS Requested Depletion (TAF)") +
+theme(text = element_text(size=20),  legend.title = element_blank(),
+legend.text=element_text(size=18)) #,
+paste("Summer from Month ",nSummerStart," to ",nSummerEnd)
+ggplot() +
+geom_bar(data=dfAllDepletionSeas, aes(fill=District,y=SeasTotal,x=Year+ SeasonNum/12 + Offset , width = 0.4*(nSummerEnd - SeasonNum)/(nSummerEnd-nSummerStart) + 0.3),position="stack", stat="identity") +
+#geom_line(data=dfMaxBalance, aes(color="Max Balance", y=MaxBal/1e6,x=Year), size=2) +
+#scale_fill_manual(name="Guide1",values = c(palBlues(15)), breaks = c(cAZDistricts, cCADistricts), labels = c(cAZDistricts, cCADistricts)) +
+scale_fill_manual(values = dfDistrictColor$FillColor, breaks = dfDistrictColor$District, labels = dfDistrictColor$District) +
+#scale_fill_manual(values = c(palReds[4:9],palBlues(9))) +
+#scale_fill_manual(name="Guide1",values = c(palBlues(15))) +
+#scale_color_manual(name="Guide2", values=c("Black")) +
+scale_x_continuous(limits = c(2020,2030), breaks = seq(2020,2030, by=2)) +
+#scale_y_continuous(breaks=seq(0,3,by=1),labels=seq(0,3,by=1), sec.axis = sec_axis(~. +0, name = "", breaks = c(nMaxBalance$Total[2])/1e6, labels = c("Max Balance"))) +
+#guides(fill = guide_legend(keywidth = 1, keyheight = 1), color=FALSE) +
+facet_wrap(~State) +
+#Add a text label to define summer
+annotate("text", label=paste("Summer from Months ",nSummerStart," to ",nSummerEnd),x=2026,y= 2000) +
+theme_bw() +
+labs(x="", y="CRSS Requested Depletion (TAF)") +
+theme(text = element_text(size=20),  legend.title = element_blank(),
+legend.text=element_text(size=18)) #,
+ggplot() +
+geom_bar(data=dfAllDepletionSeas, aes(fill=District,y=SeasTotal,x=Year+ SeasonNum/12 + Offset , width = 0.4*(nSummerEnd - SeasonNum)/(nSummerEnd-nSummerStart) + 0.3),position="stack", stat="identity") +
+#geom_line(data=dfMaxBalance, aes(color="Max Balance", y=MaxBal/1e6,x=Year), size=2) +
+#scale_fill_manual(name="Guide1",values = c(palBlues(15)), breaks = c(cAZDistricts, cCADistricts), labels = c(cAZDistricts, cCADistricts)) +
+scale_fill_manual(values = dfDistrictColor$FillColor, breaks = dfDistrictColor$District, labels = dfDistrictColor$District) +
+#scale_fill_manual(values = c(palReds[4:9],palBlues(9))) +
+#scale_fill_manual(name="Guide1",values = c(palBlues(15))) +
+#scale_color_manual(name="Guide2", values=c("Black")) +
+scale_x_continuous(limits = c(2020,2030), breaks = seq(2020,2030, by=2)) +
+#scale_y_continuous(breaks=seq(0,3,by=1),labels=seq(0,3,by=1), sec.axis = sec_axis(~. +0, name = "", breaks = c(nMaxBalance$Total[2])/1e6, labels = c("Max Balance"))) +
+#guides(fill = guide_legend(keywidth = 1, keyheight = 1), color=FALSE) +
+facet_wrap(~State) +
+#Add a text label to define summer
+annotate("text", label=paste("Summer from Months ",nSummerStart," to ",nSummerEnd),x=2026,y= 2000, size=8) +
+theme_bw() +
+labs(x="", y="CRSS Requested Depletion (TAF)") +
+theme(text = element_text(size=20),  legend.title = element_blank(),
+legend.text=element_text(size=18)) #,
+ggplot() +
+geom_bar(data=dfAllDepletionSeas, aes(fill=District,y=SeasTotal,x=Year+ SeasonNum/12 + Offset , width = 0.4*(nSummerEnd - SeasonNum)/(nSummerEnd-nSummerStart) + 0.3),position="stack", stat="identity") +
+#geom_line(data=dfMaxBalance, aes(color="Max Balance", y=MaxBal/1e6,x=Year), size=2) +
+#scale_fill_manual(name="Guide1",values = c(palBlues(15)), breaks = c(cAZDistricts, cCADistricts), labels = c(cAZDistricts, cCADistricts)) +
+scale_fill_manual(values = dfDistrictColor$FillColor, breaks = dfDistrictColor$District, labels = dfDistrictColor$District) +
+#scale_fill_manual(values = c(palReds[4:9],palBlues(9))) +
+#scale_fill_manual(name="Guide1",values = c(palBlues(15))) +
+#scale_color_manual(name="Guide2", values=c("Black")) +
+scale_x_continuous(limits = c(2020,2030), breaks = seq(2020,2030, by=2)) +
+#scale_y_continuous(breaks=seq(0,3,by=1),labels=seq(0,3,by=1), sec.axis = sec_axis(~. +0, name = "", breaks = c(nMaxBalance$Total[2])/1e6, labels = c("Max Balance"))) +
+#guides(fill = guide_legend(keywidth = 1, keyheight = 1), color=FALSE) +
+facet_wrap(~State) +
+#Add a text label to define summer
+annotate("text", label=paste("Summer from Months ",nSummerStart," to ",nSummerEnd),x=2026,y= 2000, size=7) +
+theme_bw() +
+labs(x="", y="CRSS Requested Depletion (TAF)") +
+theme(text = element_text(size=20),  legend.title = element_blank(),
+legend.text=element_text(size=18)) #,
+ggplot() +
+geom_bar(data=dfAllDepletionSeas, aes(fill=District,y=SeasTotal,x=Year+ SeasonNum/12 + Offset , width = 0.4*(nSummerEnd - SeasonNum)/(nSummerEnd-nSummerStart) + 0.3),position="stack", stat="identity") +
+#geom_line(data=dfMaxBalance, aes(color="Max Balance", y=MaxBal/1e6,x=Year), size=2) +
+#scale_fill_manual(name="Guide1",values = c(palBlues(15)), breaks = c(cAZDistricts, cCADistricts), labels = c(cAZDistricts, cCADistricts)) +
+scale_fill_manual(values = dfDistrictColor$FillColor, breaks = dfDistrictColor$District, labels = dfDistrictColor$District) +
+#scale_fill_manual(values = c(palReds[4:9],palBlues(9))) +
+#scale_fill_manual(name="Guide1",values = c(palBlues(15))) +
+#scale_color_manual(name="Guide2", values=c("Black")) +
+scale_x_continuous(limits = c(2020,2030), breaks = seq(2020,2030, by=2)) +
+#scale_y_continuous(breaks=seq(0,3,by=1),labels=seq(0,3,by=1), sec.axis = sec_axis(~. +0, name = "", breaks = c(nMaxBalance$Total[2])/1e6, labels = c("Max Balance"))) +
+#guides(fill = guide_legend(keywidth = 1, keyheight = 1), color=FALSE) +
+facet_wrap(~State) +
+#Add a text label to define summer
+annotate("text", label=paste("Summer from Months\n",nSummerStart," to ",nSummerEnd),x=2026,y= 2000, size=7) +
+theme_bw() +
+labs(x="", y="CRSS Requested Depletion (TAF)") +
+theme(text = element_text(size=20),  legend.title = element_blank(),
+legend.text=element_text(size=18)) #,
+ggplot() +
+geom_bar(data=dfAllDepletionSeas, aes(fill=District,y=SeasTotal,x=Year+ SeasonNum/12 + Offset , width = 0.4*(nSummerEnd - SeasonNum)/(nSummerEnd-nSummerStart) + 0.3),position="stack", stat="identity") +
+#geom_line(data=dfMaxBalance, aes(color="Max Balance", y=MaxBal/1e6,x=Year), size=2) +
+#scale_fill_manual(name="Guide1",values = c(palBlues(15)), breaks = c(cAZDistricts, cCADistricts), labels = c(cAZDistricts, cCADistricts)) +
+scale_fill_manual(values = dfDistrictColor$FillColor, breaks = dfDistrictColor$District, labels = dfDistrictColor$District) +
+#scale_fill_manual(values = c(palReds[4:9],palBlues(9))) +
+#scale_fill_manual(name="Guide1",values = c(palBlues(15))) +
+#scale_color_manual(name="Guide2", values=c("Black")) +
+scale_x_continuous(limits = c(2020,2030), breaks = seq(2020,2030, by=2)) +
+#scale_y_continuous(breaks=seq(0,3,by=1),labels=seq(0,3,by=1), sec.axis = sec_axis(~. +0, name = "", breaks = c(nMaxBalance$Total[2])/1e6, labels = c("Max Balance"))) +
+#guides(fill = guide_legend(keywidth = 1, keyheight = 1), color=FALSE) +
+facet_wrap(~State) +
+#Add a text label to define summer
+#annotate("text", label=paste("Summer from Months\n",nSummerStart," to ",nSummerEnd),x=2026,y= 2000, size=7) +
+theme_bw() +
+labs(x="", y="CRSS Requested Depletion (TAF)", subtitle=paste("Summer from Months\n",nSummerStart," to ",nSummerEnd)) +
+theme(text = element_text(size=20),  legend.title = element_blank(),
+legend.text=element_text(size=18)) #,
+ggplot() +
+geom_bar(data=dfAllDepletionSeas, aes(fill=District,y=SeasTotal,x=Year+ SeasonNum/12 + Offset , width = 0.4*(nSummerEnd - SeasonNum)/(nSummerEnd-nSummerStart) + 0.3),position="stack", stat="identity") +
+#geom_line(data=dfMaxBalance, aes(color="Max Balance", y=MaxBal/1e6,x=Year), size=2) +
+#scale_fill_manual(name="Guide1",values = c(palBlues(15)), breaks = c(cAZDistricts, cCADistricts), labels = c(cAZDistricts, cCADistricts)) +
+scale_fill_manual(values = dfDistrictColor$FillColor, breaks = dfDistrictColor$District, labels = dfDistrictColor$District) +
+#scale_fill_manual(values = c(palReds[4:9],palBlues(9))) +
+#scale_fill_manual(name="Guide1",values = c(palBlues(15))) +
+#scale_color_manual(name="Guide2", values=c("Black")) +
+scale_x_continuous(limits = c(2020,2030), breaks = seq(2020,2030, by=2)) +
+#scale_y_continuous(breaks=seq(0,3,by=1),labels=seq(0,3,by=1), sec.axis = sec_axis(~. +0, name = "", breaks = c(nMaxBalance$Total[2])/1e6, labels = c("Max Balance"))) +
+#guides(fill = guide_legend(keywidth = 1, keyheight = 1), color=FALSE) +
+facet_wrap(~State) +
+#Add a text label to define summer
+#annotate("text", label=paste("Summer from Months\n",nSummerStart," to ",nSummerEnd),x=2026,y= 2000, size=7) +
+theme_bw() +
+labs(x="", y="CRSS Requested Depletion (TAF)", subtitle=paste("Summer from Months ",nSummerStart," to ",nSummerEnd)) +
+theme(text = element_text(size=20),  legend.title = element_blank(),
+legend.text=element_text(size=18)) #,
+# PlotLowerBasinAgUsers.r
+#
+# Use DIT (demand) data from CRSS to plot Water Demands by Lower Basin Users. Three plots:
+# 1. Monthly variations
+# 2. Annual variations
+# 3. Seasonal (Summer/Winter) variations
+#
+# The main data file is DIT_CRSS_LBshortageEIS_2016UCRC_v1.8 which comes from the January 2021 version of
+# the Colorado River Simulation System and is the 2016 Upper Colorado River schedule (for upper basin states)
+#
+# This is a beginning R-programming effort! There could be lurking bugs or basic coding errors that I am not even aware of.
+# Please report bugs/feedback to me (contact info below)
+#
+# David E. Rosenberg
+# April 1, 2021
+# Utah State University
+# david.rosenberg@usu.edu
+rm(list = ls())  #Clear history
+# Load required libraies
+if (!require(tidyverse)) {
+install.packages("tidyverse", repos="http://cran.r-project.org")
+library(tidyverse)
+}
+if (!require(readxl)) {
+install.packages("readxl", repos="http://cran.r-project.org")
+library(readxl)
+}
+if (!require(RColorBrewer)) {
+install.packages("RColorBrewer",repos="http://cran.r-project.org")
+library(RColorBrewer) #
+}
+if (!require(dplyr)) {
+install.packages("dplyr",repos="http://cran.r-project.org")
+library(dplyr) #
+}
+if (!require(expss)) {
+install.packages("expss",repos="http://cran.r-project.org")
+library(expss) #
+}
+if (!require(reshape2)) {
+install.packages("reshape2", repos="http://cran.r-project.org")
+library(reshape2)
+}
