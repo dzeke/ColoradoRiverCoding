@@ -141,7 +141,7 @@ print(sprintf("%.1f%%",109800/3119884*100))
 
 palBlues <- brewer.pal(9, "Blues")
 
-#Plot #1. Stacked bar chart of account balance by state by year. Add individual state limits as secondary y axis
+#Plot #1. Stacked bar chart of Intentionally Created Surplus (ICS) account balance by state by year. Add individual state limits as secondary y axis
 # Prepare state limits as a cumulative amount
 cColNamesLimits <- colnames(dfLimits)
 dfLimitsMelt <- melt(data=dfLimits, id.vars="New levels with DCP", measure.vars = cColNamesLimits[2:5]) 
@@ -187,7 +187,7 @@ ggplot() +
 
 #Plot #2. Stacked bar chart of deposits to ICS accounts by state by year
 
-#Calcualte deposits each year the differences by year
+#Calculate deposits each year the differences by year
 dfICSDeposit <- data.frame(-diff(as.matrix(dfICSBalance)))
 #Put the correct year back in
 dfICSDeposit$Year <- dfICSBalance$Year[1:nrow(dfICSDeposit)]

@@ -3,8 +3,9 @@
 1. **Excel Model File** - ColoradoRiverBasinAccounts.xlsx. Basin Accounts Tool. Move into Google Sheets and follow Facilitation Directions (below). Or open ReadMe-Directions Worksheet.
 1. **Lets Start** - ColoradoRiverBasinAccounts-LetsStart.pdf. Visual directions.
 1. **[Model Guide](https://github.com/dzeke/ColoradoRiverCoding/blob/main/ModelMusings/Support/ModelGuide/ModelGuide-CombinedLakePowellLakeMead.md)** - Online help file that provides context and explanations for each spreadsheet row. 
-1. **Manuscript** - 3-LessonsRealTimeModelAdaptiveReservoirOperations.docx. Write up for publication as a journal article. Earlier, cite-able version at [https://digitalcommons.usu.edu/cee_facpub/3778/](https://digitalcommons.usu.edu/cee_facpub/3778/])..
+1. **Manuscript** - 3-LessonsImmerseCollaborateAdaptReservoirOperations.docx. Write up for publication as a journal article. Earlier, cite-able version at [https://digitalcommons.usu.edu/cee_facpub/3778/](https://digitalcommons.usu.edu/cee_facpub/3778/]).
 1. **readme.md** - Requirements, facilitation directions, publications, file contents, and more (this file).
+1. **One page summary** - ColoradoRiverBasinWaterAccounts-1PageSummary-v2.pdf.
 
 ## Overview														
 The purpose of this activity is to discuss more adaptive Colorado River operations than existing operations that equalize reservoirs and expire in 2026. To provoke discussion, download the **Excel Model File** (ColoradoRiverBasinAccounts.xlsx), move to Google Sheets, and invite participants. There are accounts for the Upper Basin, Lower Basin, Mexico, Colorado River Delta, First Nations, and a shared reserve. Over one or more years, participants consume, save, and trade water in the accounts, protect reservoirs, and sustain endangered, native fish of the Grand Canyon. Read on for directions to use.
@@ -54,10 +55,10 @@ The purpose of this activity is to discuss more adaptive Colorado River operatio
 1. **ReadMe-Directions** Worksheet also has these directions and describes all worksheets in the Workbook.
   
 ## Publications
-1. Rosenberg, D. E. (Submitted). "Lessons from real-time, online collaborative modeling to discuss more adaptive reservoir operations." (.docx file). Earlier, cite-able version at [https://digitalcommons.usu.edu/cee_facpub/3778/](https://digitalcommons.usu.edu/cee_facpub/3778/]).
-1. Rosenberg, D. E. (In press). "[Adapt Lake Mead releases to inflow to give managers more flexibility to slow reservoir draw down](https://digitalcommons.usu.edu/water_pubs/170/)." Journal of Water Resources Planning and Management.
+1. Rosenberg, D. E. (Submitted). "Lessons from immersive online collaborative modeling to discuss more adaptive reservoir operations." (.docx file). Earlier, cite-able version at [https://digitalcommons.usu.edu/cee_facpub/3778/](https://digitalcommons.usu.edu/cee_facpub/3778/]).
+1. Rosenberg, D. E. (2022). "[Adapt Lake Mead releases to inflow to give managers more flexibility to slow reservoir draw down](https://doi.org/10.1061/(ASCE)WR.1943-5452.0001592)." Journal of Water Resources Planning and Management, 148(10), 02522006. [Preprint](https://digitalcommons.usu.edu/water_pubs/170/).
 1. Rosenberg, D. E. (2022). "[Invest in Farm Water Conservation to Curtail Buy and Dry](https://ascelibrary.org/doi/full/10.1061/%28ASCE%29WR.1943-5452.0001584)." Journal of Water Resources Planning and Management. 148(8) 01822001.
-1. Wang, J., and Rosenberg, D. E. (Submitted). "[Living within our Means: Adapting Colorado River Basin depletions to available water]( https://digitalcommons.usu.edu/water_pubs/171/)." Submitted to Journal of Water Resources Planning and Management.
+1. Wang, J., and Rosenberg, D. E. (2023). "[Adapting Colorado River Basin Depletions to Available Water to Live within Our Means](https://doi.org/10.1061/JWRMD5.WRENG-5555)." Journal of Water Resources Planning and Management. 149(7), 04023026. [Preprint](https://digitalcommons.usu.edu/water_pubs/171/).
 1. Wang, J., Rosenberg, D. E., Schmidt, J. C., and Wheeler, K. G. (2020). "[Managing the Colorado River for an Uncertain Future](http://qcnr.usu.edu/coloradoriver/files/CCRS_White_Paper_3.pdf)." Center for Colorado River Studies, Utah State University, Logan, Utah.
 
 ## Donate to Support this Work
